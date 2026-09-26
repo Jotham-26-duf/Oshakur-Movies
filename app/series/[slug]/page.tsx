@@ -35,209 +35,192 @@ export default async function SeriesDetailsPage({
     <main className="min-h-screen bg-[#121212] text-white">
       <Navbar />
 
-      <section className="relative overflow-hidden">
+      {/* Series Hero */}
+      <section className="relative overflow-hidden pt-20">
         <div className="absolute inset-0">
           <img
-            src={currentSeries.image}
-            alt=""
-            className="h-full w-full object-cover opacity-20 blur-sm"
+            src={`/images/series/${currentSeries.image}`}
+            alt={currentSeries.title}
+            className="h-full w-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-[#121212]/80" />
-
-          <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/70 to-[#121212]/40" />
+          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#121212] via-[#121212]/90 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/30" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 sm:pt-36 lg:px-8">
-          <div className="grid gap-8 md:grid-cols-[280px_1fr] lg:gap-12">
-            <div className="mx-auto w-full max-w-[280px]">
-              <div className="overflow-hidden rounded-2xl bg-[#2A2A2A] shadow-2xl">
-                <img
-                  src={currentSeries.image}
-                  alt={currentSeries.title}
-                  className="aspect-[2/3] w-full object-cover"
-                />
-              </div>
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10">
+          <div className="grid items-center gap-10 md:grid-cols-[280px_1fr]">
+            {/* Series Poster */}
+            <div className="overflow-hidden rounded-xl shadow-2xl">
+              <img
+                src={`/images/series/${currentSeries.image}`}
+                alt={currentSeries.title}
+                className="aspect-[2/3] w-full object-cover"
+              />
             </div>
 
-            <div className="flex flex-col justify-center">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#00E5FF]">
+            {/* Series Information */}
+            <div className="max-w-3xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#00E5FF]">
                 Series
               </p>
 
-              <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
+              <h1 className="mb-4 text-4xl font-bold sm:text-5xl lg:text-6xl">
                 {currentSeries.title}
               </h1>
 
-              <div className="mt-5 flex flex-wrap items-center gap-3 text-sm">
-                <span className="text-[#AAAAAA]">
-                  {currentSeries.year}
-                </span>
+              <div className="mb-5 flex flex-wrap items-center gap-4 text-sm text-gray-300">
+                <span>{currentSeries.year}</span>
 
-                <span className="text-[#666666]">•</span>
+                <span>•</span>
 
-                <span className="rounded-md bg-[#5C6BC0] px-3 py-1.5 text-xs font-semibold">
-                  <span className="mr-1 text-[#FFC107]">★</span>
-                  {currentSeries.rating}
-                </span>
+                <span>★ {currentSeries.rating}</span>
 
-                <span className="text-[#666666]">•</span>
+                <span>•</span>
 
-                <span className="text-[#AAAAAA]">
-                  {currentSeries.language}
-                </span>
+                <span>{currentSeries.language}</span>
               </div>
 
-              <p className="mt-6 max-w-3xl text-sm leading-7 text-[#AAAAAA] sm:text-base">
+              <div className="mb-6 flex flex-wrap gap-2">
+                {currentSeries.genres.map((genre) => (
+                  <span
+                    key={genre}
+                    className="rounded-full bg-white/10 px-3 py-1 text-sm text-gray-200"
+                  >
+                    {genre}
+                  </span>
+                ))}
+              </div>
+
+              <p className="mb-8 max-w-2xl text-base leading-7 text-gray-300 sm:text-lg">
                 {currentSeries.description}
               </p>
+
+              <a
+                href="#episodes"
+                className="inline-flex items-center rounded-lg bg-[#00E5FF] px-6 py-3 font-semibold text-black transition hover:bg-[#00cfe8]"
+              >
+                View Episodes
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="mb-6">
+      {/* Episodes */}
+      <section
+        id="episodes"
+        className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-10"
+      >
+        <div className="mb-8">
           <h2 className="text-2xl font-bold sm:text-3xl">
             Episodes
           </h2>
 
-          <p className="mt-1 text-sm text-[#AAAAAA]">
-            {seriesEpisodes.length}{" "}
-            {seriesEpisodes.length === 1 ? "episode" : "episodes"}{" "}
-            available for {currentSeries.title}.
+          <p className="mt-2 text-gray-400">
+            Watch or download episodes of {currentSeries.title}.
           </p>
         </div>
 
-        {seriesEpisodes.length > 0 ? (
+        {seriesEpisodes.length === 0 ? (
+          <div className="rounded-xl border border-white/10 bg-white/5 p-8 text-center">
+            <p className="text-gray-400">
+              No episodes available yet.
+            </p>
+          </div>
+        ) : (
           <div className="space-y-5">
             {seriesEpisodes.map((episode) => (
               <article
                 key={episode.id}
-                className="overflow-hidden rounded-2xl border border-white/10 bg-[#1B1B1B]"
+                className="overflow-hidden rounded-xl border border-white/10 bg-[#1b1b1b] transition hover:border-white/20"
               >
-                <div className="grid gap-0 md:grid-cols-[220px_1fr]">
-                  <div className="bg-[#2A2A2A]">
+                <div className="grid md:grid-cols-[280px_1fr]">
+                  {/* Series image used for every episode */}
+                  <div className="overflow-hidden">
                     <img
-                      src={episode.image}
-                      alt={episode.title}
+                      src={`/images/series/${currentSeries.image}`}
+                      alt={currentSeries.title}
                       className="h-full min-h-[180px] w-full object-cover"
                     />
                   </div>
 
-                  <div className="p-5 sm:p-6">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-[#00E5FF]">
-                      Episode {episode.episodeNumber}
-                    </p>
+                  <div className="flex flex-col justify-between p-5 sm:p-6">
+                    <div>
+                      <p className="mb-2 text-sm font-semibold text-[#00E5FF]">
+                        Episode {episode.episodeNumber}
+                      </p>
 
-                    <h3 className="mt-2 text-xl font-bold">
-                      {episode.title}
-                    </h3>
+                      <h3 className="mb-3 text-xl font-bold sm:text-2xl">
+                        {episode.title}
+                      </h3>
 
-                    <p className="mt-3 text-sm leading-6 text-[#AAAAAA]">
-                      {episode.description}
-                    </p>
+                      <p className="leading-6 text-gray-400">
+                        {episode.description}
+                      </p>
+                    </div>
 
-                    <div className="mt-5 flex flex-wrap gap-3">
-                      {episode.streamUrl ? (
-                        <a
-                          href={episode.streamUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center rounded-xl bg-[#2979FF] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1E63D6]"
-                        >
-                          <span className="mr-2">▶</span>
-                          Watch
-                        </a>
-                      ) : (
-                        <button
-                          type="button"
-                          disabled
-                          className="inline-flex cursor-not-allowed items-center justify-center rounded-xl bg-[#2A2A2A] px-5 py-3 text-sm font-semibold text-[#666666]"
-                        >
-                          <span className="mr-2">▶</span>
-                          Watch
-                        </button>
-                      )}
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <a
+                        href={episode.streamUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center rounded-lg bg-[#00E5FF] px-5 py-2.5 font-semibold text-black transition hover:bg-[#00cfe8]"
+                      >
+                        ▶ Watch
+                      </a>
 
-                      {episode.downloadUrl ? (
-                        <a
-                          href={episode.downloadUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center rounded-xl bg-[#22C55E] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#16A34A]"
-                        >
-                          <span className="mr-2">↓</span>
-                          Download
-                        </a>
-                      ) : (
-                        <button
-                          type="button"
-                          disabled
-                          className="inline-flex cursor-not-allowed items-center justify-center rounded-xl bg-[#2A2A2A] px-5 py-3 text-sm font-semibold text-[#666666]"
-                        >
-                          <span className="mr-2">↓</span>
-                          Download
-                        </button>
-                      )}
+                      <a
+                        href={episode.downloadUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center rounded-lg border border-white/20 bg-white/5 px-5 py-2.5 font-semibold text-white transition hover:bg-white/10"
+                      >
+                        ↓ Download
+                      </a>
                     </div>
                   </div>
                 </div>
               </article>
             ))}
           </div>
-        ) : (
-          <div className="rounded-2xl border border-white/10 bg-[#1B1B1B] p-8 text-center">
-            <p className="text-sm text-[#AAAAAA]">
-              No episodes have been added yet.
-            </p>
-          </div>
         )}
       </section>
 
+      {/* Related Series */}
       {relatedSeries.length > 0 && (
-        <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-          <div className="mb-6 flex items-center justify-between gap-4">
-            <div>
-              <h2 className="text-2xl font-bold sm:text-3xl">
-                More Series
-              </h2>
-
-              <p className="mt-1 text-sm text-[#AAAAAA]">
-                Explore more series.
-              </p>
-            </div>
-
-            <Link
-              href="/series"
-              className="shrink-0 text-sm font-semibold text-[#00E5FF] transition hover:text-white"
-            >
-              View All
-            </Link>
+        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-10">
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold sm:text-3xl">
+              More Series
+            </h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
             {relatedSeries.map((item) => (
               <Link
                 key={item.id}
                 href={`/series/${item.slug}`}
-                className="group"
+                className="group overflow-hidden rounded-lg bg-[#1b1b1b]"
               >
-                <div className="overflow-hidden rounded-xl bg-[#2A2A2A]">
+                <div className="aspect-[2/3] overflow-hidden">
                   <img
-                    src={item.image}
+                    src={`/images/series/${item.image}`}
                     alt={item.title}
-                    className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                   />
                 </div>
 
-                <h3 className="mt-3 truncate font-semibold transition group-hover:text-[#00E5FF]">
-                  {item.title}
-                </h3>
+                <div className="p-3">
+                  <h3 className="truncate font-semibold">
+                    {item.title}
+                  </h3>
 
-                <p className="mt-1 text-sm text-[#AAAAAA]">
-                  {item.year}
-                </p>
+                  <p className="mt-1 text-sm text-gray-400">
+                    {item.year}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>

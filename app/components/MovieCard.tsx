@@ -24,7 +24,7 @@ export default function MovieCard({
       <Link href={`/movies/${slug}`}>
         <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
           <img
-            src={image}
+            src={`/images/movies/${image}`}
             alt={title}
             className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
           />

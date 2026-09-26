@@ -46,7 +46,7 @@ export default function SeriesPage() {
               >
                 <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
                   <img
-                    src={item.image}
+                    src={`/images/series/${item.image}`}
                     alt={item.title}
                     className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-110"
                   />

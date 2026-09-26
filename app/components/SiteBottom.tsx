@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 function MailIcon() {
@@ -11,6 +12,7 @@ function MailIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
     >
       <rect x="3" y="5" width="18" height="14" rx="2" />
       <path d="m3 7 9 6 9-6" />
@@ -29,13 +31,28 @@ function PhoneIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
     >
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z" />
     </svg>
   );
 }
 
-function LocationIcon() {
+function YouTubeIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.7V8.3l6.4 3.7-6.4 3.7Z" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
   return (
     <svg
       width="20"
@@ -46,170 +63,203 @@ function LocationIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
     >
-      <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
-      <circle cx="12" cy="10" r="2.5" />
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle
+        cx="17.5"
+        cy="6.5"
+        r="1"
+        fill="currentColor"
+        stroke="none"
+      />
+    </svg>
+  );
+}
+
+function TikTokIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M19.3 7.1a5.8 5.8 0 0 1-3.5-1.2v8.3a5.8 5.8 0 1 1-5-5.7v3a2.8 2.8 0 1 0 2 2.7V2h3a5.8 5.8 0 0 0 3.5 3.5v1.6Z" />
+    </svg>
+  );
+}
+
+function WhatsAppIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.88 11.88 0 0 0 5.73 1.46h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.44-8.43ZM12.06 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.73.98.99-3.64-.23-.37a9.85 9.85 0 0 1-1.51-5.28c0-5.48 4.46-9.94 9.95-9.94 2.66 0 5.16 1.04 7.04 2.93a9.9 9.9 0 0 1 2.91 7.05c0 5.48-4.46 9.94-9.95 9.94Zm5.45-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" />
     </svg>
   );
 }
 
 export default function SiteBottom() {
   return (
-    <>
-      <section className="px-6 py-10 lg:px-10">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-white/10 bg-[#1B1B1B] p-8">
-          <div className="flex flex-col items-center text-center">
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#2979FF]/20 text-[#2979FF]">
-              <MailIcon />
+    <footer className="border-t border-white/10 bg-[#0D0D0D] px-6 py-12 lg:px-10">
+      <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Brand */}
+        <div className="sm:col-span-2 lg:col-span-1">
+          <Link href="/" className="inline-block">
+            <div className="flex items-center gap-3">
+              {/* Text-based logo - no image file required */}
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-[#1B1B1B]">
+                <span className="text-xl font-black text-white">
+                  OM8
+                </span>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-extrabold tracking-wide text-white">
+                  Oshakur
+                  Movies
+                </h2>
+
+                <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#00E5FF]">
+                  Oshakur Movies
+                </p>
+              </div>
             </div>
+          </Link>
 
-            <h2 className="mt-5 text-2xl font-bold text-white">
-              Need Help?
-            </h2>
-
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-[#AAAAAA]">
-              Contact us if you have questions, suggestions, or need support
-              while using Oshakur Movies.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-8 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <a
-              href="https://wa.me/250789063094"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group rounded-xl border border-white/10 bg-[#121212] p-5 transition hover:border-[#25D366]/50"
-            >
-              <div className="text-[#25D366]">WhatsApp</div>
-              <p className="mt-2 text-sm text-[#AAAAAA]">
-                Chat with us
-              </p>
-            </a>
-
-            <a
-              href="tel:+250789063094"
-              className="group rounded-xl border border-white/10 bg-[#121212] p-5 transition hover:border-[#2979FF]/50"
-            >
-              <div className="flex items-center gap-3 text-[#2979FF]">
-                <PhoneIcon />
-                <span>Phone</span>
-              </div>
-
-              <p className="mt-2 text-sm text-[#AAAAAA]">
-                Call us directly
-              </p>
-            </a>
-
-            <a
-              href="mailto:dufitumurengezijotham21@gmail.com"
-              className="group rounded-xl border border-white/10 bg-[#121212] p-5 transition hover:border-[#E040FB]/50"
-            >
-              <div className="flex items-center gap-3 text-[#E040FB]">
-                <MailIcon />
-                <span>Email</span>
-              </div>
-
-              <p className="mt-2 text-sm text-[#AAAAAA]">
-                Send us an email
-              </p>
-            </a>
-
-            <div className="rounded-xl border border-white/10 bg-[#121212] p-5">
-              <div className="flex items-center gap-3 text-[#00E5FF]">
-                <LocationIcon />
-                <span>Location</span>
-              </div>
-
-              <p className="mt-2 text-sm text-[#AAAAAA]">
-                Rwanda
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 border-t border-white/10 pt-8 text-center">
-            <p className="text-sm font-semibold text-white">
-              Join our community
-            </p>
-
-            <a
-              href="https://chat.whatsapp.com/J3WZy8GpRpT61LhbugxQBL"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex rounded-xl border border-white/10 bg-[#121212] px-5 py-3 text-sm font-semibold text-white transition hover:border-[#25D366] hover:text-[#25D366]"
-            >
-              Join WhatsApp Group
-            </a>
-          </div>
+          <p className="mt-5 max-w-sm text-sm leading-7 text-[#AAAAAA]">
+            Reba Agasobanuye aho waba uri hose kubuntu. Abasobanuzi,
+            Rocky Kimomo, Junior Giti, Sankara, Savimbi, PK, Gaheza
+            n&apos;abandi.
+          </p>
         </div>
-      </section>
 
-      <footer className="border-t border-white/10 bg-[#0D0D0D] px-6 py-12 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
-          <div>
+        {/* Quick Links */}
+        <div>
+          <h3 className="relative inline-block pb-2 font-semibold text-white">
+            Quick Links
+            <span className="absolute bottom-0 left-0 h-[2px] w-8 bg-[#E50914]" />
+          </h3>
+
+          <nav className="mt-5 flex flex-col gap-3 text-sm text-[#AAAAAA]">
             <Link
-              href="/"
-              className="text-2xl font-extrabold tracking-wider"
+              href="/about-us"
+              className="transition hover:text-white"
             >
-              <span className="text-[#00E5FF]">OSHAKUR</span>
-              <span className="text-[#E040FB]"> MOVIES</span>
+              About Us
             </Link>
 
-            <p className="mt-4 max-w-sm text-sm leading-6 text-[#777777]">
-              Discover movies and series in one simple place.
-            </p>
-          </div>
+            <Link
+              href="/privacy"
+              className="transition hover:text-white"
+            >
+              Privacy Policy
+            </Link>
 
-          <div>
-            <h3 className="font-semibold text-white">
-              Quick Links
-            </h3>
+            <Link
+              href="/terms"
+              className="transition hover:text-white"
+            >
+              Terms &amp; Conditions
+            </Link>
+          </nav>
+        </div>
 
-            <div className="mt-4 flex flex-col gap-3 text-sm text-[#AAAAAA]">
-              <Link
-                href="/"
-                className="transition hover:text-[#00E5FF]"
-              >
-                Home
-              </Link>
+        {/* Follow Us */}
+        <div>
+          <h3 className="relative inline-block pb-2 font-semibold text-white">
+            Follow Us
+            <span className="absolute bottom-0 left-0 h-[2px] w-8 bg-[#E50914]" />
+          </h3>
 
-              <Link
-                href="/movies"
-                className="transition hover:text-[#00E5FF]"
-              >
-                Movies
-              </Link>
+          <div className="mt-5 flex flex-col gap-4">
+            <a
+              href="https://www.youtube.com/@oshakurfilms.com."
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Oshakur Films on YouTube"
+              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#FF0000]"
+            >
+              <YouTubeIcon />
+              <span>YouTube</span>
+            </a>
 
-              <Link
-                href="/series"
-                className="transition hover:text-[#00E5FF]"
-              >
-                Series
-              </Link>
+            <a
+              href="https://www.instagram.com/oshakurfilms"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Oshakur Films on Instagram"
+              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#E1306C]"
+            >
+              <InstagramIcon />
+              <span>Instagram</span>
+            </a>
 
-              <Link
-                href="/trending"
-                className="transition hover:text-[#00E5FF]"
-              >
-                Trending
-              </Link>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-white">
-              Oshakur Movies
-            </h3>
-
-            <p className="mt-4 text-sm leading-6 text-[#777777]">
-              Watch, discover, and explore movies and series.
-            </p>
+            <a
+              href="https://www.tiktok.com/@oshakurfilms"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Oshakur Films on TikTok"
+              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-white"
+            >
+              <TikTokIcon />
+              <span>TikTok</span>
+            </a>
           </div>
         </div>
 
-        <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-center text-xs text-[#666666]">
-          © {new Date().getFullYear()} Oshakur Movies. All rights reserved.
+        {/* Contact */}
+        <div>
+          <h3 className="relative inline-block pb-2 font-semibold text-white">
+            Contact
+            <span className="absolute bottom-0 left-0 h-[2px] w-8 bg-[#E50914]" />
+          </h3>
+
+          <div className="mt-5 flex flex-col gap-4">
+            <a
+              href="tel:+250788821628"
+              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#00E5FF]"
+            >
+              <PhoneIcon />
+              <span>+250 788 821 628</span>
+            </a>
+
+            <a
+              href="https://wa.me/250788821628"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#25D366]"
+            >
+              <WhatsAppIcon />
+              <span>WhatsApp</span>
+            </a>
+
+            <a
+              href="mailto:info@oshakurfilms.com"
+              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#E040FB]"
+            >
+              <MailIcon />
+              <span>info@oshakurfilms.com</span>
+            </a>
+          </div>
         </div>
-      </footer>
-    </>
+      </div>
+
+      {/* Bottom copyright */}
+      <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-center">
+        <p className="text-xs text-[#666666]">
+          Copyright © {new Date().getFullYear()} OSHAkurFilms. All Rights
+          Reserved.
+        </p>
+      </div>
+    </footer>
   );
 }
+

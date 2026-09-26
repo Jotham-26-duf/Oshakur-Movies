@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -305,7 +306,7 @@ export default function Navbar() {
                               className="flex items-center gap-3 rounded-xl p-2 transition hover:bg-[#2A2A2A]"
                             >
                               <img
-                                src={movie.image}
+                                src={`/images/movies/${movie.image}`}
                                 alt={movie.title}
                                 className="h-14 w-10 shrink-0 rounded-md object-cover"
                               />
@@ -423,3 +424,4 @@ export default function Navbar() {
     </>
   );
 }
+

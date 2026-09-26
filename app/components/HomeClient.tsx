@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 import MovieCard from "./MovieCard";
@@ -141,7 +140,7 @@ export default function HomeClient({
                 >
                   <div className="aspect-[2/3] overflow-hidden bg-[#2A2A2A]">
                     <img
-                      src={item.image}
+                      src={`/images/series/${item.image}`}
                       alt={item.title}
                       className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                     />
@@ -203,7 +202,7 @@ export default function HomeClient({
                 >
                   <div className="aspect-[2/3] overflow-hidden bg-[#2A2A2A]">
                     <img
-                      src={item.image}
+                      src={`/images/series/${item.image}`}
                       alt={item.title}
                       className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                     />
@@ -315,4 +314,3 @@ export default function HomeClient({
     </main>
   );
 }
-
