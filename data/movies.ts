@@ -1,4 +1,3 @@
-
 export interface MoviePart {
   id: string;
   partNumber: number;
@@ -82,10 +81,9 @@ export const movies: Movie[] = [
     year: "2026",
     rating: "8.0",
     image: "knock.webp",
-    description:
-      "A movie presented in multiple parts.",
+    description: "A movie presented in multiple parts.",
     language: "English",
-  genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
+    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
 
@@ -108,6 +106,7 @@ export const movies: Movie[] = [
       },
     ],
   },
+
   {
     id: "4",
     title: "KAL HO NAA HO",
@@ -115,8 +114,7 @@ export const movies: Movie[] = [
     year: "2026",
     rating: "8.0",
     image: "jab.webp",
-    description:
-      "A movie presented in multiple parts.",
+    description: "A movie presented in multiple parts.",
     language: "English",
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
@@ -141,7 +139,8 @@ export const movies: Movie[] = [
       },
     ],
   },
-   {
+
+  {
     id: "5",
     title: "Alpha",
     slug: "alpha",
@@ -174,7 +173,8 @@ export const movies: Movie[] = [
       },
     ],
   },
-   {
+
+  {
     id: "6",
     title: "Tom and Jerry",
     slug: "tom-and-jerry",
@@ -207,8 +207,9 @@ export const movies: Movie[] = [
       },
     ],
   },
+
   {
-    id: "6",
+    id: "7",
     title: "KUNG FU JUNGLE",
     slug: "kung-fu-jungle",
     year: "2026",
@@ -238,7 +239,7 @@ export const movies: Movie[] = [
         downloadUrl:
           "https://www.mediafire.com/file/9mie4kwccjle3aq/Kung+Fu+Jungle+B+Hd.Mp4.mp4/file",
       },
-       {
+      {
         id: "7-3",
         partNumber: 3,
         title: "Part C",
@@ -248,9 +249,4 @@ export const movies: Movie[] = [
       },
     ],
   },
-  
-  
-  
-  
 ];
-
