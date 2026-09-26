@@ -33,7 +33,7 @@ export const movies: Movie[] = [
     description:
       "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his true voice, and stand up for what he believes in.",
     language: "English",
-    genres: ["Drama", "Music", "Romance", "Comedy"],
+    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
 
@@ -59,7 +59,7 @@ export const movies: Movie[] = [
     description:
       "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his true voice, and stand up for what he believes in.",
     language: "English",
-    genres: ["Drama", "Music", "Romance", "Comedy"],
+    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
 
@@ -85,7 +85,7 @@ export const movies: Movie[] = [
     description:
       "A movie presented in multiple parts.",
     language: "English",
-    genres: ["Drama", "Music", "Romance", "Comedy"],
+  genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
 
@@ -118,7 +118,7 @@ export const movies: Movie[] = [
     description:
       "A movie presented in multiple parts.",
     language: "English",
-    genres: ["Drama", "Music", "Romance", "Comedy"],
+    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
 
@@ -151,7 +151,7 @@ export const movies: Movie[] = [
     description:
       "Watch and enjoy this movie on Oshakur Movies. Explore an entertaining story, memorable characters, and exciting moments, then discover more great movies available on our platform.",
     language: "English",
-    genres: ["Drama", "Music", "Romance", "Comedy"],
+    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
 
@@ -184,7 +184,7 @@ export const movies: Movie[] = [
     description:
       "Watch and enjoy this movie on Oshakur Movies. Explore an entertaining story, memorable characters, and exciting moments, then discover more great movies available on our platform.",
     language: "English",
-    genres: ["Drama", "Music", "Romance", "Comedy"],
+    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
 

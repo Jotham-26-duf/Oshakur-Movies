@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -42,14 +41,14 @@ const categories: Category[] = [
 const categoryImages = categories.map((category) => {
   const movieImages = movies
     .filter((movie) => movie.genres.includes(category.name))
-    .map((movie) => movie.image);
+    .map((movie) => `/images/movies/${movie.image}`);
 
   const seriesImages = series
     .filter((item) => item.genres.includes(category.name))
-    .map((item) => item.image);
+    .map((item) => `/images/series/${item.image}`);
 
   const images = [...movieImages, ...seriesImages].filter(
-    (image) => image && image !== "..."
+    (image) => image && !image.includes("...")
   );
 
   return {
@@ -133,4 +132,3 @@ export default function CategorySection() {
     </section>
   );
 }
-

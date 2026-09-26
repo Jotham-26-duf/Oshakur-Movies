@@ -23,7 +23,7 @@ export const series: Series[] = [
     description:
       "Wednesday Addams investigates strange events while attending a mysterious academy.",
     language: "English",
-    genres: ["Comedy", "Drama", "Horror"],
+    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: false,
     createdAt: "2026-02-05",
   },
@@ -37,7 +37,7 @@ export const series: Series[] = [
     description:
       "Wednesday Addams investigates strange events while attending a mysterious academy.",
     language: "English",
-    genres: ["Comedy", "Drama", "Horror"],
+    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"], 
     isFeatured: false,
     createdAt: "2026-02-05",
   },
