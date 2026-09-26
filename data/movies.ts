@@ -1,4 +1,3 @@
-
 export interface MoviePart {
   id: string;
   partNumber: number;
@@ -82,10 +81,9 @@ export const movies: Movie[] = [
     year: "2026",
     rating: "8.0",
     image: "knock.webp",
-    description:
-      "A movie presented in multiple parts.",
+    description: "A movie presented in multiple parts.",
     language: "English",
-  genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
+    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
 
@@ -108,6 +106,7 @@ export const movies: Movie[] = [
       },
     ],
   },
+
   {
     id: "4",
     title: "KAL HO NAA HO",
@@ -115,8 +114,7 @@ export const movies: Movie[] = [
     year: "2026",
     rating: "8.0",
     image: "jab.webp",
-    description:
-      "A movie presented in multiple parts.",
+    description: "A movie presented in multiple parts.",
     language: "English",
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
@@ -141,7 +139,8 @@ export const movies: Movie[] = [
       },
     ],
   },
-   {
+
+  {
     id: "5",
     title: "Alpha",
     slug: "alpha",
@@ -174,7 +173,8 @@ export const movies: Movie[] = [
       },
     ],
   },
-   {
+
+  {
     id: "6",
     title: "Tom and Jerry",
     slug: "tom-and-jerry",
@@ -207,7 +207,8 @@ export const movies: Movie[] = [
       },
     ],
   },
-   {
+
+  {
     id: "7",
     title: "KUNG FU JUNGLE",
     slug: "kung-fu-jungle",
@@ -226,7 +227,7 @@ export const movies: Movie[] = [
         id: "7-1",
         partNumber: 1,
         title: "Part A",
-        streamUrl: "https://hanerix.com/mjajegxiwx6s",
+        streamUrl: "https://audinifer.com/mjajegxiwx6s",
         downloadUrl:
           "https://www.mediafire.com/file/kds6dvvixn3t4iy/Kung+Fu+Jungle+A+Hd.Mp4.mp4/file",
       },
@@ -234,22 +235,18 @@ export const movies: Movie[] = [
         id: "7-2",
         partNumber: 2,
         title: "Part B",
-        streamUrl: "https://vibuxer.com/7757v2eha2by",
+        streamUrl: "https://audinifer.com/7757v2eha2by",
         downloadUrl:
           "https://www.mediafire.com/file/9mie4kwccjle3aq/Kung+Fu+Jungle+B+Hd.Mp4.mp4/file",
       },
-       {
+      {
         id: "7-3",
         partNumber: 3,
         title: "Part C",
-        streamUrl: "https://vibuxer.com/j35szpe4922y",
+        streamUrl: "https://hanerix.com/j35szpe4922y",
         downloadUrl:
           "https://www.mediafire.com/file/501yy66m4pezfyd/Kung+Fu+Jungle+D+Hd.Mp4.mp4/file",
       },
     ],
   },
-  
-  
-  
 ];
-

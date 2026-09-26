@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -101,7 +100,7 @@ export default async function CategoryPage({
                 >
                   <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
                     <img
-                      src={movie.image}
+                      src={`/images/movies/${movie.image}`}
                       alt={movie.title}
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
@@ -115,7 +114,9 @@ export default async function CategoryPage({
 
                   <div className="mt-2 flex items-center gap-2 text-sm text-[#AAAAAA]">
                     <span>{movie.year}</span>
+
                     <span>•</span>
+
                     <span className="flex items-center gap-1">
                       <span className="text-[#FFC107]">★</span>
                       {movie.rating}
@@ -145,7 +146,7 @@ export default async function CategoryPage({
                 >
                   <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
                     <img
-                      src={item.image}
+                      src={`/images/series/${item.image}`}
                       alt={item.title}
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
@@ -159,7 +160,9 @@ export default async function CategoryPage({
 
                   <div className="mt-2 flex items-center gap-2 text-sm text-[#AAAAAA]">
                     <span>{item.year}</span>
+
                     <span>•</span>
+
                     <span className="flex items-center gap-1">
                       <span className="text-[#FFC107]">★</span>
                       {item.rating}
@@ -195,4 +198,3 @@ export default async function CategoryPage({
     </main>
   );
 }
-
