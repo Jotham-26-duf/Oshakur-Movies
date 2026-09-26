@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import CommentsSection from "@/app/components/CommentsSection";
 import MovieCard from "@/app/components/MovieCard";
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
@@ -225,17 +226,7 @@ export default async function MovieDetailsPage({
       </section>
 
       {/* Comments */}
-      <section className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
-        <div className="border-t border-white/10 pt-8">
-          <h2 className="text-2xl font-bold sm:text-3xl">Comments</h2>
-
-          <div className="mt-5 rounded-xl border border-white/10 bg-[#1B1B1B] p-6">
-            <p className="text-sm text-[#AAAAAA]">
-              Comments will be available here.
-            </p>
-          </div>
-        </div>
-      </section>
+      <CommentsSection movieSlug={movie.slug} />
 
       {/* More Films */}
       {relatedMovies.length > 0 && (
