@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FiArrowLeft } from "react-icons/fi";
 
 import MovieCard from "@/app/components/MovieCard";
 import Navbar from "@/app/components/Navbar";
@@ -30,9 +31,13 @@ export default function MoviesPage() {
 
             <Link
               href="/"
-              className="rounded-xl border border-white/10 bg-[#1B1B1B] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-[#1B1B1B] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]"
             >
-              ← Home
+              <FiArrowLeft
+                size={17}
+                aria-hidden="true"
+              />
+              Home
             </Link>
           </div>
         </div>
