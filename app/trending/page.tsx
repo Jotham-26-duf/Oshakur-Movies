@@ -1,6 +1,7 @@
-
 import Link from "next/link";
 
+import Navbar from "@/app/components/Navbar";
+import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
 import { series } from "@/data/series";
 
@@ -10,6 +11,8 @@ export default function TrendingPage() {
 
   return (
     <main className="min-h-screen bg-[#121212] text-white">
+      <Navbar />
+
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-10">
         {/* Header */}
         <div className="mb-10">
@@ -50,7 +53,7 @@ export default function TrendingPage() {
                 >
                   <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
                     <img
-                      src={movie.image}
+                      src={`/images/movies/${movie.image}`}
                       alt={movie.title}
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
@@ -96,7 +99,7 @@ export default function TrendingPage() {
                 >
                   <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
                     <img
-                      src={item.image}
+                      src={`/images/series/${item.image}`}
                       alt={item.title}
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
@@ -143,7 +146,8 @@ export default function TrendingPage() {
             </div>
           )}
       </div>
+
+      <SiteBottom />
     </main>
   );
 }
-
