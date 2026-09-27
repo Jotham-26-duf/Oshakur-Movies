@@ -28,7 +28,7 @@ const categories: Category[] = [
   },
   {
     id: "5",
-    name: "Horror",
+    name: "Romance",
   },
   {
     id: "6",

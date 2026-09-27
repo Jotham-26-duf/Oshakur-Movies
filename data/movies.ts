@@ -1,3 +1,4 @@
+
 export interface MoviePart {
   id: string;
   partNumber: number;
@@ -249,4 +250,220 @@ export const movies: Movie[] = [
       },
     ],
   },
+
+  {
+    id: "8",
+    title: "Furious Attack",
+    slug: "furious-attack",
+    year: "2026",
+    rating: "8.0",
+    image: "furious.jpg",
+    description:
+      "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his true voice, and stand up for what he believes in.",
+    language: "English",
+    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
+    isFeatured: true,
+    createdAt: "2026-09-24",
+
+    parts: [
+      {
+        id: "8-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "..",
+        downloadUrl:
+          "https://www.mediafire.com/file/a5gbis8ujp0qtei/Furios+Attack.mp4/file",
+      },
+    ],
+  },
+
+  {
+    id: "9",
+    title: "Fifty Shades Freed",
+    slug: "fifty-shades-freed",
+    year: "2018",
+    rating: "8.0",
+    image: "fifty-shades-freed.jpg",
+    description:
+      "Newlyweds Christian and Ana begin their married life together, but new threats from the past put their relationship and future at risk.",
+    language: "English",
+    genres: ["Romance"],
+    isFeatured: true,
+    createdAt: "2026-09-27",
+
+    parts: [
+      {
+        id: "9-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://hanerix.com/kjtq8kes5jsf",
+        downloadUrl:
+          "https://www.mediafire.com/file/2z5h5dwm43clqq4/Watch_Fifty_Shades_Freed_Hd.mp4/file",
+      },
+    ],
+  },
+
+  {
+    id: "10",
+    title: "Getting Played",
+    slug: "getting-played",
+    year: "2005",
+    rating: "8.0",
+    image: "getting-played.jpg",
+    description:
+      "Three friends decide to play a game of seduction on a stranger, but their plan takes an unexpected turn when they discover that he knows what they are trying to do.",
+    language: "English",
+    genres: ["Romance"],
+    isFeatured: true,
+    createdAt: "2026-09-27",
+
+    parts: [
+      {
+        id: "10-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://vibuxer.com/jjjhxcgxz14z",
+        downloadUrl:
+          "https://www.mediafire.com/file/io4b33afjsh571u/Getting+Played+Hd.mp4/file",
+      },
+    ],
+  },
+
+  {
+    id: "11",
+    title: "Bad Sister",
+    slug: "bad-sister",
+    year: "2015",
+    rating: "8.0",
+    image: "bad-sister.jpg",
+    description:
+      "A student becomes suspicious of a new nun whose behavior seems increasingly disturbing, leading her to uncover a dangerous secret.",
+    language: "English",
+    genres: ["Romance"],
+    isFeatured: true,
+    createdAt: "2026-09-27",
+
+    parts: [
+      {
+        id: "11-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://hanerix.com/no1v0ip154g4",
+        downloadUrl:
+          "https://www.mediafire.com/file/cbc1i4sylr8i61q/BAD+SISTER.mp4/file",
+      },
+    ],
+  },
+
+  {
+    id: "12",
+    title: "Desire",
+    slug: "desire",
+    year: "2026",
+    rating: "8.0",
+    image: "desire.jpg",
+    description:
+      "A dramatic story of desire, relationships, and the consequences of choices that change the lives of those involved.",
+    language: "English",
+    genres: ["Romance"],
+    isFeatured: true,
+    createdAt: "2026-09-27",
+
+    parts: [
+      {
+        id: "12-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://hanerix.com/9qso57igb2uv",
+        downloadUrl:
+          "https://www.mediafire.com/file/zbfm4mk4lhjlss7/DESIRE_2026_perfect.mp4/file",
+      },
+    ],
+  },
+
+  {
+    id: "13",
+    title: "Fifty Shades Darker",
+    slug: "fifty-shades-darker",
+    year: "2017",
+    rating: "8.0",
+    image: "fifty-shades-darker.jpg",
+    description:
+      "Christian Grey and Anastasia Steele try to rebuild their relationship, but figures from Christian's past threaten their future together.",
+    language: "English",
+    genres: ["Romance"],
+    isFeatured: true,
+    createdAt: "2026-09-27",
+
+    parts: [
+      {
+        id: "13-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://hanerix.com/eoa6yohtnzgv",
+        downloadUrl: "",
+      },
+    ],
+  },
+
+  {
+    id: "14",
+    title: "Fifty Shades of Grey",
+    slug: "fifty-shades-of-grey",
+    year: "2015",
+    rating: "8.0",
+    image: "fifty-shades-of-grey.jpg",
+    description:
+      "An inexperienced college student meets wealthy businessman Christian Grey, and their relationship develops into an intense romance as she discovers more about his private world.",
+    language: "English",
+    genres: ["Romance"],
+    isFeatured: true,
+    createdAt: "2026-09-27",
+
+    parts: [
+      {
+        id: "14-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://audinifer.com/ivfxc0cta24w",
+        downloadUrl:
+          "https://www.mediafire.com/file/lmlzjjr8rmw5ei9/Fifty_Shades_Of_Grey_Hd.mp4/file",
+      },
+    ],
+  },
+
+  {
+    id: "15",
+    title: "Pretty Woman",
+    slug: "pretty-woman",
+    year: "1990",
+    rating: "8.0",
+    image: "pretty-woman.jpg",
+    description:
+      "A wealthy businessman hires Vivian to accompany him during a business trip in Los Angeles, and their unexpected relationship gradually develops into something deeper.",
+    language: "English",
+    genres: ["Romance"],
+    isFeatured: true,
+    createdAt: "2026-09-27",
+
+    parts: [
+      {
+        id: "15-1",
+        partNumber: 1,
+        title: "Part A",
+        streamUrl: "https://audinifer.com/yo6pfx310pny",
+        downloadUrl:
+          "https://www.mediafire.com/file/ihyy65jjhl8hnsq/Pretty_Woman_A_Hd.mp4/file",
+      },
+      {
+        id: "15-2",
+        partNumber: 2,
+        title: "Part B",
+        streamUrl: "https://audinifer.com/g4bdrqomneoe",
+        downloadUrl:
+          "https://www.mediafire.com/file/tvulzrcvvzo4j5x/Pretty_Woman_B_Hd.mp4/file",
+      },
+    ],
+  },
 ];
+
