@@ -1,3 +1,4 @@
+
 export interface Series {
   id: string;
   title: string;
@@ -23,7 +24,7 @@ export const series: Series[] = [
     description:
       "A drama series following the complicated lives, relationships, and struggles of its characters.",
     language: "English",
-    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
+    genres: ["Drama"],
     isFeatured: false,
     createdAt: "2026-02-05",
   },
@@ -38,7 +39,7 @@ export const series: Series[] = [
     description:
       "The story continues with new challenges, conflicts, relationships, and unexpected events.",
     language: "English",
-    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
+    genres: ["Drama"],
     isFeatured: false,
     createdAt: "2026-02-05",
   },
@@ -53,8 +54,24 @@ export const series: Series[] = [
     description:
       "An action thriller about covert operatives connected to a secret government program.",
     language: "English",
-    genres: ["Action", "Drama", "Thriller"],
+    genres: ["Drama"],
     isFeatured: false,
     createdAt: "2026-02-05",
   },
+
+  {
+    id: "4",
+    title: "JUMONG",
+    slug: "jumong",
+    year: "2006",
+    rating: "8.5",
+    image: "jumong.jpg",
+    description:
+      "A historical drama following Jumong's journey, struggles, relationships, and rise during a time of conflict and political change.",
+    language: "Korean",
+    genres: ["Drama"],
+    isFeatured: false,
+    createdAt: "2026-09-28",
+  },
 ];
+
