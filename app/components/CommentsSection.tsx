@@ -1,7 +1,8 @@
+
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { createClient } from "@/lib/supabase/client";
 
 interface Comment {
   id: string;
@@ -27,7 +28,9 @@ function formatTime(dateString: string) {
   const date = new Date(dateString);
   const now = new Date();
 
-  const seconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+  const seconds = Math.floor(
+    (now.getTime() - date.getTime()) / 1000
+  );
 
   if (seconds < 60) {
     return "just now";
@@ -83,6 +86,8 @@ export default function CommentsSection({
 
   const isMovie = Boolean(movieSlug);
   const targetSlug = movieSlug ?? seriesSlug;
+
+  const supabase = createClient();
 
   useEffect(() => {
     async function loadUser() {
@@ -175,7 +180,9 @@ export default function CommentsSection({
     setComments((data as Comment[]) ?? []);
   }
 
-  async function handlePostComment(event: FormEvent<HTMLFormElement>) {
+  async function handlePostComment(
+    event: FormEvent<HTMLFormElement>
+  ) {
     event.preventDefault();
 
     const trimmedContent = content.trim();
@@ -201,17 +208,19 @@ export default function CommentsSection({
       user?.email?.split("@")[0] ||
       "Guest";
 
-    const { error: insertError } = await supabase.from("comments").insert({
-      movie_slug: isMovie ? targetSlug : null,
-      series_slug: isMovie ? null : targetSlug,
-      user_id: user?.id ?? null,
-      username: finalUsername,
-      avatar_url: user?.user_metadata?.avatar_url ?? null,
-      content: trimmedContent,
-      parent_id: null,
-      is_pinned: false,
-      is_admin: false,
-    });
+    const { error: insertError } = await supabase
+      .from("comments")
+      .insert({
+        movie_slug: isMovie ? targetSlug : null,
+        series_slug: isMovie ? null : targetSlug,
+        user_id: user?.id ?? null,
+        username: finalUsername,
+        avatar_url: user?.user_metadata?.avatar_url ?? null,
+        content: trimmedContent,
+        parent_id: null,
+        is_pinned: false,
+        is_admin: false,
+      });
 
     if (insertError) {
       console.error("Error posting comment:", insertError);
@@ -253,17 +262,19 @@ export default function CommentsSection({
       user?.email?.split("@")[0] ||
       "Guest";
 
-    const { error: insertError } = await supabase.from("comments").insert({
-      movie_slug: isMovie ? targetSlug : null,
-      series_slug: isMovie ? null : targetSlug,
-      user_id: user?.id ?? null,
-      username: finalUsername,
-      avatar_url: user?.user_metadata?.avatar_url ?? null,
-      content: trimmedReply,
-      parent_id: parentId,
-      is_pinned: false,
-      is_admin: false,
-    });
+    const { error: insertError } = await supabase
+      .from("comments")
+      .insert({
+        movie_slug: isMovie ? targetSlug : null,
+        series_slug: isMovie ? null : targetSlug,
+        user_id: user?.id ?? null,
+        username: finalUsername,
+        avatar_url: user?.user_metadata?.avatar_url ?? null,
+        content: trimmedReply,
+        parent_id: parentId,
+        is_pinned: false,
+        is_admin: false,
+      });
 
     if (insertError) {
       console.error("Error posting reply:", insertError);
@@ -280,7 +291,9 @@ export default function CommentsSection({
   }
 
   function getReplies(parentId: string) {
-    return comments.filter((comment) => comment.parent_id === parentId);
+    return comments.filter(
+      (comment) => comment.parent_id === parentId
+    );
   }
 
   const mainComments = comments.filter(
@@ -294,7 +307,6 @@ export default function CommentsSection({
           Comments ({comments.length})
         </h2>
 
-        {/* Post Comment */}
         <form
           onSubmit={handlePostComment}
           className="mt-6 rounded-xl border border-white/10 bg-[#1B1B1B] p-5 sm:p-6"
@@ -358,7 +370,6 @@ export default function CommentsSection({
           </div>
         </form>
 
-        {/* Comments List */}
         <div className="mt-8">
           {loading ? (
             <div className="rounded-xl border border-white/10 bg-[#1B1B1B] p-6 text-center">
@@ -386,7 +397,6 @@ export default function CommentsSection({
                           : "border-white/10 bg-[#1B1B1B]"
                       }`}
                     >
-                      {/* Comment Header */}
                       <div className="flex items-start gap-3">
                         {comment.avatar_url ? (
                           <img
@@ -420,9 +430,12 @@ export default function CommentsSection({
                           </div>
 
                           <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-[#777777]">
-                            <span>{formatTime(comment.created_at)}</span>
+                            <span>
+                              {formatTime(comment.created_at)}
+                            </span>
 
-                            {comment.updated_at !== comment.created_at && (
+                            {comment.updated_at !==
+                              comment.created_at && (
                               <>
                                 <span>•</span>
                                 <span>edited</span>
@@ -432,12 +445,10 @@ export default function CommentsSection({
                         </div>
                       </div>
 
-                      {/* Comment Text */}
                       <p className="mt-4 whitespace-pre-wrap text-sm leading-7 text-[#CCCCCC]">
                         {comment.content}
                       </p>
 
-                      {/* Reply Button */}
                       <div className="mt-4">
                         <button
                           type="button"
@@ -457,7 +468,6 @@ export default function CommentsSection({
                         </button>
                       </div>
 
-                      {/* Reply Form */}
                       {replyingTo === comment.id && (
                         <form
                           onSubmit={(event) =>
@@ -490,7 +500,6 @@ export default function CommentsSection({
                         </form>
                       )}
 
-                      {/* Replies */}
                       {replies.length > 0 && (
                         <div className="mt-5 space-y-4 border-l border-white/10 pl-4 sm:pl-6">
                           {replies.map((reply) => (
@@ -555,7 +564,6 @@ export default function CommentsSection({
           )}
         </div>
 
-        {/* Logged-in user information */}
         {currentUserId && (
           <p className="mt-5 text-xs text-[#666666]">
             You are commenting as{" "}
@@ -569,3 +577,4 @@ export default function CommentsSection({
     </section>
   );
 }
+

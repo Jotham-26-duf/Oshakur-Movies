@@ -1,7 +1,7 @@
+
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import CommentsSection from "@/app/components/CommentsSection";
 import MovieCard from "@/app/components/MovieCard";
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
@@ -35,9 +35,7 @@ export default async function MovieDetailsPage({
     <main className="min-h-screen bg-[#121212] text-white">
       <Navbar />
 
-      {/* Movie Details */}
       <section className="relative overflow-hidden">
-        {/* Background Image */}
         {movie.image && (
           <div className="absolute inset-0">
             <img
@@ -57,10 +55,8 @@ export default async function MovieDetailsPage({
           <div className="absolute inset-0 bg-gradient-to-b from-[#1B1B1B] to-[#121212]" />
         )}
 
-        {/* Content */}
         <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 sm:pt-12 lg:px-8">
           <div className="grid gap-8 md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr] lg:gap-12">
-            {/* Movie Poster */}
             <div className="mx-auto w-full max-w-[320px]">
               <div className="overflow-hidden rounded-2xl bg-[#2A2A2A] shadow-2xl">
                 {movie.image ? (
@@ -79,7 +75,6 @@ export default async function MovieDetailsPage({
               </div>
             </div>
 
-            {/* Movie Information */}
             <div className="flex flex-col justify-center">
               <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#00E5FF]">
                 Movie
@@ -89,7 +84,6 @@ export default async function MovieDetailsPage({
                 {movie.title}
               </h1>
 
-              {/* Movie Information */}
               <div className="mt-5 flex flex-wrap items-center gap-3 text-sm">
                 <span className="text-[#AAAAAA]">{movie.year}</span>
 
@@ -107,7 +101,6 @@ export default async function MovieDetailsPage({
                 </span>
               </div>
 
-              {/* Genres */}
               {movie.genres.length > 0 && (
                 <div className="mt-5 flex flex-wrap gap-2">
                   {movie.genres.map((genre) => (
@@ -121,19 +114,16 @@ export default async function MovieDetailsPage({
                 </div>
               )}
 
-              {/* Description */}
               <p className="mt-6 max-w-3xl text-sm leading-7 text-[#AAAAAA] sm:text-base">
                 {movie.description}
               </p>
 
-              {/* Watch / Download */}
               <div className="mt-8">
                 <h2 className="mb-4 text-xl font-bold sm:text-2xl">
                   Watch / Download
                 </h2>
 
                 {isSinglePart ? (
-                  /* ONE PART */
                   <div className="flex flex-wrap gap-3">
                     {singlePart?.streamUrl && (
                       <a
@@ -160,7 +150,6 @@ export default async function MovieDetailsPage({
                     )}
                   </div>
                 ) : (
-                  /* MULTIPLE PARTS */
                   <div className="space-y-4">
                     {movie.parts.map((part) => (
                       <div
@@ -214,7 +203,6 @@ export default async function MovieDetailsPage({
         </div>
       </section>
 
-      {/* Summary */}
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="max-w-4xl">
           <h2 className="text-2xl font-bold sm:text-3xl">Summary</h2>
@@ -225,10 +213,6 @@ export default async function MovieDetailsPage({
         </div>
       </section>
 
-      {/* Comments */}
-      <CommentsSection movieSlug={movie.slug} />
-
-      {/* More Films */}
       {relatedMovies.length > 0 && (
         <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="mb-6 flex items-center justify-between gap-4">
@@ -269,3 +253,4 @@ export default async function MovieDetailsPage({
     </main>
   );
 }
+
