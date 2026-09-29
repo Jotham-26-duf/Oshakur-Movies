@@ -104,7 +104,7 @@ export const series: Series[] = [
     slug: "generation-to-generation",
     year: "2026",
     rating: "8.0",
-    image: "generation-to-generation.jpg",
+    image: "generation.jpg",
     description:
       "A family drama exploring relationships, challenges, conflicts, and experiences that connect different generations.",
     language: "English",
