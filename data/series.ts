@@ -28,7 +28,6 @@ export const series: Series[] = [
     isFeatured: false,
     createdAt: "2026-02-05",
   },
-
   {
     id: "2",
     title: "BEAUTY IN BLACK SEASON 2",
@@ -43,7 +42,6 @@ export const series: Series[] = [
     isFeatured: false,
     createdAt: "2026-02-05",
   },
-
   {
     id: "3",
     title: "TREADSTONE",
@@ -58,7 +56,6 @@ export const series: Series[] = [
     isFeatured: false,
     createdAt: "2026-02-05",
   },
-
   {
     id: "4",
     title: "JUMONG",
@@ -73,7 +70,6 @@ export const series: Series[] = [
     isFeatured: false,
     createdAt: "2026-09-28",
   },
-
   {
     id: "5",
     title: "OUTER BANKS SEASON 5",
@@ -88,7 +84,6 @@ export const series: Series[] = [
     isFeatured: false,
     createdAt: "2026-09-28",
   },
-
   {
     id: "6",
     title: "BETWEEN FATHER AND SON",
@@ -103,5 +98,18 @@ export const series: Series[] = [
     isFeatured: false,
     createdAt: "2026-09-28",
   },
+  {
+    id: "7",
+    title: "GENERATION TO GENERATION",
+    slug: "generation-to-generation",
+    year: "2026",
+    rating: "8.0",
+    image: "generation-to-generation.jpg",
+    description:
+      "A family drama exploring relationships, challenges, conflicts, and experiences that connect different generations.",
+    language: "English",
+    genres: ["Drama", "Family"],
+    isFeatured: false,
+    createdAt: "2026-09-29",
+  },
 ];
-

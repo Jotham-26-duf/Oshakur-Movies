@@ -55,7 +55,6 @@ export const episodes: Episode[] = [
       "https://www.mediafire.com/file/2q88edic2tdare5/Treadstone+Ep1.mp4/file",
   },
 
-  // Jumong Episodes 1–22
   {
     id: "5",
     seriesSlug: "jumong",
@@ -295,7 +294,6 @@ export const episodes: Episode[] = [
     downloadUrl: "",
   },
 
-  // Outer Banks Season 5 Episodes 1–10
   {
     id: "27",
     seriesSlug: "outer-banks",
@@ -407,7 +405,6 @@ export const episodes: Episode[] = [
       "https://www.mediafire.com/file/4sclxzopifiiuoi/OUTERBANKS_S05_EP_10_final__.mp4/file",
   },
 
-  // Between Father and Son Episodes 1–9
   {
     id: "37",
     seriesSlug: "between-father-and-son",
@@ -507,5 +504,137 @@ export const episodes: Episode[] = [
     downloadUrl:
       "https://www.mediafire.com/file/hdfpr5oy087z30y/Between_Father_and_Son_Ep9.mp4/file",
   },
-];
 
+  {
+    id: "46",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 1,
+    title: "Episode 1",
+    description:
+      "The story begins as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/n5oy2b0dzq0rhbn/GENERATION_TO_GENERATION_01.mp4/file",
+  },
+  {
+    id: "47",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 2,
+    title: "Episode 2",
+    description:
+      "The story continues as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/jaydjxdfzhbef87/GENERATION_TO_GENERATION_02.mp4/file",
+  },
+  {
+    id: "48",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 3,
+    title: "Episode 3",
+    description:
+      "The story continues as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/smdztbxamjn2ws8/GENERATION_TO_GENERATION_03.mp4/file",
+  },
+  {
+    id: "49",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 4,
+    title: "Episode 4",
+    description:
+      "The story continues as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/yyy4703782s5h2h/GENERATION_TO_GENERATION_04.mp4/file",
+  },
+  {
+    id: "50",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 5,
+    title: "Episode 5",
+    description:
+      "The story continues as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/xa00mqe04wjxsa4/GENERATION_TO_GENERATION_05.mp4/file",
+  },
+  {
+    id: "51",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 6,
+    title: "Episode 6",
+    description:
+      "The story continues as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/y9wb1ozl2keauwc/GENERATION_TO_GENERATION_06.mp4/file",
+  },
+  {
+    id: "52",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 7,
+    title: "Episode 7",
+    description:
+      "The story continues as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/m5bj6muiqkmlyyw/GENERATION_TO_GENERATION_07.mp4/file",
+  },
+  {
+    id: "53",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 8,
+    title: "Episode 8",
+    description:
+      "The story continues as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/2u7l95xznl6o1og/GENERATION_TO_GENERATION_08.mp4/file",
+  },
+  {
+    id: "54",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 9,
+    title: "Episode 9",
+    description:
+      "The story continues as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/mun3lsoeaz7az68/GENERATION_TO_GENERATION_09.mp4/file",
+  },
+  {
+    id: "55",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 10,
+    title: "Episode 10",
+    description:
+      "The story continues as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/ap5vycu2hg5yhc5/GENERATION_TO_GENERATION_10.mp4/file",
+  },
+  {
+    id: "56",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 11,
+    title: "Episode 11",
+    description:
+      "The story continues as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/ap5vycu2hg5yhc5/GENERATION_TO_GENERATION_11.mp4/file",
+  },
+  {
+    id: "57",
+    seriesSlug: "generation-to-generation",
+    episodeNumber: 12,
+    title: "Episode 12",
+    description:
+      "The story continues as family relationships, challenges, and unexpected events unfold.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/74b2s2q66vhg0m5/GENERATION_TO_GENERATION_12.mp4/file",
+  },
+];
