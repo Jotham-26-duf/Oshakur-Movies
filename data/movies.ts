@@ -36,7 +36,6 @@ export const movies: Movie[] = [
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
-
     parts: [
       {
         id: "1-1",
@@ -48,7 +47,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "2",
     title: "One Last Shot",
@@ -62,7 +60,6 @@ export const movies: Movie[] = [
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
-
     parts: [
       {
         id: "2-1",
@@ -74,7 +71,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "3",
     title: "KNOCK KNOCK",
@@ -87,7 +83,6 @@ export const movies: Movie[] = [
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
-
     parts: [
       {
         id: "3-1",
@@ -107,7 +102,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "4",
     title: "KAL HO NAA HO",
@@ -120,7 +114,6 @@ export const movies: Movie[] = [
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
-
     parts: [
       {
         id: "4-1",
@@ -140,7 +133,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "5",
     title: "Alpha",
@@ -154,7 +146,6 @@ export const movies: Movie[] = [
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
-
     parts: [
       {
         id: "5-1",
@@ -174,7 +165,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "6",
     title: "Tom and Jerry",
@@ -188,7 +178,6 @@ export const movies: Movie[] = [
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
-
     parts: [
       {
         id: "6-1",
@@ -208,7 +197,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "7",
     title: "KUNG FU JUNGLE",
@@ -222,7 +210,6 @@ export const movies: Movie[] = [
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
-
     parts: [
       {
         id: "7-1",
@@ -250,7 +237,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "8",
     title: "Furious Attack",
@@ -264,7 +250,6 @@ export const movies: Movie[] = [
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
-
     parts: [
       {
         id: "8-1",
@@ -276,7 +261,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "9",
     title: "Fifty Shades Freed",
@@ -290,7 +274,6 @@ export const movies: Movie[] = [
     genres: ["Romance"],
     isFeatured: true,
     createdAt: "2026-09-27",
-
     parts: [
       {
         id: "9-1",
@@ -302,7 +285,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "10",
     title: "Getting Played",
@@ -316,7 +298,6 @@ export const movies: Movie[] = [
     genres: ["Romance"],
     isFeatured: true,
     createdAt: "2026-09-27",
-
     parts: [
       {
         id: "10-1",
@@ -328,7 +309,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "11",
     title: "Bad Sister",
@@ -342,7 +322,6 @@ export const movies: Movie[] = [
     genres: ["Romance"],
     isFeatured: true,
     createdAt: "2026-09-27",
-
     parts: [
       {
         id: "11-1",
@@ -354,7 +333,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "12",
     title: "Desire",
@@ -368,7 +346,6 @@ export const movies: Movie[] = [
     genres: ["Romance"],
     isFeatured: true,
     createdAt: "2026-09-27",
-
     parts: [
       {
         id: "12-1",
@@ -380,7 +357,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "13",
     title: "Fifty Shades Darker",
@@ -394,7 +370,6 @@ export const movies: Movie[] = [
     genres: ["Romance"],
     isFeatured: true,
     createdAt: "2026-09-27",
-
     parts: [
       {
         id: "13-1",
@@ -405,7 +380,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "14",
     title: "Fifty Shades of Grey",
@@ -419,7 +393,6 @@ export const movies: Movie[] = [
     genres: ["Romance"],
     isFeatured: true,
     createdAt: "2026-09-27",
-
     parts: [
       {
         id: "14-1",
@@ -431,7 +404,6 @@ export const movies: Movie[] = [
       },
     ],
   },
-
   {
     id: "15",
     title: "Pretty Woman",
@@ -445,7 +417,6 @@ export const movies: Movie[] = [
     genres: ["Romance"],
     isFeatured: true,
     createdAt: "2026-09-27",
-
     parts: [
       {
         id: "15-1",
@@ -465,5 +436,641 @@ export const movies: Movie[] = [
       },
     ],
   },
+  {
+    id: "16",
+    title: "The Legend Of White Dragon",
+    slug: "the-legend-of-white-dragon",
+    year: "2026",
+    rating: "8.0",
+    image: "the-legend-of-white-dragon.jpg",
+    description:
+      "Watch and enjoy The Legend Of White Dragon on Oshakur Movies.",
+    language: "English",
+    genres: ["Action", "Adventure", "Fantasy"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "16-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/qhh1y2jeilrajwq/The_Legend_Of_White_Dragon_-_Perfect_Nyir%257E.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "17",
+    title: "Kung Fu Panda",
+    slug: "kung-fu-panda",
+    year: "2008",
+    rating: "8.0",
+    image: "kung-fu-panda.jpg",
+    description:
+      "Po, a clumsy but determined panda, unexpectedly becomes the Dragon Warrior and must learn kung fu to protect his valley.",
+    language: "English",
+    genres: ["Animation", "Comedy", "Action", "Adventure"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "17-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/cnwl8tc814znwcz/Kung+Fu+Panda+1.mp4/file",
+      },
+      {
+        id: "17-2",
+        partNumber: 2,
+        title: "Part B",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/u7kfpbya2wif62n/Kung+Fu+Panda+B.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "18",
+    title: "Kung Fu Panda 2",
+    slug: "kung-fu-panda-2",
+    year: "2011",
+    rating: "8.0",
+    image: "kung-fu-panda-2.jpg",
+    description:
+      "Po and the Furious Five face a dangerous enemy while Po discovers more about his mysterious past.",
+    language: "English",
+    genres: ["Animation", "Comedy", "Action", "Adventure"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "18-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/sqnxw7ltjemm126/Kung+Fu+Panda+2.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "19",
+    title: "Kung Fu Panda 3",
+    slug: "kung-fu-panda-3",
+    year: "2016",
+    rating: "8.0",
+    image: "kung-fu-panda-3.jpg",
+    description:
+      "Po reunites with his biological father and must train a village of pandas to face a powerful supernatural threat.",
+    language: "English",
+    genres: ["Animation", "Comedy", "Action", "Adventure"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "19-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/pulgwzyjwxbtf6h/Kung+Fu+Panda+3.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "20",
+    title: "Moana",
+    slug: "moana",
+    year: "2016",
+    rating: "8.0",
+    image: "moana.jpg",
+    description:
+      "A determined young girl sets out across the ocean on an extraordinary journey to save her people and restore balance to her island.",
+    language: "English",
+    genres: ["Animation", "Adventure", "Comedy", "Fantasy"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "20-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/qjx1qgqd6ut5vgt/MOANA++2016+HD+Pk.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "21",
+    title: "Peter Rabbit",
+    slug: "peter-rabbit",
+    year: "2018",
+    rating: "8.0",
+    image: "peter-rabbit.jpg",
+    description:
+      "Peter Rabbit and his friends find themselves in a hilarious conflict with the new owner of the farm.",
+    language: "English",
+    genres: ["Animation", "Comedy", "Adventure", "Family"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "21-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/04xw0iw481y2vwk/Peter+Rabbit+Hd.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "22",
+    title: "Bilal",
+    slug: "bilal",
+    year: "2015",
+    rating: "8.0",
+    image: "bilal.jpg",
+    description:
+      "An inspiring animated story about Bilal's journey from hardship to becoming a symbol of courage, faith, and freedom.",
+    language: "English",
+    genres: ["Animation", "Action", "Adventure", "Drama"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "22-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/2z3gmczapjnckgq/Bilal_Hd.mp4/file",
+      },
+      {
+        id: "22-2",
+        partNumber: 2,
+        title: "Part B",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/3frcjl5an97kh0c/Bilal_B.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "23",
+    title: "Coco",
+    slug: "coco",
+    year: "2017",
+    rating: "8.0",
+    image: "coco.jpg",
+    description:
+      "A young boy who dreams of becoming a musician enters the Land of the Dead and discovers important secrets about his family.",
+    language: "English",
+    genres: ["Animation", "Adventure", "Comedy", "Drama"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "23-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/vpncfdf1fcpvckc/Coco+Hd+Mp4(1).mp4/file",
+      },
+    ],
+  },
+  {
+    id: "24",
+    title: "GOAT",
+    slug: "goat",
+    year: "2026",
+    rating: "8.0",
+    image: "goat.jpg",
+    description: "Watch and enjoy GOAT on Oshakur Movies.",
+    language: "English",
+    genres: ["Animation", "Comedy", "Adventure", "Family"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "24-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/ppqav3w0xkiw25o/GOAT+(2).mp4/file",
+      },
+    ],
+  },
+  {
+    id: "25",
+    title: "Rango",
+    slug: "rango",
+    year: "2011",
+    rating: "8.0",
+    image: "rango.jpg",
+    description:
+      "A pet chameleon finds himself in a desert town where he unexpectedly becomes the sheriff and faces a dangerous mystery.",
+    language: "English",
+    genres: ["Animation", "Comedy", "Action", "Adventure"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "25-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/vxosv41efcz5tiw/Rango+Hd2.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "26",
+    title: "Kirikou and the Sorceress",
+    slug: "kirikou-and-the-sorceress",
+    year: "1998",
+    rating: "8.0",
+    image: "kirikou-and-the-sorceress.jpg",
+    description:
+      "A brave young boy named Kirikou sets out to protect his village and uncover the truth behind a powerful sorceress.",
+    language: "French",
+    genres: ["Animation", "Adventure", "Fantasy", "Family"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "26-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/c93mnvcgsemjvz4/Kiriku_Et_La_Sorciere%25282%2529.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "27",
+    title: "Kirikou and the Beast",
+    slug: "kirikou-and-the-beast",
+    year: "2005",
+    rating: "8.0",
+    image: "kirikou-and-the-beast.jpg",
+    description:
+      "Kirikou faces a series of adventures while helping his village overcome mysterious challenges and dangers.",
+    language: "French",
+    genres: ["Animation", "Adventure", "Fantasy", "Family"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "27-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/kzd46ahrai0deau/Kirikou+And+Beasto.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "28",
+    title: "Wrong Turn",
+    slug: "wrong-turn",
+    year: "2003",
+    rating: "8.0",
+    image: "wrong-turn.jpg",
+    description:
+      "A group of travelers become stranded in the wilderness and encounter dangerous and mysterious threats.",
+    language: "English",
+    genres: ["Horror", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "28-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/73lnwx8rphgdth5/Wrong+Turn+1+Hd+Mp4.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "29",
+    title: "Wrong Turn 2",
+    slug: "wrong-turn-2",
+    year: "2007",
+    rating: "8.0",
+    image: "wrong-turn-2.jpg",
+    description:
+      "A group of contestants taking part in a survival reality show find themselves facing deadly dangers in the wilderness.",
+    language: "English",
+    genres: ["Horror", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "29-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/rq3h7nkrih78iut/Wrong_Turn_2_Hd.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "30",
+    title: "Wrong Turn 3",
+    slug: "wrong-turn-3",
+    year: "2009",
+    rating: "8.0",
+    image: "wrong-turn-3.jpg",
+    description:
+      "A group of people must fight for survival after becoming trapped in a dangerous wilderness.",
+    language: "English",
+    genres: ["Horror", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "30-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/yvlccok61kkn2st/Wrong_Turn_3_Hd.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "31",
+    title: "Wrong Turn 5",
+    slug: "wrong-turn-5",
+    year: "2012",
+    rating: "8.0",
+    image: "wrong-turn-5.jpg",
+    description:
+      "A group of young people become trapped in a remote town where they face terrifying dangers.",
+    language: "English",
+    genres: ["Horror", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "31-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/7ch0pt16r8c4zee/Wrong_Turn_5_Hd.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "32",
+    title: "Wrong Turn 6",
+    slug: "wrong-turn-6",
+    year: "2014",
+    rating: "8.0",
+    image: "wrong-turn-6.jpg",
+    description:
+      "A group of friends travel to an inherited resort and discover a terrifying family secret.",
+    language: "English",
+    genres: ["Horror", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "32-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/brmqa5qibhfp0ql/Wrong+Turn+6+Hd.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "33",
+    title: "The Devil's Mouth",
+    slug: "the-devils-mouth",
+    year: "2026",
+    rating: "8.0",
+    image: "the-devils-mouth.jpg",
+    description:
+      "A terrifying story involving dark secrets, danger, and mysterious forces.",
+    language: "English",
+    genres: ["Horror", "Thriller", "Mystery"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "33-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/35uvcsrjt1qhkw2/The_Devil_mouth_.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "34",
+    title: "A Quiet Place: Day One",
+    slug: "a-quiet-place-day-one",
+    year: "2024",
+    rating: "8.0",
+    image: "a-quiet-place-day-one.jpg",
+    description:
+      "A woman struggles to survive as terrifying creatures hunt anything that makes a sound.",
+    language: "English",
+    genres: ["Horror", "Thriller", "Drama", "Sci-Fi"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "34-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/4gy9v9fo2uw34vn/AQUITEPLACEDAYONE.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "35",
+    title: "Evil Dead Burn",
+    slug: "evil-dead-burn",
+    year: "2026",
+    rating: "8.0",
+    image: "evil-dead-burn.jpg",
+    description:
+      "A terrifying horror story involving supernatural forces and a fight for survival.",
+    language: "English",
+    genres: ["Horror", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "35-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/rasdl65qreqsfkh/Evil+dead+burn+2026.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "36",
+    title: "The Last House",
+    slug: "the-last-house",
+    year: "2026",
+    rating: "8.0",
+    image: "the-last-house.jpg",
+    description:
+      "A suspenseful story of survival involving a mysterious house and dangerous events.",
+    language: "English",
+    genres: ["Horror", "Thriller", "Mystery"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "36-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/vj3fx384z3v1gxu/The_Last_House.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "37",
+    title: "Ready or Not 2",
+    slug: "ready-or-not-2",
+    year: "2026",
+    rating: "8.0",
+    image: "ready-or-not-2.jpg",
+    description:
+      "A new dangerous game unfolds as survival becomes the ultimate challenge.",
+    language: "English",
+    genres: ["Horror", "Thriller", "Comedy"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "37-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/bh1udp098bfeuod/READY_OR_NOT_2_.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "38",
+    title: "Day Breaker",
+    slug: "day-breaker",
+    year: "2020",
+    rating: "8.0",
+    image: "day-breaker.jpg",
+    description: "Watch and enjoy Day Breaker on Oshakur Movies.",
+    language: "English",
+    genres: ["Action", "Thriller", "Drama"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "38-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/tr1v9n48pde2g9v/Watch_Day_breaker_%25282020%2529_1.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "39",
+    title: "Deep Water",
+    slug: "deep-water",
+    year: "2022",
+    rating: "8.0",
+    image: "deep-water.jpg",
+    description:
+      "A psychological thriller exploring a complicated relationship and the dangerous consequences of hidden secrets.",
+    language: "English",
+    genres: ["Drama", "Thriller", "Mystery"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "39-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/pk60hbl8q6yryv5/DEEP+WATER.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "40",
+    title: "Fall",
+    slug: "fall",
+    year: "2022",
+    rating: "8.0",
+    image: "fall.jpg",
+    description:
+      "Two friends become trapped at the top of a remote tower and must find a way to survive.",
+    language: "English",
+    genres: ["Thriller", "Adventure", "Drama"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "40-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/ytjjg3sd2xwr5lz/Fall.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "41",
+    title: "Thrash - Gaheza",
+    slug: "thrash-gaheza",
+    year: "2026",
+    rating: "8.0",
+    image: "thrash-gaheza.jpg",
+    description: "Watch and enjoy Thrash - Gaheza on Oshakur Movies.",
+    language: "Kinyarwanda",
+    genres: ["Drama", "Action", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-09-30",
+    parts: [
+      {
+        id: "41-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/57pw50wvhmzbn68/Thrash+-+Gaheza.mp4/file",
+      },
+    ],
+  },
 ];
-
