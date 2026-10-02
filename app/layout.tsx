@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
@@ -77,6 +78,14 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="beforeInteractive"
         />
+
+        {/* Monetag Multitag */}
+        <script
+          src="https://quge5.com/88/tag.min.js"
+          data-zone="289831"
+          async
+          data-cfasync="false"
+        />
       </head>
 
       <body>
@@ -105,3 +114,4 @@ export default function RootLayout({
     </html>
   );
 }
+
