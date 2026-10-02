@@ -13,13 +13,14 @@ export const metadata: Metadata = {
   },
 
   description:
-    "OSHAKUR MOVIES — Watch and discover Agasobanuye movies and series online. Browse Action, Adventure, Comedy, Drama, Horror, Romance and Thriller movies.",
+    "OSHAKUR MOVIES — Watch and discover Agasobanuye movies and series online. Browse Action, Adventure, Comedy, Drama, Horror, and Thriller movies and series.",
 
   keywords: [
     "OSHAKUR MOVIES",
     "OSHAKUR",
     "Agasobanuye",
     "Rwanda movies",
+    "Rwanda series",
     "movies",
     "series",
     "watch movies",
@@ -33,18 +34,27 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OSHAKUR MOVIES | Watch Agasobanuye Movies & Series",
     description:
-      "Watch and discover Agasobanuye movies and series on OSHAKUR MOVIES.",
+      "Watch and discover Agasobanuye movies and series online on OSHAKUR MOVIES.",
     url: siteUrl,
     siteName: "OSHAKUR MOVIES",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/images/movies/images.webp",
+        width: 1200,
+        height: 630,
+        alt: "OSHAKUR MOVIES",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "OSHAKUR MOVIES | Watch Agasobanuye Movies & Series",
     description:
-      "Watch and discover Agasobanuye movies and series on OSHAKUR MOVIES.",
+      "Watch and discover Agasobanuye movies and series online on OSHAKUR MOVIES.",
+    images: ["/images/movies/images.webp"],
   },
 
   robots: {
@@ -72,6 +82,13 @@ export default function RootLayout({
               name: "OSHAKUR MOVIES",
               alternateName: "OSHAKUR",
               url: siteUrl,
+              description:
+                "OSHAKUR MOVIES — Watch and discover Agasobanuye movies and series online.",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: `${siteUrl}/search?q={search_term_string}`,
+                "query-input": "required name=search_term_string",
+              },
             }),
           }}
         />
