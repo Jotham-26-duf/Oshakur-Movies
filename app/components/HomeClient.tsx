@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 import MovieCard from "./MovieCard";
@@ -51,10 +52,24 @@ export default function HomeClient({
     .sort((a, b) => Number(b.rating) - Number(a.rating))
     .slice(0, 10);
 
-  const heroMovies =
-    featuredMovies.length > 0
-      ? featuredMovies
-      : movies.slice(0, 5);
+  /*
+   * HERO
+   *
+   * Combine all featured movies and all featured series
+   * into one carousel.
+   */
+  const heroItems = [
+    ...featuredMovies.map((movie) => ({
+      ...movie,
+      type: "movie" as const,
+    })),
+
+    ...featuredSeries.map((seriesItem) => ({
+      ...seriesItem,
+      description: "",
+      type: "series" as const,
+    })),
+  ];
 
   return (
     <main
@@ -63,9 +78,15 @@ export default function HomeClient({
     >
       <Navbar />
 
-      <Hero movies={heroMovies} />
+      {/* =====================================================
+          HERO
+          Featured Movies + Featured Series
+          ===================================================== */}
+      <Hero items={heroItems} />
 
-      {/* TRENDING MOVIES */}
+      {/* =====================================================
+          TRENDING MOVIES
+          ===================================================== */}
       {trendingMovies.length > 0 && (
         <section className="px-4 py-10 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-7xl">
@@ -108,7 +129,9 @@ export default function HomeClient({
         </section>
       )}
 
-      {/* FEATURED SERIES */}
+      {/* =====================================================
+          FEATURED SERIES
+          ===================================================== */}
       {featuredSeries.length > 0 && (
         <section className="px-4 py-10 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-7xl">
@@ -170,7 +193,9 @@ export default function HomeClient({
         </section>
       )}
 
-      {/* LATEST SERIES */}
+      {/* =====================================================
+          LATEST SERIES
+          ===================================================== */}
       {series.length > 0 && (
         <section className="px-4 py-10 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-7xl">
@@ -232,7 +257,9 @@ export default function HomeClient({
         </section>
       )}
 
-      {/* LATEST MOVIES */}
+      {/* =====================================================
+          LATEST MOVIES
+          ===================================================== */}
       {latestMovies.length > 0 && (
         <section className="px-4 py-10 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-7xl">
@@ -271,7 +298,9 @@ export default function HomeClient({
         </section>
       )}
 
-      {/* TOP RATED */}
+      {/* =====================================================
+          TOP RATED
+          ===================================================== */}
       {topRatedMovies.length > 0 && (
         <section className="px-4 py-10 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-7xl">
@@ -307,10 +336,16 @@ export default function HomeClient({
         </section>
       )}
 
-      {/* POPULAR CATEGORIES */}
+      {/* =====================================================
+          POPULAR CATEGORIES
+          ===================================================== */}
       <CategorySection />
 
+      {/* =====================================================
+          FOOTER
+          ===================================================== */}
       <SiteBottom />
     </main>
   );
 }
+
