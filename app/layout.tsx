@@ -1,6 +1,5 @@
 
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 
 const siteUrl = "https://oshakurmovies.party";
@@ -72,11 +71,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-6421049945104967"
+        />
+
+        {/* Google AdSense */}
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6421049945104967"
           crossOrigin="anonymous"
-          strategy="beforeInteractive"
         />
 
         {/* Monetag Multitag */}
