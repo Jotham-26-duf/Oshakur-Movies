@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
@@ -71,13 +70,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <head>
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6421049945104967"
           crossOrigin="anonymous"
         />
+      </head>
 
+      <body>
         {children}
 
         <script
@@ -103,4 +104,3 @@ export default function RootLayout({
     </html>
   );
 }
-
