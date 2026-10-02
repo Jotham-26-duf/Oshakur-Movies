@@ -58,7 +58,7 @@ export const movies: Movie[] = [
       "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his true voice, and stand up for what he believes in.",
     language: "English",
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-09-24",
     parts: [
       {
@@ -81,7 +81,7 @@ export const movies: Movie[] = [
     description: "A movie presented in multiple parts.",
     language: "English",
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-09-24",
     parts: [
       {
@@ -112,7 +112,7 @@ export const movies: Movie[] = [
     description: "A movie presented in multiple parts.",
     language: "English",
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-09-24",
     parts: [
       {
@@ -144,7 +144,7 @@ export const movies: Movie[] = [
       "Watch and enjoy this movie on Oshakur Movies. Explore an entertaining story, memorable characters, and exciting moments, then discover more great movies available on our platform.",
     language: "English",
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-09-24",
     parts: [
       {
@@ -176,7 +176,7 @@ export const movies: Movie[] = [
       "Watch and enjoy this movie on Oshakur Movies. Explore an entertaining story, memorable characters, and exciting moments, then discover more great movies available on our platform.",
     language: "English",
     genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-09-24",
     parts: [
       {
@@ -207,7 +207,7 @@ export const movies: Movie[] = [
     description:
       "Watch and enjoy this movie on Oshakur Movies. Explore an entertaining story, memorable characters, and exciting moments, then discover more great movies available on our platform.",
     language: "English",
-    genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
+    genres: ["Comedy", "Drama", "Romance", "Thriller", "Action", "Adventure"],
     isFeatured: true,
     createdAt: "2026-09-24",
     parts: [
@@ -1073,4 +1073,660 @@ export const movies: Movie[] = [
       },
     ],
   },
+    {
+    id: "42",
+    title: "RHADE SHYAM A",
+    slug: "rhade-shyam-a",
+    year: "2022",
+    rating: "8.0",
+    image: "rhade-shyam-a.jpg",
+    description:
+      "A romantic period drama centered on love, destiny, and the difficult choices faced by two people whose lives become deeply connected.",
+    language: "Telugu",
+    genres: ["Drama", "Romance"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "42-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://vibuxer.com/n9xwbh81vqgf",
+        downloadUrl:
+          "https://www.mediafire.com/file/hisxymlff3liw7u/RHADE+SHYAM+A+(1).mp4/file",
+      },
+    ],
+  },
+  {
+    id: "43",
+    title: "London Has Fallen",
+    slug: "london-has-fallen",
+    year: "2016",
+    rating: "8.0",
+    image: "london-has-fallen.jpg",
+    description:
+      "A secret service agent must protect world leaders and fight to survive after a devastating attack takes place in London.",
+    language: "English",
+    genres: ["Action", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "43-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://audinifer.com/v2bttq268ach",
+        downloadUrl:
+          "https://www.mediafire.com/file/wwuybs7uq6e4ww4/London_Has_Fallen.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "44",
+    title: "The Contractor",
+    slug: "the-contractor",
+    year: "2022",
+    rating: "8.0",
+    image: "the-contractor.jpg",
+    description:
+      "A former special forces soldier becomes involved in a dangerous mission after leaving military service.",
+    language: "English",
+    genres: ["Action", "Thriller", "Drama"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "44-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://vibuxer.com/n9xwbh81vqgf",
+        downloadUrl:
+          "https://www.mediafire.com/file/xeh74cczy6s9f9i/The+Contractor.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "45",
+    title: "Snake Woman",
+    slug: "snake-woman",
+    year: "2026",
+    rating: "8.0",
+    image: "snake-woman.jpg",
+    description:
+      "A mysterious story involving danger, secrets, and a woman whose identity becomes connected to a terrifying supernatural mystery.",
+    language: "English",
+    genres: ["Horror", "Thriller", "Mystery"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "45-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://vibuxer.com/d9m8f9whij7r",
+        downloadUrl:
+          "https://www.mediafire.com/file/03ixa87b7bl5djp/SNAKE+WOMAN.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "46",
+    title: "Mutiny",
+    slug: "mutiny",
+    year: "2026",
+    rating: "8.0",
+    image: "mutiny.jpg",
+    description:
+      "An action thriller involving conflict, betrayal, and a dangerous struggle for survival.",
+    language: "English",
+    genres: ["Action", "Thriller", "Drama"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "46-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://vibuxer.com/hphyiekgm15u17",
+        downloadUrl:
+          "https://www.mediafire.com/file/rdlhay8x126ycpk/Mutiny+2026.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "47",
+    title: "Rango",
+    slug: "rango-new",
+    year: "2011",
+    rating: "8.0",
+    image: "rango.jpg",
+    description:
+      "A pet chameleon finds himself in a desert town where he unexpectedly becomes the sheriff and faces a dangerous mystery.",
+    language: "English",
+    genres: ["Animation", "Comedy", "Action", "Adventure"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "47-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://audinifer.com/yljz6q7s3ean",
+        downloadUrl:
+          "https://www.mediafire.com/file/vxosv41efcz5tiw/Rango+Hd2.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "48",
+    title: "Face Off",
+    slug: "face-off",
+    year: "1997",
+    rating: "8.0",
+    image: "face-off.jpg",
+    description:
+      "An FBI agent and a dangerous criminal become caught in an extraordinary identity-swapping conflict.",
+    language: "English",
+    genres: ["Action", "Thriller", "Crime"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "48-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://audinifer.com/qf8mlnpbl6en",
+        downloadUrl:
+          "https://www.mediafire.com/file/afmu8t2pi1i7z78/Face+Off+Hd.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "49",
+    title: "Mortal Kombat",
+    slug: "mortal-kombat",
+    year: "2021",
+    rating: "8.0",
+    image: "mortal-kombat.jpg",
+    description:
+      "A group of fighters prepare to defend Earth in a legendary tournament against powerful supernatural opponents.",
+    language: "English",
+    genres: ["Action", "Fantasy", "Adventure"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "49-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://audinifer.com/33tgfy5dreu3",
+        downloadUrl:
+          "https://www.mediafire.com/file/fnwk15xdt9n9anr/MORTAL_KOMBAT.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "50",
+    title: "xXx: The Return of Xander Cage",
+    slug: "xxx-the-return-of-xander-cage",
+    year: "2017",
+    rating: "8.0",
+    image: "xxx-the-return-of-xander-cage.jpg",
+    description:
+      "Xander Cage returns from self-imposed exile and joins a dangerous mission involving a powerful weapon and international criminals.",
+    language: "English",
+    genres: ["Action", "Adventure", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "50-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "",
+        downloadUrl:
+          "https://www.mediafire.com/file/txya9zvgf3yprpq/xXx+the+return+of+xander+cage.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "51",
+    title: "Troll 2",
+    slug: "troll-2",
+    year: "2026",
+    rating: "8.0",
+    image: "troll-2.jpg",
+    description:
+      "A new supernatural adventure involving mysterious creatures, danger, and a fight for survival.",
+    language: "English",
+    genres: ["Fantasy", "Adventure", "Action"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "51-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://audinifer.com/ff3jto6t3td4",
+        downloadUrl:
+          "https://www.mediafire.com/file/d1wreg7lo23ufkl/TROLL_2_.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "52",
+    title: "Little Brother",
+    slug: "little-brother",
+    year: "2026",
+    rating: "8.0",
+    image: "little-brother.jpg",
+    description:
+      "A dramatic story about family, relationships, and the challenges faced by people brought together by difficult circumstances.",
+    language: "English",
+    genres: ["Drama", "Comedy"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "52-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://hgcloud.to/f3ebm57jn8mk",
+        downloadUrl:
+          "https://www.mediafire.com/file/abbs2mqzt63his8/Little+Brother+2026+Perfect.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "53",
+    title: "Taken",
+    slug: "taken",
+    year: "2008",
+    rating: "8.0",
+    image: "taken.jpg",
+    description:
+      "A former special agent uses his particular skills to rescue his kidnapped daughter from a dangerous criminal network.",
+    language: "English",
+    genres: ["Action", "Thriller", "Crime"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "53-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://vibuxer.com/rdy2ldxgk56d",
+        downloadUrl:
+          "https://www.mediafire.com/file/dhvt2izz9lisa64/Taken.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "54",
+    title: "Shang-Chi and the Legend of the Ten Rings",
+    slug: "shang-chi-and-the-legend-of-the-ten-rings",
+    year: "2021",
+    rating: "8.0",
+    image: "shang-chi.jpg",
+    description:
+      "Shang-Chi confronts his past after becoming involved with the mysterious Ten Rings organization and discovers secrets about his family.",
+    language: "English",
+    genres: ["Action", "Adventure", "Fantasy"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "54-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://audinifer.com/oywmw2d549wd",
+        downloadUrl:
+          "https://www.mediafire.com/file/e463930jpg6m63l/Shang_Chi_1.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "55",
+    title: "The Sea Beast",
+    slug: "the-sea-beast",
+    year: "2022",
+    rating: "8.0",
+    image: "the-sea-beast.jpg",
+    description:
+      "A young girl joins a legendary sea monster hunter and discovers that the creatures they fear may not be what they seem.",
+    language: "English",
+    genres: ["Animation", "Adventure", "Action", "Fantasy"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "55-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://hanerix.com/2imvzbmws3te",
+        downloadUrl:
+          "https://www.mediafire.com/file/s2x3uhocqk23ch8/The+Sea+Beast++Hd+Mp4.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "56",
+    title: "Zootopia",
+    slug: "zootopia",
+    year: "2016",
+    rating: "8.0",
+    image: "zootopia.jpg",
+    description:
+      "A determined rabbit police officer teams up with a clever fox to uncover a mystery threatening the animal city of Zootopia.",
+    language: "English",
+    genres: ["Animation", "Comedy", "Adventure", "Family"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "56-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://audinifer.com/ueh3u0qmej26",
+        downloadUrl:
+          "https://www.mediafire.com/file/6j2q636k9dzf38r/Zootopia.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "57",
+    title: "Push",
+    slug: "push",
+    year: "2009",
+    rating: "8.0",
+    image: "push.jpg",
+    description:
+      "People with extraordinary abilities become involved in a dangerous struggle involving a secret government program and powerful enemies.",
+    language: "English",
+    genres: ["Action", "Sci-Fi", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-10-01",
+    parts: [
+      {
+        id: "57-1",
+        partNumber: 1,
+        title: "Part 1",
+        streamUrl: "https://vibuxer.com/e88ejv2wubug",
+        downloadUrl:
+          "https://www.mediafire.com/file/e9t2wvv0knz2oix/www.agasobanuyenow.com+-+Push+-+Rocky.mp4/file",
+      },
+    ],
+  },
+  {
+  id: "58",
+  title: "Blood Brothers",
+  slug: "blood-brothers",
+  year: "2026",
+  rating: "8.0",
+  image: "blood-brothers.jpg",
+  description: "Blood Brothers is an action drama movie.",
+  language: "English",
+  genres: ["Action", "Drama", "Thriller"],
+  isFeatured: true,
+  createdAt: "2026-10-01",
+  parts: [
+    {
+      id: "58-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://hanerix.com/xxlxa47z80zr",
+      downloadUrl:
+        "https://www.mediafire.com/file/ebfpsjtdt74vkh7/Blood+Brothers+A.mp4/file",
+    },
+    {
+      id: "58-2",
+      partNumber: 2,
+      title: "Part B",
+      streamUrl: "https://audinifer.com/31q6wc0x58us",
+      downloadUrl:
+        "https://www.mediafire.com/file/kz58sonut5sa1g9/Blood+Brothers+B.mp4/file",
+    },
+  ],
+},
+
+{
+  id: "59",
+  title: "Gallowwalkers",
+  slug: "gallowwalkers",
+  year: "2012",
+  rating: "8.0",
+  image: "gallowwalkers.jpg",
+  description: "Gallowwalkers is an action horror western movie.",
+  language: "English",
+  genres: ["Action", "Horror", "Western"],
+  isFeatured: true,
+  createdAt: "2026-10-01",
+  parts: [
+    {
+      id: "59-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://vibuxer.com/12b44b2s0mhg",
+      downloadUrl:
+        "https://www.mediafire.com/file/divjm2ugqhhqucf/Gallowwalkers.A._Hd.Mp4.mp4/file",
+    },
+    {
+      id: "59-2",
+      partNumber: 2,
+      title: "Part B",
+      streamUrl: "",
+      downloadUrl:
+        "https://www.mediafire.com/file/m0w4c06c2fmbhsj/Gallowwalkers.B._Hd.Mp4.mp4/file",
+    },
+  ],
+},
+
+{
+  id: "60",
+  title: "Kuch Kuch Hota Hai",
+  slug: "kuch-kuch-hota-hai",
+  year: "1998",
+  rating: "8.0",
+  image: "kuch-kuch-hota-hai.jpg",
+  description: "Kuch Kuch Hota Hai is a romantic drama movie.",
+  language: "Hindi",
+  genres: ["Romance", "Drama", "Comedy"],
+  isFeatured: true,
+  createdAt: "2026-10-01",
+  parts: [
+    {
+      id: "60-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://audinifer.com/w1l77wematae",
+      downloadUrl:
+        "https://www.mediafire.com/file/6wqo5yv9bwac6c5/Kuch+Kuch+Hota+Hai+A+.mp4/file",
+    },
+      {
+      id: "60-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://audinifer.com/w1l77wematae",
+      downloadUrl:
+        "https://www.mediafire.com/file/7jkgwmzmaoovsjm/Kuch+Kuch+Hota+Hai-720P.mp4/file",
+    },
+  ],
+  
+},
+
+{
+  id: "61",
+  title: "Step Up All In",
+  slug: "step-up-all-in",
+  year: "2014",
+  rating: "8.0",
+  image: "step-up-all-in.jpg",
+  description: "Step Up All In is a dance drama movie.",
+  language: "English",
+  genres: ["Drama", "Romance", "Music"],
+  isFeatured: true,
+  createdAt: "2026-10-01",
+  parts: [
+    {
+      id: "61-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "",
+      downloadUrl:
+        "https://www.mediafire.com/file/qvtq7ltyq8nzoez/Step_Up_All_In_A_Hd.mp4/file",
+    },
+    {
+      id: "61-2",
+      partNumber: 2,
+      title: "Part B",
+      streamUrl: "https://audinifer.com/wrywb7q7il2z",
+      downloadUrl:
+        "https://www.mediafire.com/file/qkt6jdjbb6ay72s/Step+Up+All+In+B+Hd.mp4/file",
+    },
+  ],
+},
+{
+  id: "62",
+  title: "Secret Superstar",
+  slug: "secret-superstar",
+  year: "2017",
+  rating: "8.0",
+  image: "secret-superstar.jpg",
+  description: "Secret Superstar is a Hindi drama and music movie.",
+  language: "Hindi",
+  genres: ["Drama", "Music"],
+  isFeatured: true,
+  createdAt: "2026-10-01",
+  parts: [
+    {
+      id: "62-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://audinifer.com/l12cojos646q",
+      downloadUrl:
+        "https://www.mediafire.com/file/k99bguvrf416kkm/Secret_Superstar_A_Hd.mp4/file",
+    },
+    {
+      id: "62-2",
+      partNumber: 2,
+      title: "Part B",
+      streamUrl: "https://hanerix.com/dfkpcsc0ibar",
+      downloadUrl:
+        "https://www.mediafire.com/file/04ar7hwjkegc8r6/Secret_Superstar_B_Hd.mp4/file",
+    },
+  ],
+},
+
+{
+  id: "63",
+  title: "Dhadkan",
+  slug: "dhadkan",
+  year: "2000",
+  rating: "8.0",
+  image: "dhadkan.jpg",
+  description: "Dhadkan is a romantic drama movie.",
+  language: "Hindi",
+  genres: ["Romance", "Drama"],
+  isFeatured: true,
+  createdAt: "2026-10-01",
+  parts: [
+    {
+      id: "63-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://audinifer.com/a8m9eubkq0i1",
+      downloadUrl:
+        "https://www.mediafire.com/file/mdcltx4xn3ol4p5/Dhadkan_A_Hd.mp4/file",
+    },
+    {
+      id: "63-2",
+      partNumber: 2,
+      title: "Part B",
+      streamUrl: "https://hanerix.com/5rgnnmo7r2hs",
+      downloadUrl:
+        "https://www.mediafire.com/file/y8ntfejjyrp38fc/Dhadkan_B_Hd.mp4/file",
+    },
+    {
+      id: "63-3",
+      partNumber: 3,
+      title: "Part C",
+      streamUrl: "https://hanerix.com/skenrmdvbi5a",
+      downloadUrl:
+        "https://www.mediafire.com/file/2kfkvzrenj6hu1u/Dhadkan_C_Hd.mp4/file",
+    },
+  ],
+},
+
+{
+  id: "64",
+  title: "Blast",
+  slug: "blast",
+  year: "2026",
+  rating: "8.0",
+  image: "blast.jpg",
+  description: "Blast is an action thriller movie.",
+  language: "English",
+  genres: ["Action", "Thriller"],
+  isFeatured: true,
+  createdAt: "2026-10-01",
+  parts: [
+    {
+      id: "64-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://vibuxer.com/xngslo3hic28",
+      downloadUrl:
+        "https://www.mediafire.com/file/1w7ki6je3ztwuwl/BLAST+A+ROCKY.mp4/file",
+    },
+    {
+      id: "64-2",
+      partNumber: 2,
+      title: "Part B",
+      streamUrl: "https://vibuxer.com/r3t0v279l4yy",
+      downloadUrl:
+        "https://www.mediafire.com/file/0u0qrmok7v05zw3/BLAST_B+BY+ROCKY+new.mp4/file",
+    },
+  ],
+},
+
+{
+  id: "65",
+  title: "Vishwanath",
+  slug: "vishwanath",
+  year: "2026",
+  rating: "8.0",
+  image: "vishwanath.jpg",
+  description: "Vishwanath is an action drama movie.",
+  language: "English",
+  genres: ["Action", "Drama"],
+  isFeatured: true,
+  createdAt: "2026-10-01",
+  parts: [
+    {
+      id: "65-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://audinifer.com/ix7ci8px6lqm",
+      downloadUrl:
+        "https://www.mediafire.com/file/psqsnndecw78xqc/VISHWANA+A.mp4/file",
+    },
+    {
+      id: "65-2",
+      partNumber: 2,
+      title: "Part B",
+      streamUrl: "https://hanerix.com/nyctfl5z27n5",
+      downloadUrl:
+        "https://www.mediafire.com/file/59bgo33ask1nze2/VISHWANATH+B.mp4/file",
+    },
+    {
+      id: "65-3",
+      partNumber: 3,
+      title: "Part C",
+      streamUrl: "https://audinifer.com/dzk8gcxviz1s",
+      downloadUrl:
+        "https://www.mediafire.com/file/c3axzu9zu2ril95/VISHWANATH+C.mp4/file",
+    },
+  ],
+},
+
 ];

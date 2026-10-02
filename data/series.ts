@@ -25,7 +25,7 @@ export const series: Series[] = [
       "A drama series following the complicated lives, relationships, and struggles of its characters.",
     language: "English",
     genres: ["Drama"],
-    isFeatured: false,
+    isFeatured: true,
     createdAt: "2026-02-05",
   },
   {
@@ -39,7 +39,7 @@ export const series: Series[] = [
       "The story continues with new challenges, conflicts, relationships, and unexpected events.",
     language: "English",
     genres: ["Drama"],
-    isFeatured: false,
+    isFeatured: true,
     createdAt: "2026-02-05",
   },
   {
@@ -81,7 +81,7 @@ export const series: Series[] = [
       "The story continues with new adventures, challenges, friendships, conflicts, and unexpected events.",
     language: "English",
     genres: ["Adventure", "Drama", "Mystery", "Thriller"],
-    isFeatured: false,
+    isFeatured: true,
     createdAt: "2026-09-28",
   },
   {

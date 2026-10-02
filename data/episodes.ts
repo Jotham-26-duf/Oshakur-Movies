@@ -1435,4 +1435,4 @@ export const episodes: Episode[] = [
     downloadUrl:
       "https://www.mediafire.com/file/53y00v2cqbgpzxi/Vampire_dieries_S1_Ep22.mp4/file",
   },
-];
+]; 

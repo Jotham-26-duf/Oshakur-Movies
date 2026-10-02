@@ -1,9 +1,11 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Oshakur Movies",
-  description: "Watch and discover movies and series on Oshakur Movies.",
+  title: "OSHAKUR MOVIES",
+  description:
+    "OSHAKUR MOVIES — Watch and discover movies and series online.",
 };
 
 export default function RootLayout({
@@ -17,3 +19,4 @@ export default function RootLayout({
     </html>
   );
 }
+
