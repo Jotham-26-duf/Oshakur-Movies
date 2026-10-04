@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 interface MovieCardProps {
@@ -80,3 +81,4 @@ export default function MovieCard({
     </div>
   );
 }
+

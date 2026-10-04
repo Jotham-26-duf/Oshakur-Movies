@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
 
@@ -7,6 +8,11 @@ import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
 
 export default function MoviesPage() {
+  const orderedMovies = [
+    ...movies.filter((movie) => movie.isFeatured),
+    ...movies.filter((movie) => !movie.isFeatured),
+  ];
+
   return (
     <main className="min-h-screen bg-[#121212] text-white">
       <Navbar />
@@ -42,9 +48,9 @@ export default function MoviesPage() {
           </div>
         </div>
 
-        {movies.length > 0 ? (
+        {orderedMovies.length > 0 ? (
           <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {movies.map((movie) => (
+            {orderedMovies.map((movie) => (
               <MovieCard
                 key={movie.id}
                 title={movie.title}

@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 import Navbar from "@/app/components/Navbar";
@@ -5,6 +6,11 @@ import SiteBottom from "@/app/components/SiteBottom";
 import { series } from "@/data/series";
 
 export default function SeriesPage() {
+  const orderedSeries = [
+    ...series.filter((item) => item.isFeatured),
+    ...series.filter((item) => !item.isFeatured),
+  ];
+
   return (
     <main className="min-h-screen bg-[#121212] text-white">
       <Navbar />
@@ -36,9 +42,9 @@ export default function SeriesPage() {
           </div>
         </div>
 
-        {series.length > 0 ? (
+        {orderedSeries.length > 0 ? (
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {series.map((item) => (
+            {orderedSeries.map((item) => (
               <Link
                 key={item.id}
                 href={`/series/${item.slug}`}
@@ -90,3 +96,4 @@ export default function SeriesPage() {
     </main>
   );
 }
+

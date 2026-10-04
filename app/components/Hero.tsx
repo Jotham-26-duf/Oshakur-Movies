@@ -1,7 +1,8 @@
+
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 interface HeroItem {
   id: string;
@@ -13,319 +14,352 @@ interface HeroItem {
   description?: string;
   language: string;
   type: "movie" | "series";
+  genres?: string[];
 }
 
 interface HeroProps {
   items: HeroItem[];
 }
 
-function ArrowLeftIcon() {
+function PlayIcon() {
   return (
     <svg
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-5 w-5"
+      className="h-4 w-4 fill-current"
+      aria-hidden="true"
     >
-      <path d="m15 18-6-6 6-6" />
+      <path d="M8 5.5v13L19 12 8 5.5z" />
     </svg>
   );
 }
 
-function ArrowRightIcon() {
+function StarIcon() {
   return (
     <svg
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-5 w-5"
+      className="h-4 w-4 fill-current"
+      aria-hidden="true"
     >
-      <path d="m9 18 6-6-6-6" />
+      <path d="M12 2.8l2.83 5.74 6.34.92 1.08 6.32L12 17.27l-5.66 2.99 1.08-6.32-4.59-4.48 6.34-.92L12 2.8z" />
     </svg>
   );
 }
 
 export default function Hero({ items }: HeroProps) {
-  const featuredItems = items;
+  const safeItems = useMemo(() => items.slice(0, 8), [items]);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isChanging, setIsChanging] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  const totalItems = safeItems.length;
+  const activeItem = safeItems[activeIndex];
+
+  const changeSlide = useCallback(
+    (newIndex: number) => {
+      if (totalItems === 0) return;
+
+      const nextIndex = (newIndex + totalItems) % totalItems;
+
+      if (nextIndex === activeIndex) return;
+
+      setIsChanging(true);
+      setProgress(0);
+
+      window.setTimeout(() => {
+        setActiveIndex(nextIndex);
+        setIsChanging(false);
+      }, 220);
+    },
+    [activeIndex, totalItems]
+  );
+
+  const goNext = useCallback(() => {
+    changeSlide(activeIndex + 1);
+  }, [activeIndex, changeSlide]);
 
   useEffect(() => {
-    if (featuredItems.length <= 1) {
-      return;
-    }
+    if (totalItems <= 1 || isPaused) return;
 
-    const timer = setInterval(() => {
-      setCurrentIndex(
-        (current) => (current + 1) % featuredItems.length
-      );
-    }, 5000);
+    const timer = window.setInterval(goNext, 7000);
 
-    return () => clearInterval(timer);
-  }, [featuredItems.length]);
+    return () => window.clearInterval(timer);
+  }, [goNext, isPaused, totalItems]);
 
   useEffect(() => {
-    if (currentIndex >= featuredItems.length) {
-      setCurrentIndex(0);
-    }
-  }, [currentIndex, featuredItems.length]);
+    if (totalItems <= 1 || isPaused) return;
 
-  if (featuredItems.length === 0) {
-    return null;
-  }
+    setProgress(0);
 
-  const item = featuredItems[currentIndex];
+    const startTime = Date.now();
+    const duration = 7000;
+
+    const timer = window.setInterval(() => {
+      const elapsed = Date.now() - startTime;
+
+      setProgress(Math.min((elapsed / duration) * 100, 100));
+    }, 50);
+
+    return () => window.clearInterval(timer);
+  }, [activeIndex, isPaused, totalItems]);
+
+  useEffect(() => {
+    const handleKeyboard = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight") {
+        goNext();
+      }
+
+      if (event.key === " ") {
+        event.preventDefault();
+        setIsPaused((current) => !current);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyboard);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyboard);
+    };
+  }, [goNext]);
+
+  if (!activeItem) return null;
 
   const itemUrl =
-    item.type === "movie"
-      ? `/movies/${item.slug}`
-      : `/series/${item.slug}`;
+    activeItem.type === "movie"
+      ? `/movies/${activeItem.slug}`
+      : `/series/${activeItem.slug}`;
 
-  function showPrevious() {
-    setCurrentIndex((current) =>
-      current === 0 ? featuredItems.length - 1 : current - 1
-    );
-  }
+  const imagePath =
+    activeItem.type === "movie"
+      ? `/images/movies/${activeItem.image}`
+      : `/images/series/${activeItem.image}`;
 
-  function showNext() {
-    setCurrentIndex(
-      (current) => (current + 1) % featuredItems.length
-    );
-  }
+  const itemType =
+    activeItem.type === "movie" ? "Movie" : "Series";
 
-  function goToSlide(index: number) {
-    setCurrentIndex(index);
-  }
+  const genres = activeItem.genres ?? [];
 
   return (
-    <section className="bg-[#0D0D0D] px-3 py-5 sm:px-5 sm:py-7 lg:px-8 lg:py-10">
-      <div className="mx-auto w-full max-w-[1500px]">
-        <div className="relative min-h-[560px] overflow-hidden rounded-2xl bg-[#0D0D0D] shadow-2xl sm:min-h-[620px] lg:min-h-[680px]">
+    <section
+      className="relative overflow-hidden bg-[#0D1117]"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      aria-label="Featured movies and series"
+    >
+      {/* HERO */}
+      <div className="relative min-h-[600px] md:min-h-[650px]">
 
-          {/* =====================================================
-              BACKGROUND ARTWORK
-              ===================================================== */}
+        {/* RIGHT IMAGE — TOUCHES THE RIGHT EDGE */}
+        <div className="absolute inset-y-0 right-0 z-10 w-full md:w-[58%]">
           <Link
             href={itemUrl}
-            aria-label={`View ${item.title}`}
-            className="absolute inset-0 z-0 block"
+            aria-label={`View ${activeItem.title}`}
+            className="absolute inset-0 block"
           >
             <img
-              key={item.id}
-              src={
-                item.type === "movie"
-                  ? `/images/movies/${item.image}`
-                  : `/images/series/${item.image}`
-              }
-              alt={item.title}
-              className="absolute inset-0 h-full w-full object-cover object-center transition-all duration-700"
+              key={activeItem.id}
+              src={imagePath}
+              alt={activeItem.title}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+              sizes="(max-width: 768px) 100vw, 58vw"
+              className={`h-full w-full object-contain object-right ${
+                isChanging
+                  ? "scale-[0.98] opacity-0"
+                  : "scale-100 opacity-100"
+              } transition-all duration-500 ease-out`}
             />
           </Link>
+        </div>
 
-          {/* General dark overlay */}
-          <div className="pointer-events-none absolute inset-0 z-10 bg-black/20" />
+        {/* LEFT SHADOW → SMOOTH TRANSPARENT → IMAGE */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-20 hidden w-[76%] bg-gradient-to-r from-[#0D1117] via-[#0D1117]/95 via-[30%] via-[#0D1117]/80 via-[44%] via-[#0D1117]/55 via-[57%] via-[#0D1117]/30 via-[68%] via-[#0D1117]/10 via-[78%] via-transparent via-[88%] to-transparent md:block" />
 
-          {/* =====================================================
-              DUAL-ZONE BACKGROUND
-              DARK LEFT → IMAGE RIGHT
-              ===================================================== */}
-          <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-r from-[#0D0D0D] via-[#0D0D0D]/95 via-[38%] via-[#0D0D0D]/65 via-[55%] to-transparent" />
+        {/* MOBILE OVERLAY */}
+        <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-[#0D1117] via-[#0D1117]/55 to-transparent md:hidden" />
 
-          {/* Soft dark edge around artwork */}
-          <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-l from-black/10 via-transparent to-transparent" />
+        {/* LEFT CONTENT */}
+        <div className="relative z-30 mx-auto flex min-h-[600px] max-w-[1600px] items-center px-5 pb-28 pt-24 sm:px-8 md:min-h-[650px] md:px-10 lg:px-16">
+          <div
+            className={`max-w-xl transition-all duration-500 ${
+              isChanging
+                ? "-translate-x-5 opacity-0"
+                : "translate-x-0 opacity-100"
+            }`}
+          >
+            {/* BADGES */}
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="rounded-md bg-[#2979FF] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-[#2979FF]/20">
+                {activeIndex === 0
+                  ? "NEW"
+                  : activeItem.type === "series"
+                    ? "TRENDING"
+                    : "FEATURED"}
+              </span>
 
-          {/* Bottom fade */}
-          <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/35 to-transparent" />
+              <span className="flex items-center gap-1 rounded-md bg-black/30 px-3 py-1 text-sm font-semibold text-white backdrop-blur-md">
+                <StarIcon />
+                {activeItem.rating}
+              </span>
 
-          {/* Top fade */}
-          <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-b from-black/50 via-transparent to-transparent" />
-
-          {/* =====================================================
-              TOP 1
-              ===================================================== */}
-          <div className="absolute right-5 top-5 z-50 sm:right-8 sm:top-8 lg:right-10">
-            <div className="flex items-center gap-2 rounded-full border border-[#2B6CB0]/60 bg-black/55 px-4 py-2 text-sm font-bold text-white shadow-lg backdrop-blur-md">
-              <span className="text-base">🔥</span>
-              <span>Top 1</span>
+              <span className="rounded-md border border-white/15 bg-black/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/85 backdrop-blur-md">
+                {itemType}
+              </span>
             </div>
-          </div>
 
-          {/* =====================================================
-              PREVIOUS ARROW
-              ===================================================== */}
-          {featuredItems.length > 1 && (
-            <button
-              type="button"
-              onClick={showPrevious}
-              aria-label="Previous featured item"
-              className="absolute left-3 top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-white/65 backdrop-blur-sm transition hover:bg-[#2B6CB0] hover:text-white sm:left-5 sm:h-12 sm:w-12"
-            >
-              <ArrowLeftIcon />
-            </button>
-          )}
+            {/* TITLE */}
+            <h1 className="mt-5 max-w-2xl text-4xl font-black leading-[0.95] tracking-tight text-white drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl">
+              {activeItem.title}
+            </h1>
 
-          {/* =====================================================
-              NEXT ARROW
-              ===================================================== */}
-          {featuredItems.length > 1 && (
-            <button
-              type="button"
-              onClick={showNext}
-              aria-label="Next featured item"
-              className="absolute right-3 top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-white/65 backdrop-blur-sm transition hover:bg-[#2B6CB0] hover:text-white sm:right-5 sm:h-12 sm:w-12"
-            >
-              <ArrowRightIcon />
-            </button>
-          )}
+            {/* INFO */}
+            <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-white/75">
+              <span>{activeItem.year}</span>
 
-          {/* =====================================================
-              LEFT INFORMATION
-              ===================================================== */}
-          <div className="relative z-30 flex min-h-[560px] items-center px-8 pb-32 pt-24 sm:min-h-[620px] sm:px-12 sm:pb-36 lg:min-h-[680px] lg:px-16">
-            <div
-              key={`content-${item.id}`}
-              className="max-w-[570px]"
-            >
-              {/* NEW + RATING + TYPE */}
-              <div className="mb-5 flex flex-wrap items-center gap-2">
-                <span className="rounded-md border border-[#2B6CB0] bg-[#2B6CB0]/20 px-3 py-1 text-xs font-bold tracking-wider text-[#63A4FF]">
-                  NEW
-                </span>
+              <span className="text-white/30">•</span>
 
-                <span className="flex items-center gap-1 rounded-md border border-white/10 bg-black/45 px-3 py-1 text-xs font-bold text-white backdrop-blur-sm">
-                  <span className="text-[#FFC107]">★</span>
-                  {item.rating}
-                </span>
+              <span>{itemType}</span>
 
-                <span className="rounded-md border border-white/10 bg-black/45 px-3 py-1 text-xs font-semibold text-gray-200 backdrop-blur-sm">
-                  {item.type === "series" ? "SERIES" : "MOVIE"}
-                </span>
-              </div>
-
-              {/* TITLE */}
-              <h1 className="max-w-2xl text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                {item.title}
-              </h1>
-
-              {/* METADATA */}
-              <div className="mt-5 flex flex-wrap items-center gap-2">
-                <span className="text-sm font-semibold text-gray-300">
-                  {item.year}
-                </span>
-
-                <span className="text-gray-500">•</span>
-
-                <span className="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-gray-300">
-                  Latest
-                </span>
-
-                <span className="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-gray-300">
-                  {item.type === "series" ? "Series" : "Movies"}
-                </span>
-
-                {item.language && (
-                  <span className="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-gray-300">
-                    {item.language}
-                  </span>
-                )}
-              </div>
-
-              {/* DESCRIPTION */}
-              {item.description && (
-                <p className="mt-6 max-w-xl text-sm leading-7 text-gray-200 sm:text-base">
-                  {item.description}
-                </p>
+              {activeItem.language && (
+                <>
+                  <span className="text-white/30">•</span>
+                  <span>{activeItem.language}</span>
+                </>
               )}
 
-              {/* WATCH BUTTON */}
-              <div className="mt-7 flex flex-wrap items-center gap-3">
-                <Link
-                  href={itemUrl}
-                  className="inline-flex items-center gap-2 rounded-lg bg-[#2B6CB0] px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-[#347FC8]"
-                >
-                  <span>▶</span>
-                  <span>Watch Now</span>
-                </Link>
+              {genres.length > 0 && (
+                <>
+                  <span className="text-white/30">•</span>
 
-                <Link
-                  href={itemUrl}
-                  className="rounded-lg border border-white/15 bg-black/40 px-6 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition hover:border-[#2B6CB0] hover:text-[#63A4FF]"
-                >
-                  More Details
-                </Link>
+                  <div className="flex flex-wrap gap-2">
+                    {genres.slice(0, 3).map((genre) => (
+                      <span
+                        key={`${activeItem.id}-${genre}`}
+                        className="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-xs text-white/80 backdrop-blur-sm"
+                      >
+                        {genre}
+                      </span>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* DESCRIPTION */}
+            {activeItem.description && (
+              <p className="mt-5 line-clamp-3 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
+                {activeItem.description}
+              </p>
+            )}
+
+            {/* BUTTONS */}
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link
+                href={itemUrl}
+                className="inline-flex items-center gap-2 rounded-lg bg-[#2979FF] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#2979FF]/20 transition hover:-translate-y-0.5 hover:bg-[#1E6BE8]"
+              >
+                <PlayIcon />
+                Watch Now
+              </Link>
+
+              <Link
+                href={itemUrl}
+                className="rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white/10"
+              >
+                More Details
+              </Link>
+            </div>
+
+            {/* PROGRESS */}
+            <div className="mt-8 flex max-w-md items-center gap-4">
+              <span className="whitespace-nowrap text-xs font-bold tracking-widest text-white/70">
+                {String(activeIndex + 1).padStart(2, "0")} /{" "}
+                {String(totalItems).padStart(2, "0")}
+              </span>
+
+              <div className="h-[3px] flex-1 overflow-hidden rounded-full bg-white/15">
+                <div
+                  className="h-full rounded-full bg-[#2979FF] transition-[width] duration-75"
+                  style={{
+                    width: `${progress}%`,
+                  }}
+                />
               </div>
+
+              <span className="hidden text-xs uppercase tracking-widest text-white/40 sm:block">
+                Now Showing
+              </span>
             </div>
           </div>
-
-          {/* =====================================================
-              THUMBNAILS
-              RIGHT HALF + CENTERED
-              ===================================================== */}
-          {featuredItems.length > 1 && (
-            <div className="absolute bottom-10 left-[52%] z-40 flex w-[43%] -translate-x-1/2 items-end justify-center gap-2 sm:gap-3">
-              {featuredItems.map((slide, index) => {
-                const isActive = index === currentIndex;
-
-                return (
-                  <button
-                    key={`${slide.type}-${slide.id}-${index}`}
-                    type="button"
-                    onClick={() => goToSlide(index)}
-                    aria-label={`Go to ${slide.title}`}
-                    className={`group relative shrink-0 overflow-hidden rounded-lg transition-all duration-300 ${
-                      isActive
-                        ? "h-24 w-16 scale-110 border-2 border-[#2B6CB0] shadow-lg shadow-[#2B6CB0]/50 sm:h-28 sm:w-20"
-                        : "h-20 w-14 border border-white/20 opacity-65 hover:scale-105 hover:opacity-100 sm:h-24 sm:w-16"
-                    }`}
-                  >
-                    <img
-                      src={
-                        slide.type === "movie"
-                          ? `/images/movies/${slide.image}`
-                          : `/images/series/${slide.image}`
-                      }
-                      alt={slide.title}
-                      className="h-full w-full object-cover"
-                    />
-
-                    {isActive && (
-                      <div className="absolute inset-0 bg-[#2B6CB0]/10" />
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-          )}
-
-          {/* =====================================================
-              PROGRESS INDICATORS
-              ALWAYS CENTERED
-              ===================================================== */}
-          {featuredItems.length > 1 && (
-            <div className="absolute bottom-3 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2">
-              {featuredItems.map((slide, index) => (
-                <button
-                  key={`dot-${slide.type}-${slide.id}-${index}`}
-                  type="button"
-                  onClick={() => goToSlide(index)}
-                  aria-label={`Go to ${slide.title}`}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    index === currentIndex
-                      ? "w-8 bg-[#2B6CB0]"
-                      : "w-1.5 bg-white/35 hover:bg-white/70"
-                  }`}
-                />
-              ))}
-            </div>
-          )}
         </div>
+
+        {/* BOTTOM FADE */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 h-32 bg-gradient-to-t from-[#0D1117]/90 via-[#0D1117]/30 to-transparent" />
       </div>
+
+      {/* CENTERED THUMBNAILS */}
+      {totalItems > 1 && (
+        <div className="relative z-40 -mt-20 mb-6 flex justify-center">
+          <div className="flex items-end justify-center gap-3 overflow-x-auto px-4 pb-1">
+            {safeItems.map((item, index) => {
+              const thumbnailPath =
+                item.type === "movie"
+                  ? `/images/movies/${item.image}`
+                  : `/images/series/${item.image}`;
+
+              return (
+                <button
+                  key={`thumbnail-${item.type}-${item.id}-${index}`}
+                  type="button"
+                  onClick={() => changeSlide(index)}
+                  aria-label={`Show ${item.title}`}
+                  className={`group relative h-20 w-14 shrink-0 overflow-hidden rounded-md border transition-all duration-300 ${
+                    index === activeIndex
+                      ? "w-16 -translate-y-1 border-[#2979FF] shadow-lg shadow-[#2979FF]/30"
+                      : "border-white/15 opacity-60 hover:-translate-y-1 hover:opacity-100"
+                  }`}
+                >
+                  <img
+                    src={thumbnailPath}
+                    alt={item.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover"
+                  />
+
+                  <span className="absolute inset-0 bg-black/10 transition group-hover:bg-transparent" />
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* DOTS */}
+      {totalItems > 1 && (
+        <div className="mb-4 flex items-center justify-center gap-1.5">
+          {safeItems.map((item, index) => (
+            <button
+              key={`dot-${item.type}-${item.id}-${index}`}
+              type="button"
+              onClick={() => changeSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                index === activeIndex
+                  ? "w-7 bg-[#2979FF]"
+                  : "w-1.5 bg-white/35 hover:bg-white/70"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* BLUE ACCENT */}
+      <div className="h-1 w-full bg-gradient-to-r from-[#2979FF] via-[#00E5FF] to-transparent opacity-70" />
     </section>
   );
 }
+
+
