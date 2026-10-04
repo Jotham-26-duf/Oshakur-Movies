@@ -25,7 +25,7 @@ export const series: Series[] = [
       "A drama series following the complicated lives, relationships, and struggles of its characters.",
     language: "English",
     genres: ["Drama"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-02-05",
   },
   {
@@ -39,7 +39,7 @@ export const series: Series[] = [
       "The story continues with new challenges, conflicts, relationships, and unexpected events.",
     language: "English",
     genres: ["Drama"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-02-05",
   },
   {
@@ -81,7 +81,7 @@ export const series: Series[] = [
       "The story continues with new adventures, challenges, friendships, conflicts, and unexpected events.",
     language: "English",
     genres: ["Adventure", "Drama", "Mystery", "Thriller"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-09-28",
   },
   {
@@ -221,7 +221,8 @@ export const series: Series[] = [
       "A supernatural drama following Elena Gilbert and the Salvatore brothers as their lives become connected to the mysterious supernatural world of Mystic Falls.",
     language: "English",
     genres: ["Drama", "Fantasy", "Horror", "Romance", "Thriller"],
-    isFeatured: false,
+    isFeatured: true
+    ,
     createdAt: "2026-09-30",
   },
     {
@@ -250,7 +251,7 @@ export const series: Series[] = [
       "A historical drama continuing the story of the early followers of Jesus as they face persecution, political conflict, faith, and difficult challenges.",
     language: "English",
     genres: ["Drama", "Historical"],
-    isFeatured: false,
+    isFeatured: true,
     createdAt: "2026-10-04",
   },
 
@@ -265,7 +266,7 @@ export const series: Series[] = [
       "A Spanish prison drama following women dealing with dangerous conflicts, alliances, survival, revenge, and unexpected events inside and outside prison.",
     language: "Spanish",
     genres: ["Drama", "Thriller", "Crime"],
-    isFeatured: false,
+    isFeatured: true,
     createdAt: "2026-10-04",
   },
 
@@ -295,7 +296,7 @@ export const series: Series[] = [
       "A historical Korean drama following two friends whose relationship is tested by political conflict, ambition, loyalty, war, and their different visions for the future.",
     language: "Korean",
     genres: ["Drama", "Historical", "Action"],
-    isFeatured: false,
+    isFeatured: true,
     createdAt: "2026-10-04",
   },
 
@@ -310,7 +311,7 @@ export const series: Series[] = [
       "A psychological drama exploring relationships, jealousy, secrets, family dynamics, and the complicated connection between a woman and her son's girlfriend.",
     language: "English",
     genres: ["Drama", "Thriller"],
-    isFeatured: false,
+    isFeatured: true,
     createdAt: "2026-10-04",
   },
 
