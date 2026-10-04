@@ -224,4 +224,108 @@ export const series: Series[] = [
     isFeatured: false,
     createdAt: "2026-09-30",
   },
+    {
+    id: "16",
+    title: "SHAQUE",
+    slug: "shaque",
+    year: "2026",
+    rating: "8.0",
+    image: "shaque.jpg",
+    description:
+      "A drama series following complicated relationships, personal struggles, secrets, and unexpected events that change the lives of its characters.",
+    language: "English",
+    genres: ["Drama", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-10-04",
+  },
+
+  {
+    id: "17",
+    title: "A.D. THE BIBLE CONTINUES",
+    slug: "ad-the-bible-continues",
+    year: "2015",
+    rating: "8.0",
+    image: "ad-the-bible-continues.jpg",
+    description:
+      "A historical drama continuing the story of the early followers of Jesus as they face persecution, political conflict, faith, and difficult challenges.",
+    language: "English",
+    genres: ["Drama", "Historical"],
+    isFeatured: false,
+    createdAt: "2026-10-04",
+  },
+
+  {
+    id: "18",
+    title: "VIS A VIS SEASON 4",
+    slug: "vis-a-vis",
+    year: "2019",
+    rating: "8.0",
+    image: "vis-a-vis.jpg",
+    description:
+      "A Spanish prison drama following women dealing with dangerous conflicts, alliances, survival, revenge, and unexpected events inside and outside prison.",
+    language: "Spanish",
+    genres: ["Drama", "Thriller", "Crime"],
+    isFeatured: false,
+    createdAt: "2026-10-04",
+  },
+
+  {
+    id: "19",
+    title: "BEAUTY IN BLACK SEASON 3",
+    slug: "beauty-in-black-season-3",
+    year: "2026",
+    rating: "8.0",
+    image: "beautyThree.jpg",
+    description:
+      "The story continues with new conflicts, betrayals, relationships, power struggles, and dangerous challenges surrounding the characters.",
+    language: "English",
+    genres: ["Drama", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-10-04",
+  },
+
+  {
+    id: "20",
+    title: "MY COUNTRY: THE NEW AGE",
+    slug: "my-country",
+    year: "2019",
+    rating: "8.0",
+    image: "my-country.jpg",
+    description:
+      "A historical Korean drama following two friends whose relationship is tested by political conflict, ambition, loyalty, war, and their different visions for the future.",
+    language: "Korean",
+    genres: ["Drama", "Historical", "Action"],
+    isFeatured: false,
+    createdAt: "2026-10-04",
+  },
+
+  {
+    id: "21",
+    title: "THE GIRLFRIEND",
+    slug: "the-girlfriend",
+    year: "2025",
+    rating: "8.0",
+    image: "the-girlfriend.jpg",
+    description:
+      "A psychological drama exploring relationships, jealousy, secrets, family dynamics, and the complicated connection between a woman and her son's girlfriend.",
+    language: "English",
+    genres: ["Drama", "Thriller"],
+    isFeatured: false,
+    createdAt: "2026-10-04",
+  },
+
+  {
+    id: "22",
+    title: "THE OVAL SEASON 1",
+    slug: "the-oval",
+    year: "2019",
+    rating: "8.0",
+    image: "the-oval.jpg",
+    description:
+      "A political drama following a powerful family inside the White House while exploring political secrets, family conflicts, relationships, power, and dangerous struggles.",
+    language: "English",
+    genres: ["Drama", "Thriller", "Political"],
+    isFeatured: true,
+    createdAt: "2026-10-04",
+  },
 ];
