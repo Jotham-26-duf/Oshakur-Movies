@@ -2286,4 +2286,110 @@ export const episodes: Episode[] = [
     downloadUrl:
       "https://www.mediafire.com/file/cefm2w6qvkfx0/The_Oval_25_final.mp4/file",
   },
+    {
+    id: "212",
+    seriesSlug: "teach-a-lesson",
+    episodeNumber: 1,
+    title: "Episode 1",
+    description:
+      "The story begins as the characters face new challenges and unexpected events.",
+    streamUrl: "https://hanerix.com/rkcsuqn0s1ro",
+    downloadUrl:
+      "https://www.mediafire.com/file/0hu04xih8gm6a6c/TEACH+LEASSON+S01+E01.mp4/file",
+  },
+  {
+    id: "213",
+    seriesSlug: "teach-a-lesson",
+    episodeNumber: 2,
+    title: "Episode 2",
+    description:
+      "The story continues as new situations and challenges develop.",
+    streamUrl: "https://vibuxer.com/6xtfga0k44qs",
+    downloadUrl:
+      "https://www.mediafire.com/file/2m709vv624cjzb8/TEACH+LEASSON+E2+.mp4/file",
+  },
+  {
+    id: "214",
+    seriesSlug: "teach-a-lesson",
+    episodeNumber: 3,
+    title: "Episode 3",
+    description:
+      "The characters face new challenges as the story continues to unfold.",
+    streamUrl: "https://hanerix.com/6ri4zyinxxnv",
+    downloadUrl:
+      "https://www.mediafire.com/file/yew4563bfrsvvjx/TEACH+LEASSON+E03.mp4/file",
+  },
+  {
+    id: "215",
+    seriesSlug: "teach-a-lesson",
+    episodeNumber: 4,
+    title: "Episode 4",
+    description:
+      "New developments create tension as the characters deal with unexpected events.",
+    streamUrl:
+      "https://avcaption.com/watch/e97e9a3a09b7a653e7adc245b477c4fe",
+    downloadUrl:
+      "https://www.mediafire.com/file/v82r7a1eu8lrwma/TEACH+A+LESSON+EP+04__+.mp4/file",
+  },
+
+  {
+    id: "216",
+    seriesSlug: "taken-season-1",
+    episodeNumber: 1,
+    title: "Episode 1",
+    description:
+      "The story begins as Bryan Mills faces a dangerous situation that changes his life.",
+    streamUrl:
+      "https://avcaption.com/watch/d29171a15fe9178985affdf8cb0ea39f",
+    downloadUrl:
+      "https://www.mediafire.com/file/sk8kjwrhzyxf77l/TAKEN_S01_EP_01.mp4/file",
+  },
+  {
+    id: "217",
+    seriesSlug: "taken-season-1",
+    episodeNumber: 2,
+    title: "Episode 2",
+    description:
+      "Bryan continues his investigation while facing new dangers and unexpected challenges.",
+    streamUrl:
+      "https://avcaption.com/watch/6a488a84ffa1e7fff745654938be88a7",
+    downloadUrl:
+      "https://www.mediafire.com/file/9x6iik3zpynwilk/TAKEN_S01_EP_02.mp4/file",
+  },
+  {
+    id: "218",
+    seriesSlug: "taken-season-1",
+    episodeNumber: 3,
+    title: "Episode 3",
+    description:
+      "The investigation becomes more complicated as new threats emerge.",
+    streamUrl:
+      "https://avcaption.com/watch/35d5cf9e5a0227178d5f99c18a955480",
+    downloadUrl:
+      "https://www.mediafire.com/file/slwwervse7yowyy/TAKEN_S01_EP_03.mp4/file",
+  },
+  {
+    id: "219",
+    seriesSlug: "taken-season-1",
+    episodeNumber: 4,
+    title: "Episode 4",
+    description:
+      "The situation becomes more dangerous as Bryan faces another major challenge.",
+    streamUrl:
+      "https://avcaption.com/watch/7e45ecffe4136da47cc1cf60e6465910",
+    downloadUrl:
+      "https://www.mediafie.com/file/ta3j152ydd48h31/TAKEN_S01_EP_04.mp4/file",
+  },
+  {
+    id: "220",
+    seriesSlug: "taken-season-1",
+    episodeNumber: 5,
+    title: "Episode 5",
+    description:
+      "New developments push Bryan deeper into the dangerous investigation.",
+    streamUrl:
+      "https://avcaption.com/watch/86de8fb7ee667e67e39e298d07c33ed5",
+    downloadUrl:
+      "https://www.mediafire.com/file/v9tlb5vuxd67r63/TAKEN_S01_EP_05.mp4/file",
+  },
 ]; 

@@ -63,20 +63,42 @@ export default function HomeClient({
   const [menuOpen, setMenuOpen] = useState(false);
   const [search, setSearch] = useState("");
 
+  /*
+   * Featured movies are shown first.
+   * Within the featured movies, the newest entries
+   * (the ones added last in movies.ts) appear first.
+   *
+   * Non-featured movies keep their original order.
+   */
   const orderedMovies = useMemo(() => {
-    return [...movies].sort((a, b) => {
-      if (a.isFeatured && !b.isFeatured) return -1;
-      if (!a.isFeatured && b.isFeatured) return 1;
-      return 0;
-    });
+    const featured = movies
+      .filter((movie) => movie.isFeatured)
+      .reverse();
+
+    const regular = movies.filter(
+      (movie) => !movie.isFeatured
+    );
+
+    return [...featured, ...regular];
   }, [movies]);
 
+  /*
+   * Featured series are shown first.
+   * Within the featured series, the newest entries
+   * (the ones added last in series.ts) appear first.
+   *
+   * Non-featured series keep their original order.
+   */
   const orderedSeries = useMemo(() => {
-    return [...series].sort((a, b) => {
-      if (a.isFeatured && !b.isFeatured) return -1;
-      if (!a.isFeatured && b.isFeatured) return 1;
-      return 0;
-    });
+    const featured = series
+      .filter((item) => item.isFeatured)
+      .reverse();
+
+    const regular = series.filter(
+      (item) => !item.isFeatured
+    );
+
+    return [...featured, ...regular];
   }, [series]);
 
   const newMovies = useMemo(

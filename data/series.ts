@@ -329,4 +329,36 @@ export const series: Series[] = [
     isFeatured: true,
     createdAt: "2026-10-04",
   },
+    {
+    id: "23",
+    title: "TEACH A LESSON",
+    slug: "teach-a-lesson",
+    year: "2026",
+    rating: "8.0",
+    image: "teach-a-lesson.jpg",
+    description:
+      "A drama series exploring relationships, challenges, conflicts, and unexpected events surrounding its characters.",
+    language: "English",
+    genres: ["Drama", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-10-06",
+  },
+
+  {
+    id: "24",
+    title: "TAKEN SEASON 1",
+    slug: "taken-season-1",
+    year: "2017",
+    rating: "8.0",
+    image: "taken.jpg",
+    description:
+      "An action thriller series following Bryan Mills and his journey through dangerous missions, investigations, and unexpected threats.",
+    language: "English",
+    genres: ["Action", "Drama", "Thriller"],
+    isFeatured: true,
+    createdAt: "2026-10-06",
+  },
+  
+  
+
 ];

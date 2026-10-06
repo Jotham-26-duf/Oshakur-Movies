@@ -3317,4 +3317,79 @@ export const movies: Movie[] = [
     },
   ],
 },
+{
+  id: "126",
+  title: "Escape and Evasion",
+  slug: "escape-and-evasion",
+  year: "2019",
+  rating: "8.0",
+  image: "escape-and-evasion.jpg",
+  description:
+    "Escape and Evasion follows a soldier who returns home after a dangerous mission and struggles with the memories of what happened. As he searches for answers, he is forced to confront the consequences of his past.",
+  language: "English",
+  genres: ["Action", "Drama", "Thriller"],
+  isFeatured: true,
+  createdAt: "2026-10-06",
+  parts: [
+    {
+      id: "126-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl: "https://hgcloud.to/rr2hwommlte",
+      downloadUrl:
+        "https://www.mediafire.com/file/xw91hq9oqvipufa/Escape+and+Evasion.mp4/file",
+    },
+  ],
+},
+
+{
+  id: "127",
+  title: "Desire Tikuvutu - Genius",
+  slug: "desire-tikuvutu-genius",
+  year: "2026",
+  rating: "8.0",
+  image: "desire-tikuvutu-genius.jpg",
+  description:
+    "Desire Tikuvutu - Genius is a dramatic story centered around ambition, determination, and the challenges faced by people pursuing their goals.",
+  language: "English",
+  genres: ["Drama"],
+  isFeatured: true,
+  createdAt: "2026-10-06",
+  parts: [
+    {
+      id: "127-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl: "https://hgcloud.to/xsgz82d9503u",
+      downloadUrl:
+        "https://www.mediafire.com/file/bvtie8e6q8ynzmq/Desire_Tikuvutu_-_Genius.mp4/file",
+    },
+  ],
+},
+
+{
+  id: "128",
+  title: "Doing Life",
+  slug: "doing-life",
+  year: "2026",
+  rating: "8.0",
+  image: "doing-life.jpg",
+  description:
+    "Doing Life follows characters dealing with difficult circumstances and unexpected challenges as they navigate relationships, choices, and the consequences of their actions.",
+  language: "English",
+  genres: ["Drama", "Thriller"],
+  isFeatured: true,
+  createdAt: "2026-10-06",
+  parts: [
+    {
+      id: "128-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl:
+        "https://avcaption.com/watch/3a43acbff9b65cbffbdca10ca8dd92b3",
+      downloadUrl:
+        "https://www.mediafire.com/file/ouzzvgmjpz6v54z/DOING+LIFE+__.mp4/file",
+    },
+  ],
+},
 ];
