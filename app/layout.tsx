@@ -31,6 +31,13 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
 
+  /* Website favicon / site logo */
+  icons: {
+    icon: "/images/logo.jpg",
+    shortcut: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
+  },
+
   openGraph: {
     title: "OSHAKUR MOVIES | Watch Agasobanuye Movies & Series",
     description:
@@ -95,23 +102,34 @@ export default function RootLayout({
       <body>
         {children}
 
+        {/* Website + Organization structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "OSHAKUR MOVIES",
-              alternateName: "OSHAKUR",
-              url: siteUrl,
-              description:
-                "OSHAKUR MOVIES — Watch and discover Agasobanuye movies and series online.",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: `${siteUrl}/search?q={search_term_string}`,
-                "query-input": "required name=search_term_string",
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "OSHAKUR MOVIES",
+                alternateName: "OSHAKUR",
+                url: siteUrl,
+                description:
+                  "OSHAKUR MOVIES — Watch and discover Agasobanuye movies and series online.",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: `${siteUrl}/search?q={search_term_string}`,
+                  "query-input": "required name=search_term_string",
+                },
               },
-            }),
+
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "OSHAKUR MOVIES",
+                url: siteUrl,
+                logo: `${siteUrl}/images/logo.jpg`,
+              },
+            ]),
           }}
         />
       </body>
