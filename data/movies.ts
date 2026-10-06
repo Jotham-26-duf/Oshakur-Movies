@@ -1399,7 +1399,7 @@ export const movies: Movie[] = [
       "A young girl joins a legendary sea monster hunter and discovers that the creatures they fear may not be what they seem.",
     language: "English",
     genres: ["Animation", "Adventure", "Action", "Fantasy"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-10-01",
     parts: [
       {
@@ -1423,7 +1423,7 @@ export const movies: Movie[] = [
       "A determined rabbit police officer teams up with a clever fox to uncover a mystery threatening the animal city of Zootopia.",
     language: "English",
     genres: ["Animation", "Comedy", "Adventure", "Family"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-10-01",
     parts: [
       {
@@ -1447,7 +1447,7 @@ export const movies: Movie[] = [
       "People with extraordinary abilities become involved in a dangerous struggle involving a secret government program and powerful enemies.",
     language: "English",
     genres: ["Action", "Sci-Fi", "Thriller"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-10-01",
     parts: [
       {
@@ -1470,7 +1470,7 @@ export const movies: Movie[] = [
   description: "Blood Brothers is an action drama movie.",
   language: "English",
   genres: ["Action", "Drama", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1502,7 +1502,7 @@ export const movies: Movie[] = [
   description: "Gallowwalkers is an action horror western movie.",
   language: "English",
   genres: ["Action", "Horror", "Western"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1534,7 +1534,7 @@ export const movies: Movie[] = [
   description: "Kuch Kuch Hota Hai is a romantic drama movie.",
   language: "Hindi",
   genres: ["Romance", "Drama", "Comedy"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1567,7 +1567,7 @@ export const movies: Movie[] = [
   description: "Step Up All In is a dance drama movie.",
   language: "English",
   genres: ["Drama", "Romance", "Music"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-01",
   parts: [
     {
