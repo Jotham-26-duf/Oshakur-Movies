@@ -1,10 +1,10 @@
+
 import Link from "next/link";
 import { FiMail, FiPhone } from "react-icons/fi";
 import {
   SiInstagram,
   SiTiktok,
   SiWhatsapp,
-  SiYoutube,
 } from "react-icons/si";
 
 export default function SiteBottom() {
@@ -15,7 +15,7 @@ export default function SiteBottom() {
         <div className="sm:col-span-2 lg:col-span-1">
           <Link href="/" className="inline-block">
             <div className="flex items-center gap-3">
-              {/* Text-based logo - no image file required */}
+              {/* Text-based logo */}
               <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-[#1B1B1B]">
                 <span className="text-xl font-black text-white">
                   OM8
@@ -80,37 +80,52 @@ export default function SiteBottom() {
           </h3>
 
           <div className="mt-5 flex flex-col gap-4">
+            {/* TikTok */}
             <a
-              href="https://www.youtube.com/@oshakurfilm.com."
+              href="https://www.tiktok.com/@oshakurmovies23"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Oshakuru Movies on YouTube"
-              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#FF0000]"
+              aria-label="Oshakur Movies on TikTok"
+              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-white"
             >
-              <SiYoutube size={20} aria-hidden="true" />
-              <span>YouTube</span>
+              <SiTiktok size={20} aria-hidden="true" />
+              <span>TikTok</span>
             </a>
 
+            {/* Instagram */}
             <a
-              href="https://www.instagram.com/oshakurfilm"
+              href="https://www.instagram.com/reel/DeHRzrpPszz/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ=="
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Oshakuru Movies on Instagram"
+              aria-label="Oshakur Movies on Instagram"
               className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#E1306C]"
             >
               <SiInstagram size={20} aria-hidden="true" />
               <span>Instagram</span>
             </a>
 
+            {/* WhatsApp Group */}
             <a
-              href="https://www.tiktok.com/@oshakurfilm"
+              href="https://chat.whatsapp.com/J3WZy8GpRpT61LhbugxQBL?s=cl&p=a&mlu=4&ilr=4"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Oshakuru Movies on TikTok"
-              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-white"
+              aria-label="Join Oshakur Movies WhatsApp Group"
+              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#25D366]"
             >
-              <SiTiktok size={20} aria-hidden="true" />
-              <span>TikTok</span>
+              <SiWhatsapp size={20} aria-hidden="true" />
+              <span>WhatsApp Group</span>
+            </a>
+
+            {/* WhatsApp Channel */}
+            <a
+              href="https://whatsapp.com/channel/0029Vb9FAiT6hENkuTGlcy1W"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Oshakur Movies WhatsApp Channel"
+              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#25D366]"
+            >
+              <SiWhatsapp size={20} aria-hidden="true" />
+              <span>WhatsApp Channel</span>
             </a>
           </div>
         </div>
@@ -123,6 +138,7 @@ export default function SiteBottom() {
           </h3>
 
           <div className="mt-5 flex flex-col gap-4">
+            {/* Phone */}
             <a
               href="tel:+250789063094"
               className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#00E5FF]"
@@ -131,6 +147,7 @@ export default function SiteBottom() {
               <span>+250 789063094</span>
             </a>
 
+            {/* WhatsApp Contact */}
             <a
               href="https://wa.me/250789063094"
               target="_blank"
@@ -141,6 +158,7 @@ export default function SiteBottom() {
               <span>WhatsApp</span>
             </a>
 
+            {/* Email */}
             <a
               href="mailto:oshakurmovies@gmail.com"
               className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#E040FB]"

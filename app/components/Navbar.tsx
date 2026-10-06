@@ -16,6 +16,7 @@ function HomeIcon() {
       stroke="currentColor"
       strokeWidth="2"
       className="h-4 w-4"
+      aria-hidden="true"
     >
       <path d="M3 10.5 12 3l9 7.5" />
       <path d="M5 9.5V21h14V9.5" />
@@ -32,6 +33,7 @@ function MovieIcon() {
       stroke="currentColor"
       strokeWidth="2"
       className="h-4 w-4"
+      aria-hidden="true"
     >
       <rect x="3" y="5" width="18" height="14" rx="2" />
       <path d="m7 5 2 3" />
@@ -52,6 +54,7 @@ function SeriesIcon() {
       stroke="currentColor"
       strokeWidth="2"
       className="h-4 w-4"
+      aria-hidden="true"
     >
       <rect x="3" y="4" width="18" height="16" rx="2" />
       <path d="M8 4v4" />
@@ -70,6 +73,7 @@ function TrendingIcon() {
       stroke="currentColor"
       strokeWidth="2"
       className="h-4 w-4"
+      aria-hidden="true"
     >
       <path d="M3 17 9 11l4 4 8-9" />
       <path d="M17 6h4v4" />
@@ -85,6 +89,7 @@ function SearchIcon() {
       stroke="currentColor"
       strokeWidth="2"
       className="h-5 w-5"
+      aria-hidden="true"
     >
       <circle cx="11" cy="11" r="7" />
       <path d="m20 20-4-4" />
@@ -100,6 +105,7 @@ function MenuIcon() {
       stroke="currentColor"
       strokeWidth="2"
       className="h-6 w-6"
+      aria-hidden="true"
     >
       <path d="M4 6h16" />
       <path d="M4 12h16" />
@@ -116,6 +122,7 @@ function CloseIcon() {
       stroke="currentColor"
       strokeWidth="2"
       className="h-6 w-6"
+      aria-hidden="true"
     >
       <path d="m6 6 12 12" />
       <path d="m18 6-12 12" />
@@ -197,16 +204,31 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#121212]/95 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 max-w-7xl items-center px-4 sm:h-18 sm:px-6 lg:px-8">
+        {/* TOP NAVIGATION */}
+        <div className="mx-auto flex h-16 max-w-7xl items-center px-4 sm:h-[72px] sm:px-6 lg:px-8">
+          {/* OSHAKUR MOVIES BRAND */}
           <Link
             href="/"
             onClick={closeMenu}
-            className="shrink-0 text-xl font-extrabold tracking-wider sm:text-2xl"
+            aria-label="Oshakur Movies home"
+            className="flex shrink-0 items-center gap-2"
           >
-            <span className="text-[#00E5FF]">OSHAKUR</span>{" "}
-            <span className="text-[#E040FB]">MOVIES</span>
+            <img
+              src="/images/logo.jpg"
+              alt="OSHAKUR MOVIES logo"
+              width={48}
+              height={48}
+              className="h-10 w-10 rounded-full object-cover sm:h-12 sm:w-12"
+            />
+
+            {/* Brand name appears on larger screens */}
+            <span className="hidden whitespace-nowrap text-xl font-extrabold tracking-wide sm:block lg:text-2xl">
+              <span className="text-[#00E5FF]">OSHAKUR</span>{" "}
+              <span className="text-[#E040FB]">MOVIES</span>
+            </span>
           </Link>
 
+          {/* DESKTOP NAVIGATION */}
           <nav className="ml-6 hidden items-center gap-1 lg:flex">
             <Link
               href="/"
@@ -241,6 +263,7 @@ export default function Navbar() {
             </Link>
           </nav>
 
+          {/* RIGHT SIDE */}
           <div className="ml-auto flex items-center gap-2">
             <Link
               href="/login"
@@ -254,12 +277,14 @@ export default function Navbar() {
               onClick={() => setMenuOpen((open) => !open)}
               className="rounded-lg p-2 text-white transition hover:bg-white/10 lg:hidden"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
             >
               {menuOpen ? <CloseIcon /> : <MenuIcon />}
             </button>
           </div>
         </div>
 
+        {/* SEARCH BAR */}
         <div className="border-t border-white/5 bg-[#121212] px-4 py-3 sm:px-6 lg:px-8">
           <form
             onSubmit={handleSearch}
@@ -275,6 +300,7 @@ export default function Navbar() {
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
                 placeholder="Search movies and series..."
+                aria-label="Search movies and series"
                 className="w-full rounded-full border border-white/10 bg-[#2A2A2A] py-3 pl-11 pr-24 text-sm text-white outline-none placeholder:text-[#AAAAAA] focus:border-[#2979FF] focus:bg-[#303030] sm:py-3.5"
               />
 
@@ -291,6 +317,7 @@ export default function Navbar() {
               <div className="absolute left-0 right-0 top-full mt-2 overflow-hidden rounded-2xl border border-white/10 bg-[#1B1B1B] shadow-2xl">
                 {hasMatches ? (
                   <div className="max-h-[420px] overflow-y-auto">
+                    {/* MOVIE RESULTS */}
                     {matchingMovies.length > 0 && (
                       <div className="p-3">
                         <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-wider text-[#888888]">
@@ -326,6 +353,7 @@ export default function Navbar() {
                       </div>
                     )}
 
+                    {/* SERIES RESULTS */}
                     {matchingSeries.length > 0 && (
                       <div className="border-t border-white/10 p-3">
                         <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-wider text-[#888888]">
@@ -377,6 +405,7 @@ export default function Navbar() {
           </form>
         </div>
 
+        {/* MOBILE MENU */}
         {menuOpen && (
           <div className="border-t border-white/10 bg-[#121212] px-4 py-4 shadow-2xl lg:hidden">
             <nav className="flex flex-col gap-2">
@@ -420,8 +449,8 @@ export default function Navbar() {
         )}
       </header>
 
-      <div className="h-[116px] sm:h-[122px]" />
+      {/* SPACE FOR FIXED HEADER */}
+      <div className="h-[116px] sm:h-[128px]" />
     </>
   );
 }
-

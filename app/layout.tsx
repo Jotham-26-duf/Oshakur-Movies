@@ -31,11 +31,10 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
 
-  /* Website favicon / site logo */
   icons: {
-    icon: "/images/logo.jpg",
-    shortcut: "/images/logo.jpg",
-    apple: "/images/logo.jpg",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 
   openGraph: {
@@ -76,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta
           name="google-adsense-account"
@@ -136,4 +135,3 @@ export default function RootLayout({
     </html>
   );
 }
-
