@@ -31,8 +31,9 @@ export const movies: Movie[] = [
   title: "LET IT SHINE",
   slug: "let-it-shine",
   year: "2026",
+  explainer:"ROCK KIMOMO",
   rating: "8.0",
-  image: "og-image.png",
+  image: "images.webp",
   description:
     "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his true voice, and stand up for what he believes in.",
   language: "English",
@@ -54,6 +55,7 @@ export const movies: Movie[] = [
   id: "2",
   title: "One Last Shot",
   slug: "one-last-shot",
+  explainer: "ROCK KIMOMO",
   year: "2026",
   rating: "8.0",
   image: "onelatstshot.webp",

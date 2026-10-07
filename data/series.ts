@@ -25,7 +25,7 @@ export const series: Series[] = [
     description:
       "A drama series following the complicated lives, relationships, and struggles of its characters.",
     language: "English",
-    explainer: "",
+    explainer: "ROCK KIMOMO",
     genres: ["Drama"],
     isFeatured: false,
     createdAt: "2026-02-05",
