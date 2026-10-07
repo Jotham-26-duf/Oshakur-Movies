@@ -8,6 +8,7 @@ export interface MoviePart {
 }
 
 export interface Movie {
+ explainer?: string;
   id: string;
   title: string;
   slug: string;
@@ -20,6 +21,7 @@ export interface Movie {
   isFeatured: boolean;
   createdAt: string;
   parts: MoviePart[];
+
 }
 
 export const movies: Movie[] = [
@@ -30,7 +32,7 @@ export const movies: Movie[] = [
   slug: "let-it-shine",
   year: "2026",
   rating: "8.0",
-  image: "images.webp",
+  image: "og-image.png",
   description:
     "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his true voice, and stand up for what he believes in.",
   language: "English",
@@ -3389,6 +3391,31 @@ export const movies: Movie[] = [
         "https://avcaption.com/watch/3a43acbff9b65cbffbdca10ca8dd92b3",
       downloadUrl:
         "https://www.mediafire.com/file/ouzzvgmjpz6v54z/DOING+LIFE+__.mp4/file",
+    },
+  ],
+},
+{
+  id: "129",
+  title: "Hacksaw Ridge",
+  slug: "hacksaw-ridge",
+  year: "2016",
+  rating: "8.1",
+  image: "hacksaw-ridge.jpg",
+  description:
+    "During World War II, Desmond Doss serves as a combat medic and refuses to carry a weapon because of his beliefs. Despite facing intense opposition, he saves numerous wounded soldiers during the Battle of Okinawa.",
+  language: "English",
+  genres: ["Drama", "Action"],
+  isFeatured: true,
+  createdAt: "2026-10-07",
+  parts: [
+    {
+      id: "129-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl:
+        "https://avcaption.com/watch/01bd41a7b2914994ce2aaa4cfa42ca2c",
+      downloadUrl:
+        "https://www.mediafire.com/file/54wb908r7il8mv8/HACKSAW+RIDGE.mp4/file",
     },
   ],
 },

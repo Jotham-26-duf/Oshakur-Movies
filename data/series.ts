@@ -1,4 +1,3 @@
-
 export interface Series {
   id: string;
   title: string;
@@ -8,9 +7,11 @@ export interface Series {
   image: string;
   description: string;
   language: string;
+  explainer?: string;
   genres: string[];
   isFeatured: boolean;
   createdAt: string;
+  
 }
 
 export const series: Series[] = [
@@ -24,10 +25,12 @@ export const series: Series[] = [
     description:
       "A drama series following the complicated lives, relationships, and struggles of its characters.",
     language: "English",
+    explainer: "",
     genres: ["Drama"],
     isFeatured: false,
     createdAt: "2026-02-05",
   },
+
   {
     id: "2",
     title: "BEAUTY IN BLACK SEASON 2",
@@ -38,10 +41,12 @@ export const series: Series[] = [
     description:
       "The story continues with new challenges, conflicts, relationships, and unexpected events.",
     language: "English",
+    explainer: "",
     genres: ["Drama"],
     isFeatured: false,
     createdAt: "2026-02-05",
   },
+
   {
     id: "3",
     title: "TREADSTONE",
@@ -52,10 +57,12 @@ export const series: Series[] = [
     description:
       "An action thriller about covert operatives connected to a secret government program.",
     language: "English",
+    explainer: "",
     genres: ["Action", "Drama", "Thriller"],
     isFeatured: false,
     createdAt: "2026-02-05",
   },
+
   {
     id: "4",
     title: "JUMONG",
@@ -66,10 +73,12 @@ export const series: Series[] = [
     description:
       "A historical drama following Jumong's journey, struggles, relationships, and rise during a time of conflict and political change.",
     language: "Korean",
+    explainer: "",
     genres: ["Drama", "Historical", "Action"],
     isFeatured: false,
     createdAt: "2026-09-28",
   },
+
   {
     id: "5",
     title: "OUTER BANKS SEASON 5",
@@ -80,10 +89,12 @@ export const series: Series[] = [
     description:
       "The story continues with new adventures, challenges, friendships, conflicts, and unexpected events.",
     language: "English",
+    explainer: "",
     genres: ["Adventure", "Drama", "Mystery", "Thriller"],
     isFeatured: false,
     createdAt: "2026-09-28",
   },
+
   {
     id: "6",
     title: "BETWEEN FATHER AND SON",
@@ -94,10 +105,12 @@ export const series: Series[] = [
     description:
       "A family drama exploring the relationship between a father and his son as they face challenges, conflicts, and unexpected events.",
     language: "English",
+    explainer: "",
     genres: ["Drama", "Family"],
     isFeatured: false,
     createdAt: "2026-09-28",
   },
+
   {
     id: "7",
     title: "GENERATION TO GENERATION",
@@ -108,11 +121,13 @@ export const series: Series[] = [
     description:
       "A family drama exploring relationships, challenges, conflicts, and experiences that connect different generations.",
     language: "English",
+    explainer: "",
     genres: ["Drama", "Family"],
     isFeatured: false,
     createdAt: "2026-09-29",
   },
-    {
+
+  {
     id: "8",
     title: "DEATH GAME",
     slug: "death-game",
@@ -122,10 +137,12 @@ export const series: Series[] = [
     description:
       "A suspenseful series following characters who face dangerous challenges and unexpected events.",
     language: "Korean",
+    explainer: "",
     genres: ["Drama", "Thriller", "Mystery"],
     isFeatured: false,
     createdAt: "2026-09-30",
   },
+
   {
     id: "9",
     title: "AGENT KIM",
@@ -136,10 +153,12 @@ export const series: Series[] = [
     description:
       "An action series following Agent Kim through dangerous missions, conflicts, and unexpected challenges.",
     language: "English",
+    explainer: "",
     genres: ["Action", "Drama", "Thriller"],
     isFeatured: false,
     createdAt: "2026-09-30",
   },
+
   {
     id: "10",
     title: "A BONA FIDE KILLER",
@@ -150,10 +169,12 @@ export const series: Series[] = [
     description:
       "A thriller following a dangerous investigation filled with secrets, conflicts, and unexpected events.",
     language: "English",
+    explainer: "",
     genres: ["Action", "Drama", "Thriller"],
     isFeatured: false,
     createdAt: "2026-09-30",
   },
+
   {
     id: "11",
     title: "ELITE FORCE",
@@ -164,10 +185,12 @@ export const series: Series[] = [
     description:
       "An action series following an elite team as they face dangerous missions and powerful enemies.",
     language: "English",
+    explainer: "",
     genres: ["Action", "Drama", "Thriller"],
     isFeatured: false,
     createdAt: "2026-09-30",
   },
+
   {
     id: "12",
     title: "THE EAST PALACE",
@@ -178,10 +201,12 @@ export const series: Series[] = [
     description:
       "A historical drama filled with palace conflicts, relationships, ambition, and unexpected events.",
     language: "Chinese",
+    explainer: "",
     genres: ["Drama", "Historical", "Romance"],
     isFeatured: false,
     createdAt: "2026-09-30",
   },
+
   {
     id: "13",
     title: "THE FIXERS",
@@ -192,10 +217,12 @@ export const series: Series[] = [
     description:
       "A drama series following characters who become involved in complicated situations and difficult challenges.",
     language: "English",
+    explainer: "",
     genres: ["Drama", "Thriller"],
     isFeatured: false,
     createdAt: "2026-09-30",
   },
+
   {
     id: "14",
     title: "LANTERNS",
@@ -206,11 +233,13 @@ export const series: Series[] = [
     description:
       "A mystery drama following characters as they uncover secrets and face unexpected events.",
     language: "English",
+    explainer: "",
     genres: ["Drama", "Mystery", "Thriller"],
     isFeatured: false,
     createdAt: "2026-09-30",
   },
-    {
+
+  {
     id: "15",
     title: "THE VAMPIRE DIARIES SEASON 1",
     slug: "the-vampire-diaries-season-1",
@@ -220,12 +249,13 @@ export const series: Series[] = [
     description:
       "A supernatural drama following Elena Gilbert and the Salvatore brothers as their lives become connected to the mysterious supernatural world of Mystic Falls.",
     language: "English",
+    explainer: "",
     genres: ["Drama", "Fantasy", "Horror", "Romance", "Thriller"],
-    isFeatured: true
-    ,
+    isFeatured: true,
     createdAt: "2026-09-30",
   },
-    {
+
+  {
     id: "16",
     title: "SHAQUE",
     slug: "shaque",
@@ -235,6 +265,7 @@ export const series: Series[] = [
     description:
       "A drama series following complicated relationships, personal struggles, secrets, and unexpected events that change the lives of its characters.",
     language: "English",
+    explainer: "",
     genres: ["Drama", "Thriller"],
     isFeatured: true,
     createdAt: "2026-10-04",
@@ -250,6 +281,7 @@ export const series: Series[] = [
     description:
       "A historical drama continuing the story of the early followers of Jesus as they face persecution, political conflict, faith, and difficult challenges.",
     language: "English",
+    explainer: "",
     genres: ["Drama", "Historical"],
     isFeatured: true,
     createdAt: "2026-10-04",
@@ -265,6 +297,7 @@ export const series: Series[] = [
     description:
       "A Spanish prison drama following women dealing with dangerous conflicts, alliances, survival, revenge, and unexpected events inside and outside prison.",
     language: "Spanish",
+    explainer: "",
     genres: ["Drama", "Thriller", "Crime"],
     isFeatured: true,
     createdAt: "2026-10-04",
@@ -280,6 +313,7 @@ export const series: Series[] = [
     description:
       "The story continues with new conflicts, betrayals, relationships, power struggles, and dangerous challenges surrounding the characters.",
     language: "English",
+    explainer: "",
     genres: ["Drama", "Thriller"],
     isFeatured: true,
     createdAt: "2026-10-04",
@@ -295,6 +329,7 @@ export const series: Series[] = [
     description:
       "A historical Korean drama following two friends whose relationship is tested by political conflict, ambition, loyalty, war, and their different visions for the future.",
     language: "Korean",
+    explainer: "",
     genres: ["Drama", "Historical", "Action"],
     isFeatured: true,
     createdAt: "2026-10-04",
@@ -310,6 +345,7 @@ export const series: Series[] = [
     description:
       "A psychological drama exploring relationships, jealousy, secrets, family dynamics, and the complicated connection between a woman and her son's girlfriend.",
     language: "English",
+    explainer: "",
     genres: ["Drama", "Thriller"],
     isFeatured: true,
     createdAt: "2026-10-04",
@@ -325,11 +361,13 @@ export const series: Series[] = [
     description:
       "A political drama following a powerful family inside the White House while exploring political secrets, family conflicts, relationships, power, and dangerous struggles.",
     language: "English",
+    explainer: "",
     genres: ["Drama", "Thriller", "Political"],
     isFeatured: true,
     createdAt: "2026-10-04",
   },
-    {
+
+  {
     id: "23",
     title: "TEACH A LESSON",
     slug: "teach-a-lesson",
@@ -339,6 +377,7 @@ export const series: Series[] = [
     description:
       "A drama series exploring relationships, challenges, conflicts, and unexpected events surrounding its characters.",
     language: "English",
+    explainer: "",
     genres: ["Drama", "Thriller"],
     isFeatured: true,
     createdAt: "2026-10-06",
@@ -354,11 +393,9 @@ export const series: Series[] = [
     description:
       "An action thriller series following Bryan Mills and his journey through dangerous missions, investigations, and unexpected threats.",
     language: "English",
+    explainer: "",
     genres: ["Action", "Drama", "Thriller"],
     isFeatured: true,
     createdAt: "2026-10-06",
   },
-  
-  
-
 ];

@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 interface MovieCardProps {
@@ -7,8 +6,33 @@ interface MovieCardProps {
   rating: string;
   image: string;
   slug: string;
+  explainer?: string;
+  createdAt?: string;
   streamUrl?: string;
   downloadUrl?: string;
+}
+
+function getTimeAgo(createdAt?: string): string {
+  if (!createdAt) return "";
+
+  const createdTime = new Date(createdAt).getTime();
+  const now = Date.now();
+  const difference = now - createdTime;
+
+  if (difference < 0) return "Just now";
+
+  const minutes = Math.floor(difference / (1000 * 60));
+  const hours = Math.floor(difference / (1000 * 60 * 60));
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const weeks = Math.floor(days / 7);
+  const months = Math.floor(days / 30);
+
+  if (minutes < 1) return "Just now";
+  if (minutes < 60) return `${minutes}m ago`;
+  if (hours < 24) return `${hours}h ago`;
+  if (days < 7) return `${days}d ago`;
+  if (weeks < 4) return `${weeks}w ago`;
+  return `${months}mo ago`;
 }
 
 export default function MovieCard({
@@ -17,9 +41,13 @@ export default function MovieCard({
   rating,
   image,
   slug,
+  explainer,
+  createdAt,
   streamUrl,
   downloadUrl,
 }: MovieCardProps) {
+  const timeAgo = getTimeAgo(createdAt);
+
   return (
     <div className="group block w-full min-w-0">
       <Link href={`/movies/${slug}`}>
@@ -45,7 +73,9 @@ export default function MovieCard({
       </Link>
 
       <div className="mt-2 flex items-center gap-2 text-sm">
-        <span className="text-[#AAAAAA]">{year}</span>
+        {timeAgo && (
+          <span className="text-[#AAAAAA]">{timeAgo}</span>
+        )}
 
         <span className="text-[#AAAAAA]">•</span>
 
@@ -53,6 +83,16 @@ export default function MovieCard({
           <span className="text-[#FFC107]">★</span>
           {rating}
         </span>
+
+        {explainer && (
+          <>
+            <span className="text-[#AAAAAA]">•</span>
+
+            <span className="truncate text-[#AAAAAA]">
+              🎙 {explainer}
+            </span>
+          </>
+        )}
       </div>
 
       <div className="mt-3 flex gap-2">
@@ -81,4 +121,3 @@ export default function MovieCard({
     </div>
   );
 }
-
