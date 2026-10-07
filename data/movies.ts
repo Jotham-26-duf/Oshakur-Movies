@@ -1600,7 +1600,7 @@ export const movies: Movie[] = [
   description: "Secret Superstar is a Hindi drama and music movie.",
   language: "Hindi",
   genres: ["Drama", "Music"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1632,7 +1632,7 @@ export const movies: Movie[] = [
   description: "Dhadkan is a romantic drama movie.",
   language: "Hindi",
   genres: ["Romance", "Drama"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1672,7 +1672,7 @@ export const movies: Movie[] = [
   description: "Blast is an action thriller movie.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1885,7 +1885,7 @@ export const movies: Movie[] = [
     "Mayday follows a dangerous mission that quickly turns into a fight for survival. The characters must deal with unexpected threats, difficult decisions, and powerful enemies while trying to complete their mission.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -1917,7 +1917,7 @@ export const movies: Movie[] = [
     "Knights of the Zodiac follows a young warrior who discovers extraordinary abilities and becomes involved in a dangerous battle to protect a powerful goddess. He must master his skills and face powerful enemies in a series of intense battles.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-03",
   parts: [
     {
