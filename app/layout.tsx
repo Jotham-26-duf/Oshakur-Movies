@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/images/movies/images.webp",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "OSHAKUR MOVIES",
+        alt: "OSHAKUR MOVIES — Watch Agasobanuye Movies & Series",
       },
     ],
   },
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "OSHAKUR MOVIES | Watch Agasobanuye Movies & Series",
     description:
       "Watch and discover Agasobanuye movies and series online on OSHAKUR MOVIES.",
-    images: ["/images/movies/images.webp"],
+    images: ["/images/og-image.png"],
   },
 
   robots: {
@@ -89,12 +89,18 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
-        {/* Monetag Multitag */}
+        {/* Monetag Vignette Banner - Zone 11973593 */}
         <script
-          src="https://quge5.com/88/tag.min.js"
-          data-zone="289831"
-          async
-          data-cfasync="false"
+          dangerouslySetInnerHTML={{
+            __html: `(function(s){s.dataset.zone='11973593',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`
+          }}
+        />
+
+        {/* Monetag In-Page Push - Zone 11973734 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(s){s.dataset.zone='11973734',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`
+          }}
         />
       </head>
 
@@ -135,3 +141,4 @@ export default function RootLayout({
     </html>
   );
 }
+
