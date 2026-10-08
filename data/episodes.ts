@@ -2392,4 +2392,69 @@ export const episodes: Episode[] = [
     downloadUrl:
       "https://www.mediafire.com/file/v9tlb5vuxd67r63/TAKEN_S01_EP_05.mp4/file",
   },
+    {
+    id: "221",
+    seriesSlug: "hes-into-her-season-1",
+    episodeNumber: 1,
+    title: "Episode 1",
+    description:
+      "Maxpein arrives at a new school and meets Deib, beginning an unexpected relationship filled with conflict and romance.",
+    streamUrl: "https://vibuxer.com/ajsgcidmtbq0",
+    downloadUrl:
+      "https://www.mediafire.com/file/ibhy7m8gbsqr89p/Hes+Into+Her+S01+E01.mp4/file",
+  },
+  {
+    id: "222",
+    seriesSlug: "hes-into-her-season-1",
+    episodeNumber: 2,
+    title: "Episode 2",
+    description:
+      "Maxpein and Deib continue navigating school life, misunderstandings, and their growing connection.",
+    streamUrl: "https://audinifer.com/ys0vhfnbewv7",
+    downloadUrl:
+      "https://www.mediafire.com/file/0mh1r18epoulsuu/Hes_Into_Her_S01_E02.mp4/file",
+  },
+  {
+    id: "223",
+    seriesSlug: "hes-into-her-season-1",
+    episodeNumber: 3,
+    title: "Episode 3",
+    description:
+      "New school experiences bring more challenges as the characters develop friendships and confront their feelings.",
+    streamUrl: "https://hanerix.com/xbdhgt34p0t2",
+    downloadUrl:
+      "https://www.mediafire.com/file/lphbr4y8usihcbz/Hes_Into_Her_S01_E03.mp4/file",
+  },
+  {
+    id: "224",
+    seriesSlug: "hes-into-her-season-1",
+    episodeNumber: 4,
+    title: "Episode 4",
+    description:
+      "The story continues as Maxpein and Deib navigate their changing relationship and school life.",
+    streamUrl: "https://audinifer.com/yqm9qap3yxb2",
+    downloadUrl: "",
+  },
+  {
+    id: "225",
+    seriesSlug: "hes-into-her-season-1",
+    episodeNumber: 5,
+    title: "Episode 5",
+    description:
+      "Relationships and friendships continue to evolve as unexpected situations test the characters.",
+    streamUrl: "https://audinifer.com/s66mrvf8fcvd",
+    downloadUrl:
+      "https://www.mediafire.com/file/h74lbvtvdj4iruw/He%2527s_Into_Her_S01_E05.mp4/file",
+  },
+  {
+    id: "226",
+    seriesSlug: "hes-into-her-season-1",
+    episodeNumber: 6,
+    title: "Episode 6",
+    description:
+      "The characters face further relationship challenges and new developments in their school lives.",
+    streamUrl: "",
+    downloadUrl:
+      "https://www.mediafire.com/file/ci4tk7dn51l8x79/He%2527s_Into_Her_S01_E06.mp4/file",
+  },
 ]; 

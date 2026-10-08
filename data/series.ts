@@ -398,4 +398,20 @@ export const series: Series[] = [
     isFeatured: true,
     createdAt: "2026-10-06",
   },
+    {
+    id: "25",
+    title: "HE'S INTO HER SEASON 1",
+    slug: "hes-into-her-season-1",
+    year: "2021",
+    rating: "8.0",
+    image: "hes-into-her.jpg",
+    description:
+      "A Filipino romantic comedy-drama following a strong-willed girl and a popular school basketball player whose rivalry gradually develops into romance, friendship, and unexpected challenges.",
+    language: "Filipino",
+    explainer: "",
+    genres: ["Romance", "Drama", "Comedy"],
+    isFeatured: true,
+    createdAt: "2026-10-09",
+  },
+
 ];

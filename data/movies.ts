@@ -3448,4 +3448,31 @@ export const movies: Movie[] = [
     },
   ],
 },
+{
+  id: "131",
+  title: "Insidious out of the further",
+  slug: "insidious-out-of-the-further",
+  explainer: "Perfect",
+  year: "2026",
+  rating: "8.0",
+  image: "insidious-out-of-the-further.jpg",
+  description:
+    "During World War II, Desmond Doss serves as a combat medic and refuses to carry a weapon because of his beliefs. Despite facing intense opposition, he saves numerous wounded soldiers during the Battle of Okinawa.",
+  language: "English",
+  genres: ["Drama", "Action"],
+  isFeatured: true,
+  createdAt: "2026-10-07",
+  parts:[
+
+    {
+      id: "131-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl:
+        "https://avcaption.com/watch/bc643adc7a2625b5412f120e92b73bc8",
+      downloadUrl:
+        "https://www.mediafire.com/file/zj3m04yty133hns/Insidious+Out+of+the+further.mp4/file",
+    },
+  ],
+},
 ];
