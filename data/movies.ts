@@ -2780,7 +2780,6 @@ export const movies: Movie[] = [
     },
   ],
 },
-
 {
   id: "105",
   title: "Over Your Dead Body",
@@ -3409,7 +3408,8 @@ export const movies: Movie[] = [
   genres: ["Drama", "Action"],
   isFeatured: true,
   createdAt: "2026-10-07",
-  parts: [
+  parts:[
+
     {
       id: "129-1",
       partNumber: 1,
@@ -3418,6 +3418,33 @@ export const movies: Movie[] = [
         "https://avcaption.com/watch/01bd41a7b2914994ce2aaa4cfa42ca2c",
       downloadUrl:
         "https://www.mediafire.com/file/54wb908r7il8mv8/HACKSAW+RIDGE.mp4/file",
+    },
+  ],
+},
+{
+  id: "130",
+  title: "Fall 2 Deadpoint",
+  slug: "fall-2-deadpoint",
+  explainer: "Perfect",
+  year: "2026",
+  rating: "8.0",
+  image: "fall-2-deadpoint.jpg",
+  description:
+    "During World War II, Desmond Doss serves as a combat medic and refuses to carry a weapon because of his beliefs. Despite facing intense opposition, he saves numerous wounded soldiers during the Battle of Okinawa.",
+  language: "English",
+  genres: ["Drama", "Action"],
+  isFeatured: true,
+  createdAt: "2026-10-07",
+  parts:[
+
+    {
+      id: "130-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl:
+        "",
+      downloadUrl:
+        "https://www.mediafire.com/file/rds70eoynrs4ui6/FALL+2+DEADPOINT+2026+perfect.mp4/file",
     },
   ],
 },
