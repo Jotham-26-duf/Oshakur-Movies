@@ -413,5 +413,21 @@ export const series: Series[] = [
     isFeatured: true,
     createdAt: "2026-10-09",
   },
+  {
+id: "26",
+title: "DEVIOUS MAIDS SEASON 1",
+slug: "devious-maids-season-1",
+year: "2013",
+rating: "7.8",
+image: "devious-maids.jpg",
+description:
+"A mystery drama following four Latina maids working in the homes of Beverly Hills' wealthiest families, where secrets, scandals, and murder complicate their lives.",
+language: "English",
+explainer: "Rock kimomo",
+genres: ["Drama", "Comedy", "Mystery"],
+isFeatured: true,
+createdAt: "2026-10-09",
+},
+
 
 ];
