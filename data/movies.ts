@@ -3572,4 +3572,56 @@ export const movies: Movie[] = [
   ],
 },
 
+{
+  id: "136",
+  title: "Prey",
+  slug: "prey",
+  year: "2022",
+  rating: "8.0",
+  image: "images.webp",
+  description: "A skilled young Comanche hunter faces a dangerous alien predator while protecting her people.",
+  language: "English",
+  genres: ["Action", "Adventure", "Thriller", "Science Fiction"],
+  isFeatured: false,
+  createdAt: "2026-10-10",
+  parts: [
+    {
+      id: "136-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl: "",
+      downloadUrl: "https://drive.google.com/file/d/17qhctCGDbYAzUXP0EwElNvDdV1uUrSaX/view",
+    },
+  ],
+},
+{
+  id: "137",
+  title: "Play Dirty",
+  slug: "play-dirty",
+  year: "2025",
+  rating: "8.0",
+  image: "images.webp",
+  description: "A crime thriller involving a carefully planned heist and the complications that follow.",
+  language: "English",
+  genres: ["Action", "Crime", "Thriller"],
+  isFeatured: false,
+  createdAt: "2026-10-10",
+  parts: [
+    {
+      id: "137-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "",
+      downloadUrl: "https://drive.google.com/file/d/1-LTYvlDmspy4bOSS-0poPPfqwftecZwc/view",
+    },
+    {
+      id: "137-2",
+      partNumber: 2,
+      title: "Part B",
+      streamUrl: "",
+      downloadUrl: "https://drive.google.com/file/d/1qnkSkfO_Z1JgT9_2_99rnzEh2R1lnSbE/view",
+    },
+  ],
+},
+
 ];
