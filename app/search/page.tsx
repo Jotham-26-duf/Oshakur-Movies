@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { movies } from "@/data/movies";
 import { series } from "@/data/series";
@@ -8,14 +9,32 @@ interface SearchPageProps {
   }>;
 }
 
+// Normalize spaces, capitalization, and punctuation.
+function normalizeText(value: unknown): string {
+  return String(value ?? "")
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+// Match every search word, even if the words are entered
+// with extra spaces or in a different order.
+function matchesSearch(searchableText: string, query: string): boolean {
+  const text = normalizeText(searchableText);
+  const words = normalizeText(query).split(" ").filter(Boolean);
+
+  return words.every((word) => text.includes(word));
+}
+
 export default async function SearchPage({
   searchParams,
 }: SearchPageProps) {
   const params = await searchParams;
-  const query = params.q?.trim() || "";
-  const searchTerm = query.toLowerCase();
+  const query = (params.q ?? "").trim().replace(/\s+/g, " ");
 
-  const movieResults = searchTerm
+  const movieResults = query
     ? movies.filter((movie) => {
         const searchableText = [
           movie.title,
@@ -24,16 +43,15 @@ export default async function SearchPage({
           movie.rating,
           movie.description,
           movie.language,
+          movie.explainer,
           movie.isFeatured ? "featured" : "",
-        ]
-          .join(" ")
-          .toLowerCase();
+        ].join(" ");
 
-        return searchableText.includes(searchTerm);
+        return matchesSearch(searchableText, query);
       })
     : [];
 
-  const seriesResults = searchTerm
+  const seriesResults = query
     ? series.filter((item) => {
         const searchableText = [
           item.title,
@@ -42,56 +60,69 @@ export default async function SearchPage({
           item.rating,
           item.description,
           item.language,
+          item.explainer,
           item.isFeatured ? "featured" : "",
-        ]
-          .join(" ")
-          .toLowerCase();
+        ].join(" ");
 
-        return searchableText.includes(searchTerm);
+        return matchesSearch(searchableText, query);
       })
     : [];
 
-  const hasResults =
-    movieResults.length > 0 || seriesResults.length > 0;
+  const totalResults = movieResults.length + seriesResults.length;
 
   return (
     <main className="min-h-screen bg-[#121212] text-white">
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-10">
         <div className="mb-10">
           <h1 className="text-3xl font-extrabold sm:text-4xl">
-            Search
+            Search Movies &amp; Series
           </h1>
 
           <p className="mt-2 text-sm text-[#AAAAAA]">
-            Search movies and series by title, year, rating,
-            description, language, and more.
+            Search by title, year, rating, language, description,
+            or explainer. Spaces are supported.
           </p>
         </div>
 
         {!query && (
           <div className="rounded-2xl border border-white/10 bg-[#1B1B1B] p-8 text-center">
             <p className="text-[#AAAAAA]">
-              Enter a movie or series name to search.
+              Enter a movie title, series name, or explainer name
+              in the search box to find matching results.
             </p>
           </div>
         )}
 
-        {query && !hasResults && (
-          <div className="rounded-2xl border border-white/10 bg-[#1B1B1B] p-8 text-center">
-            <h2 className="text-lg font-semibold">
-              No results found
-            </h2>
-
-            <p className="mt-2 text-sm text-[#AAAAAA]">
-              We couldn't find anything matching "{query}".
-            </p>
-          </div>
+        {query && (
+          <p className="mb-8 text-sm text-[#AAAAAA]">
+            {totalResults > 0 ? (
+              <>
+                Found{" "}
+                <span className="font-semibold text-white">
+                  {totalResults}
+                </span>{" "}
+                matching {totalResults === 1 ? "result" : "results"} for{" "}
+                <span className="font-semibold text-[#00E5FF]">
+                  &quot;{query}&quot;
+                </span>
+              </>
+            ) : (
+              <>
+                No results found for{" "}
+                <span className="font-semibold text-white">
+                  &quot;{query}&quot;
+                </span>
+                . Try another search.
+              </>
+            )}
+          </p>
         )}
 
+        {/* MOVIES */}
         {movieResults.length > 0 && (
           <section>
             <h2 className="mb-5 text-2xl font-bold">
-              Movies
+              Movies ({movieResults.length})
             </h2>
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
@@ -99,29 +130,36 @@ export default async function SearchPage({
                 <Link
                   key={movie.id}
                   href={`/movies/${movie.slug}`}
-                  className="group"
+                  className="group min-w-0"
                 >
                   <div className="overflow-hidden rounded-xl bg-[#2A2A2A]">
                     <img
-                      src={movie.image}
+                      src={`/images/movies/${movie.image}`}
                       alt={movie.title}
+                      loading="lazy"
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
                   </div>
 
-                  <h3 className="mt-3 truncate font-semibold transition group-hover:text-[#00E5FF]">
+                  <h3 className="mt-3 font-semibold transition group-hover:text-[#00E5FF]">
                     {movie.title}
                   </h3>
 
-                  <div className="mt-2 flex items-center gap-2 text-sm text-[#AAAAAA]">
+                  <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-[#AAAAAA]">
                     <span>{movie.year}</span>
                     <span>•</span>
                     <span>★ {movie.rating}</span>
                   </div>
 
                   {movie.language && (
-                    <p className="mt-1 truncate text-xs text-[#888888]">
+                    <p className="mt-1 text-xs text-[#888888]">
                       {movie.language}
+                    </p>
+                  )}
+
+                  {movie.explainer?.trim() && (
+                    <p className="mt-1 text-xs text-[#00E5FF]">
+                      🎙 {movie.explainer}
                     </p>
                   )}
                 </Link>
@@ -130,12 +168,11 @@ export default async function SearchPage({
           </section>
         )}
 
+        {/* SERIES */}
         {seriesResults.length > 0 && (
-          <section
-            className={movieResults.length > 0 ? "mt-12" : ""}
-          >
+          <section className={movieResults.length > 0 ? "mt-12" : ""}>
             <h2 className="mb-5 text-2xl font-bold">
-              Series
+              Series ({seriesResults.length})
             </h2>
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
@@ -143,29 +180,36 @@ export default async function SearchPage({
                 <Link
                   key={item.id}
                   href={`/series/${item.slug}`}
-                  className="group"
+                  className="group min-w-0"
                 >
                   <div className="overflow-hidden rounded-xl bg-[#2A2A2A]">
                     <img
-                      src={item.image}
+                      src={`/images/series/${item.image}`}
                       alt={item.title}
+                      loading="lazy"
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
                   </div>
 
-                  <h3 className="mt-3 truncate font-semibold transition group-hover:text-[#00E5FF]">
+                  <h3 className="mt-3 font-semibold transition group-hover:text-[#00E5FF]">
                     {item.title}
                   </h3>
 
-                  <div className="mt-2 flex items-center gap-2 text-sm text-[#AAAAAA]">
+                  <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-[#AAAAAA]">
                     <span>{item.year}</span>
                     <span>•</span>
                     <span>★ {item.rating}</span>
                   </div>
 
                   {item.language && (
-                    <p className="mt-1 truncate text-xs text-[#888888]">
+                    <p className="mt-1 text-xs text-[#888888]">
                       {item.language}
+                    </p>
+                  )}
+
+                  {item.explainer?.trim() && (
+                    <p className="mt-1 text-xs text-[#00E5FF]">
+                      🎙 {item.explainer}
                     </p>
                   )}
                 </Link>

@@ -1,23 +1,36 @@
-
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useState } from "react";
+import { type FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { movies } from "@/data/movies";
 import { series } from "@/data/series";
 
+function normalizeSearchText(value: unknown): string {
+  return String(value ?? "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function matchesSearch(text: string, query: string): boolean {
+  const normalizedText = normalizeSearchText(text);
+  const words = normalizeSearchText(query).split(" ").filter(Boolean);
+
+  return (
+    words.length > 0 &&
+    words.every((word) => normalizedText.includes(word))
+  );
+}
+
 function HomeIcon() {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      className="h-4 w-4"
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4" aria-hidden="true">
       <path d="M3 10.5 12 3l9 7.5" />
       <path d="M5 9.5V21h14V9.5" />
       <path d="M9 21v-6h6v6" />
@@ -27,14 +40,7 @@ function HomeIcon() {
 
 function MovieIcon() {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      className="h-4 w-4"
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4" aria-hidden="true">
       <rect x="3" y="5" width="18" height="14" rx="2" />
       <path d="m7 5 2 3" />
       <path d="m13 5 2 3" />
@@ -48,14 +54,7 @@ function MovieIcon() {
 
 function SeriesIcon() {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      className="h-4 w-4"
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4" aria-hidden="true">
       <rect x="3" y="4" width="18" height="16" rx="2" />
       <path d="M8 4v4" />
       <path d="M16 4v4" />
@@ -67,14 +66,7 @@ function SeriesIcon() {
 
 function TrendingIcon() {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      className="h-4 w-4"
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4" aria-hidden="true">
       <path d="M3 17 9 11l4 4 8-9" />
       <path d="M17 6h4v4" />
     </svg>
@@ -83,14 +75,7 @@ function TrendingIcon() {
 
 function SearchIcon() {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      className="h-5 w-5"
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5" aria-hidden="true">
       <circle cx="11" cy="11" r="7" />
       <path d="m20 20-4-4" />
     </svg>
@@ -99,14 +84,7 @@ function SearchIcon() {
 
 function MenuIcon() {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      className="h-6 w-6"
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6" aria-hidden="true">
       <path d="M4 6h16" />
       <path d="M4 12h16" />
       <path d="M4 18h16" />
@@ -116,14 +94,7 @@ function MenuIcon() {
 
 function CloseIcon() {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      className="h-6 w-6"
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6" aria-hidden="true">
       <path d="m6 6 12 12" />
       <path d="m18 6-12 12" />
     </svg>
@@ -136,7 +107,7 @@ export default function Navbar() {
   const [search, setSearch] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const searchTerm = search.trim().toLowerCase();
+  const searchTerm = normalizeSearchText(search);
 
   const matchingMovies = searchTerm
     ? movies
@@ -148,12 +119,11 @@ export default function Navbar() {
             movie.rating,
             movie.description,
             movie.language,
+            movie.explainer,
             movie.isFeatured ? "featured" : "",
-          ]
-            .join(" ")
-            .toLowerCase();
+          ].join(" ");
 
-          return searchableText.includes(searchTerm);
+          return matchesSearch(searchableText, searchTerm);
         })
         .slice(0, 5)
     : [];
@@ -168,12 +138,11 @@ export default function Navbar() {
             item.rating,
             item.description,
             item.language,
+            item.explainer,
             item.isFeatured ? "featured" : "",
-          ]
-            .join(" ")
-            .toLowerCase();
+          ].join(" ");
 
-          return searchableText.includes(searchTerm);
+          return matchesSearch(searchableText, searchTerm);
         })
         .slice(0, 5)
     : [];
@@ -184,11 +153,9 @@ export default function Navbar() {
   function handleSearch(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const query = search.trim();
+    const query = search.trim().replace(/\s+/g, " ");
 
-    if (!query) {
-      return;
-    }
+    if (!query) return;
 
     router.push(`/search?q=${encodeURIComponent(query)}`);
   }
@@ -204,9 +171,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#121212]/95 backdrop-blur-xl">
-        {/* TOP NAVIGATION */}
         <div className="mx-auto flex h-16 max-w-7xl items-center px-4 sm:h-[72px] sm:px-6 lg:px-8">
-          {/* OSHAKUR MOVIES BRAND */}
           <Link
             href="/"
             onClick={closeMenu}
@@ -221,49 +186,30 @@ export default function Navbar() {
               className="h-10 w-10 rounded-full object-cover sm:h-12 sm:w-12"
             />
 
-            {/* Brand name appears on larger screens */}
             <span className="hidden whitespace-nowrap text-xl font-extrabold tracking-wide sm:block lg:text-2xl">
               <span className="text-[#00E5FF]">OSHAKUR</span>{" "}
               <span className="text-[#E040FB]">MOVIES</span>
             </span>
           </Link>
 
-          {/* DESKTOP NAVIGATION */}
           <nav className="ml-6 hidden items-center gap-1 lg:flex">
-            <Link
-              href="/"
-              className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]"
-            >
-              <HomeIcon />
-              Home
+            <Link href="/" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]">
+              <HomeIcon /> Home
             </Link>
 
-            <Link
-              href="/movies"
-              className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]"
-            >
-              <MovieIcon />
-              Movies
+            <Link href="/movies" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]">
+              <MovieIcon /> Movies
             </Link>
 
-            <Link
-              href="/series"
-              className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]"
-            >
-              <SeriesIcon />
-              Series
+            <Link href="/series" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]">
+              <SeriesIcon /> Series
             </Link>
 
-            <Link
-              href="/trending"
-              className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]"
-            >
-              <TrendingIcon />
-              Trending
+            <Link href="/trending" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]">
+              <TrendingIcon /> Trending
             </Link>
           </nav>
 
-          {/* RIGHT SIDE */}
           <div className="ml-auto flex items-center gap-2">
             <Link
               href="/login"
@@ -286,10 +232,7 @@ export default function Navbar() {
 
         {/* SEARCH BAR */}
         <div className="border-t border-white/5 bg-[#121212] px-4 py-3 sm:px-6 lg:px-8">
-          <form
-            onSubmit={handleSearch}
-            className="relative mx-auto max-w-7xl"
-          >
+          <form onSubmit={handleSearch} role="search" className="relative mx-auto max-w-7xl">
             <div className="relative">
               <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#AAAAAA]">
                 <SearchIcon />
@@ -301,6 +244,8 @@ export default function Navbar() {
                 onChange={(event) => setSearch(event.target.value)}
                 placeholder="Search movies and series..."
                 aria-label="Search movies and series"
+                aria-controls="navbar-search-results"
+                autoComplete="off"
                 className="w-full rounded-full border border-white/10 bg-[#2A2A2A] py-3 pl-11 pr-24 text-sm text-white outline-none placeholder:text-[#AAAAAA] focus:border-[#2979FF] focus:bg-[#303030] sm:py-3.5"
               />
 
@@ -312,12 +257,13 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* LIVE SEARCH RESULTS */}
             {searchTerm && (
-              <div className="absolute left-0 right-0 top-full mt-2 overflow-hidden rounded-2xl border border-white/10 bg-[#1B1B1B] shadow-2xl">
+              <div
+                id="navbar-search-results"
+                className="absolute left-0 right-0 top-full mt-2 overflow-hidden rounded-2xl border border-white/10 bg-[#1B1B1B] shadow-2xl"
+              >
                 {hasMatches ? (
                   <div className="max-h-[420px] overflow-y-auto">
-                    {/* MOVIE RESULTS */}
                     {matchingMovies.length > 0 && (
                       <div className="p-3">
                         <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-wider text-[#888888]">
@@ -335,6 +281,7 @@ export default function Navbar() {
                               <img
                                 src={`/images/movies/${movie.image}`}
                                 alt={movie.title}
+                                loading="lazy"
                                 className="h-14 w-10 shrink-0 rounded-md object-cover"
                               />
 
@@ -342,10 +289,14 @@ export default function Navbar() {
                                 <p className="truncate text-sm font-semibold text-white">
                                   {movie.title}
                                 </p>
-
                                 <p className="mt-1 text-xs text-[#AAAAAA]">
                                   {movie.year} • ★ {movie.rating}
                                 </p>
+                                {movie.explainer && (
+                                  <p className="mt-1 truncate text-xs text-[#00E5FF]">
+                                    {movie.explainer}
+                                  </p>
+                                )}
                               </div>
                             </Link>
                           ))}
@@ -353,7 +304,6 @@ export default function Navbar() {
                       </div>
                     )}
 
-                    {/* SERIES RESULTS */}
                     {matchingSeries.length > 0 && (
                       <div className="border-t border-white/10 p-3">
                         <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-wider text-[#888888]">
@@ -369,8 +319,9 @@ export default function Navbar() {
                               className="flex items-center gap-3 rounded-xl p-2 transition hover:bg-[#2A2A2A]"
                             >
                               <img
-                                src={item.image}
+                                src={`/images/series/${item.image}`}
                                 alt={item.title}
+                                loading="lazy"
                                 className="h-14 w-10 shrink-0 rounded-md object-cover"
                               />
 
@@ -378,10 +329,14 @@ export default function Navbar() {
                                 <p className="truncate text-sm font-semibold text-white">
                                   {item.title}
                                 </p>
-
                                 <p className="mt-1 text-xs text-[#AAAAAA]">
                                   {item.year} • ★ {item.rating}
                                 </p>
+                                {item.explainer && (
+                                  <p className="mt-1 truncate text-xs text-[#00E5FF]">
+                                    {item.explainer}
+                                  </p>
+                                )}
                               </div>
                             </Link>
                           ))}
@@ -394,7 +349,6 @@ export default function Navbar() {
                     <p className="text-sm font-semibold text-white">
                       No matching results
                     </p>
-
                     <p className="mt-1 text-xs text-[#888888]">
                       Keep typing or try another title.
                     </p>
@@ -409,47 +363,26 @@ export default function Navbar() {
         {menuOpen && (
           <div className="border-t border-white/10 bg-[#121212] px-4 py-4 shadow-2xl lg:hidden">
             <nav className="flex flex-col gap-2">
-              <Link
-                href="/"
-                onClick={closeMenu}
-                className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]"
-              >
-                <HomeIcon />
-                Home
+              <Link href="/" onClick={closeMenu} className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]">
+                <HomeIcon /> Home
               </Link>
 
-              <Link
-                href="/movies"
-                onClick={closeMenu}
-                className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]"
-              >
-                <MovieIcon />
-                Movies
+              <Link href="/movies" onClick={closeMenu} className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]">
+                <MovieIcon /> Movies
               </Link>
 
-              <Link
-                href="/series"
-                onClick={closeMenu}
-                className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]"
-              >
-                <SeriesIcon />
-                Series
+              <Link href="/series" onClick={closeMenu} className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]">
+                <SeriesIcon /> Series
               </Link>
 
-              <Link
-                href="/trending"
-                onClick={closeMenu}
-                className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]"
-              >
-                <TrendingIcon />
-                Trending
+              <Link href="/trending" onClick={closeMenu} className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]">
+                <TrendingIcon /> Trending
               </Link>
             </nav>
           </div>
         )}
       </header>
 
-      {/* SPACE FOR FIXED HEADER */}
       <div className="h-[116px] sm:h-[128px]" />
     </>
   );

@@ -12,6 +12,7 @@ interface HeroItem {
   rating: string;
   image: string;
   description?: string;
+  explainer?: string;
   language: string;
   type: "movie" | "series";
   genres?: string[];
@@ -149,7 +150,6 @@ export default function Hero({ items }: HeroProps) {
     >
       {/* HERO */}
       <div className="relative min-h-[600px] md:min-h-[650px]">
-
         {/* RIGHT IMAGE — TOUCHES THE RIGHT EDGE */}
         <div className="absolute inset-y-0 right-0 z-10 w-full md:w-[58%]">
           <Link
@@ -213,6 +213,13 @@ export default function Hero({ items }: HeroProps) {
             <h1 className="mt-5 max-w-2xl text-4xl font-black leading-[0.95] tracking-tight text-white drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl">
               {activeItem.title}
             </h1>
+
+            {/* EXPLAINER NAME */}
+            {activeItem.explainer && (
+              <p className="mt-3 text-sm font-medium text-[#00E5FF] sm:text-base">
+                🎙 Explained by: {activeItem.explainer}
+              </p>
+            )}
 
             {/* INFO */}
             <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-white/75">
@@ -361,5 +368,3 @@ export default function Hero({ items }: HeroProps) {
     </section>
   );
 }
-
-

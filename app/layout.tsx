@@ -1,6 +1,7 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
+import MonetagScripts from "./MonetagScripts";
 
 const siteUrl = "https://oshakurmovies.party";
 
@@ -82,32 +83,21 @@ export default function RootLayout({
           content="ca-pub-6421049945104967"
         />
 
-        {/* Google AdSense */}
+        {/* Google AdSense — preserved from the original */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6421049945104967"
           crossOrigin="anonymous"
         />
-
-        {/* Monetag Vignette Banner - Zone 11973593 */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(s){s.dataset.zone='11973593',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`
-          }}
-        />
-
-        {/* Monetag In-Page Push - Zone 11973734 */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(s){s.dataset.zone='11973734',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`
-          }}
-        />
       </head>
 
       <body>
+        {/* Monetag scripts are managed by app/MonetagScripts.tsx */}
+        <MonetagScripts />
+
         {children}
 
-        {/* Website + Organization structured data */}
+        {/* Website + Organization structured data — preserved */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -123,10 +113,10 @@ export default function RootLayout({
                 potentialAction: {
                   "@type": "SearchAction",
                   target: `${siteUrl}/search?q={search_term_string}`,
-                  "query-input": "required name=search_term_string",
+                  "query-input":
+                    "required name=search_term_string",
                 },
               },
-
               {
                 "@context": "https://schema.org",
                 "@type": "Organization",
@@ -141,4 +131,3 @@ export default function RootLayout({
     </html>
   );
 }
-
