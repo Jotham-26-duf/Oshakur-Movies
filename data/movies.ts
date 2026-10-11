@@ -3585,6 +3585,7 @@ export const movies: Movie[] = [
   isFeatured: true,
   createdAt: "2026-10-10",
   parts: [
+
     {
       id: "136-1",
       partNumber: 1,
@@ -3643,10 +3644,30 @@ export const movies: Movie[] = [
       title: "Part A",
       streamUrl: "https://hgcloud.to/hvtdi9ztooka",
       downloadUrl: "https://www.mediafire.com/file/sove89mpwx687eh/KUNG+FU+SOCCER+2026+perfect.mp4/file",
-    }
-    
-  ],
+    }],
 },
-
-
+{
+  id: "139",
+  title: "2 Fast 2 Furious Fast and Furious 2",
+  slug: "2-fast-2-furious-fast-and-furious-2",
+  explainer: "Didier",
+  year: "2025",
+  rating: "8.0",
+  image: "2-fast-2-furious-fast-and-furious-2.jpg",
+  description: "Former LAPD officer Brian O'Conner (Paul Walker) has relocated to Miami, where he makes a living in the high-stakes underground street-racing scene alongside Tej Parker (Ludacris) and Suki. Busted by federal authorities, Brian is offered a clean slate if he can help U.S. Customs go undercover to bring down ruthless Miami drug lord Carter Verone (Cole Hauser).",
+  language: "English",
+  genres: ["Action", "Crime", "Thriller"],
+  isFeatured: true,
+  createdAt: "2026-10-10",
+  parts: [
+    {
+      id: "139-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://hgcloud.to/u9jw4u6ov7z3",
+      downloadUrl: "https://www.mediafire.com/file/zy48p8qhuarfqan/2+Fast+2+Furious+2+Hd.mp4/file",
+    }],
+},
 ];
+
+
