@@ -3486,7 +3486,7 @@ export const movies: Movie[] = [
   description: "A team of animal criminals attempts to turn over a new leaf, but changing their ways proves more difficult than expected.",
   language: "English",
   genres: ["Animation", "Comedy", "Action", "Adventure"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3508,7 +3508,7 @@ export const movies: Movie[] = [
   description: "A young boy discovers King Arthur's legendary sword and must help stop an ancient threat with the help of his friends.",
   language: "English",
   genres: ["Adventure", "Fantasy", "Action"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3530,7 +3530,7 @@ export const movies: Movie[] = [
   description: "Journalist Eddie Brock bonds with an alien symbiote that gives him extraordinary powers and a dangerous second personality.",
   language: "English",
   genres: ["Action", "Science Fiction", "Thriller"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3559,7 +3559,7 @@ export const movies: Movie[] = [
   description: "A romantic drama about betrayal, desire, and the unexpected consequences of a new relationship.",
   language: "Portuguese",
   genres: ["Drama", "Romance", "Thriller"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3582,7 +3582,7 @@ export const movies: Movie[] = [
   description: "A skilled young Comanche hunter faces a dangerous alien predator while protecting her people.",
   language: "English",
   genres: ["Action", "Adventure", "Thriller", "Science Fiction"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3604,7 +3604,7 @@ export const movies: Movie[] = [
   description: "A crime thriller involving a carefully planned heist and the complications that follow.",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3623,5 +3623,30 @@ export const movies: Movie[] = [
     },
   ],
 },
+   {
+  id: "138",
+  title: "Kung Fu Soccer",
+  slug: "kung-fu-soccer",
+  explainer: "Perfect",
+  year: "2025",
+  rating: "8.0",
+  image: "kung-fu-soccer.jpg",
+  description: "A thrilling blend of martial arts, comedy, and football, Kung Fu Soccer follows talented fighters who use their extraordinary kung fu skills on the football field. Combining powerful kicks, incredible moves, teamwork, and hilarious moments, they set out to prove that their unique abilities can transform an ordinary football team into an extraordinary force. The movie delivers exciting action, entertaining comedy, and a story about friendship, determination, and believing in your talents",
+  language: "English",
+  genres: ["Action", "Crime", "Thriller"],
+  isFeatured: true,
+  createdAt: "2026-10-10",
+  parts: [
+    {
+      id: "138-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://hgcloud.to/hvtdi9ztooka",
+      downloadUrl: "https://www.mediafire.com/file/sove89mpwx687eh/KUNG+FU+SOCCER+2026+perfect.mp4/file",
+    }
+    
+  ],
+},
+
 
 ];

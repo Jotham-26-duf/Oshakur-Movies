@@ -91,7 +91,7 @@ export default function SiteBottom() {
 
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/reel/DeHRzrpPszz/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ=="
+              href="https://www.tiktok.com/@jonathannyawe2026?_r=1&_t=ZS-9ANgtXMhQb1"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Oshakur Movies on Instagram"
@@ -149,6 +149,8 @@ export default function SiteBottom() {
         </div>
 
         {/* Contact */}
+       
+        {/* Contact */}
         <div>
           <h3 className="relative inline-block pb-2 font-semibold text-white">
             Contact
@@ -159,10 +161,12 @@ export default function SiteBottom() {
             {/* Phone */}
             <a
               href="tel:+250789063094"
-              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#00E5FF]"
+              className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#00E5FF]/50 hover:bg-[#00E5FF]/10"
             >
-              <FiPhone size={22} aria-hidden="true" />
-              <span>+250 789063094</span>
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#00B8D4] transition group-hover:scale-110">
+                <FiPhone size={30} color="#FFFFFF" aria-hidden="true" />
+              </span>
+              <span className="text-base font-semibold">+250 789063094</span>
             </a>
 
             {/* WhatsApp Contact */}
@@ -170,25 +174,29 @@ export default function SiteBottom() {
               href="https://wa.me/250789063094"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#25D366]"
+              className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#25D366]/50 hover:bg-[#25D366]/10"
             >
-              <SiWhatsapp size={23} color="#25D366" aria-hidden="true" />
-              <span>WhatsApp</span>
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#25D366] transition group-hover:scale-110">
+                <SiWhatsapp size={30} color="#FFFFFF" aria-hidden="true" />
+              </span>
+              <span className="text-base font-semibold">WhatsApp</span>
             </a>
 
             {/* Email */}
             <a
               href="mailto:oshakurmovies@gmail.com"
-              className="flex items-center gap-3 text-sm text-[#AAAAAA] transition hover:text-[#E040FB]"
+              className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#E040FB]/50 hover:bg-[#E040FB]/10"
             >
-              <FiMail size={22} aria-hidden="true" />
-              <span>oshakurmovies@gmail.com</span>
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#E040FB] transition group-hover:scale-110">
+                <FiMail size={30} color="#FFFFFF" aria-hidden="true" />
+              </span>
+              <span className="break-all text-base font-semibold">
+                oshakurmovies@gmail.com
+              </span>
             </a>
           </div>
         </div>
-      </div>
 
-      {/* Bottom copyright */}
       <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-center">
         <p className="text-xs text-[#666666]">
           Copyright © {new Date().getFullYear()} Oshakuru Movies. All
