@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { FiMail, FiPhone } from "react-icons/fi";
 import {
@@ -79,11 +78,7 @@ export default function SiteBottom() {
               className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-white/30 hover:bg-white/[0.07]"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-black shadow-lg transition group-hover:scale-110">
-                <SiTiktok
-                  size={30}
-                  color="#000000"
-                  aria-hidden="true"
-                />
+                <SiTiktok size={30} color="#000000" aria-hidden="true" />
               </span>
               <span className="text-base font-semibold">TikTok</span>
               <span className="ml-auto text-xl text-white/50">↗</span>
@@ -91,18 +86,14 @@ export default function SiteBottom() {
 
             {/* Instagram */}
             <a
-              href="https://www.tiktok.com/@jonathannyawe2026?_r=1&_t=ZS-9ANgtXMhQb1"
+              href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Oshakur Movies on Instagram"
               className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#E1306C]/50 hover:bg-[#E1306C]/10"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#FEDA75] via-[#E1306C] to-[#833AB4] shadow-lg transition group-hover:scale-110">
-                <SiInstagram
-                  size={30}
-                  color="#FFFFFF"
-                  aria-hidden="true"
-                />
+                <SiInstagram size={30} color="#FFFFFF" aria-hidden="true" />
               </span>
               <span className="text-base font-semibold">Instagram</span>
               <span className="ml-auto text-xl text-white/50">↗</span>
@@ -117,11 +108,7 @@ export default function SiteBottom() {
               className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#25D366]/50 hover:bg-[#25D366]/10"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#25D366] shadow-lg transition group-hover:scale-110">
-                <SiWhatsapp
-                  size={30}
-                  color="#FFFFFF"
-                  aria-hidden="true"
-                />
+                <SiWhatsapp size={30} color="#FFFFFF" aria-hidden="true" />
               </span>
               <span className="text-base font-semibold">WhatsApp Group</span>
               <span className="ml-auto text-xl text-white/50">↗</span>
@@ -136,11 +123,7 @@ export default function SiteBottom() {
               className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#25D366]/50 hover:bg-[#25D366]/10"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#25D366] shadow-lg transition group-hover:scale-110">
-                <SiWhatsapp
-                  size={30}
-                  color="#FFFFFF"
-                  aria-hidden="true"
-                />
+                <SiWhatsapp size={30} color="#FFFFFF" aria-hidden="true" />
               </span>
               <span className="text-base font-semibold">WhatsApp Channel</span>
               <span className="ml-auto text-xl text-white/50">↗</span>
@@ -148,8 +131,6 @@ export default function SiteBottom() {
           </div>
         </div>
 
-        {/* Contact */}
-       
         {/* Contact */}
         <div>
           <h3 className="relative inline-block pb-2 font-semibold text-white">
@@ -174,6 +155,7 @@ export default function SiteBottom() {
               href="https://wa.me/250789063094"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Contact Oshakur Movies on WhatsApp"
               className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#25D366]/50 hover:bg-[#25D366]/10"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#25D366] transition group-hover:scale-110">
@@ -196,7 +178,9 @@ export default function SiteBottom() {
             </a>
           </div>
         </div>
+      </div>
 
+      {/* Copyright */}
       <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-center">
         <p className="text-xs text-[#666666]">
           Copyright © {new Date().getFullYear()} Oshakuru Movies. All
