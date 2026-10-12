@@ -6,7 +6,8 @@ import MonetagScripts from "./MonetagScripts";
 const siteUrl = "https://oshakurmovies.party";
 
 export const metadata: Metadata = {
- 
+  metadataBase: new URL(siteUrl),
+
   title: {
     default: "OSHAKUR MOVIES | Watch Agasobanuye Movies & Series",
     template: "%s | OSHAKUR MOVIES",
@@ -27,9 +28,6 @@ export const metadata: Metadata = {
     "watch series",
   ],
 
-  alternates: {
-    canonical: siteUrl,
-  },
 
   icons: {
     icon: "/favicon.png",
