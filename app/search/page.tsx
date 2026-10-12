@@ -1,7 +1,19 @@
 
+import type { Metadata } from "next";
 import Link from "next/link";
+import Navbar from "@/app/components/Navbar";
+import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
 import { series } from "@/data/series";
+
+export const metadata: Metadata = {
+  title: "Search Movies & Series",
+  description: "Search movies and series on Oshakur Movies.",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 interface SearchPageProps {
   searchParams: Promise<{
@@ -72,6 +84,7 @@ export default async function SearchPage({
 
   return (
     <main className="min-h-screen bg-[#121212] text-white">
+      <Navbar />
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-10">
         <div className="mb-10">
           <h1 className="text-3xl font-extrabold sm:text-4xl">
@@ -218,6 +231,7 @@ export default async function SearchPage({
           </section>
         )}
       </div>
+      <SiteBottom />
     </main>
   );
 }
