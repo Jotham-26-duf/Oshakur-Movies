@@ -1,4 +1,4 @@
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
 
@@ -6,6 +6,15 @@ import MovieCard from "@/app/components/MovieCard";
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
+
+export const metadata: Metadata = {
+  title: "All Movies",
+  description:
+    "Browse all movies on Oshakur Movies. Discover action, adventure, comedy, drama, horror, and thriller movies.",
+  alternates: {
+    canonical: "https://oshakurmovies.party/movies",
+  },
+};
 
 export default function MoviesPage() {
   const orderedMovies = [
@@ -39,10 +48,7 @@ export default function MoviesPage() {
               href="/"
               className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-[#1B1B1B] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]"
             >
-              <FiArrowLeft
-                size={17}
-                aria-hidden="true"
-              />
+              <FiArrowLeft size={17} aria-hidden="true" />
               Home
             </Link>
           </div>

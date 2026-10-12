@@ -1,8 +1,10 @@
+
 import fs from "fs";
 import path from "path";
 
 const baseUrl = "https://oshakurmovies.party";
 
+// Read the existing movie and series data files.
 const moviesFile = fs.readFileSync(
   path.join(process.cwd(), "data", "movies.ts"),
   "utf8"
@@ -13,64 +15,70 @@ const seriesFile = fs.readFileSync(
   "utf8"
 );
 
-// Extract movie slugs from movies.ts
-const movieSlugs = [
-  ...moviesFile.matchAll(/slug:\s*["'`]([^"'`]+)["'`]/g),
-].map((match) => match[1]);
+// Extract slugs such as:
+// slug: "let-it-shine"
+// slug: 'outer-banks'
+// slug: `kung-fu-panda`
+function extractSlugs(fileContent, fileName) {
+  const matches = [
+    ...fileContent.matchAll(/\bslug\s*:\s*["'`]([^"'`]+)["'`]/g),
+  ];
 
-// Extract series slugs from series.ts
-const seriesSlugs = [
-  ...seriesFile.matchAll(/slug:\s*["'`]([^"'`]+)["'`]/g),
-].map((match) => match[1]);
+  const slugs = matches.map((match) => match[1].trim());
 
+  // Remove duplicate slugs while preserving their original order.
+  const uniqueSlugs = [...new Set(slugs)];
+
+  console.log(`${fileName}: ${slugs.length} slug entries found`);
+  console.log(`${fileName}: ${uniqueSlugs.length} unique slugs`);
+
+  return uniqueSlugs;
+}
+
+const movieSlugs = extractSlugs(moviesFile, "Movies");
+const seriesSlugs = extractSlugs(seriesFile, "Series");
+
+// Build the sitemap URLs.
 const urls = [
-  {
-    url: baseUrl,
-    changeFrequency: "daily",
-    priority: "1.0",
-  },
-  {
-    url: `${baseUrl}/movies`,
-    changeFrequency: "daily",
-    priority: "0.9",
-  },
-  {
-    url: `${baseUrl}/series`,
-    changeFrequency: "daily",
-    priority: "0.9",
-  },
+  `${baseUrl}/`,
+  `${baseUrl}/movies`,
+  `${baseUrl}/series`,
 
-  ...movieSlugs.map((slug) => ({
-    url: `${baseUrl}/movies/${slug}`,
-    changeFrequency: "weekly",
-    priority: "0.8",
-  })),
-
-  ...seriesSlugs.map((slug) => ({
-    url: `${baseUrl}/series/${slug}`,
-    changeFrequency: "weekly",
-    priority: "0.8",
-  })),
+  ...movieSlugs.map((slug) => `${baseUrl}/movies/${slug}`),
+  ...seriesSlugs.map((slug) => `${baseUrl}/series/${slug}`),
 ];
 
+// Remove duplicate URLs.
+const uniqueUrls = [...new Set(urls)];
+
+// Escape special XML characters.
+function escapeXml(value) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+// Generate valid XML sitemap content.
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
+${uniqueUrls
   .map(
-    (item) => `  <url>
-    <loc>${item.url}</loc>
-    <changefreq>${item.changeFrequency}</changefreq>
-    <priority>${item.priority}</priority>
+    (url) => `  <url>
+    <loc>${escapeXml(url)}</loc>
   </url>`
   )
   .join("\n")}
 </urlset>
 `;
 
+// Save the generated sitemap.
 const outputPath = path.join(process.cwd(), "public", "sitemap.xml");
 
 fs.writeFileSync(outputPath, xml, "utf8");
 
-console.log("Sitemap generated successfully!");
-console.log(`Total URLs: ${urls.length}`);
+console.log("\nSitemap generated successfully!");
+console.log(`Total URLs: ${uniqueUrls.length}`);
 console.log(`Saved to: ${outputPath}`);

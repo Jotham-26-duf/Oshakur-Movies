@@ -1,4 +1,5 @@
 
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -11,6 +12,26 @@ interface MovieDetailsPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: MovieDetailsPageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const movie = movies.find((item) => item.slug === slug);
+
+  if (!movie) {
+    return {};
+  }
+
+  return {
+    title: `${movie.title} | OSHAKUR MOVIES`,
+    description: `Watch ${movie.title} on OSHAKUR MOVIES.`,
+    alternates: {
+      canonical: `https://oshakurmovies.party/movies/${movie.slug}`,
+    },
+  };
 }
 
 export default async function MovieDetailsPage({
@@ -253,4 +274,3 @@ export default async function MovieDetailsPage({
     </main>
   );
 }
-

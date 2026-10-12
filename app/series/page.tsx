@@ -1,9 +1,18 @@
-
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { series } from "@/data/series";
+
+export const metadata: Metadata = {
+  title: "All Series",
+  description:
+    "Explore series on Oshakur Movies. Discover shows, browse ratings, and find episodes to watch.",
+  alternates: {
+    canonical: "https://oshakurmovies.party/series",
+  },
+};
 
 export default function SeriesPage() {
   const orderedSeries = [
@@ -96,4 +105,3 @@ export default function SeriesPage() {
     </main>
   );
 }
-

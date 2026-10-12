@@ -1,3 +1,5 @@
+
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -10,6 +12,26 @@ interface SeriesDetailsPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: SeriesDetailsPageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const currentSeries = series.find((item) => item.slug === slug);
+
+  if (!currentSeries) {
+    return {};
+  }
+
+  return {
+    title: `${currentSeries.title} | OSHAKUR MOVIES`,
+    description: `Explore ${currentSeries.title} on OSHAKUR MOVIES and find episodes to watch.`,
+    alternates: {
+      canonical: `https://oshakurmovies.party/series/${currentSeries.slug}`,
+    },
+  };
 }
 
 export default async function SeriesDetailsPage({
