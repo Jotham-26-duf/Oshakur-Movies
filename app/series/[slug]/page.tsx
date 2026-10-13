@@ -26,7 +26,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${currentSeries.title} | OSHAKUR MOVIES`,
+    title: currentSeries.title,
     description: `Explore ${currentSeries.title} on OSHAKUR MOVIES and find episodes to watch.`,
     alternates: {
       canonical: `https://oshakurmovies.party/series/${currentSeries.slug}`,

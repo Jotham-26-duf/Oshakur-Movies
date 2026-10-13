@@ -428,6 +428,52 @@ genres: ["Drama", "Comedy", "Mystery"],
 isFeatured: true,
 createdAt: "2026-10-09",
 },
+{
+  id: "27",
+  title: "THE CHOSEN SEASON 2",
+  slug: "the-chosen-season-2",
+  year: "2021",
+  rating: "9.2",
+  image: "the-chosen.jpg",
+  description:
+    "A biblical drama following Jesus and His disciples as their faith is tested and their understanding of His mission deepens through powerful encounters and life-changing teachings.",
+  language: "English",
+  explainer: "Mussa Savimbi",
+  genres: ["Drama", "History"],
+  isFeatured: false,
+  createdAt: "2026-10-13",
+},
+{
+  id: "28",
+  title: "COVEN ACADEMY SEASON 1",
+  slug: "coven-academy-season-1",
+  year: "2025",
+  rating: "7.0",
+  image: "coven-academy.jpg",
+  description:
+    "A supernatural fantasy series set in a mysterious academy where young witches face dangerous secrets, hidden rivalries, and challenges that test their magical abilities.",
+  language: "English",
+  explainer: "Skov",
+  genres: ["Drama", "Fantasy", "Mystery"],
+  isFeatured: false,
+  createdAt: "2026-10-13",
+},
+
+{
+  id: "29",
+  title: "DEVIOUS MAIDS SEASON 2",
+  slug: "devious-maids-season-2",
+  year: "2014",
+  rating: "7.8",
+  image: "devious-maidss.jpg",
+  description:
+    "The secrets of Beverly Hills grow more dangerous as four maids navigate complicated relationships, wealthy employers, shocking revelations, and mysteries that threaten their lives.",
+  language: "English",
+  explainer: "Rock Kimomo",
+  genres: ["Drama", "Comedy", "Mystery"],
+  isFeatured: false,
+  createdAt: "2026-10-13",
+},
 
 
 ];

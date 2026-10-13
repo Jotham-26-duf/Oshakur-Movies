@@ -43,6 +43,7 @@ const urls = [
   `${baseUrl}/`,
   `${baseUrl}/movies`,
   `${baseUrl}/series`,
+  `${baseUrl}/trending`,
 
   ...movieSlugs.map((slug) => `${baseUrl}/movies/${slug}`),
   ...seriesSlugs.map((slug) => `${baseUrl}/series/${slug}`),

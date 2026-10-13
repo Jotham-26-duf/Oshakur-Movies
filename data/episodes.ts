@@ -2530,4 +2530,102 @@ streamUrl: "https://hanerix.com/2981phlivtgq",
 downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e08_Hd.mp4/file",
 },
 
+{
+  id: "235",
+  seriesSlug: "devious-maids-season-2",
+  episodeNumber: 1,
+  title: "Episode 1",
+  description: "Devious Maids Season 2, Episode 1.",
+  streamUrl: "https://hgcloud.to/7z67z8xylj7e",
+  downloadUrl: "https://www.mediafire.com/file/rdtn3grx4kpef8q/Devious+Maids+S02e01+Hd.mp4/file",
+},
+{
+  id: "236",
+  seriesSlug: "devious-maids-season-2",
+  episodeNumber: 2,
+  title: "Episode 2",
+  description: "Devious Maids Season 2, Episode 2.",
+  streamUrl: "https://hgcloud.to/2vx6j2hl9bss",
+  downloadUrl: "https://www.mediafire.com/file/ma8zqxsxgmdogew/Devious+Maids+S02e02+Hd.mp4/file",
+},
+{
+  id: "237",
+  seriesSlug: "devious-maids-season-2",
+  episodeNumber: 3,
+  title: "Episode 3",
+  description: "Devious Maids Season 2, Episode 3.",
+  streamUrl: "https://www.mediafire.com/file/t3zeflrtjc6zaur/Devious+Maids+S02e03+Hd.mp4/file",
+  downloadUrl: "https://www.mediafire.com/file/t3zeflrtjc6zaur/Devious+Maids+S02e03+Hd.mp4/file",
+},
+
+
+// THE CHOSEN — SEASON 2
+{
+  id: "238",
+  seriesSlug: "the-chosen-season-2",
+  episodeNumber: 1,
+  title: "Episode 1",
+  description: "The Chosen Season 2, Episode 1.",
+  streamUrl: "https://hgcloud.to/9gi2z62ety3b",
+  downloadUrl: "https://www.mediafire.com/file/33jiiak998oig65/CHOSEN_S2_EP1.mp4/file",
+},
+{
+  id: "239",
+  seriesSlug: "the-chosen-season-2",
+  episodeNumber: 2,
+  title: "Episode 2",
+  description: "The Chosen Season 2, Episode 2.",
+  streamUrl: "https://hgcloud.to/dacxfvo1zhii",
+  downloadUrl: "https://www.mediafire.com/file/t4oa24dr7elhxbe/CHOSEN_S2_EP2.mp4/file",
+},
+{
+  id: "240",
+  seriesSlug: "the-chosen-season-2",
+  episodeNumber: 3,
+  title: "Episode 3",
+  description: "The Chosen Season 2, Episode 3.",
+  streamUrl: "https://hgcloud.to/x0tnb438hq5d",
+  downloadUrl: "https://www.mediafire.com/file/7pdvv1e4amk2yeq/CHOSEN_S2_EP3.mp4/file",
+},
+
+// COVEN ACADEMY — SEASON 1
+{
+  id: "241",
+  seriesSlug: "coven-academy-season-1",
+  episodeNumber: 1,
+  title: "Episode 1",
+  description: "Coven Academy Season 1, Episode 1.",
+  streamUrl: "https://hgcloud.to/i2eezz1qvqd7",
+  downloadUrl: "https://www.mediafire.com/file/80gn7nduqj7z8z0/Coven+Academy+S1E1.mp4/file",
+},
+{
+  id: "242",
+  seriesSlug: "coven-academy-season-1",
+  episodeNumber: 2,
+  title: "Episode 2",
+  description: "Coven Academy Season 1, Episode 2.",
+  streamUrl: "https://hgcloud.to/kt354l4inny1",
+  downloadUrl: "https://www.mediafire.com/file/gr042c6qj33qsd7/Coven+Academy+S1E2.mp4/file",
+},
+{
+  id: "243",
+  seriesSlug: "coven-academy-season-1",
+  episodeNumber: 3,
+  title: "Episode 3",
+  description: "Coven Academy Season 1, Episode 3.",
+  streamUrl: "https://hgcloud.to/wgk9c5jfld6n",
+  downloadUrl: "https://www.mediafire.com/file/zd1mzcu7zysswc3/Coven+Academy+S1E3.mp4/file",
+},
+{
+  id: "244",
+  seriesSlug: "coven-academy-season-1",
+  episodeNumber: 4,
+  title: "Episode 4",
+  description: "Coven Academy Season 1, Episode 4.",
+  streamUrl: "https://hgcloud.to/zuprfy834rxm",
+  downloadUrl: "https://www.mediafire.com/file/6dwidaerm65r2sn/Coven_Academy_S1E4.mp4/file",
+},
+
+
+
 ]; 
