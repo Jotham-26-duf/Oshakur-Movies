@@ -3486,7 +3486,7 @@ export const movies: Movie[] = [
   description: "A team of animal criminals attempts to turn over a new leaf, but changing their ways proves more difficult than expected.",
   language: "English",
   genres: ["Animation", "Comedy", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3508,7 +3508,7 @@ export const movies: Movie[] = [
   description: "A young boy discovers King Arthur's legendary sword and must help stop an ancient threat with the help of his friends.",
   language: "English",
   genres: ["Adventure", "Fantasy", "Action"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-10",
   parts: [
     {
