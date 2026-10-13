@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
 import { series } from "@/data/series";
+
+export const metadata: Metadata = {
+  title: "Trending Movies & Series",
+  description: "Discover trending movies and series on Oshakur Movies.",
+  alternates: {
+    canonical: "https://oshakurmovies.party/trending",
+  },
+};
 
 export default function TrendingPage() {
   const trendingMovies = movies.slice(0, 10);
