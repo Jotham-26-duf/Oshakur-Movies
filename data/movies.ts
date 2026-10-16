@@ -4101,7 +4101,7 @@ export const movies: Movie[] = [
   description: "A sports comedy combining martial arts and basketball, following a young kung fu expert who discovers his unusual skills can help him succeed on the basketball court. Check the supplied video file for the correct version and language.",
   language: "English",
   genres: ["Comedy", "Action", "Sport"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4124,7 +4124,7 @@ export const movies: Movie[] = [
   description: "Johnny Blaze makes a supernatural pact that transforms him into the Ghost Rider, a mysterious rider with a flaming skull and extraordinary powers. This entry uses the supplied Sankara video file; confirm the exact edition before publishing.",
   language: "English",
   genres: ["Action", "Fantasy", "Thriller"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4147,7 +4147,7 @@ export const movies: Movie[] = [
   description: "A movie listing for It's Love. The supplied files include an A-labelled video and a second video without a part designation. Confirm the film's identity and viewing order before adding a detailed synopsis.",
   language: "English",
   genres: ["Romance", "Drama"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4177,7 +4177,7 @@ export const movies: Movie[] = [
   description: "A martial arts adventure set around a remote desert inn where dangerous factions, skilled fighters, and political intrigue collide. Confirm that the supplied file corresponds to the 1992 film before publishing its detailed metadata.",
   language: "English",
   genres: ["Action", "Adventure", "Drama"],
-  isFeatured: false,
+  isFeatured: true          ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4200,7 +4200,7 @@ export const movies: Movie[] = [
   description: "A former military sniper is drawn into a dangerous conspiracy and must use his experience to uncover the truth. This listing contains two supplied video parts, which should be watched in the correct order.",
   language: "English",
   genres: ["Action", "Thriller", "Drama"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4230,7 +4230,7 @@ export const movies: Movie[] = [
   description: "An adult-oriented film listing based on the supplied filenames. Verify the exact title, classification, and applicable age restrictions before publishing.",
   language: "Unknown",
   genres: ["Drama"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4267,7 +4267,7 @@ export const movies: Movie[] = [
   description: "A suspense and horror movie listing based on the supplied file name. Verify the exact film edition before adding a plot summary, release year, or rating.",
   language: "English",
   genres: ["Horror", "Thriller"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4290,7 +4290,7 @@ export const movies: Movie[] = [
   description: "A sweeping Indian epic following a young man who discovers a mysterious connection to a powerful kingdom. His journey leads him into a world of royal rivalries, battles, and questions about his origins. Verify the supplied edition and language before publishing.",
   language: "Hindi",
   genres: ["Action", "Adventure", "Fantasy"],
-  isFeatured: false,
+  isFeatured:true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4313,7 +4313,7 @@ export const movies: Movie[] = [
   description: "An action movie listing identified by the supplied Retribution file name. Confirm the film's exact identity and edition before adding release information or a detailed synopsis.",
   language: "Unknown",
   genres: ["Action", "Thriller"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4336,7 +4336,7 @@ export const movies: Movie[] = [
   description: "A Hong Kong legal action thriller following a prosecutor who confronts a complicated criminal case and fights to uncover the truth. The supplied files are divided into two parts.",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4366,7 +4366,7 @@ export const movies: Movie[] = [
   description: "A supernatural horror story in which a family confronts a terrifying connection to death and a seemingly unavoidable fate. The supplied file is labelled Part A; confirm whether another part is available.",
   language: "English",
   genres: ["Horror", "Thriller"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4389,7 +4389,7 @@ export const movies: Movie[] = [
   description: "An action movie listing with two supplied video parts. Confirm the exact movie title and edition before adding a detailed synopsis or release information.",
   language: "English",
   genres: ["Action", "Adventure", "Thriller"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4419,7 +4419,7 @@ export const movies: Movie[] = [
   description: "A Nigerian action thriller following a former smuggler who faces a dangerous mission involving a kidnapped child and a race against time. The supplied video is divided into two parts.",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4450,7 +4450,7 @@ export const movies: Movie[] = [
   description: "Matchbox is an action-adventure movie listing presented in two parts. Watch Part A first, then continue with Part B. The supplied links provide streaming and download options for each part. Confirm the exact film details and rating before publishing.",
   language: "English",
   genres: ["Action", "Adventure", "Comedy"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-16",
   parts: [
     {
