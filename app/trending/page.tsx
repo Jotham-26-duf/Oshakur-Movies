@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function TrendingPage() {
   const trendingMovies = movies.slice(0, 10);
-  const trendingSeries = series.slice(0, 10);
+  const trendingSeries = series.slice(0, 20);
 
   return (
     <main className="min-h-screen bg-[#121212] text-white">
