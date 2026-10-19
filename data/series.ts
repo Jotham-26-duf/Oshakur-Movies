@@ -804,6 +804,36 @@ createdAt: "2026-10-09",
   genres: ["Drama"],
   explainer: "Eric Pro",
 },
+{
+  id: "52",
+  title: "KINGDOM",
+  slug: "kingdom",
+  year: "Unknown",
+  rating: "N/A",
+  image: "kingdom.jpg",
+  isFeatured: true,
+  createdAt: "2026-10-19",
+  description:
+    "A drama series presented in Agasobanuye by Junior Giti, with multiple episodes available to watch and download.",
+  language: "Kinyarwanda",
+  genres: ["Action", "Drama", "Thriller"],
+  explainer: "Junior Giti",
+},
+{
+  id: "53",
+  title: "S.O.Z. — Season 2",
+  slug: "soz-season-2",
+  year: "Unknown",
+  rating: "N/A",
+  image: "soz.jpg",
+  isFeatured: true,
+  createdAt: "2026-10-19",
+  description:
+    "S.O.Z. Season 2 is a series presented in Agasobanuye by Nkuba Porter, featuring eight episodes with streaming and download links.",
+  language: "Kinyarwanda",
+  genres: ["Action", "Drama", "Thriller"],
+  explainer: "Nkuba Porter",
+},
 
 
 ];

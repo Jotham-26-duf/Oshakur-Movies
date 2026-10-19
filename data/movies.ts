@@ -4492,6 +4492,36 @@ export const movies: Movie[] = [
     },
   ],
 },
+{
+  id: "172",
+  title: "Friends, Sex and Games",
+  slug: "friends-sex-and-games",
+  explainer: "Sankara",
+  year: "REPLACE_WITH_YEAR",
+  rating: "",
+  image: "friends-sex-and-games.jpg",
+  description: "Watch Friends, Sex and Games on Oshakur Movies. Stream the episodes online or download them using the available links.",
+  language: "English",
+  genres: ["Drama", "Romance"],
+  isFeatured: true,
+  createdAt: "2026-10-19",
+  parts: [
+    {
+      id: "172-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl: "https://hgcloud.to/szwyo0vtv4fn",
+      downloadUrl: "https://www.mediafire.com/file/5eqchyrj8eyft8b/Friends+sex+and+games+Ep1.mp4/file",
+    },
+    {
+      id: "172-2",
+      partNumber: 2,
+      title: "Part 2",
+      streamUrl: "https://hgcloud.to/6vjaardsnvhc",
+      downloadUrl: "https://www.mediafire.com/file/5c4u5obl9b493in/Friends+sex+and+games+Ep2.mp4/file",
+    },
+  ],
+},
 ];
 
 
