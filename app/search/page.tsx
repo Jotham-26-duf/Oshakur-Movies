@@ -25,10 +25,12 @@ interface SearchPageProps {
 function normalizeText(value: unknown): string {
   return String(value ?? "")
     .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/['’]/g, "")
     .replace(/[^a-z0-9]+/g, " ")
-    .trim()
-    .replace(/\s+/g, " ");
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 // Match every search word, even if the words are entered
@@ -44,7 +46,7 @@ export default async function SearchPage({
   searchParams,
 }: SearchPageProps) {
   const params = await searchParams;
-  const query = (params.q ?? "").trim().replace(/\s+/g, " ");
+  const query = String(params.q ?? "").replace(/\s+/g, " ").trim();
 
   const movieResults = query
     ? movies.filter((movie) => {

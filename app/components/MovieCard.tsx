@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import { getExplainerImage } from "../lib/explainers";
 
 interface MovieCardProps {
   title: string;
@@ -101,23 +102,26 @@ export default function MovieCard({
 
       <div className="mt-2 flex min-w-0 items-center justify-between gap-2">
         {explainerName ? (
-          onExplainerClick ? (
-            <button
-              type="button"
-              onClick={() => onExplainerClick(explainerName)}
-              title={explainerName}
-              className="min-w-0 truncate text-left text-xs text-[#00E5FF] hover:underline"
-            >
-              🎙 {explainerName}
-            </button>
-          ) : (
-            <span
-              title={explainerName}
-              className="min-w-0 truncate text-xs text-[#00E5FF]"
-            >
-              🎙 {explainerName}
-            </span>
-          )
+          <span className="flex min-w-0 items-center gap-1.5">
+            {getExplainerImage(explainerName) && <img src={getExplainerImage(explainerName)} alt="" className="h-5 w-5 shrink-0 rounded-full object-cover" />}
+            {onExplainerClick ? (
+              <button
+                type="button"
+                onClick={() => onExplainerClick(explainerName)}
+                title={explainerName}
+                className="min-w-0 truncate text-left text-xs text-[#00E5FF] hover:underline"
+              >
+                🎙 {explainerName}
+              </button>
+            ) : (
+              <span
+                title={explainerName}
+                className="min-w-0 truncate text-xs text-[#00E5FF]"
+              >
+                🎙 {explainerName}
+              </span>
+            )}
+          </span>
         ) : (
           <span className="min-w-0 text-xs text-white/40">
             Explainer unavailable

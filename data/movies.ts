@@ -4469,7 +4469,30 @@ export const movies: Movie[] = [
     },
   ],
 },
-
+{
+  id: "171",
+  title: "MASTER PLAN",
+  slug: "master-plan",
+  explainer: "Rock Kimomo",
+  year: "REPLACE_WITH_YEAR",
+  rating: "",
+  image: "master-plan.jpg",
+  description: "Watch MASTER PLAN on Oshakur Movies. Stream the movie online or download it using the available links.",
+  language: "English",
+  genres: ["Action", "Adventure", "Comedy"],
+  isFeatured: true,
+  createdAt: "2026-10-19",
+  parts: [
+    {
+      id: "171-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://hgcloud.to/ywn9dekb0ips",
+      downloadUrl: "https://www.mediafire.com/file/oeab0f094i7ggso/MASTER+PLAN.mp4/file",
+    },
+  ],
+},
 ];
+
 
 

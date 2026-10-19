@@ -43,3 +43,77 @@ input {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+.announcement-bar {
+  height: 34px;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(0 229 255 / 20%);
+  background: #090d10;
+  color: #f5f5f5;
+}
+
+.announcement-track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  animation: announcement-scroll 65s linear infinite;
+}
+
+.announcement-copy {
+  display: flex;
+  align-items: center;
+  flex: none;
+  white-space: nowrap;
+  padding-right: 4rem;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.announcement-bar:hover .announcement-track {
+  animation-play-state: paused;
+}
+
+@keyframes announcement-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.explainer-marquee {
+  overflow: hidden;
+}
+
+.explainer-track {
+  display: flex;
+  width: max-content;
+  animation: explainer-scroll 38s linear infinite;
+}
+
+.explainer-marquee:hover .explainer-track {
+  animation-play-state: paused;
+}
+
+@keyframes explainer-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announcement-track,
+  .explainer-track {
+    animation: none;
+  }
+
+  .announcement-bar {
+    height: auto;
+    padding: 8px 12px;
+  }
+
+  .announcement-copy[aria-hidden="true"] {
+    display: none;
+  }
+
+  .announcement-copy {
+    white-space: normal;
+    line-height: 1.5;
+  }
+}

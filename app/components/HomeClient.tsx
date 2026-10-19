@@ -6,6 +6,7 @@ import Link from "next/link";
 import Hero from "./Hero";
 import MovieCard from "./MovieCard";
 import SiteBottom from "./SiteBottom";
+import { getCanonicalExplainerName, getExplainerImage, normalizeExplainerName } from "../lib/explainers";
 
 type HomeMovie = {
   id: string;
@@ -50,6 +51,7 @@ type TrendingItem =
   | { contentType: "series"; data: HomeSeries };
 
 type Explainer = {
+  key: string;
   name: string;
   movies: HomeMovie[];
   series: HomeSeries[];
@@ -240,34 +242,34 @@ export default function HomeClient({
     return mixedItems;
   }, [orderedMovies, orderedSeries]);
 
-  // Trending: alternate movies and series, up to eight cards.
+  // Trending: show the 10 newest movies and 20 newest series.
   const trendingItems = useMemo(() => {
     const result: TrendingItem[] = [];
+    const recentMovies = [...movies].sort((a, b) =>
+      (b.createdAt ?? "").localeCompare(a.createdAt ?? "")
+    ).slice(0, 10);
+    const recentSeries = [...series].sort((a, b) =>
+      (b.createdAt ?? "").localeCompare(a.createdAt ?? "")
+    ).slice(0, 20);
 
-    for (
-      let index = 0;
-      result.length < 8 &&
-      (index < orderedMovies.length ||
-        index < orderedSeries.length);
-      index++
-    ) {
-      if (orderedMovies[index] && result.length < 8) {
+    for (let index = 0; index < Math.max(recentMovies.length, recentSeries.length); index++) {
+      if (recentMovies[index]) {
         result.push({
           contentType: "movie",
-          data: orderedMovies[index],
+          data: recentMovies[index],
         });
       }
 
-      if (orderedSeries[index] && result.length < 8) {
+      if (recentSeries[index]) {
         result.push({
           contentType: "series",
-          data: orderedSeries[index],
+          data: recentSeries[index],
         });
       }
     }
 
     return result;
-  }, [orderedMovies, orderedSeries]);
+  }, [movies, series]);
 
   // Build explainer profiles from the names already in your data.
   const explainers = useMemo(() => {
@@ -277,11 +279,12 @@ export default function HomeClient({
       const name = movie.explainer?.trim();
       if (!name) continue;
 
-      const key = name.toLocaleLowerCase();
+      const key = normalizeExplainerName(name);
 
       if (!profileMap.has(key)) {
         profileMap.set(key, {
-          name,
+          key,
+          name: getCanonicalExplainerName(name),
           movies: [],
           series: [],
         });
@@ -294,11 +297,12 @@ export default function HomeClient({
       const name = item.explainer?.trim();
       if (!name) continue;
 
-      const key = name.toLocaleLowerCase();
+      const key = normalizeExplainerName(name);
 
       if (!profileMap.has(key)) {
         profileMap.set(key, {
-          name,
+          key,
+          name: getCanonicalExplainerName(name),
           movies: [],
           series: [],
         });
@@ -316,7 +320,7 @@ export default function HomeClient({
   }, [movies, series]);
 
   const activeExplainer = explainers.find(
-    (item) => item.name === selectedExplainer
+    (item) => item.key === selectedExplainer
   );
 
   function handleSearch(event: FormEvent<HTMLFormElement>) {
@@ -531,7 +535,7 @@ export default function HomeClient({
                       <button
                         type="button"
                         onClick={() =>
-                          setSelectedExplainer(content.explainer!.trim())
+                          setSelectedExplainer(normalizeExplainerName(content.explainer!))
                         }
                         className="block max-w-full truncate text-left text-xs text-[#00E5FF] hover:underline"
                       >
@@ -569,37 +573,41 @@ export default function HomeClient({
         </div>
 
         {explainers.length > 0 ? (
-          <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-            {explainers.map((explainer) => {
-              const totalTitles =
-                explainer.movies.length + explainer.series.length;
-
-              return (
-                <button
-                  key={explainer.name}
-                  type="button"
-                  onClick={() => setSelectedExplainer(explainer.name)}
-                  className="group flex flex-col items-center rounded-xl border border-white/10 bg-white/5 p-5 text-center transition hover:border-[#00E5FF]/50 hover:bg-white/10"
+          <div className="explainer-marquee" aria-label="Movie and series explainers">
+            <div className="explainer-track w-max">
+              {[false, true].map((isDuplicate) => (
+                <div
+                  key={isDuplicate ? "duplicate-track" : "primary-track"}
+                  className="flex items-center gap-8 pr-8 sm:gap-12 sm:pr-12"
+                  aria-hidden={isDuplicate}
+                  inert={isDuplicate}
                 >
-                  <span className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-[#00E5FF]/60 bg-gradient-to-br from-[#00E5FF]/20 to-[#E040FB]/20 text-2xl font-extrabold text-[#00E5FF] transition group-hover:scale-105">
-                    {getInitials(explainer.name)}
-                  </span>
-
-                  <span className="mt-3 line-clamp-2 text-sm font-bold group-hover:text-[#00E5FF]">
-                    {explainer.name}
-                  </span>
-
-                  <span className="mt-1 text-xs text-white/50">
-                    {totalTitles}{" "}
-                    {totalTitles === 1 ? "title" : "titles"}
-                  </span>
-
-                  <span className="mt-2 text-xs font-semibold text-[#00E5FF]">
-                    View profile
-                  </span>
-                </button>
-              );
-            })}
+                  {explainers.map((explainer) => (
+                    <button
+                      key={explainer.key}
+                      type="button"
+                      onClick={() => setSelectedExplainer(explainer.key)}
+                      className="group flex w-24 shrink-0 flex-col items-center gap-2 py-2 text-center sm:w-28"
+                    >
+                      <span className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-2 border-[#00E5FF]/50 bg-white/5 transition group-hover:scale-105 group-hover:border-[#00E5FF] sm:h-20 sm:w-20">
+                        {getExplainerImage(explainer.name) ? (
+                          <img
+                            src={getExplainerImage(explainer.name)}
+                            alt={explainer.name}
+                            className="h-full w-full object-cover"
+                          />
+                        ) : (
+                          <span className="text-lg font-extrabold text-[#00E5FF]">{getInitials(explainer.name)}</span>
+                        )}
+                      </span>
+                      <span className="max-w-full truncate text-xs font-semibold text-white/85 transition group-hover:text-[#00E5FF] sm:text-sm">
+                        {explainer.name}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         ) : (
           <div className="rounded-xl border border-white/10 bg-white/5 p-8 text-center text-white/50">
@@ -623,9 +631,11 @@ export default function HomeClient({
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-center gap-4">
-                <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-[#00E5FF]/60 bg-[#00E5FF]/10 text-xl font-extrabold text-[#00E5FF]">
-                  {getInitials(activeExplainer.name)}
-                </span>
+                {getExplainerImage(activeExplainer.name) ? (
+                  <img src={getExplainerImage(activeExplainer.name)} alt={activeExplainer.name} className="h-16 w-16 shrink-0 rounded-full border-2 border-[#00E5FF]/60 object-cover" />
+                ) : (
+                  <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-[#00E5FF]/60 bg-[#00E5FF]/10 text-xl font-extrabold text-[#00E5FF]">{getInitials(activeExplainer.name)}</span>
+                )}
 
                 <div>
                   <h2 className="text-xl font-bold">
@@ -773,7 +783,7 @@ export default function HomeClient({
   slug={movie.slug}
   explainer={movie.explainer}
   createdAt={movie.createdAt}
-  onExplainerClick={(name) => setSelectedExplainer(name)}
+  onExplainerClick={(name) => setSelectedExplainer(normalizeExplainerName(name))}
 />
               ))}
             </div>
@@ -836,10 +846,11 @@ export default function HomeClient({
                       <button
                         type="button"
                         onClick={() =>
-                          setSelectedExplainer(item.explainer!.trim())
+                          setSelectedExplainer(normalizeExplainerName(item.explainer!))
                         }
                         className="block max-w-full truncate text-left text-xs text-[#00E5FF] hover:underline"
                       >
+                        {getExplainerImage(item.explainer) && <img src={getExplainerImage(item.explainer)} alt="" className="mr-1 inline-block h-5 w-5 rounded-full object-cover align-middle" />}
                         🎙 {item.explainer}
                       </button>
                     )}

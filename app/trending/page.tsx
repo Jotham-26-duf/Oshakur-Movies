@@ -15,8 +15,12 @@ export const metadata: Metadata = {
 };
 
 export default function TrendingPage() {
-  const trendingMovies = movies.slice(0, 10);
-  const trendingSeries = series.slice(0, 20);
+  const trendingMovies = [...movies]
+    .sort((a, b) => (b.createdAt ?? "").localeCompare(a.createdAt ?? ""))
+    .slice(0, 10);
+  const trendingSeries = [...series]
+    .sort((a, b) => (b.createdAt ?? "").localeCompare(a.createdAt ?? ""))
+    .slice(0, 20);
 
   return (
     <main className="min-h-screen bg-[#121212] text-white">
@@ -33,7 +37,7 @@ export default function TrendingPage() {
           </Link>
 
           <p className="mt-7 text-xs font-semibold uppercase tracking-[0.25em] text-[#00E5FF]">
-            What's Hot
+            What&apos;s Hot
           </p>
 
           <h1 className="mt-2 text-3xl font-extrabold sm:text-4xl">

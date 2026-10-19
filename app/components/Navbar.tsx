@@ -14,8 +14,8 @@ function normalizeSearchText(value: unknown): string {
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/['’]/g, "")
     .replace(/[^a-z0-9]+/g, " ")
-    .trim()
-    .replace(/\s+/g, " ");
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function matchesSearch(text: string, query: string): boolean {
@@ -153,7 +153,7 @@ export default function Navbar() {
   function handleSearch(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const query = search.trim().replace(/\s+/g, " ");
+    const query = search.replace(/\s+/g, " ").trim();
 
     if (!query) return;
 

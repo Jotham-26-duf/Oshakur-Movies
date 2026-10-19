@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import MonetagScripts from "./MonetagScripts";
+import AnnouncementBanner from "./components/AnnouncementBanner";
 
 const siteUrl = "https://oshakurmovies.party";
 
@@ -91,6 +92,8 @@ export default function RootLayout({
       <body>
         {/* Monetag scripts are managed by app/MonetagScripts.tsx */}
         <MonetagScripts />
+
+        <AnnouncementBanner />
 
         {children}
 
