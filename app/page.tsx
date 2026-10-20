@@ -11,11 +11,24 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "OSHAKUR MOVIES",
+    alternateName: "Oshakur Movies",
+    url: "https://oshakurmovies.party/",
+  };
+
   return (
-    <HomeClient
-      movies={movies}
-      series={series}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <HomeClient movies={movies} series={series} />
+    </>
   );
 }
 
