@@ -1,7 +1,13 @@
 
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { login } from "./actions";
+
+export const metadata: Metadata = {
+  title: "Sign In",
+  robots: { index: false, follow: false },
+};
 
 interface LoginPageProps {
   searchParams: Promise<{
@@ -91,7 +97,7 @@ export default async function LoginPage({
 
           <div className="mt-6 text-center">
             <p className="text-sm text-[#AAAAAA]">
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <Link
                 href="/signup"
                 className="font-semibold text-[#00E5FF] transition hover:text-white"

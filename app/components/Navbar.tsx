@@ -2,18 +2,19 @@
 
 import Link from "next/link";
 import { type FormEvent, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import { movies } from "@/data/movies";
 import { series } from "@/data/series";
+import { SiWhatsapp } from "react-icons/si";
+import OshakurLogo from "./OshakurLogo";
 
 function normalizeSearchText(value: unknown): string {
   return String(value ?? "")
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .replace(/['’]/g, "")
-    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -103,6 +104,7 @@ function CloseIcon() {
 
 export default function Navbar() {
   const router = useRouter();
+  const pathname = usePathname();
 
   const [search, setSearch] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -168,44 +170,48 @@ export default function Navbar() {
     setSearch("");
   }
 
+  function navLinkClass(href: string) {
+    const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+    return `flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E50914] ${
+      isActive
+        ? "bg-white/10 text-white shadow-[inset_0_-2px_0_#E50914]"
+        : "text-[#B7C1CE] hover:bg-white/[0.07] hover:text-white"
+    }`;
+  }
+
   return (
     <>
-      <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#121212]/95 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 max-w-7xl items-center px-4 sm:h-[72px] sm:px-6 lg:px-8">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0D0D0D]/95 shadow-[0_12px_32px_rgba(0,0,0,0.24)] backdrop-blur-xl">
+        <div className="mx-auto flex h-16 max-w-[1600px] items-center px-4 sm:h-[72px] sm:px-6 lg:px-[5%]">
           <Link
             href="/"
             onClick={closeMenu}
             aria-label="Oshakur Movies home"
             className="flex shrink-0 items-center gap-2"
           >
-            <img
-              src="/images/logo.jpg"
-              alt="OSHAKUR MOVIES logo"
-              width={48}
-              height={48}
-              className="h-10 w-10 rounded-full object-cover sm:h-12 sm:w-12"
-            />
+            <OshakurLogo className="size-10 shrink-0 sm:size-12" />
 
-            <span className="hidden whitespace-nowrap text-xl font-extrabold tracking-wide sm:block lg:text-2xl">
-              <span className="text-[#00E5FF]">OSHAKUR</span>{" "}
-              <span className="text-[#E040FB]">MOVIES</span>
+              <span className="whitespace-nowrap text-xs font-extrabold tracking-wide sm:text-xl lg:text-2xl">
+              <span className="text-white">OSHAKUR</span>{" "}
+              <span className="text-[#E50914]">MOVIES</span>
             </span>
           </Link>
 
-          <nav className="ml-6 hidden items-center gap-1 lg:flex">
-            <Link href="/" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]">
+          <nav className="ml-6 hidden items-center gap-1 lg:flex" aria-label="Main navigation">
+            <Link href="/" aria-current={pathname === "/" ? "page" : undefined} className={navLinkClass("/")}>
               <HomeIcon /> Home
             </Link>
 
-            <Link href="/movies" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]">
+            <Link href="/movies" aria-current={pathname.startsWith("/movies") ? "page" : undefined} className={navLinkClass("/movies")}>
               <MovieIcon /> Movies
             </Link>
 
-            <Link href="/series" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]">
+            <Link href="/series" aria-current={pathname.startsWith("/series") ? "page" : undefined} className={navLinkClass("/series")}>
               <SeriesIcon /> Series
             </Link>
 
-            <Link href="/trending" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:text-[#00E5FF]">
+            <Link href="/trending" aria-current={pathname.startsWith("/trending") ? "page" : undefined} className={navLinkClass("/trending")}>
               <TrendingIcon /> Trending
             </Link>
           </nav>
@@ -213,10 +219,12 @@ export default function Navbar() {
           <div className="ml-auto flex items-center gap-2">
             <Link
               href="/login"
-              className="rounded-lg border border-white/10 bg-[#1B1B1B] px-4 py-2 text-sm font-semibold text-white transition hover:border-[#2979FF] hover:text-[#2979FF]"
+              className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-semibold text-white transition hover:border-[#E50914]/50 hover:bg-white/[0.08] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E50914]"
             >
               Login
             </Link>
+
+            <a href="https://wa.me/250789063094" target="_blank" rel="noopener noreferrer" aria-label="Contact OSHAKUR MOVIES on WhatsApp" className="hidden rounded-lg border border-white/10 bg-white/[0.04] p-2.5 text-white transition hover:border-[#E50914] hover:text-[#FF2633] sm:inline-flex"><SiWhatsapp size={19} aria-hidden="true" /></a>
 
             <button
               type="button"
@@ -231,8 +239,8 @@ export default function Navbar() {
         </div>
 
         {/* SEARCH BAR */}
-        <div className="border-t border-white/5 bg-[#121212] px-4 py-3 sm:px-6 lg:px-8">
-          <form onSubmit={handleSearch} role="search" className="relative mx-auto max-w-7xl">
+        <div className="absolute left-1/2 top-1/2 hidden w-[30vw] max-w-[440px] -translate-x-1/2 -translate-y-1/2 lg:block">
+          <form onSubmit={handleSearch} role="search" className="relative mx-auto">
             <div className="relative">
               <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#AAAAAA]">
                 <SearchIcon />
@@ -242,18 +250,19 @@ export default function Navbar() {
                 type="search"
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
-                placeholder="Search movies and series..."
+                placeholder="Type your search"
                 aria-label="Search movies and series"
                 aria-controls="navbar-search-results"
                 autoComplete="off"
-                className="w-full rounded-full border border-white/10 bg-[#2A2A2A] py-3 pl-11 pr-24 text-sm text-white outline-none placeholder:text-[#AAAAAA] focus:border-[#2979FF] focus:bg-[#303030] sm:py-3.5"
+                className="w-full rounded-lg border border-[#292929] bg-[#141414] py-2.5 pl-11 pr-14 text-sm text-white outline-none placeholder:text-[#777] transition focus:border-[#E50914]/70 focus-visible:ring-2 focus-visible:ring-[#E50914]/30"
               />
 
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-[#2979FF] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#1E63D6]"
+                aria-label="Search"
+                className="absolute right-1 top-1/2 grid h-9 w-10 -translate-y-1/2 place-items-center rounded-md bg-[#E50914] text-white transition hover:bg-[#F6121D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E50914]"
               >
-                Search
+                <SearchIcon />
               </button>
             </div>
 
@@ -276,7 +285,7 @@ export default function Navbar() {
                               key={movie.id}
                               href={`/movies/${movie.slug}`}
                               onClick={selectResult}
-                              className="flex items-center gap-3 rounded-xl p-2 transition hover:bg-[#2A2A2A]"
+                              className="group flex items-center gap-3 rounded-xl p-2 transition duration-200 hover:-translate-y-0.5 hover:bg-[#2A2A2A] hover:shadow-lg focus-visible:bg-[#2A2A2A]"
                             >
                               <img
                                 src={`/images/movies/${movie.image}`}
@@ -316,7 +325,7 @@ export default function Navbar() {
                               key={item.id}
                               href={`/series/${item.slug}`}
                               onClick={selectResult}
-                              className="flex items-center gap-3 rounded-xl p-2 transition hover:bg-[#2A2A2A]"
+                              className="group flex items-center gap-3 rounded-xl p-2 transition duration-200 hover:-translate-y-0.5 hover:bg-[#2A2A2A] hover:shadow-lg focus-visible:bg-[#2A2A2A]"
                             >
                               <img
                                 src={`/images/series/${item.image}`}
@@ -361,21 +370,21 @@ export default function Navbar() {
 
         {/* MOBILE MENU */}
         {menuOpen && (
-          <div className="border-t border-white/10 bg-[#121212] px-4 py-4 shadow-2xl lg:hidden">
-            <nav className="flex flex-col gap-2">
-              <Link href="/" onClick={closeMenu} className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]">
+          <div className="border-t border-white/10 bg-[#0B1320] px-4 py-4 shadow-2xl lg:hidden">
+            <nav className="flex flex-col gap-2" aria-label="Mobile navigation">
+              <Link href="/" onClick={closeMenu} aria-current={pathname === "/" ? "page" : undefined} className={navLinkClass("/")}>
                 <HomeIcon /> Home
               </Link>
 
-              <Link href="/movies" onClick={closeMenu} className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]">
+              <Link href="/movies" onClick={closeMenu} aria-current={pathname.startsWith("/movies") ? "page" : undefined} className={navLinkClass("/movies")}>
                 <MovieIcon /> Movies
               </Link>
 
-              <Link href="/series" onClick={closeMenu} className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]">
+              <Link href="/series" onClick={closeMenu} aria-current={pathname.startsWith("/series") ? "page" : undefined} className={navLinkClass("/series")}>
                 <SeriesIcon /> Series
               </Link>
 
-              <Link href="/trending" onClick={closeMenu} className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]">
+              <Link href="/trending" onClick={closeMenu} aria-current={pathname.startsWith("/trending") ? "page" : undefined} className={navLinkClass("/trending")}>
                 <TrendingIcon /> Trending
               </Link>
             </nav>
@@ -383,7 +392,7 @@ export default function Navbar() {
         )}
       </header>
 
-      <div className="h-[116px] sm:h-[128px]" />
+      <div className="h-0" />
     </>
   );
 }

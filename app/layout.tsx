@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 import MonetagScripts from "./MonetagScripts";
 import AnnouncementBanner from "./components/AnnouncementBanner";
-
-const siteUrl = "https://oshakurmovies.party";
+import WhatsAppChannelButton from "./components/WhatsAppChannelButton";
+import { createOpenGraphMetadata, siteName, siteOpenGraph, siteUrl } from "./seo";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "OSHAKUR MOVIES | Watch Agasobanuye Movies & Series",
+    default: "OSHAKUR MOVIES | Watch Agasobanye Movies & Series",
     template: "%s | OSHAKUR MOVIES",
   },
 
@@ -31,32 +31,16 @@ export const metadata: Metadata = {
 
 
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 
-  openGraph: {
-    title: "OSHAKUR MOVIES | Watch Agasobanuye Movies & Series",
-    description:
-      "Watch and discover Agasobanuye movies and series online on OSHAKUR MOVIES.",
-    url: siteUrl,
-    siteName: "OSHAKUR MOVIES",
-    type: "website",
-    locale: "en_US",
-    images: [
-      {
-        url: "/images/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "OSHAKUR MOVIES — Watch Agasobanuye Movies & Series",
-      },
-    ],
-  },
+  openGraph: siteOpenGraph,
 
   twitter: {
     card: "summary_large_image",
-    title: "OSHAKUR MOVIES | Watch Agasobanuye Movies & Series",
+    title: "OSHAKUR MOVIES | Watch Agasobanye Movies & Series",
     description:
       "Watch and discover Agasobanuye movies and series online on OSHAKUR MOVIES.",
     images: ["/images/og-image.png"],
@@ -97,6 +81,8 @@ export default function RootLayout({
 
         {children}
 
+        <WhatsAppChannelButton />
+
         {/* Organization structured data — preserved */}
         <script
           type="application/ld+json"
@@ -104,9 +90,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "OSHAKUR MOVIES",
+              name: siteName,
               url: siteUrl,
-              logo: `${siteUrl}/images/logo.jpg`,
+              logo: new URL("/favicon.svg", siteUrl).toString(),
             }).replace(/</g, "\\u003c"),
           }}
         />

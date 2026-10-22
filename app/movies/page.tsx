@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FiArrowLeft } from "react-icons/fi";
 
 import MovieCard from "@/app/components/MovieCard";
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
+import { createOpenGraphMetadata } from "@/app/seo";
 
 export const metadata: Metadata = {
   title: "All Movies",
@@ -14,48 +14,32 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://oshakurmovies.party/movies",
   },
+  openGraph: createOpenGraphMetadata(
+    "/movies",
+    "All Movies | OSHAKUR MOVIES",
+    "Browse all movies on OSHAKUR MOVIES, including action, adventure, comedy, drama, horror, and thriller films.",
+  ),
 };
 
 export default function MoviesPage() {
   const orderedMovies = [
     ...movies.filter((movie) => movie.isFeatured),
-    ...movies.filter((movie) => !movie.isFeatured),
+    ...movies.filter((movie) => !movie.isFeatured).sort((a, b) => (b.createdAt ?? "").localeCompare(a.createdAt ?? "")),
   ];
 
   return (
-    <main className="min-h-screen bg-[#121212] text-white">
+    <main className="cinema-page min-h-screen text-white">
       <Navbar />
 
-      <section className="mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 sm:pt-36 lg:px-8">
-        <div className="mb-8">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#00E5FF]">
-            Oshakur Movies
-          </p>
-
-          <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h1 className="text-3xl font-extrabold sm:text-4xl">
-                All Movies
-              </h1>
-
-              <p className="mt-2 max-w-2xl text-sm leading-6 text-[#AAAAAA]">
-                Browse our collection of movies and discover something to
-                watch.
-              </p>
-            </div>
-
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-[#1B1B1B] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]"
-            >
-              <FiArrowLeft size={17} aria-hidden="true" />
-              Home
-            </Link>
-          </div>
-        </div>
+      <section className="mx-auto max-w-[1600px] px-4 pb-16 pt-7 sm:px-6 lg:px-[5%]">
+        <header className="mb-8">
+          <nav aria-label="Breadcrumb" className="mb-4 flex items-center gap-2 text-sm text-[#737373]"><Link href="/" className="transition hover:text-white">Home</Link><span aria-hidden="true">/</span><span aria-current="page" className="text-[#A3A3A3]">Movies</span></nav>
+          <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">All Movies <span className="text-[#A3A3A3]">({new Set(orderedMovies.map((movie) => movie.id)).size})</span></h1>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-[#A3A3A3] sm:text-base">Explore our movie collection, discover your favorite stories, and find the latest Agasobanuye additions to OSHAKUR MOVIES.</p>
+        </header>
 
         {orderedMovies.length > 0 ? (
-          <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+          <div className="media-grid">
             {orderedMovies.map((movie) => (
               <MovieCard
                 key={movie.id}
@@ -64,6 +48,9 @@ export default function MoviesPage() {
                 rating={movie.rating}
                 image={movie.image}
                 slug={movie.slug}
+                explainer={movie.explainer}
+                createdAt={movie.createdAt}
+                genres={movie.genres}
               />
             ))}
           </div>

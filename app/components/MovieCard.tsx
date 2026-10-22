@@ -8,10 +8,12 @@ interface MovieCardProps {
   rating: string;
   image: string;
   slug: string;
+  hrefPrefix?: "/movies" | "/series";
   explainer?: string;
   createdAt?: string;
   streamUrl?: string;
   downloadUrl?: string;
+  genres?: string[];
   onExplainerClick?: (name: string) => void;
 }
 
@@ -66,41 +68,38 @@ export default function MovieCard({
   rating,
   image,
   slug,
+  hrefPrefix = "/movies",
   explainer,
   createdAt,
   streamUrl,
   downloadUrl,
+  genres,
   onExplainerClick,
 }: MovieCardProps) {
   const timeAgo = getTimeAgo(createdAt);
   const explainerName = explainer?.trim();
 
   return (
-    <article className="group block w-full min-w-0">
-      <Link href={`/movies/${slug}`} className="block">
-        <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
+    <article className="cinema-card group block w-full min-w-0">
+      <Link href={`${hrefPrefix}/${slug}`} className="block">
+        <div className="media-poster relative">
           <img
             src={`/images/movies/${image}`}
             alt={title}
             loading="lazy"
-            className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
           />
-
-          <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition duration-300 group-hover:bg-black/50">
-            <div className="scale-0 rounded-full bg-[#2979FF] p-4 text-white shadow-xl transition duration-300 group-hover:scale-100">
-              <span className="text-lg">▶</span>
-            </div>
-          </div>
+          {genres?.[0] && <span className="media-genre">{genres[0]}</span>}
+          <span className="media-play" aria-hidden="true">▶</span>
         </div>
       </Link>
 
-      <Link href={`/movies/${slug}`} className="block">
-        <h3 className="mt-3 truncate font-semibold text-white transition group-hover:text-[#00E5FF]">
+      <Link href={`${hrefPrefix}/${slug}`} className="block">
+        <h3 className="media-title">
           {title}
         </h3>
       </Link>
 
-      <div className="mt-2 flex min-w-0 items-center justify-between gap-2">
+      <div className="media-byline">
         {explainerName ? (
           <span className="flex min-w-0 items-center gap-1.5">
             {getExplainerImage(explainerName) && <img src={getExplainerImage(explainerName)} alt="" className="h-5 w-5 shrink-0 rounded-full object-cover" />}
@@ -127,17 +126,12 @@ export default function MovieCard({
             Explainer unavailable
           </span>
         )}
-
-        <span
-          title={timeAgo}
-          className="shrink-0 text-right text-xs text-[#AAAAAA]"
-        >
-          {timeAgo}
-        </span>
       </div>
 
-      {rating && (
-        <div className="mt-2">
+      {createdAt && timeAgo !== "Upload date unavailable" && <time title={timeAgo} dateTime={createdAt} className="media-time">{timeAgo}</time>}
+
+      {rating && rating !== "N/A" && (
+        <div className="media-meta">
           <span className="inline-flex items-center gap-1 rounded-md bg-[#5C6BC0] px-2 py-1 text-xs font-semibold text-white">
             <span className="text-[#FFC107]">★</span>
             {rating}
@@ -145,13 +139,13 @@ export default function MovieCard({
         </div>
       )}
 
-      <div className="mt-3 flex gap-2">
+      <div className="mt-3 flex gap-2 px-2 pb-2">
         {streamUrl && (
           <a
             href={streamUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 rounded-lg bg-[#2979FF] px-2 py-2 text-center text-xs font-semibold text-white transition hover:bg-[#1E63D6]"
+            className="flex-1 rounded-lg bg-[#E50914] px-2 py-2 text-center text-xs font-semibold text-white transition hover:bg-[#FF2633]"
           >
             ▶ Watch
           </a>
@@ -162,7 +156,7 @@ export default function MovieCard({
             href={downloadUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 rounded-lg bg-[#22C55E] px-2 py-2 text-center text-xs font-semibold text-white transition hover:bg-[#16A34A]"
+            className="flex-1 rounded-lg bg-white/10 px-2 py-2 text-center text-xs font-semibold text-white transition hover:bg-white/20"
           >
             ↓ Download
           </a>

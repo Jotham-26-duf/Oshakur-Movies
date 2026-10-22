@@ -103,9 +103,9 @@ export default function CategorySection() {
               <Link
                 key={category.id}
                 href={`/category/${category.id}`}
-                className="group block"
+                className="group media-tile block min-w-0"
               >
-                <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
+                <div className="media-tile-frame">
                   <img
                     src={currentImage}
                     alt={category.name}
@@ -113,6 +113,8 @@ export default function CategorySection() {
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+                  <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
 
                   <div className="absolute inset-x-0 bottom-0 p-4">
                     <h3 className="text-lg font-bold text-white">

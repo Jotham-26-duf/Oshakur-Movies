@@ -145,15 +145,16 @@ export default async function SearchPage({
                 <Link
                   key={movie.id}
                   href={`/movies/${movie.slug}`}
-                  className="group min-w-0"
+                  className="group media-tile min-w-0"
                 >
-                  <div className="overflow-hidden rounded-xl bg-[#2A2A2A]">
+                  <div className="media-tile-frame overflow-hidden rounded-xl bg-[#2A2A2A]">
                     <img
                       src={`/images/movies/${movie.image}`}
                       alt={movie.title}
                       loading="lazy"
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
+                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
                   </div>
 
                   <h3 className="mt-3 font-semibold transition group-hover:text-[#00E5FF]">
@@ -195,15 +196,16 @@ export default async function SearchPage({
                 <Link
                   key={item.id}
                   href={`/series/${item.slug}`}
-                  className="group min-w-0"
+                  className="group media-tile min-w-0"
                 >
-                  <div className="overflow-hidden rounded-xl bg-[#2A2A2A]">
+                  <div className="media-tile-frame overflow-hidden rounded-xl bg-[#2A2A2A]">
                     <img
                       src={`/images/series/${item.image}`}
                       alt={item.title}
                       loading="lazy"
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
+                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
                   </div>
 
                   <h3 className="mt-3 font-semibold transition group-hover:text-[#00E5FF]">

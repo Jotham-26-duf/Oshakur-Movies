@@ -5,6 +5,7 @@ import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
 import { series } from "@/data/series";
+import { createOpenGraphMetadata } from "@/app/seo";
 
 export const metadata: Metadata = {
   title: "Trending Movies & Series",
@@ -12,18 +13,25 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://oshakurmovies.party/trending",
   },
+  openGraph: createOpenGraphMetadata(
+    "/trending",
+    "Trending Movies & Series | OSHAKUR MOVIES",
+    "Discover trending movies and series on OSHAKUR MOVIES.",
+  ),
 };
 
 export default function TrendingPage() {
   const trendingMovies = [...movies]
+    .filter((movie) => movie.isFeatured)
     .sort((a, b) => (b.createdAt ?? "").localeCompare(a.createdAt ?? ""))
     .slice(0, 10);
   const trendingSeries = [...series]
+    .filter((item) => item.isFeatured)
     .sort((a, b) => (b.createdAt ?? "").localeCompare(a.createdAt ?? ""))
     .slice(0, 20);
 
   return (
-    <main className="min-h-screen bg-[#121212] text-white">
+    <main className="cinema-page min-h-screen text-white">
       <Navbar />
 
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-10">
@@ -62,14 +70,16 @@ export default function TrendingPage() {
                 <Link
                   key={movie.id}
                   href={`/movies/${movie.slug}`}
-                  className="group block min-w-0"
+                  className="group media-tile block min-w-0"
                 >
-                  <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
+                  <div className="media-tile-frame">
                     <img
                       src={`/images/movies/${movie.image}`}
                       alt={movie.title}
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
+
+                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
 
                     <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/20" />
                   </div>
@@ -108,14 +118,16 @@ export default function TrendingPage() {
                 <Link
                   key={item.id}
                   href={`/series/${item.slug}`}
-                  className="group block min-w-0"
+                  className="group media-tile block min-w-0"
                 >
-                  <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
+                  <div className="media-tile-frame">
                     <img
                       src={`/images/series/${item.image}`}
                       alt={item.title}
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
+
+                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
 
                     <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/20" />
                   </div>

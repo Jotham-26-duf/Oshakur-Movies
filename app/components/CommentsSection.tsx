@@ -309,7 +309,7 @@ export default function CommentsSection({
 
         <form
           onSubmit={handlePostComment}
-          className="mt-6 rounded-xl border border-white/10 bg-[#1B1B1B] p-5 sm:p-6"
+          className="mt-6 rounded-xl border border-white/10 bg-[#191919] p-5 sm:p-6"
         >
           <h3 className="mb-4 text-lg font-semibold">
             Post a Comment
@@ -328,9 +328,9 @@ export default function CommentsSection({
               type="text"
               value={username}
               onChange={(event) => setUsername(event.target.value)}
-              placeholder="Enter your name"
+              placeholder="Your name"
               maxLength={50}
-              className="w-full rounded-lg border border-white/10 bg-[#121212] px-4 py-3 text-sm text-white outline-none transition placeholder:text-[#666666] focus:border-[#00E5FF]"
+              className="w-full rounded-lg border border-white/10 bg-[#0D0D0D] px-4 py-3 text-sm text-white outline-none transition placeholder:text-[#777777] focus:border-[#E50914]"
             />
           </div>
 
@@ -346,10 +346,10 @@ export default function CommentsSection({
               id="comment-content"
               value={content}
               onChange={(event) => setContent(event.target.value)}
-              placeholder="Write your comment..."
+              placeholder="Share your thoughts..."
               rows={4}
               maxLength={1000}
-              className="w-full resize-none rounded-lg border border-white/10 bg-[#121212] px-4 py-3 text-sm text-white outline-none transition placeholder:text-[#666666] focus:border-[#00E5FF]"
+              className="w-full resize-none rounded-lg border border-white/10 bg-[#0D0D0D] px-4 py-3 text-sm text-white outline-none transition placeholder:text-[#777777] focus:border-[#E50914]"
             />
           </div>
 
@@ -363,7 +363,7 @@ export default function CommentsSection({
             <button
               type="submit"
               disabled={posting || !content.trim()}
-              className="rounded-lg bg-[#00E5FF] px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-[#00cfe8] disabled:cursor-not-allowed disabled:opacity-50"
+              className="rounded-lg bg-[#E50914] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#FF2633] disabled:cursor-not-allowed disabled:opacity-50"
             >
               {posting ? "Posting..." : "Post Comment"}
             </button>

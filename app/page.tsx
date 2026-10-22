@@ -3,20 +3,27 @@ import type { Metadata } from "next";
 import HomeClient from "./components/HomeClient";
 import { movies } from "@/data/movies";
 import { series } from "@/data/series";
+import { createOpenGraphMetadata, siteName, siteUrl } from "./seo";
 
 export const metadata: Metadata = {
+  title: "OSHAKUR MOVIES | Watch Agasobanye Movies & Series",
   alternates: {
-    canonical: "https://oshakurmovies.party/",
+    canonical: siteUrl,
   },
+  openGraph: createOpenGraphMetadata(
+    "/",
+    "OSHAKUR MOVIES | Watch Agasobanye Movies & Series",
+    "Watch and discover Agasobanuye movies and series online on OSHAKUR MOVIES.",
+  ),
 };
 
 export default function Home() {
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "OSHAKUR MOVIES",
+    name: siteName,
     alternateName: "Oshakur Movies",
-    url: "https://oshakurmovies.party/",
+    url: siteUrl,
   };
 
   return (

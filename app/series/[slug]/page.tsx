@@ -1,4 +1,4 @@
-
+﻿
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -7,6 +7,11 @@ import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { episodes } from "@/data/episodes";
 import { series } from "@/data/series";
+import { movies } from "@/data/movies";
+import { getExplainerImage } from "@/app/lib/explainers";
+import MovieCard from "@/app/components/MovieCard";
+import CommentsSection from "@/app/components/CommentsSection";
+import { createOpenGraphMetadata } from "@/app/seo";
 
 interface SeriesDetailsPageProps {
   params: Promise<{
@@ -25,12 +30,20 @@ export async function generateMetadata({
     return {};
   }
 
+  const title = `${currentSeries.title} | OSHAKUR MOVIES`;
+  const description = `Explore ${currentSeries.title} on OSHAKUR MOVIES and find episodes to watch.`;
+
   return {
-    title: currentSeries.title,
-    description: `Explore ${currentSeries.title} on OSHAKUR MOVIES and find episodes to watch.`,
+    title,
+    description,
     alternates: {
       canonical: `https://oshakurmovies.party/series/${currentSeries.slug}`,
     },
+    openGraph: createOpenGraphMetadata(
+      `/series/${currentSeries.slug}`,
+      title,
+      description,
+    ),
   };
 }
 
@@ -49,86 +62,35 @@ export default async function SeriesDetailsPage({
     .filter((episode) => episode.seriesSlug === currentSeries.slug)
     .sort((a, b) => a.episodeNumber - b.episodeNumber);
 
-  const relatedSeries = series
-    .filter((item) => item.slug !== currentSeries.slug)
-    .slice(0, 6);
+  const recommendations = [
+    ...series.filter((item) => item.slug !== currentSeries.slug).map((item) => ({...item, type: "series" as const})),
+    ...movies.map((item) => ({...item, type: "movie" as const})),
+  ].sort((a,b) => Number(b.genres?.some((genre) => currentSeries.genres.includes(genre))) - Number(a.genres?.some((genre) => currentSeries.genres.includes(genre))) || Number(b.explainer?.trim().toLowerCase() === currentSeries.explainer?.trim().toLowerCase()) - Number(a.explainer?.trim().toLowerCase() === currentSeries.explainer?.trim().toLowerCase()) || (b.createdAt ?? "").localeCompare(a.createdAt ?? "")).slice(0, 6);
 
   return (
-    <main className="min-h-screen bg-[#121212] text-white">
+    <main className="cinema-page min-h-screen text-white">
       <Navbar />
-
-      {/* Series Hero */}
-      <section className="relative overflow-hidden pt-20">
-        <div className="absolute inset-0">
-          <img
-            src={`/images/series/${currentSeries.image}`}
-            alt={currentSeries.title}
-            className="h-full w-full object-cover"
-          />
-
-          <div className="absolute inset-0 bg-black/70" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#121212] via-[#121212]/90 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/30" />
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10">
-          <div className="grid items-center gap-10 md:grid-cols-[280px_1fr]">
-            {/* Series Poster */}
-            <div className="overflow-hidden rounded-xl shadow-2xl">
-              <img
-                src={`/images/series/${currentSeries.image}`}
-                alt={currentSeries.title}
-                className="aspect-[2/3] w-full object-cover"
-              />
-            </div>
-
-            {/* Series Information */}
-            <div className="max-w-3xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#00E5FF]">
-                Series
-              </p>
-
-              <h1 className="mb-4 text-4xl font-bold sm:text-5xl lg:text-6xl">
-                {currentSeries.title}
-              </h1>
-
-              <div className="mb-5 flex flex-wrap items-center gap-4 text-sm text-gray-300">
-                <span>{currentSeries.year}</span>
-
-                <span>•</span>
-
-                <span>★ {currentSeries.rating}</span>
-
-                <span>•</span>
-
-                <span>{currentSeries.language}</span>
-              </div>
-
-              <div className="mb-6 flex flex-wrap gap-2">
-                {currentSeries.genres.map((genre) => (
-                  <span
-                    key={genre}
-                    className="rounded-full bg-white/10 px-3 py-1 text-sm text-gray-200"
-                  >
-                    {genre}
-                  </span>
-                ))}
-              </div>
-
-              <p className="mb-8 max-w-2xl text-base leading-7 text-gray-300 sm:text-lg">
-                {currentSeries.description}
-              </p>
-
-              <a
-                href="#episodes"
-                className="inline-flex items-center rounded-lg bg-[#00E5FF] px-6 py-3 font-semibold text-black transition hover:bg-[#00cfe8]"
-              >
-                View Episodes
-              </a>
-            </div>
+      <div className="mx-auto max-w-7xl px-4 pt-5 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" className="mb-5 flex min-w-0 items-center gap-2 overflow-hidden text-sm text-[#999]"><Link href="/" className="shrink-0 hover:text-white">Home</Link><span>/</span><Link href="/series" className="shrink-0 hover:text-white">Series</Link><span>/</span><span aria-current="page" className="truncate text-white">{currentSeries.title}</span></nav>
+        <section>
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#141414] shadow-2xl">
+            <img src={`/images/series/${currentSeries.image}`} alt={currentSeries.title} fetchPriority="high" className="h-[260px] w-full object-cover opacity-85 sm:h-[380px] lg:h-[480px]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-black/35 to-black/5" />
+            {seriesEpisodes[0]?.streamUrl && <a href={seriesEpisodes[0].streamUrl} target="_blank" rel="noopener noreferrer" aria-label={`Watch ${currentSeries.title}`} className="absolute left-1/2 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#E50914] text-2xl shadow-xl shadow-red-950/60 transition hover:scale-105 hover:bg-[#FF2633]">▶</a>}
+            <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8"><p className="mb-2 text-xs font-bold uppercase tracking-[.2em] text-[#E50914]">Series</p><h1 className="text-3xl font-black tracking-tight sm:text-5xl">{currentSeries.title}</h1></div>
           </div>
-        </div>
-      </section>
+          <div className="mt-5 flex flex-wrap items-center gap-2 text-sm">
+            {currentSeries.genres.map((genre) => <span key={genre} className="rounded-full bg-[#E50914]/15 px-3 py-1 text-xs font-semibold text-white">{genre}</span>)}
+            <span className="rounded-full bg-[#E5A93B] px-3 py-1 text-xs font-bold text-black">{currentSeries.title.match(/season\s*\d+/i)?.[0] ?? "Series"}</span>
+            <span className="text-[#AAA]">{currentSeries.year} · {currentSeries.language}</span>
+            {currentSeries.rating && currentSeries.rating !== "N/A" && <span className="rounded-full bg-white/10 px-3 py-1 text-xs">★ {currentSeries.rating}</span>}
+            {currentSeries.explainer && <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1"><img src={getExplainerImage(currentSeries.explainer) || "/favicon.svg"} alt="" className="h-6 w-6 rounded-full object-cover" />{currentSeries.explainer}</span>}
+            {currentSeries.createdAt && <span className="text-xs text-[#888]">Added {new Date(currentSeries.createdAt).toLocaleDateString()}</span>}
+          </div>
+          <p className="mt-4 max-w-4xl text-sm leading-7 text-[#AAA] sm:text-base">{currentSeries.description || "No summary is available for this title yet."}</p>
+        </section>
+      </div>
+
 
       {/* Episodes */}
       <section
@@ -137,7 +99,7 @@ export default async function SeriesDetailsPage({
       >
         <div className="mb-8">
           <h2 className="text-2xl font-bold sm:text-3xl">
-            Episodes
+            Watch / Download
           </h2>
 
           <p className="mt-2 text-gray-400">
@@ -152,25 +114,16 @@ export default async function SeriesDetailsPage({
             </p>
           </div>
         ) : (
-          <div className="space-y-5">
+          <div className="space-y-3">
             {seriesEpisodes.map((episode) => (
               <article
                 key={episode.id}
-                className="overflow-hidden rounded-xl border border-white/10 bg-[#1b1b1b] transition hover:border-white/20"
+                className="rounded-xl border border-white/10 bg-[#191919] p-4 transition hover:border-white/20 sm:p-5"
               >
-                <div className="grid md:grid-cols-[280px_1fr]">
-                  {/* Series image used for every episode */}
-                  <div className="overflow-hidden">
-                    <img
-                      src={`/images/series/${currentSeries.image}`}
-                      alt={currentSeries.title}
-                      className="h-full min-h-[180px] w-full object-cover"
-                    />
-                  </div>
-
-                  <div className="flex flex-col justify-between p-5 sm:p-6">
+                <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+                  <div>
                     <div>
-                      <p className="mb-2 text-sm font-semibold text-[#00E5FF]">
+                      <p className="mb-2 text-sm font-semibold text-[#E50914]">
                         Episode {episode.episodeNumber}
                       </p>
 
@@ -188,7 +141,7 @@ export default async function SeriesDetailsPage({
                         href={episode.streamUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center rounded-lg bg-[#00E5FF] px-5 py-2.5 font-semibold text-black transition hover:bg-[#00cfe8]"
+                        className="inline-flex items-center rounded-lg bg-[#E50914] px-5 py-2.5 font-semibold text-white transition hover:bg-[#FF2633]"
                       >
                         ▶ Watch
                       </a>
@@ -197,7 +150,7 @@ export default async function SeriesDetailsPage({
                         href={episode.downloadUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center rounded-lg border border-white/20 bg-white/5 px-5 py-2.5 font-semibold text-white transition hover:bg-white/10"
+                        className="inline-flex items-center rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 font-semibold text-white transition hover:bg-white/20"
                       >
                         ↓ Download
                       </a>
@@ -210,44 +163,10 @@ export default async function SeriesDetailsPage({
         )}
       </section>
 
-      {/* Related Series */}
-      {relatedSeries.length > 0 && (
-        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-10">
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold sm:text-3xl">
-              More Series
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-            {relatedSeries.map((item) => (
-              <Link
-                key={item.id}
-                href={`/series/${item.slug}`}
-                className="group overflow-hidden rounded-lg bg-[#1b1b1b]"
-              >
-                <div className="aspect-[2/3] overflow-hidden">
-                  <img
-                    src={`/images/series/${item.image}`}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                  />
-                </div>
-
-                <div className="p-3">
-                  <h3 className="truncate font-semibold">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-1 text-sm text-gray-400">
-                    {item.year}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-12 sm:px-6 lg:grid-cols-[minmax(0,1.8fr)_minmax(280px,1fr)] lg:px-8">
+        <div><CommentsSection seriesSlug={currentSeries.slug} /></div>
+        {recommendations.length > 0 && <aside className="lg:sticky lg:top-28 lg:self-start"><h2 className="cinema-section-title mb-5 text-2xl font-bold">More Films</h2><div className="grid grid-cols-2 gap-4">{recommendations.map((item) => <MovieCard key={`${item.type}-${item.id}`} title={item.title} year={item.year} rating={item.rating ?? ""} image={item.image} slug={item.slug} explainer={item.explainer} createdAt={item.createdAt} hrefPrefix={item.type === "series" ? "/series" : "/movies"} />)}</div></aside>}
+      </div>
 
       <SiteBottom />
     </main>

@@ -4,6 +4,8 @@ import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { series } from "@/data/series";
+import { episodes } from "@/data/episodes";
+import { createOpenGraphMetadata } from "@/app/seo";
 
 export const metadata: Metadata = {
   title: "All Series",
@@ -12,82 +14,50 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://oshakurmovies.party/series",
   },
+  openGraph: createOpenGraphMetadata(
+    "/series",
+    "All Series | OSHAKUR MOVIES",
+    "Explore series, seasons, and episodes on OSHAKUR MOVIES.",
+  ),
 };
 
 export default function SeriesPage() {
   const orderedSeries = [
     ...series.filter((item) => item.isFeatured),
-    ...series.filter((item) => !item.isFeatured),
+    ...series.filter((item) => !item.isFeatured).sort((a, b) => (b.createdAt ?? "").localeCompare(a.createdAt ?? "")),
   ];
 
   return (
-    <main className="min-h-screen bg-[#121212] text-white">
+    <main className="cinema-page min-h-screen text-white">
       <Navbar />
 
-      <section className="mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 sm:pt-36 lg:px-8">
-        <div className="mb-8">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#00E5FF]">
-            Oshakur Movies
-          </p>
-
-          <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h1 className="text-3xl font-extrabold sm:text-4xl">
-                All Series
-              </h1>
-
-              <p className="mt-2 max-w-2xl text-sm leading-6 text-[#AAAAAA]">
-                Explore our collection of series and discover your next
-                favorite show.
-              </p>
-            </div>
-
-            <Link
-              href="/"
-              className="rounded-xl border border-white/10 bg-[#1B1B1B] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]"
-            >
-              ← Home
-            </Link>
-          </div>
-        </div>
+      <section className="mx-auto max-w-[1600px] px-4 pb-16 pt-7 sm:px-6 lg:px-[5%]">
+        <header className="mb-8">
+          <nav aria-label="Breadcrumb" className="mb-4 flex items-center gap-2 text-sm text-[#737373]"><Link href="/" className="transition hover:text-white">Home</Link><span aria-hidden="true">/</span><span aria-current="page" className="text-[#A3A3A3]">Series</span></nav>
+          <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">All Series <span className="text-[#A3A3A3]">({new Set(orderedSeries.map((item) => item.id)).size})</span></h1>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-[#A3A3A3] sm:text-base">Discover series, follow your favorite stories, and explore available seasons and episodes on OSHAKUR MOVIES.</p>
+        </header>
 
         {orderedSeries.length > 0 ? (
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+          <div className="media-grid">
             {orderedSeries.map((item) => (
-              <Link
-                key={item.id}
-                href={`/series/${item.slug}`}
-                className="group block min-w-0"
-              >
-                <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
-                  <img
-                    src={`/images/series/${item.image}`}
-                    alt={item.title}
-                    className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-110"
-                  />
-
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition duration-300 group-hover:bg-black/60">
-                    <div className="scale-0 rounded-full bg-[#2979FF] p-4 text-white shadow-xl transition duration-300 group-hover:scale-100">
-                      <span className="text-lg">▶</span>
-                    </div>
+              <article key={item.id} className="cinema-card group min-w-0">
+                <Link href={`/series/${item.slug}`} className="block">
+                  <div className="media-poster relative">
+                    <img src={`/images/series/${item.image}`} alt={item.title} loading="lazy" />
+                    {item.genres?.[0] && <span className="media-genre">{item.genres[0]}</span>}
+                    {/(season|series)/i.test(item.title) && <span className="media-season">SEASON</span>}
+                    <span className="media-play" aria-hidden="true">▶</span>
                   </div>
+                  <h2 className="media-title">{item.title}</h2>
+                </Link>
+                <div className="media-meta">
+                  {(() => { const count = episodes.filter((episode) => episode.seriesSlug === item.slug).length; return count > 0 ? <span className="episode-pill">{count} {count === 1 ? "Episode" : "Episodes"}</span> : null; })()}
+                  <span className="media-rating">★ {item.rating}</span>
                 </div>
-
-                <h2 className="mt-3 truncate font-semibold text-white transition group-hover:text-[#00E5FF]">
-                  {item.title}
-                </h2>
-
-                <div className="mt-2 flex items-center gap-2 text-sm">
-                  <span className="text-[#AAAAAA]">{item.year}</span>
-
-                  <span className="text-[#AAAAAA]">•</span>
-
-                  <span className="flex items-center gap-1 rounded-md bg-[#5C6BC0] px-2 py-1 text-xs font-semibold">
-                    <span className="text-[#FFC107]">★</span>
-                    {item.rating}
-                  </span>
-                </div>
-              </Link>
+                <div className="media-byline">{item.explainer?.trim() || <span className="text-white/35">Explainer unavailable</span>}</div>
+                {item.createdAt && <time className="media-time" dateTime={item.createdAt}>{relativeTime(item.createdAt)}</time>}
+              </article>
             ))}
           </div>
         ) : (
@@ -104,4 +74,15 @@ export default function SeriesPage() {
       <SiteBottom />
     </main>
   );
+}
+
+function relativeTime(value: string): string {
+  const timestamp = new Date(value).getTime();
+  if (!Number.isFinite(timestamp)) return "";
+  const days = Math.max(0, Math.floor((Date.now() - timestamp) / 86_400_000));
+  if (days < 1) return "Today";
+  if (days < 7) return `${days} ${days === 1 ? "day" : "days"} ago`;
+  if (days < 30) { const weeks = Math.floor(days / 7); return `${weeks} ${weeks === 1 ? "week" : "weeks"} ago`; }
+  if (days < 365) { const months = Math.floor(days / 30); return `${months} ${months === 1 ? "month" : "months"} ago`; }
+  const years = Math.floor(days / 365); return `${years} ${years === 1 ? "year" : "years"} ago`;
 }

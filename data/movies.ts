@@ -35,10 +35,10 @@ export const movies: Movie[] = [
   rating: "8.0",
   image: "images.webp",
   description:
-    "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his true voice, and stand up for what he believes in.",
+    "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his false  voice, and stand up for what he believes in.",
   language: "English",
   genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-24",
   parts: [
     {
@@ -60,10 +60,10 @@ export const movies: Movie[] = [
   rating: "8.0",
   image: "onelatstshot.webp",
   description:
-    "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his true voice, and stand up for what he believes in.",
+    "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his false  voice, and stand up for what he believes in.",
   language: "English",
   genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-24",
   parts: [
     {
@@ -86,7 +86,7 @@ export const movies: Movie[] = [
   description: "A movie presented in multiple parts.",
   language: "English",
   genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-24",
   parts: [
     {
@@ -117,7 +117,7 @@ export const movies: Movie[] = [
   description: "A movie presented in multiple parts.",
   language: "English",
   genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-24",
   parts: [
     {
@@ -149,7 +149,7 @@ export const movies: Movie[] = [
     "Watch and enjoy this movie on Oshakur Movies. Explore an entertaining story, memorable characters, and exciting moments, then discover more great movies available on our platform.",
   language: "English",
   genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-24",
   parts: [
     {
@@ -181,7 +181,7 @@ export const movies: Movie[] = [
     "Watch and enjoy this movie on Oshakur Movies. Explore an entertaining story, memorable characters, and exciting moments, then discover more great movies available on our platform.",
   language: "English",
   genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-24",
   parts: [
     {
@@ -213,7 +213,7 @@ export const movies: Movie[] = [
     "Watch and enjoy this movie on Oshakur Movies. Explore an entertaining story, memorable characters, and exciting moments, then discover more great movies available on our platform.",
   language: "English",
   genres: ["Comedy", "Drama", "Romance", "Thriller", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-24",
   parts: [
     {
@@ -250,10 +250,10 @@ export const movies: Movie[] = [
   rating: "8.0",
   image: "furious.jpg",
   description:
-    "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his true voice, and stand up for what he believes in.",
+    "A talented young musician dreams of becoming a successful performer but struggles with his confidence and the expectations of his strict father. When his music begins to gain attention, he must find the courage to follow his passion, express his false  voice, and stand up for what he believes in.",
   language: "English",
   genres: ["Comedy", "Drama", "Horror", "Thriller", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-24",
   parts: [
     {
@@ -277,7 +277,7 @@ export const movies: Movie[] = [
     "Newlyweds Christian and Ana begin their married life together, but new threats from the past put their relationship and future at risk.",
   language: "English",
   genres: ["Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-27",
   parts: [
     {
@@ -301,7 +301,7 @@ export const movies: Movie[] = [
     "Three friends decide to play a game of seduction on a stranger, but their plan takes an unexpected turn when they discover that he knows what they are trying to do.",
   language: "English",
   genres: ["Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-27",
   parts: [
     {
@@ -325,7 +325,7 @@ export const movies: Movie[] = [
     "A student becomes suspicious of a new nun whose behavior seems increasingly disturbing, leading her to uncover a dangerous secret.",
   language: "English",
   genres: ["Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-27",
   parts: [
     {
@@ -349,7 +349,7 @@ export const movies: Movie[] = [
     "A dramatic story of desire, relationships, and the consequences of choices that change the lives of those involved.",
   language: "English",
   genres: ["Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-27",
   parts: [
     {
@@ -373,7 +373,7 @@ export const movies: Movie[] = [
     "Christian Grey and Anastasia Steele try to rebuild their relationship, but figures from Christian's past threaten their future together.",
   language: "English",
   genres: ["Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-27",
   parts: [
     {
@@ -396,7 +396,7 @@ export const movies: Movie[] = [
     "An inexperienced college student meets wealthy businessman Christian Grey, and their relationship develops into an intense romance as she discovers more about his private world.",
   language: "English",
   genres: ["Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-27",
   parts: [
     {
@@ -420,7 +420,7 @@ export const movies: Movie[] = [
     "A wealthy businessman hires Vivian to accompany him during a business trip in Los Angeles, and their unexpected relationship gradually develops into something deeper.",
   language: "English",
   genres: ["Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-27",
   parts: [
     {
@@ -452,7 +452,7 @@ export const movies: Movie[] = [
     "Watch and enjoy The Legend Of White Dragon on Oshakur Movies.",
   language: "English",
   genres: ["Action", "Adventure", "Fantasy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -476,7 +476,7 @@ export const movies: Movie[] = [
     "Po, a clumsy but determined panda, unexpectedly becomes the Dragon Warrior and must learn kung fu to protect his valley.",
   language: "English",
   genres: ["Animation", "Comedy", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -508,7 +508,7 @@ export const movies: Movie[] = [
     "Po and the Furious Five face a dangerous enemy while Po discovers more about his mysterious past.",
   language: "English",
   genres: ["Animation", "Comedy", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -532,7 +532,7 @@ export const movies: Movie[] = [
     "Po reunites with his biological father and must train a village of pandas to face a powerful supernatural threat.",
   language: "English",
   genres: ["Animation", "Comedy", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -556,7 +556,7 @@ export const movies: Movie[] = [
     "A determined young girl sets out across the ocean on an extraordinary journey to save her people and restore balance to her island.",
   language: "English",
   genres: ["Animation", "Adventure", "Comedy", "Fantasy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -580,7 +580,7 @@ export const movies: Movie[] = [
     "Peter Rabbit and his friends find themselves in a hilarious conflict with the new owner of the farm.",
   language: "English",
   genres: ["Animation", "Comedy", "Adventure", "Family"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -604,7 +604,7 @@ export const movies: Movie[] = [
     "An inspiring animated story about Bilal's journey from hardship to becoming a symbol of courage, faith, and freedom.",
   language: "English",
   genres: ["Animation", "Action", "Adventure", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -636,7 +636,7 @@ export const movies: Movie[] = [
     "A young boy who dreams of becoming a musician enters the Land of the Dead and discovers important secrets about his family.",
   language: "English",
   genres: ["Animation", "Adventure", "Comedy", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -659,7 +659,7 @@ export const movies: Movie[] = [
   description: "Watch and enjoy GOAT on Oshakur Movies.",
   language: "English",
   genres: ["Animation", "Comedy", "Adventure", "Family"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -683,7 +683,7 @@ export const movies: Movie[] = [
     "A pet chameleon finds himself in a desert town where he unexpectedly becomes the sheriff and faces a dangerous mystery.",
   language: "English",
   genres: ["Animation", "Comedy", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -707,7 +707,7 @@ export const movies: Movie[] = [
     "A brave young boy named Kirikou sets out to protect his village and uncover the truth behind a powerful sorceress.",
   language: "French",
   genres: ["Animation", "Adventure", "Fantasy", "Family"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -731,7 +731,7 @@ export const movies: Movie[] = [
     "Kirikou faces a series of adventures while helping his village overcome mysterious challenges and dangers.",
   language: "French",
   genres: ["Animation", "Adventure", "Fantasy", "Family"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -755,7 +755,7 @@ export const movies: Movie[] = [
     "A group of travelers become stranded in the wilderness and encounter dangerous and mysterious threats.",
   language: "English",
   genres: ["Horror", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -779,7 +779,7 @@ export const movies: Movie[] = [
     "A group of contestants taking part in a survival reality show find themselves facing deadly dangers in the wilderness.",
   language: "English",
   genres: ["Horror", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -803,7 +803,7 @@ export const movies: Movie[] = [
     "A group of people must fight for survival after becoming trapped in a dangerous wilderness.",
   language: "English",
   genres: ["Horror", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -827,7 +827,7 @@ export const movies: Movie[] = [
     "A group of young people become trapped in a remote town where they face terrifying dangers.",
   language: "English",
   genres: ["Horror", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -851,7 +851,7 @@ export const movies: Movie[] = [
     "A group of friends travel to an inherited resort and discover a terrifying family secret.",
   language: "English",
   genres: ["Horror", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -875,7 +875,7 @@ export const movies: Movie[] = [
     "A terrifying story involving dark secrets, danger, and mysterious forces.",
   language: "English",
   genres: ["Horror", "Thriller", "Mystery"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -899,7 +899,7 @@ export const movies: Movie[] = [
     "A woman struggles to survive as terrifying creatures hunt anything that makes a sound.",
   language: "English",
   genres: ["Horror", "Thriller", "Drama", "Sci-Fi"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -923,7 +923,7 @@ export const movies: Movie[] = [
     "A terrifying horror story involving supernatural forces and a fight for survival.",
   language: "English",
   genres: ["Horror", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -947,7 +947,7 @@ export const movies: Movie[] = [
     "A suspenseful story of survival involving a mysterious house and dangerous events.",
   language: "English",
   genres: ["Horror", "Thriller", "Mystery"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -971,7 +971,7 @@ export const movies: Movie[] = [
     "A new dangerous game unfolds as survival becomes the ultimate challenge.",
   language: "English",
   genres: ["Horror", "Thriller", "Comedy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -994,7 +994,7 @@ export const movies: Movie[] = [
   description: "Watch and enjoy Day Breaker on Oshakur Movies.",
   language: "English",
   genres: ["Action", "Thriller", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -1018,7 +1018,7 @@ export const movies: Movie[] = [
     "A psychological thriller exploring a complicated relationship and the dangerous consequences of hidden secrets.",
   language: "English",
   genres: ["Drama", "Thriller", "Mystery"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -1065,7 +1065,7 @@ export const movies: Movie[] = [
   description: "Watch and enjoy Thrash - Gaheza on Oshakur Movies.",
   language: "Kinyarwanda",
   genres: ["Drama", "Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -1089,7 +1089,7 @@ export const movies: Movie[] = [
     "A romantic period drama centered on love, destiny, and the difficult choices faced by two people whose lives become deeply connected.",
   language: "Telugu",
   genres: ["Drama", "Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1113,7 +1113,7 @@ export const movies: Movie[] = [
     "A secret service agent must protect world leaders and fight to survive after a devastating attack takes place in London.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1137,7 +1137,7 @@ export const movies: Movie[] = [
     "A former special forces soldier becomes involved in a dangerous mission after leaving military service.",
   language: "English",
   genres: ["Action", "Thriller", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1161,7 +1161,7 @@ export const movies: Movie[] = [
     "A mysterious story involving danger, secrets, and a woman whose identity becomes connected to a terrifying supernatural mystery.",
   language: "English",
   genres: ["Horror", "Thriller", "Mystery"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1185,7 +1185,7 @@ export const movies: Movie[] = [
     "An action thriller involving conflict, betrayal, and a dangerous struggle for survival.",
   language: "English",
   genres: ["Action", "Thriller", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1209,7 +1209,7 @@ export const movies: Movie[] = [
     "A pet chameleon finds himself in a desert town where he unexpectedly becomes the sheriff and faces a dangerous mystery.",
   language: "English",
   genres: ["Animation", "Comedy", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1233,7 +1233,7 @@ export const movies: Movie[] = [
     "An FBI agent and a dangerous criminal become caught in an extraordinary identity-swapping conflict.",
   language: "English",
   genres: ["Action", "Thriller", "Crime"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1257,7 +1257,7 @@ export const movies: Movie[] = [
     "A group of fighters prepare to defend Earth in a legendary tournament against powerful supernatural opponents.",
   language: "English",
   genres: ["Action", "Fantasy", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1281,7 +1281,7 @@ export const movies: Movie[] = [
     "Xander Cage returns from self-imposed exile and joins a dangerous mission involving a powerful weapon and international criminals.",
   language: "English",
   genres: ["Action", "Adventure", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1305,7 +1305,7 @@ export const movies: Movie[] = [
     "A new supernatural adventure involving mysterious creatures, danger, and a fight for survival.",
   language: "English",
   genres: ["Fantasy", "Adventure", "Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1329,7 +1329,7 @@ export const movies: Movie[] = [
     "A dramatic story about family, relationships, and the challenges faced by people brought together by difficult circumstances.",
   language: "English",
   genres: ["Drama", "Comedy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1353,7 +1353,7 @@ export const movies: Movie[] = [
     "A former special agent uses his particular skills to rescue his kidnapped daughter from a dangerous criminal network.",
   language: "English",
   genres: ["Action", "Thriller", "Crime"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1377,7 +1377,7 @@ export const movies: Movie[] = [
     "Shang-Chi confronts his past after becoming involved with the mysterious Ten Rings organization and discovers secrets about his family.",
   language: "English",
   genres: ["Action", "Adventure", "Fantasy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1403,7 +1403,7 @@ export const movies: Movie[] = [
       "A young girl joins a legendary sea monster hunter and discovers that the creatures they fear may not be what they seem.",
     language: "English",
     genres: ["Animation", "Adventure", "Action", "Fantasy"],
-    isFeatured: true,
+    isFeatured: false ,
     createdAt: "2026-10-01",
     parts: [
       {
@@ -1427,7 +1427,7 @@ export const movies: Movie[] = [
       "A determined rabbit police officer teams up with a clever fox to uncover a mystery threatening the animal city of Zootopia.",
     language: "English",
     genres: ["Animation", "Comedy", "Adventure", "Family"],
-    isFeatured: true,
+    isFeatured: false ,
     createdAt: "2026-10-01",
     parts: [
       {
@@ -1451,7 +1451,7 @@ export const movies: Movie[] = [
       "People with extraordinary abilities become involved in a dangerous struggle involving a secret government program and powerful enemies.",
     language: "English",
     genres: ["Action", "Sci-Fi", "Thriller"],
-    isFeatured: true,
+    isFeatured: false ,
     createdAt: "2026-10-01",
     parts: [
       {
@@ -1474,7 +1474,7 @@ export const movies: Movie[] = [
   description: "Blood Brothers is an action drama movie.",
   language: "English",
   genres: ["Action", "Drama", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1506,7 +1506,7 @@ export const movies: Movie[] = [
   description: "Gallowwalkers is an action horror western movie.",
   language: "English",
   genres: ["Action", "Horror", "Western"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1538,7 +1538,7 @@ export const movies: Movie[] = [
   description: "Kuch Kuch Hota Hai is a romantic drama movie.",
   language: "Hindi",
   genres: ["Romance", "Drama", "Comedy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1571,7 +1571,7 @@ export const movies: Movie[] = [
   description: "Step Up All In is a dance drama movie.",
   language: "English",
   genres: ["Drama", "Romance", "Music"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1602,7 +1602,7 @@ export const movies: Movie[] = [
   description: "Secret Superstar is a Hindi drama and music movie.",
   language: "Hindi",
   genres: ["Drama", "Music"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1634,7 +1634,7 @@ export const movies: Movie[] = [
   description: "Dhadkan is a romantic drama movie.",
   language: "Hindi",
   genres: ["Romance", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1674,7 +1674,7 @@ export const movies: Movie[] = [
   description: "Blast is an action thriller movie.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1706,7 +1706,7 @@ export const movies: Movie[] = [
   description: "Vishwanath is an action drama movie.",
   language: "English",
   genres: ["Action", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-01",
   parts: [
     {
@@ -1746,7 +1746,7 @@ export const movies: Movie[] = [
     "Who Am I follows a young computer hacker who becomes involved in a dangerous world of cybercrime, secrets, deception, and high-stakes missions. As the situation becomes more dangerous, he must use his intelligence and hacking skills to survive.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -1779,7 +1779,7 @@ export const movies: Movie[] = [
     "The Secret Woman follows a mysterious woman whose hidden past becomes connected to a dangerous situation. As secrets are uncovered, she must face unexpected challenges, conflicts, and threats while fighting to protect herself.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -1804,7 +1804,7 @@ export const movies: Movie[] = [
     "Runner 2026 Delivery Men follows delivery workers who become caught in a dangerous mission. What begins as an ordinary delivery turns into a fast-paced struggle involving powerful enemies, unexpected obstacles, and intense action.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -1829,7 +1829,7 @@ export const movies: Movie[] = [
     "Rambo: The Last Blood follows John Rambo as he attempts to live a quiet life until a violent threat forces him back into action. He travels across dangerous territory to rescue someone close to him and confronts ruthless enemies in a brutal fight for survival.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -1862,7 +1862,7 @@ export const movies: Movie[] = [
     "Firebeak is a fast-paced action movie centered around dangerous confrontations, powerful enemies, and intense battles. The story follows characters who must overcome difficult challenges while fighting to survive.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -1887,7 +1887,7 @@ export const movies: Movie[] = [
     "Mayday follows a dangerous mission that quickly turns into a fight for survival. The characters must deal with unexpected threats, difficult decisions, and powerful enemies while trying to complete their mission.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -1919,7 +1919,7 @@ export const movies: Movie[] = [
     "Knights of the Zodiac follows a young warrior who discovers extraordinary abilities and becomes involved in a dangerous battle to protect a powerful goddess. He must master his skills and face powerful enemies in a series of intense battles.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -1952,7 +1952,7 @@ export const movies: Movie[] = [
     "Lucky Strike follows characters caught in a dangerous situation where survival depends on courage, quick decisions, and determination. The story is filled with confrontations, unexpected challenges, and intense action.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -1977,7 +1977,7 @@ export const movies: Movie[] = [
     "The Wrath of Vajra follows a powerful fighter trained to become a deadly warrior. He is drawn into a violent conflict where martial arts, revenge, and survival collide in a series of intense battles.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2002,7 +2002,7 @@ export const movies: Movie[] = [
     "Just Play Dead 2026 follows characters trapped in a dangerous situation where deception and survival become essential. They must stay ahead of their enemies while dealing with unexpected threats and intense confrontations.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2027,7 +2027,7 @@ export const movies: Movie[] = [
     "Ip Man 2 follows the legendary martial artist as he moves to Hong Kong and attempts to establish his own martial arts school. He faces rival fighters and powerful opponents while defending his students and his reputation.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2052,7 +2052,7 @@ export const movies: Movie[] = [
     "Ip Man 3 follows the legendary martial artist as he protects his community and his students from dangerous rivals. When a powerful fighter threatens his school, Ip Man must face one of his most challenging battles.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2077,7 +2077,7 @@ export const movies: Movie[] = [
     "Ip Man 4 follows Ip Man as he travels to the United States and encounters new challenges involving martial arts, cultural differences, and powerful opponents. He must once again use his skills and discipline to defend those around him.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2102,7 +2102,7 @@ export const movies: Movie[] = [
     "Rise of the Legend follows a skilled fighter who returns to a city controlled by dangerous criminals. Using his martial arts abilities and determination, he takes on powerful enemies and fights to protect innocent people.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2127,7 +2127,7 @@ export const movies: Movie[] = [
     "Ninja Assassin follows a highly trained warrior who turns against the organization that raised him. Pursued by deadly enemies, he uses his extraordinary combat skills to survive and protect the people he cares about.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2152,7 +2152,7 @@ export const movies: Movie[] = [
     "Ip Man tells the story of a respected martial artist living in Foshan who is known for his exceptional Wing Chun skills. When conflict reaches his hometown, he is forced to defend his principles and face powerful opponents.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2185,7 +2185,7 @@ export const movies: Movie[] = [
     "Chinese Zodiac follows a skilled adventurer who searches for valuable historical artifacts around the world. His dangerous mission leads to thrilling chases, difficult obstacles, and intense confrontations with those seeking the same treasures.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2210,7 +2210,7 @@ export const movies: Movie[] = [
     "Hidden Strike follows two former soldiers who must work together to escort civilians through a dangerous war zone. Their mission becomes a race against time as armed enemies threaten their survival.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2235,7 +2235,7 @@ export const movies: Movie[] = [
     "Creed 3 follows Adonis Creed as he faces a former friend who returns with a powerful ambition and a personal challenge. Adonis must confront his past and prepare for a major fight that tests his strength and determination.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2260,7 +2260,7 @@ export const movies: Movie[] = [
     "Rise of the Planet of the Apes follows a scientist whose experiments lead to the creation of an extraordinarily intelligent ape. As the apes grow stronger and more independent, a chain of events begins that changes the future of humanity.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2285,7 +2285,7 @@ export const movies: Movie[] = [
     "Dawn of the Planet of the Apes follows a growing community of intelligent apes as they encounter a group of human survivors. Tensions rise between the two groups, leading to dangerous conflicts and a struggle for control and survival.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2310,7 +2310,7 @@ export const movies: Movie[] = [
     "Indemnity follows a former firefighter who wakes up accused of a terrible crime he cannot remember committing. Forced to run from powerful enemies, he uses his survival skills to uncover the truth and clear his name.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2335,7 +2335,7 @@ export const movies: Movie[] = [
     "From Paris with Love follows a young intelligence agent who is paired with an unpredictable and highly experienced operative. Together they uncover a dangerous conspiracy and must fight their way through a series of deadly missions.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2360,7 +2360,7 @@ export const movies: Movie[] = [
     "In the Grey follows a team of highly skilled agents who become involved in a dangerous mission against powerful criminals. As the operation becomes more complicated, they must rely on teamwork, combat skills, and determination to survive.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2385,7 +2385,7 @@ export const movies: Movie[] = [
     "The Maze Runner follows a young man who wakes up in a mysterious maze with no memory of his past. Alongside other trapped survivors, he must discover the secrets of the maze, avoid deadly dangers, and find a way to escape.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2410,7 +2410,7 @@ export const movies: Movie[] = [
     "xXx: The Return of Xander Cage follows an extreme athlete and government operative who returns to action after a dangerous weapon falls into the wrong hands. He assembles a team and takes on a powerful enemy in a series of high-risk missions.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2435,7 +2435,7 @@ export const movies: Movie[] = [
     "Skin Trade follows a determined detective who travels across borders to confront a powerful criminal organization. After suffering a personal loss, he joins forces with another lawman and takes on dangerous criminals involved in an international operation.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2468,7 +2468,7 @@ export const movies: Movie[] = [
     "Iceman: The Time Traveler follows a warrior who becomes caught between different eras after a mysterious journey through time. He must survive dangerous enemies and use his fighting skills while trying to understand his new surroundings.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2493,7 +2493,7 @@ export const movies: Movie[] = [
     "Big Game follows a young boy who becomes responsible for protecting a powerful political leader after their aircraft crashes in a remote wilderness. Together they must survive dangerous attackers and find a way to escape.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2518,7 +2518,7 @@ export const movies: Movie[] = [
     "The Furious follows determined fighters who become involved in a dangerous conflict filled with intense battles and powerful enemies. They must use their strength, skills, and courage to survive the fight.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2543,7 +2543,7 @@ export const movies: Movie[] = [
     "Man of War follows a skilled fighter who becomes involved in a dangerous mission against powerful enemies. As the mission develops, he must fight through difficult situations and protect himself and those around him.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2576,7 +2576,7 @@ export const movies: Movie[] = [
     "The Furious follows characters caught in a dangerous conflict where survival depends on courage, strength, and combat skills. The story is filled with intense confrontations and fast-paced action.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2601,7 +2601,7 @@ export const movies: Movie[] = [
     "Day Shift follows a hardworking father who secretly hunts dangerous supernatural creatures while trying to provide for his family. His dangerous missions become increasingly difficult as he faces powerful enemies and unexpected challenges.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2634,7 +2634,7 @@ export const movies: Movie[] = [
     "The Call follows a woman who receives a mysterious phone call that connects her to a dangerous situation. As the events unfold, she must uncover the truth and confront a powerful threat before it is too late.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2667,7 +2667,7 @@ export const movies: Movie[] = [
     "Seven Snipers follows a group of highly trained fighters who are brought together for a dangerous mission. They must work as a team, overcome heavily armed enemies, and complete their objective under extreme pressure.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2692,7 +2692,7 @@ export const movies: Movie[] = [
     "Blade of the Guardians follows a skilled warrior who accepts a dangerous mission to protect an important person. His journey takes him through violent conflicts where he must face powerful enemies and use his exceptional fighting abilities.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2717,7 +2717,7 @@ export const movies: Movie[] = [
     "The Myth follows an archaeologist and his companions as they search for an ancient treasure connected to a legendary mystery. Their journey leads to dangerous discoveries, powerful enemies, and spectacular battles.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2742,7 +2742,7 @@ export const movies: Movie[] = [
     "China Salesma follows a character who becomes involved in a dangerous conflict involving powerful opponents. As the situation escalates, he must rely on courage, determination, and combat skills to overcome the threats around him.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2767,7 +2767,7 @@ export const movies: Movie[] = [
     "Normal follows characters whose ordinary lives are disrupted by a dangerous situation. As the conflict grows, they are forced to make difficult choices and fight against unexpected threats.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2791,7 +2791,7 @@ export const movies: Movie[] = [
     "Over Your Dead Body follows characters caught in a dangerous and mysterious situation where hidden threats begin to emerge. They must uncover what is happening while struggling to survive against unexpected dangers.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2816,7 +2816,7 @@ export const movies: Movie[] = [
     "Thieves' Highway follows a determined man who becomes involved in a dangerous struggle against powerful criminals. As he confronts corruption and betrayal, he must take risks and fight to protect himself and those close to him.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2841,7 +2841,7 @@ export const movies: Movie[] = [
     "Red Notice follows an FBI agent who is forced to work with a notorious art thief to track down a dangerous criminal. Their mission takes them around the world through clever escapes, dangerous confrontations, and unexpected betrayals.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2874,7 +2874,7 @@ export const movies: Movie[] = [
     "Beast follows characters facing a powerful and dangerous threat that puts their lives at risk. They must use courage, strategy, and strength to confront their enemies and survive the escalating conflict.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2899,7 +2899,7 @@ export const movies: Movie[] = [
     "The Witch: Part 1 – The Subversion follows a young woman whose mysterious past begins to reveal extraordinary abilities. As dangerous people search for her, she becomes involved in a violent conflict that forces her to fight for survival.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2924,7 +2924,7 @@ export const movies: Movie[] = [
     "Fuze Sankra follows a character who becomes involved in a dangerous conflict involving powerful enemies and unexpected challenges. He must use determination and courage to survive and overcome the threats around him.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2949,7 +2949,7 @@ export const movies: Movie[] = [
     "The Lone Ranger follows a masked lawman and his Native American companion as they fight corruption and powerful criminals. Their journey is filled with dangerous encounters, horseback pursuits, and battles across the frontier.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -2982,7 +2982,7 @@ export const movies: Movie[] = [
     "Red Dawn follows a group of young people who find themselves defending their hometown after a sudden invasion. Forced to become fighters, they organize a resistance and face dangerous enemy forces.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3007,7 +3007,7 @@ export const movies: Movie[] = [
     "London Has Fallen follows a secret service agent who must protect the United States president during a coordinated attack in London. With the city under threat, he fights through dangerous situations to keep the president alive and stop the attackers.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3032,7 +3032,7 @@ export const movies: Movie[] = [
     "Angel Has Fallen follows a highly trained secret service agent who becomes the target of a dangerous conspiracy. Forced to escape and uncover the truth, he must use his skills to protect the president and clear his name.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3057,7 +3057,7 @@ export const movies: Movie[] = [
     "Close Gaheza follows a character who becomes involved in a dangerous situation where survival requires courage and determination. Facing powerful opponents, he must overcome obstacles and fight his way through the conflict.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3082,7 +3082,7 @@ export const movies: Movie[] = [
     "Black Adam follows an ancient champion who is awakened after thousands of years and discovers a modern world very different from the one he knew. As powerful enemies emerge, he must decide how to use his extraordinary abilities in a dangerous battle.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3107,7 +3107,7 @@ export const movies: Movie[] = [
     "Buffalo Boy follows a young boy growing up in a challenging environment where survival requires courage and determination. His journey takes him through difficult situations and dangerous encounters as he searches for a better future.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3132,7 +3132,7 @@ export const movies: Movie[] = [
     "Apex follows a dangerous mission in which a skilled fighter must survive against powerful opponents. With threats coming from every direction, he must rely on his abilities and determination to stay alive.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3157,7 +3157,7 @@ export const movies: Movie[] = [
     "Wuxia follows a skilled fighter whose quiet life is disrupted when his mysterious past begins to surface. As investigators and dangerous enemies close in, he must reveal his abilities and fight to protect himself and his family.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3182,7 +3182,7 @@ export const movies: Movie[] = [
     "The Debt Collector follows a martial arts expert who takes a job collecting debts for a powerful organization. What seems like ordinary work quickly becomes dangerous as he encounters criminals, violent opponents, and unexpected threats.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3207,7 +3207,7 @@ export const movies: Movie[] = [
     "Ong Bak 2 follows a young warrior who seeks revenge after suffering a devastating loss. He trains in different fighting styles and faces powerful enemies while developing into a formidable fighter.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3232,7 +3232,7 @@ export const movies: Movie[] = [
     "Infinite follows a man who discovers that his strange memories are connected to past lives and an ancient conflict. As powerful enemies hunt him, he must unlock his abilities and join others in a battle that could affect the future.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3257,7 +3257,7 @@ export const movies: Movie[] = [
     "Protector follows a determined fighter who takes on a dangerous mission to protect someone from powerful enemies. As the threats increase, he must use his skills, courage, and experience to overcome the people standing in his way.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3282,7 +3282,7 @@ export const movies: Movie[] = [
     "Savior follows a courageous character who becomes responsible for protecting others during a dangerous conflict. Facing powerful enemies and difficult situations, he must fight to keep those around him safe.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3307,7 +3307,7 @@ export const movies: Movie[] = [
     "Gladiator follows a respected Roman general who is betrayed and forced into slavery after a political struggle. He becomes a powerful gladiator and fights through brutal arenas while seeking justice and confronting the people responsible for destroying his life.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-03",
   parts: [
     {
@@ -3331,7 +3331,7 @@ export const movies: Movie[] = [
     "Escape and Evasion follows a soldier who returns home after a dangerous mission and struggles with the memories of what happened. As he searches for answers, he is forced to confront the consequences of his past.",
   language: "English",
   genres: ["Action", "Drama", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-06",
   parts: [
     {
@@ -3356,7 +3356,7 @@ export const movies: Movie[] = [
     "Desire Tikuvutu - Genius is a dramatic story centered around ambition, determination, and the challenges faced by people pursuing their goals.",
   language: "English",
   genres: ["Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-06",
   parts: [
     {
@@ -3381,7 +3381,7 @@ export const movies: Movie[] = [
     "Doing Life follows characters dealing with difficult circumstances and unexpected challenges as they navigate relationships, choices, and the consequences of their actions.",
   language: "English",
   genres: ["Drama", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-06",
   parts: [
     {
@@ -3406,7 +3406,7 @@ export const movies: Movie[] = [
     "During World War II, Desmond Doss serves as a combat medic and refuses to carry a weapon because of his beliefs. Despite facing intense opposition, he saves numerous wounded soldiers during the Battle of Okinawa.",
   language: "English",
   genres: ["Drama", "Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-07",
   parts:[
 
@@ -3433,7 +3433,7 @@ export const movies: Movie[] = [
     "During World War II, Desmond Doss serves as a combat medic and refuses to carry a weapon because of his beliefs. Despite facing intense opposition, he saves numerous wounded soldiers during the Battle of Okinawa.",
   language: "English",
   genres: ["Drama", "Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-07",
   parts:[
 
@@ -3460,7 +3460,7 @@ export const movies: Movie[] = [
     "A supernatural horror story involving terrifying paranormal forces and disturbing events connected to the mysterious Further.",
   language: "English",
   genres: ["Drama", "Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-07",
   parts:[
 
@@ -3486,7 +3486,7 @@ export const movies: Movie[] = [
   description: "A team of animal criminals attempts to turn over a new leaf, but changing their ways proves more difficult than expected.",
   language: "English",
   genres: ["Animation", "Comedy", "Action", "Adventure"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3508,7 +3508,7 @@ export const movies: Movie[] = [
   description: "A young boy discovers King Arthur's legendary sword and must help stop an ancient threat with the help of his friends.",
   language: "English",
   genres: ["Adventure", "Fantasy", "Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3530,7 +3530,7 @@ export const movies: Movie[] = [
   description: "Journalist Eddie Brock bonds with an alien symbiote that gives him extraordinary powers and a dangerous second personality.",
   language: "English",
   genres: ["Action", "Science Fiction", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3559,7 +3559,7 @@ export const movies: Movie[] = [
   description: "A romantic drama about betrayal, desire, and the unexpected consequences of a new relationship.",
   language: "Portuguese",
   genres: ["Drama", "Romance", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3582,7 +3582,7 @@ export const movies: Movie[] = [
   description: "A skilled young Comanche hunter faces a dangerous alien predator while protecting her people.",
   language: "English",
   genres: ["Action", "Adventure", "Thriller", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-10",
   parts: [
 
@@ -3605,7 +3605,7 @@ export const movies: Movie[] = [
   description: "A crime thriller involving a carefully planned heist and the complications that follow.",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3635,7 +3635,7 @@ export const movies: Movie[] = [
   description: "A thrilling blend of martial arts, comedy, and football, Kung Fu Soccer follows talented fighters who use their extraordinary kung fu skills on the football field. Combining powerful kicks, incredible moves, teamwork, and hilarious moments, they set out to prove that their unique abilities can transform an ordinary football team into an extraordinary force. The movie delivers exciting action, entertaining comedy, and a story about friendship, determination, and believing in your talents",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3657,7 +3657,7 @@ export const movies: Movie[] = [
   description: "Former LAPD officer Brian O'Conner (Paul Walker) has relocated to Miami, where he makes a living in the high-stakes underground street-racing scene alongside Tej Parker (Ludacris) and Suki. Busted by federal authorities, Brian is offered a clean slate if he can help U.S. Customs go undercover to bring down ruthless Miami drug lord Carter Verone (Cole Hauser).",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-10",
   parts: [
     {
@@ -3680,7 +3680,7 @@ export const movies: Movie[] = [
   description: "Enter a breathtaking world of samurai warriors, ancient traditions, and supernatural danger in 47 Ronin. When a ruthless ruler destroys their master and leaves them dishonored, a group of fearless warriors must unite to restore their honor and seek justice. Led by loyalty, courage, and an unbreakable bond, they face deadly enemies and extraordinary forces in an epic adventure packed with spectacular battles, emotional sacrifice, and unforgettable action. If you enjoy legendary warriors, Japanese mythology, and visually stunning fantasy adventures, this is a movie worth discovering.",
   language: "English",
   genres: ["Action", "Adventure", "Fantasy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3710,7 +3710,7 @@ export const movies: Movie[] = [
   description: "Feel the adrenaline of underground street racing in The Fast and the Furious, the high-octane action film that launched a legendary franchise. Undercover police officer Brian O'Conner enters the dangerous world of illegal racing to investigate a series of daring truck robberies. As he grows closer to street-racing leader Dominic Toretto and his crew, Brian faces a difficult choice between his duty and the loyalty he has developed for the people he was sent to investigate. Expect powerful cars, intense races, dangerous stunts, friendship, and nonstop suspense.",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3733,7 +3733,7 @@ export const movies: Movie[] = [
   description: "Prepare for a dark, intense cinematic experience with Sinners, a gripping story surrounded by danger, difficult choices, and the consequences of confronting the unknown. As tension builds and secrets emerge, the characters find themselves facing threats that test their courage, loyalty, and determination to survive. With a haunting atmosphere, powerful performances, and suspenseful moments, this is a compelling choice for viewers who enjoy dark drama, horror, and stories that keep them guessing. Get ready for a movie experience filled with mystery and tension.",
   language: "English",
   genres: ["Horror", "Drama", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3763,7 +3763,7 @@ export const movies: Movie[] = [
   description: "Step into a gritty world of crime, corruption, and relentless investigation in Sinners and Saints. A hardened New Orleans detective becomes caught in a dangerous case involving brutal violence and powerful criminal interests. As the investigation deepens, the line between justice and revenge becomes increasingly difficult to recognize. Packed with hard-hitting action, tense confrontations, and a dark urban atmosphere, this crime thriller is an engaging choice for viewers who enjoy police investigations, dangerous underworld secrets, and uncompromising action.",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3790,10 +3790,10 @@ export const movies: Movie[] = [
   year: "2009",
   rating: "7.4",
   image: "law-abiding-citizen.jpg",
-  description: "How far would a man go when the justice system fails him? Law Abiding Citizen follows Clyde Shelton, a grieving father who launches a calculated campaign against the people he believes allowed his family's killers to escape true justice. As an ambitious prosecutor tries to stop him, the case develops into a dangerous battle of intelligence, revenge, and moral responsibility. Filled with shocking twists, strategic mind games, and relentless suspense, this gripping thriller challenges viewers to question whether justice can exist without the law.",
+  description: "How far would a man go when the justice system fails him? Law Abiding Citizen follows Clyde Shelton, a grieving father who launches a calculated campaign against the people he believes allowed his family's killers to escape false  justice. As an ambitious prosecutor tries to stop him, the case develops into a dangerous battle of intelligence, revenge, and moral responsibility. Filled with shocking twists, strategic mind games, and relentless suspense, this gripping thriller challenges viewers to question whether justice can exist without the law.",
   language: "English",
   genres: ["Crime", "Thriller", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3816,7 +3816,7 @@ export const movies: Movie[] = [
   description: "Get ready for a powerful action-packed ride with Jaat, featuring intense confrontations, fearless characters, and a battle against dangerous forces. When injustice and violence threaten ordinary lives, a determined hero rises to challenge those who believe they are untouchable. Expect hard-hitting fights, dramatic rivalries, emotional moments, and high-energy action designed for fans of Indian action cinema. If you enjoy bold heroes, explosive confrontations, and stories built around courage and standing up against oppression, Jaat deserves a place on your watchlist.",
   language: "Hindi",
   genres: ["Action", "Crime", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3847,7 +3847,7 @@ export const movies: Movie[] = [
   description: "Discover MWABI, a compelling movie for viewers looking for an engaging story and an entertaining cinematic experience. With a title that invites curiosity, this addition gives Oshakur Movies fans another film to explore. Visit the movie page to watch the available version or download it for later viewing. Enjoy discovering more movies and stories on Oshakur Movies.",
   language: "English",
   genres: ["Drama", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3870,7 +3870,7 @@ export const movies: Movie[] = [
   description: "Get ready for another exciting Spider-Man adventure with Spider-Man: Brand New Day. Discover a new chapter featuring the iconic web-slinging hero, spectacular superhero action, and the promise of challenges that will test his courage and determination. This listing features the version provided by Dylan. Visit Oshakur Movies to access the available viewing and download links. Please note that the exact plot and release details should be verified against the specific video.",
   language: "English",
   genres: ["Action", "Adventure", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3893,7 +3893,7 @@ export const movies: Movie[] = [
   description: "Peter Parker's world changes forever when his identity as Spider-Man becomes public. Seeking a way to protect his loved ones, Peter turns to Doctor Strange, but a dangerous spell unleashes unexpected consequences. As familiar faces and powerful enemies emerge from across the multiverse, Peter must confront difficult choices about responsibility, sacrifice, and what it truly means to be a hero. Packed with spectacular action, emotional moments, and unforgettable superhero encounters, Spider-Man: No Way Home delivers an adventure Marvel fans won't want to miss.",
   language: "English",
   genres: ["Action", "Adventure", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3916,7 +3916,7 @@ export const movies: Movie[] = [
   description: "Prepare for a powerful superhero adventure with Supergirl, featuring a courageous heroine facing extraordinary challenges. With the promise of action, high-stakes encounters, and a story centered on strength and determination, this listing is aimed at fans of superhero cinema and DC-inspired adventures. The video was supplied under the Perfect version label. Check the available viewing details on Oshakur Movies and enjoy discovering another superhero title. Verify the exact edition and release information before publishing.",
   language: "English",
   genres: ["Action", "Adventure", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3939,7 +3939,7 @@ export const movies: Movie[] = [
   description: "Join Peter Parker on an international adventure as he tries to enjoy a school trip while dealing with the responsibilities of being Spider-Man. When mysterious elemental threats appear, Peter finds himself working alongside the enigmatic Mysterio to protect the world. But appearances can be deceiving, and Peter must learn whom he can trust. Combining superhero battles, humor, friendship, and surprising revelations, Spider-Man: Far From Home is an exciting choice for fans of Marvel adventures.",
   language: "English",
   genres: ["Action", "Adventure", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3962,7 +3962,7 @@ export const movies: Movie[] = [
   description: "Explore End of the Oak Street, a mysterious title for viewers who enjoy discovering new films and unexpected stories. This listing brings another movie option to the Oshakur Movies collection, giving visitors a convenient place to find its available viewing and download links. Before publishing a detailed plot summary, confirm the film's official synopsis and genre so viewers receive an accurate description of the story.",
   language: "English",
   genres: ["Thriller", "Drama", "Mystery"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -3985,7 +3985,7 @@ export const movies: Movie[] = [
   description: "Start this Part A edition of Spider-Man: Brand New Day and explore another chapter featuring the famous Marvel superhero. This listing keeps the first supplied version separate so viewers can identify it easily and find its corresponding links. For the best experience, confirm the video's content and ensure that Part A is correctly paired with its intended continuation before publishing.",
   language: "English",
   genres: ["Action", "Adventure", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -4008,7 +4008,7 @@ export const movies: Movie[] = [
   description: "Continue the Spider-Man: Brand New Day experience with this Part B edition. Designed as a separate listing for the second supplied video, it helps viewers distinguish the continuation from Part A and find the correct viewing or download option. Confirm that this file directly continues the first part and that both versions are properly labeled before publishing on Oshakur Movies.",
   language: "English",
   genres: ["Action", "Adventure", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -4031,7 +4031,7 @@ export const movies: Movie[] = [
   description: "Discover Mercy, a suspense-oriented movie listing for viewers who enjoy stories filled with difficult decisions, high stakes, and unexpected turns. This entry represents the supplied Part B file, making it easier to identify the correct version. Check the video's actual plot and release details before adding a detailed synopsis, then use the available links to access the authorized viewing or download option.",
   language: "English",
   genres: ["Thriller", "Drama", "Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -4054,7 +4054,7 @@ export const movies: Movie[] = [
   description: "Begin with this Part A edition of Mercy, listed separately so viewers can locate the correct version without confusion. The entry provides a convenient starting point for discovering the film and accessing its supplied links. If this video is intended to lead into Part B, consider linking both entries on the movie page so visitors can easily continue watching in the correct order.",
   language: "English",
   genres: ["Thriller", "Drama", "Action"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -4077,7 +4077,7 @@ export const movies: Movie[] = [
   description: "Enter a brutal survival battle in Prey, an intense action thriller set in the world of the Comanche Nation nearly 300 years ago. Naru, a skilled and determined young warrior, sets out to prove herself as a hunter while protecting her people from an unfamiliar and terrifying threat. As she discovers that the danger is far more powerful than anything she has faced before, she must rely on her intelligence, courage, and hunting skills to survive. Featuring breathtaking wilderness scenes, suspenseful encounters, and fierce combat, Prey offers a gripping new chapter in the Predator universe.",
   language: "English",
   genres: ["Action", "Thriller", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-14",
   parts: [
     {
@@ -4101,7 +4101,7 @@ export const movies: Movie[] = [
   description: "A sports comedy combining martial arts and basketball, following a young kung fu expert who discovers his unusual skills can help him succeed on the basketball court. Check the supplied video file for the correct version and language.",
   language: "English",
   genres: ["Comedy", "Action", "Sport"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4124,7 +4124,7 @@ export const movies: Movie[] = [
   description: "Johnny Blaze makes a supernatural pact that transforms him into the Ghost Rider, a mysterious rider with a flaming skull and extraordinary powers. This entry uses the supplied Sankara video file; confirm the exact edition before publishing.",
   language: "English",
   genres: ["Action", "Fantasy", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4147,7 +4147,7 @@ export const movies: Movie[] = [
   description: "A movie listing for It's Love. The supplied files include an A-labelled video and a second video without a part designation. Confirm the film's identity and viewing order before adding a detailed synopsis.",
   language: "English",
   genres: ["Romance", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4177,7 +4177,7 @@ export const movies: Movie[] = [
   description: "A martial arts adventure set around a remote desert inn where dangerous factions, skilled fighters, and political intrigue collide. Confirm that the supplied file corresponds to the 1992 film before publishing its detailed metadata.",
   language: "English",
   genres: ["Action", "Adventure", "Drama"],
-  isFeatured: true          ,
+  isFeatured: false           ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4200,7 +4200,7 @@ export const movies: Movie[] = [
   description: "A former military sniper is drawn into a dangerous conspiracy and must use his experience to uncover the truth. This listing contains two supplied video parts, which should be watched in the correct order.",
   language: "English",
   genres: ["Action", "Thriller", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4230,7 +4230,7 @@ export const movies: Movie[] = [
   description: "An adult-oriented film listing based on the supplied filenames. Verify the exact title, classification, and applicable age restrictions before publishing.",
   language: "Unknown",
   genres: ["Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4267,7 +4267,7 @@ export const movies: Movie[] = [
   description: "A suspense and horror movie listing based on the supplied file name. Verify the exact film edition before adding a plot summary, release year, or rating.",
   language: "English",
   genres: ["Horror", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4290,7 +4290,7 @@ export const movies: Movie[] = [
   description: "A sweeping Indian epic following a young man who discovers a mysterious connection to a powerful kingdom. His journey leads him into a world of royal rivalries, battles, and questions about his origins. Verify the supplied edition and language before publishing.",
   language: "Hindi",
   genres: ["Action", "Adventure", "Fantasy"],
-  isFeatured:true,
+  isFeatured:false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4313,7 +4313,7 @@ export const movies: Movie[] = [
   description: "An action movie listing identified by the supplied Retribution file name. Confirm the film's exact identity and edition before adding release information or a detailed synopsis.",
   language: "Unknown",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4336,7 +4336,7 @@ export const movies: Movie[] = [
   description: "A Hong Kong legal action thriller following a prosecutor who confronts a complicated criminal case and fights to uncover the truth. The supplied files are divided into two parts.",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4366,7 +4366,7 @@ export const movies: Movie[] = [
   description: "A supernatural horror story in which a family confronts a terrifying connection to death and a seemingly unavoidable fate. The supplied file is labelled Part A; confirm whether another part is available.",
   language: "English",
   genres: ["Horror", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4389,7 +4389,7 @@ export const movies: Movie[] = [
   description: "An action movie listing with two supplied video parts. Confirm the exact movie title and edition before adding a detailed synopsis or release information.",
   language: "English",
   genres: ["Action", "Adventure", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4419,7 +4419,7 @@ export const movies: Movie[] = [
   description: "A Nigerian action thriller following a former smuggler who faces a dangerous mission involving a kidnapped child and a race against time. The supplied video is divided into two parts.",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4450,7 +4450,7 @@ export const movies: Movie[] = [
   description: "Matchbox is an action-adventure movie listing presented in two parts. Watch Part A first, then continue with Part B. The supplied links provide streaming and download options for each part. Confirm the exact film details and rating before publishing.",
   language: "English",
   genres: ["Action", "Adventure", "Comedy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-16",
   parts: [
     {
@@ -4480,7 +4480,7 @@ export const movies: Movie[] = [
   description: "Watch MASTER PLAN on Oshakur Movies. Stream the movie online or download it using the available links.",
   language: "English",
   genres: ["Action", "Adventure", "Comedy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-19",
   parts: [
     {
@@ -4503,7 +4503,7 @@ export const movies: Movie[] = [
   description: "Watch Friends, Sex and Games on Oshakur Movies. Stream the episodes online or download them using the available links.",
   language: "English",
   genres: ["Drama", "Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-19",
   parts: [
     {
@@ -4534,7 +4534,7 @@ export const movies: Movie[] = [
   description: "Watch Sye Raa Narasimha Reddy on Oshakur Movies. Stream the movie online or download it using the available links.",
   language: "Telugu",
   genres: ["Action", "Drama", "History"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4557,7 +4557,7 @@ export const movies: Movie[] = [
   description: "Watch Weekend in Taipei on Oshakur Movies. Stream or download both parts of the movie.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4587,7 +4587,7 @@ export const movies: Movie[] = [
   description: "Watch Captain America: Brave New World on Oshakur Movies. Stream or download the movie using the available link.",
   language: "English",
   genres: ["Action", "Adventure", "Sci-Fi"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4610,7 +4610,7 @@ export const movies: Movie[] = [
   description: "Watch Rampage on Oshakur Movies. Stream the movie online or download it using the available link.",
   language: "English",
   genres: ["Action", "Adventure", "Sci-Fi"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4633,7 +4633,7 @@ export const movies: Movie[] = [
   description: "Watch Jade Dynasty on Oshakur Movies. Stream the movie online or download it using the available link.",
   language: "Chinese",
   genres: ["Action", "Fantasy", "Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4656,7 +4656,7 @@ export const movies: Movie[] = [
   description: "Watch Glad 2 on Oshakur Movies. Stream or download both parts using the available links.",
   language: "English",
   genres: ["Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4686,7 +4686,7 @@ export const movies: Movie[] = [
   description: "Watch Rosario on Oshakur Movies. Stream the movie online or download it using the available link.",
   language: "English",
   genres: ["Horror", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4709,7 +4709,7 @@ export const movies: Movie[] = [
   description: "Watch Carry-On on Oshakur Movies. Stream the movie online or download it using the available link.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4732,7 +4732,7 @@ export const movies: Movie[] = [
   description: "Watch Jungle Cruise on Oshakur Movies. Stream or download all three parts using the available links.",
   language: "English",
   genres: ["Action", "Adventure", "Fantasy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4769,7 +4769,7 @@ export const movies: Movie[] = [
   description: "Watch Six Minutes on Oshakur Movies. Stream the movie online or download it using the available link.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: true ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4792,7 +4792,7 @@ export const movies: Movie[] = [
   description: "Watch My Oxford Year on Oshakur Movies. Stream or download both parts using the available links.",
   language: "English",
   genres: ["Drama", "Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4822,7 +4822,7 @@ export const movies: Movie[] = [
   description: "Watch I Nobody on Oshakur Movies. Stream or download both parts using the available links.",
   language: "Hindi",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4852,7 +4852,7 @@ export const movies: Movie[] = [
   description: "Watch Vivarium on Oshakur Movies. Stream the movie online or download it using the available link.",
   language: "English",
   genres: ["Horror", "Mystery", "Sci-Fi"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4875,7 +4875,7 @@ export const movies: Movie[] = [
   description: "Watch Savi on Oshakur Movies. Stream or download both parts using the available links.",
   language: "Hindi",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4905,7 +4905,7 @@ export const movies: Movie[] = [
   description: "Watch Invincible Swordsman on Oshakur Movies. Stream or download both parts using the available links.",
   language: "Chinese",
   genres: ["Action", "Adventure", "Fantasy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4935,7 +4935,7 @@ export const movies: Movie[] = [
   description: "Watch No Strings Attached on Oshakur Movies. Stream the movie online or download it using the available link.",
   language: "English",
   genres: ["Comedy", "Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4958,7 +4958,7 @@ export const movies: Movie[] = [
   description: "Watch Old Guard on Oshakur Movies. Stream or download both parts using the available links.",
   language: "English",
   genres: ["Action", "Fantasy", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -4988,7 +4988,7 @@ export const movies: Movie[] = [
   description: "Watch We Were Soldiers on Oshakur Movies. Stream or download both parts using the available links.",
   language: "English",
   genres: ["Action", "Drama", "War"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5018,7 +5018,7 @@ export const movies: Movie[] = [
   description: "Watch The Unholy on Oshakur Movies. Stream the movie online or download it using the available link.",
   language: "English",
   genres: ["Horror", "Mystery", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5041,7 +5041,7 @@ export const movies: Movie[] = [
   description: "Watch After Earth on Oshakur Movies. Stream or download both parts using the available links.",
   language: "English",
   genres: ["Action", "Adventure", "Sci-Fi"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5071,7 +5071,7 @@ export const movies: Movie[] = [
   description: "Watch Art of Eight Limbs on Oshakur Movies. Stream or download all three parts using the available links.",
   language: "English",
   genres: ["Action", "Drama", "Sport"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5108,7 +5108,7 @@ export const movies: Movie[] = [
   description: "Watch The Kingsman on Oshakur Movies. Stream or download both parts using the available links.",
   language: "English",
   genres: ["Action", "Adventure", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5138,7 +5138,7 @@ export const movies: Movie[] = [
   description: "Watch Martin on Oshakur Movies. Stream or download all four parts using the available links.",
   language: "Kannada",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5182,7 +5182,7 @@ export const movies: Movie[] = [
   description: "Watch Fire Cloud Evil God on Oshakur Movies. Stream or download Part I using the available link.",
   language: "Chinese",
   genres: ["Action", "Fantasy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5205,7 +5205,7 @@ export const movies: Movie[] = [
   description: "The Unborn is a horror movie presented in an Agasobanuye version by Gaheza.",
   language: "English",
   genres: ["Horror", "Mystery", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5228,7 +5228,7 @@ export const movies: Movie[] = [
   description: "Jurassic World Rebirth is a science-fiction adventure movie presented in an Agasobanuye version by Gaheza.",
   language: "English",
   genres: ["Action", "Adventure", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5251,7 +5251,7 @@ export const movies: Movie[] = [
   description: "Troll is a fantasy action movie presented in an Agasobanuye version by Gaheza.",
   language: "English",
   genres: ["Action", "Adventure", "Fantasy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5274,7 +5274,7 @@ export const movies: Movie[] = [
   description: "Purple Heart is a romantic drama movie presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Drama", "Romance", "Music"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5297,7 +5297,7 @@ export const movies: Movie[] = [
   description: "Ganapath is an action movie presented in three parts in an Agasobanuye version by Fey.",
   language: "Hindi",
   genres: ["Action", "Drama", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5334,7 +5334,7 @@ export const movies: Movie[] = [
   description: "Private Tutor (2024) is presented in an Agasobanuye version by Hakim.",
   language: "English",
   genres: ["Drama", "Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5357,7 +5357,7 @@ export const movies: Movie[] = [
   description: "Death Race is an action thriller presented in an Agasobanuye version by Gaheza.",
   language: "English",
   genres: ["Action", "Science Fiction", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5380,7 +5380,7 @@ export const movies: Movie[] = [
   description: "Bedspacer is presented in three parts in an Agasobanuye version by ROCK KIMOMO.",
   language: "Filipino",
   genres: ["Drama", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5417,7 +5417,7 @@ export const movies: Movie[] = [
   description: "Unhinged is an action thriller presented in two parts in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5447,7 +5447,7 @@ export const movies: Movie[] = [
   description: "Devil is presented in three parts in an Agasobanuye version by Remy Debande.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5484,7 +5484,7 @@ export const movies: Movie[] = [
   description: "Wheels on Meals is an action-comedy movie presented in an Agasobanuye version by Yanga.",
   language: "English",
   genres: ["Action", "Comedy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5507,7 +5507,7 @@ export const movies: Movie[] = [
   description: "Red Notice is an action-comedy movie presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Action", "Comedy", "Crime"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5530,7 +5530,7 @@ export const movies: Movie[] = [
   description: "Kill Boksoon is an action thriller presented in two parts in an Agasobanuye version by Master P.",
   language: "Korean",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5560,7 +5560,7 @@ export const movies: Movie[] = [
   description: "Forever Us is presented in an Agasobanuye version by Sankara.",
   language: "English",
   genres: ["Drama", "Romance"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5583,7 +5583,7 @@ export const movies: Movie[] = [
   description: "Trigger Warning is an action thriller presented in two parts in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5613,7 +5613,7 @@ export const movies: Movie[] = [
   description: "Death Saved My Life is presented in two parts in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Drama", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5643,7 +5643,7 @@ export const movies: Movie[] = [
   description: "Demon City is presented in an Agasobanuye version.",
   language: "English",
   genres: ["Action", "Fantasy", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5666,7 +5666,7 @@ export const movies: Movie[] = [
   description: "Captain America: Brave New World is a superhero action movie presented in an Agasobanuye version by Sankara.",
   language: "English",
   genres: ["Action", "Adventure", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5689,7 +5689,7 @@ export const movies: Movie[] = [
   description: "Savi is presented in two parts in an Agasobanuye version by ROCK KIMOMO.",
   language: "Hindi",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5719,7 +5719,7 @@ export const movies: Movie[] = [
   description: "Sniper: The Last Stand is an action movie presented in an Agasobanuye version by Gaheza.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5742,7 +5742,7 @@ export const movies: Movie[] = [
   description: "The Greatest of All Time is an action thriller presented in two parts in an Agasobanuye version by Hakim.",
   language: "Tamil",
   genres: ["Action", "Thriller", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5772,7 +5772,7 @@ export const movies: Movie[] = [
   description: "The Lockdown is presented in two parts in an Agasobanuye version by Master P.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: true ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5802,7 +5802,7 @@ export const movies: Movie[] = [
   description: "Trouble is presented in two parts in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Action", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5855,7 +5855,7 @@ export const movies: Movie[] = [
   description: "Venom: Let There Be Carnage is a superhero action movie presented in an Agasobanuye version by JUNIOR Giti.",
   language: "English",
   genres: ["Action", "Science Fiction", "Thriller"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5878,7 +5878,7 @@ export const movies: Movie[] = [
   description: "3 Idiots is a comedy-drama movie presented in two parts in an Agasobanuye version by ROCK KIMOMO.",
   language: "Hindi",
   genres: ["Comedy", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5908,7 +5908,7 @@ export const movies: Movie[] = [
   description: "Ganti-Ganti is presented in two parts in an Agasobanuye version by Senior.",
   language: "Filipino",
   genres: ["Drama", "Romance"],
-  isFeatured: true,
+  isFeatured: true ,
   createdAt: "2026-10-20",
   parts: [
     {
@@ -5924,6 +5924,52 @@ export const movies: Movie[] = [
       title: "Part B",
       streamUrl: "",
       downloadUrl: "https://www.mediafire.com/file/itxd8gskl8q7p64/Ganti-Ganti+B.mp4/file",
+    },
+  ],
+},
+{
+  id: "224",
+  title: "LOVE LIES BLEEDING",
+  slug: "love-lies-bleeding",
+  explainer: "Ginuis",
+  year: "",
+  rating: "",
+  image: "love-lies-bleeding.jpg",
+  description: "Love Lies Bleeding is presented in two parts in an Agasobanuye version by Sankara.",
+  language: "English",
+  genres: ["Drama", "Romance", "Thriller"],
+  isFeatured: false ,
+  createdAt: "2026-10-21",
+  parts: [
+    {
+      id: "224-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "https://hgcloud.to/4whtvbx9rwj1",
+      downloadUrl: "https://www.mediafire.com/file/vmw4ceua92wckg3/LOVE+LIES+BLEEDING(+TIKUVUTU+)+-+GENIUS.mp4/file",
+    }
+  ],
+},
+{
+  id: "225",
+  title: "HOPE 2026",
+  slug: "hope-2026",
+  explainer: "Sankara",
+  year: "2026",
+  rating: "",
+  image: "hope-2026.jpg",
+  description: "Hope 2026 is presented in an Agasobanuye version by Sankara.",
+  language: "English",
+  genres: ["Drama"],
+  isFeatured: true ,
+  createdAt: "2026-10-21",
+  parts: [
+    {
+      id: "225-1",
+      partNumber: 1,
+      title: "Full Movie",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file/tgupac8djkq4jzn/Hope_2026.mp4/file",
     },
   ],
 },

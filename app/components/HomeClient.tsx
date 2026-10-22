@@ -1,11 +1,12 @@
-
+﻿
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import Hero from "./Hero";
 import MovieCard from "./MovieCard";
 import SiteBottom from "./SiteBottom";
+import Navbar from "./Navbar";
 import { getCanonicalExplainerName, getExplainerImage, normalizeExplainerName } from "../lib/explainers";
 
 type HomeMovie = {
@@ -119,19 +120,15 @@ export default function HomeClient({
   series,
 }: HomeClientProps) {
   const [filter, setFilter] = useState<ContentFilter>("all");
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [search, setSearch] = useState("");
   const [selectedExplainer, setSelectedExplainer] =
     useState<string | null>(null);
 
   const orderedMovies = useMemo(() => {
     const featured = movies
       .filter((movie) => movie.isFeatured)
-      .reverse();
+      ;
 
-    const regular = movies.filter(
-      (movie) => !movie.isFeatured
-    );
+    const regular = movies.filter((movie) => !movie.isFeatured).sort((a, b) => (b.createdAt ?? "").localeCompare(a.createdAt ?? ""));
 
     return [...featured, ...regular];
   }, [movies]);
@@ -139,11 +136,9 @@ export default function HomeClient({
   const orderedSeries = useMemo(() => {
     const featured = series
       .filter((item) => item.isFeatured)
-      .reverse();
+      ;
 
-    const regular = series.filter(
-      (item) => !item.isFeatured
-    );
+    const regular = series.filter((item) => !item.isFeatured).sort((a, b) => (b.createdAt ?? "").localeCompare(a.createdAt ?? ""));
 
     return [...featured, ...regular];
   }, [series]);
@@ -242,13 +237,13 @@ export default function HomeClient({
     return mixedItems;
   }, [orderedMovies, orderedSeries]);
 
-  // Trending: show the 10 newest movies and 20 newest series.
+  // Trending contains featured titles only, newest first.
   const trendingItems = useMemo(() => {
     const result: TrendingItem[] = [];
-    const recentMovies = [...movies].sort((a, b) =>
+    const recentMovies = movies.filter((movie) => movie.isFeatured).sort((a, b) =>
       (b.createdAt ?? "").localeCompare(a.createdAt ?? "")
     ).slice(0, 10);
-    const recentSeries = [...series].sort((a, b) =>
+    const recentSeries = series.filter((item) => item.isFeatured).sort((a, b) =>
       (b.createdAt ?? "").localeCompare(a.createdAt ?? "")
     ).slice(0, 20);
 
@@ -270,6 +265,19 @@ export default function HomeClient({
 
     return result;
   }, [movies, series]);
+
+  const mixedCatalog = useMemo(() => {
+    const result: TrendingItem[] = [];
+    const appendGroups = (moviePool: HomeMovie[], seriesPool: HomeSeries[]) => {
+      for (let index = 0; index < Math.max(moviePool.length, seriesPool.length); index += 2) {
+        moviePool.slice(index, index + 2).forEach((data) => result.push({ contentType: "movie", data }));
+        seriesPool.slice(index, index + 2).forEach((data) => result.push({ contentType: "series", data }));
+      }
+    };
+    appendGroups(orderedMovies.filter((item) => item.isFeatured), orderedSeries.filter((item) => item.isFeatured));
+    appendGroups(orderedMovies.filter((item) => !item.isFeatured), orderedSeries.filter((item) => !item.isFeatured));
+    return result;
+  }, [orderedMovies, orderedSeries]);
 
   // Build explainer profiles from the names already in your data.
   const explainers = useMemo(() => {
@@ -323,139 +331,9 @@ export default function HomeClient({
     (item) => item.key === selectedExplainer
   );
 
-  function handleSearch(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    const query = search.trim();
-
-    if (!query) return;
-
-    window.location.href =
-      "/search?q=" + encodeURIComponent(query);
-  }
-
   return (
-    <main className="min-h-screen bg-[#050505] text-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#050505]/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center">
-            <Link
-              href="/"
-              aria-label="Oshakur Movies home"
-              className="flex items-center gap-2"
-            >
-              <img
-                src="/images/logo.jpg"
-                alt="OSHAKUR MOVIES logo"
-                width={48}
-                height={48}
-                className="h-10 w-10 rounded-full object-cover sm:h-12 sm:w-12"
-              />
-
-              <span className="whitespace-nowrap text-lg font-extrabold tracking-wide sm:text-xl">
-                <span className="text-[#00E5FF]">OSHAKUR</span>{" "}
-                <span className="text-[#E040FB]">MOVIES</span>
-              </span>
-            </Link>
-          </div>
-
-          {/* Desktop search */}
-          <form
-            onSubmit={handleSearch}
-            className="hidden max-w-xl flex-1 md:flex"
-          >
-            <div className="flex w-full items-center rounded-full border border-white/10 bg-white/5 px-4">
-              <input
-                type="search"
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                placeholder="Search movies and series..."
-                className="w-full bg-transparent py-2.5 text-sm text-white outline-none placeholder:text-white/40"
-              />
-
-              <button
-                type="submit"
-                className="rounded-full px-3 py-1.5 text-sm font-semibold text-[#00E5FF] transition hover:bg-white/10"
-              >
-                Search
-              </button>
-            </div>
-          </form>
-
-          <div className="hidden items-center gap-3 md:flex">
-            <Link
-              href="/login"
-              className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold transition hover:border-[#00E5FF]/50 hover:text-[#00E5FF]"
-            >
-              Login
-            </Link>
-
-            <button
-              type="button"
-              onClick={() => setMenuOpen((value) => !value)}
-              className="rounded-lg border border-white/10 px-3 py-2 text-sm transition hover:bg-white/10"
-              aria-label="Toggle menu"
-            >
-              ☰
-            </button>
-          </div>
-
-          <button
-            type="button"
-            onClick={() => setMenuOpen((value) => !value)}
-            className="rounded-lg border border-white/10 px-3 py-2 text-sm md:hidden"
-            aria-label="Toggle menu"
-          >
-            ☰
-          </button>
-        </div>
-
-        {/* Mobile search */}
-        <div className="border-t border-white/10 px-4 py-3 md:hidden">
-          <form onSubmit={handleSearch}>
-            <div className="flex items-center rounded-full border border-white/10 bg-white/5 px-4">
-              <input
-                type="search"
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                placeholder="Search movies and series..."
-                className="w-full bg-transparent py-2.5 text-sm text-white outline-none placeholder:text-white/40"
-              />
-
-              <button
-                type="submit"
-                className="rounded-full px-3 py-1.5 text-sm font-semibold text-[#00E5FF]"
-              >
-                Search
-              </button>
-            </div>
-          </form>
-        </div>
-
-        {menuOpen && (
-          <div className="border-t border-white/10 bg-[#050505]">
-            <nav className="mx-auto flex max-w-7xl flex-col px-4 py-4 sm:px-6 lg:px-8">
-              {[
-                { label: "Home", href: "/" },
-                { label: "Movies", href: "/movies" },
-                { label: "Series", href: "/series" },
-                { label: "Trending", href: "/trending" },
-                { label: "Login", href: "/login" },
-              ].map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="border-b border-white/5 py-3 text-sm font-semibold hover:text-[#00E5FF]"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        )}
-      </header>
+    <main className="cinema-page min-h-screen text-white">
+      <Navbar />
 
       {/* Hero */}
       <Hero items={heroItems} />
@@ -474,7 +352,7 @@ export default function HomeClient({
 
           <Link
             href="/trending"
-            className="shrink-0 text-sm font-semibold text-[#00E5FF] hover:underline"
+            className="shrink-0 text-sm font-semibold text-[#E50914] hover:underline"
           >
             View all
           </Link>
@@ -490,7 +368,7 @@ export default function HomeClient({
               return (
                 <article
                   key={`${item.contentType}-${content.id}`}
-                  className="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-[#00E5FF]/40"
+                  className="group media-tile min-w-0 rounded-xl border border-white/10 bg-white/5 transition hover:border-[#E50914]/40"
                 >
                   <Link
                     href={
@@ -500,7 +378,7 @@ export default function HomeClient({
                     }
                     className="block"
                   >
-                    <div className="relative aspect-[2/3] overflow-hidden bg-white/5">
+                    <div className="media-tile-frame relative aspect-[2/3]">
                       <img
                         src={
                           isMovie
@@ -512,9 +390,10 @@ export default function HomeClient({
                         className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                       />
 
-                      <span className="absolute left-2 top-2 rounded-md bg-[#00E5FF] px-2 py-1 text-[10px] font-bold uppercase text-black">
+                      <span className="absolute left-2 top-2 rounded-md bg-[#E50914] px-2 py-1 text-[10px] font-bold uppercase text-black">
                         {isMovie ? "Movie" : "Series"}
                       </span>
+                      <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
                     </div>
 
                     <div className="px-3 pt-3">
@@ -537,7 +416,7 @@ export default function HomeClient({
                         onClick={() =>
                           setSelectedExplainer(normalizeExplainerName(content.explainer!))
                         }
-                        className="block max-w-full truncate text-left text-xs text-[#00E5FF] hover:underline"
+                        className="block max-w-full truncate text-left text-xs text-[#E50914] hover:underline"
                       >
                         🎙 {content.explainer}
                       </button>
@@ -589,7 +468,7 @@ export default function HomeClient({
                       onClick={() => setSelectedExplainer(explainer.key)}
                       className="group flex w-24 shrink-0 flex-col items-center gap-2 py-2 text-center sm:w-28"
                     >
-                      <span className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-2 border-[#00E5FF]/50 bg-white/5 transition group-hover:scale-105 group-hover:border-[#00E5FF] sm:h-20 sm:w-20">
+                      <span className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-2 border-[#E50914]/50 bg-white/5 transition group-hover:scale-105 group-hover:border-[#E50914] sm:h-20 sm:w-20">
                         {getExplainerImage(explainer.name) ? (
                           <img
                             src={getExplainerImage(explainer.name)}
@@ -597,10 +476,10 @@ export default function HomeClient({
                             className="h-full w-full object-cover"
                           />
                         ) : (
-                          <span className="text-lg font-extrabold text-[#00E5FF]">{getInitials(explainer.name)}</span>
+                          <span className="text-lg font-extrabold text-[#E50914]">{getInitials(explainer.name)}</span>
                         )}
                       </span>
-                      <span className="max-w-full truncate text-xs font-semibold text-white/85 transition group-hover:text-[#00E5FF] sm:text-sm">
+                      <span className="max-w-full truncate text-xs font-semibold text-white/85 transition group-hover:text-[#E50914] sm:text-sm">
                         {explainer.name}
                       </span>
                     </button>
@@ -632,9 +511,9 @@ export default function HomeClient({
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-center gap-4">
                 {getExplainerImage(activeExplainer.name) ? (
-                  <img src={getExplainerImage(activeExplainer.name)} alt={activeExplainer.name} className="h-16 w-16 shrink-0 rounded-full border-2 border-[#00E5FF]/60 object-cover" />
+                  <img src={getExplainerImage(activeExplainer.name)} alt={activeExplainer.name} className="h-16 w-16 shrink-0 rounded-full border-2 border-[#E50914]/60 object-cover" />
                 ) : (
-                  <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-[#00E5FF]/60 bg-[#00E5FF]/10 text-xl font-extrabold text-[#00E5FF]">{getInitials(activeExplainer.name)}</span>
+                  <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-[#E50914]/60 bg-[#E50914]/10 text-xl font-extrabold text-[#E50914]">{getInitials(activeExplainer.name)}</span>
                 )}
 
                 <div>
@@ -668,7 +547,7 @@ export default function HomeClient({
                       key={movie.id}
                       href={`/movies/${movie.slug}`}
                       onClick={() => setSelectedExplainer(null)}
-                      className="flex items-center gap-3 rounded-lg border border-white/10 p-3 transition hover:border-[#00E5FF]/40 hover:bg-white/5"
+                      className="flex items-center gap-3 rounded-lg border border-white/10 p-3 transition hover:border-[#E50914]/40 hover:bg-white/5"
                     >
                       <img
                         src={`/images/movies/${movie.image}`}
@@ -684,7 +563,7 @@ export default function HomeClient({
                           {getTimeAgo(movie.createdAt)}
                         </span>
                       </span>
-                      <span className="text-[#00E5FF]">→</span>
+                      <span className="text-[#E50914]">→</span>
                     </Link>
                   ))}
                 </div>
@@ -700,7 +579,7 @@ export default function HomeClient({
                       key={item.id}
                       href={`/series/${item.slug}`}
                       onClick={() => setSelectedExplainer(null)}
-                      className="flex items-center gap-3 rounded-lg border border-white/10 p-3 transition hover:border-[#00E5FF]/40 hover:bg-white/5"
+                      className="flex items-center gap-3 rounded-lg border border-white/10 p-3 transition hover:border-[#E50914]/40 hover:bg-white/5"
                     >
                       <img
                         src={`/images/series/${item.image}`}
@@ -716,7 +595,7 @@ export default function HomeClient({
                           {getTimeAgo(item.createdAt)}
                         </span>
                       </span>
-                      <span className="text-[#00E5FF]">→</span>
+                      <span className="text-[#E50914]">→</span>
                     </Link>
                   ))}
                 </div>
@@ -726,7 +605,7 @@ export default function HomeClient({
         </div>
       )}
 
-      {/* Main content and filters */}
+      {/* Featured and newest mixed catalog */}
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="mb-8 flex flex-wrap items-center gap-3">
           {(["all", "new", "old"] as ContentFilter[]).map(
@@ -737,7 +616,7 @@ export default function HomeClient({
                 onClick={() => setFilter(option)}
                 className={`rounded-full px-5 py-2 text-sm font-semibold capitalize transition ${
                   filter === option
-                    ? "bg-[#00E5FF] text-black"
+                    ? "bg-[#E50914] text-black"
                     : "border border-white/10 bg-white/5 text-white hover:bg-white/10"
                 }`}
               >
@@ -751,123 +630,14 @@ export default function HomeClient({
           )}
         </div>
 
-        {/* Movies */}
-        <section className="mb-12">
-          <div className="mb-5 flex items-center justify-between gap-4">
-            <div>
-              <h2 className="text-2xl font-bold sm:text-3xl">
-                Movies
-              </h2>
-              <p className="mt-1 text-sm text-white/50">
-                Watch and discover movies on OSHAKUR MOVIES.
-              </p>
-            </div>
+        <div className="mb-5 flex items-center justify-between gap-4">
+          <div><h2 className="text-2xl font-bold sm:text-3xl">Movies &amp; Series</h2><p className="mt-1 text-sm text-white/50">Featured stories, followed by the latest additions.</p></div>
+          <div className="flex gap-4"><Link href="/movies" className="text-sm font-semibold text-[#E50914] hover:underline">Movies</Link><Link href="/series" className="text-sm font-semibold text-[#E50914] hover:underline">Series</Link></div>
+        </div>
 
-            <Link
-              href="/movies"
-              className="text-sm font-semibold text-[#00E5FF] hover:underline"
-            >
-              View all
-            </Link>
-          </div>
-
-          {displayedMovies.length > 0 ? (
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-              {displayedMovies.map((movie) => (
-                <MovieCard
-  key={movie.id}
-  title={movie.title}
-  year={movie.year}
-  rating={movie.rating}
-  image={movie.image}
-  slug={movie.slug}
-  explainer={movie.explainer}
-  createdAt={movie.createdAt}
-  onExplainerClick={(name) => setSelectedExplainer(normalizeExplainerName(name))}
-/>
-              ))}
-            </div>
-          ) : (
-            <div className="rounded-xl border border-white/10 bg-white/5 p-8 text-center text-white/50">
-              No movies found.
-            </div>
-          )}
-        </section>
-
-        {/* Series */}
-        <section>
-          <div className="mb-5 flex items-center justify-between gap-4">
-            <div>
-              <h2 className="text-2xl font-bold sm:text-3xl">
-                Series
-              </h2>
-              <p className="mt-1 text-sm text-white/50">
-                Watch and discover series on OSHAKUR MOVIES.
-              </p>
-            </div>
-
-            <Link
-              href="/series"
-              className="text-sm font-semibold text-[#00E5FF] hover:underline"
-            >
-              View all
-            </Link>
-          </div>
-
-          {displayedSeries.length > 0 ? (
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-              {displayedSeries.map((item) => (
-                <article
-                  key={item.id}
-                  className="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-[#00E5FF]/40"
-                >
-                  <Link
-                    href={`/series/${item.slug}`}
-                    className="block"
-                  >
-                    <div className="aspect-[2/3] overflow-hidden bg-white/5">
-                      <img
-                        src={`/images/series/${item.image}`}
-                        alt={item.title}
-                        loading="lazy"
-                        className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                      />
-                    </div>
-
-                    <div className="px-3 pt-3">
-                      <h3 className="line-clamp-2 text-sm font-bold">
-                        {item.title}
-                      </h3>
-                    </div>
-                  </Link>
-
-                  <div className="px-3 pb-3 pt-2">
-                    {item.explainer && (
-                      <button
-                        type="button"
-                        onClick={() =>
-                          setSelectedExplainer(normalizeExplainerName(item.explainer!))
-                        }
-                        className="block max-w-full truncate text-left text-xs text-[#00E5FF] hover:underline"
-                      >
-                        {getExplainerImage(item.explainer) && <img src={getExplainerImage(item.explainer)} alt="" className="mr-1 inline-block h-5 w-5 rounded-full object-cover align-middle" />}
-                        🎙 {item.explainer}
-                      </button>
-                    )}
-
-                    <p className="mt-1 text-xs text-white/50">
-                      {getTimeAgo(item.createdAt)}
-                    </p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          ) : (
-            <div className="rounded-xl border border-white/10 bg-white/5 p-8 text-center text-white/50">
-              No series found.
-            </div>
-          )}
-        </section>
+        {mixedCatalog.length ? <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          {mixedCatalog.map((entry) => entry.contentType === "movie" ? <MovieCard key={`movie-${entry.data.id}`} title={entry.data.title} year={entry.data.year} rating={entry.data.rating} image={entry.data.image} slug={entry.data.slug} explainer={entry.data.explainer} createdAt={entry.data.createdAt} onExplainerClick={(name) => setSelectedExplainer(normalizeExplainerName(name))} /> : <article key={`series-${entry.data.id}`} className="cinema-card group min-w-0"><Link href={`/series/${entry.data.slug}`} className="block"><div className="media-poster relative"><img src={`/images/series/${entry.data.image}`} alt={entry.data.title} loading="lazy"/><span className="media-play" aria-hidden="true">▶</span></div><h3 className="media-title">{entry.data.title}</h3></Link><div className="media-byline">{entry.data.explainer?.trim() ? <button type="button" onClick={() => setSelectedExplainer(normalizeExplainerName(entry.data.explainer!))} className="truncate text-left hover:underline">{getExplainerImage(entry.data.explainer) && <img src={getExplainerImage(entry.data.explainer)} alt=""/>}🎙 {entry.data.explainer}</button> : <span className="text-white/35">Explainer unavailable</span>}</div><time className="media-time" dateTime={entry.data.createdAt}>{getTimeAgo(entry.data.createdAt)}</time></article>)}
+        </div> : <div className="rounded-xl border border-white/10 bg-white/5 p-8 text-center text-white/50">No movies or series found.</div>}
       </section>
 
       {/* Footer */}

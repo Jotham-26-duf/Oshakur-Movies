@@ -1,8 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
+import Navbar from "@/app/components/Navbar";
+import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
 import { series } from "@/data/series";
+import { createOpenGraphMetadata } from "@/app/seo";
 
 interface Category {
   id: string;
@@ -42,6 +46,31 @@ interface CategoryPageProps {
   }>;
 }
 
+export async function generateMetadata({
+  params,
+}: CategoryPageProps): Promise<Metadata> {
+  const { id } = await params;
+  const category = categories.find((item) => item.id === id);
+
+  if (!category) return {};
+
+  const title = `${category.name} Movies & Series | OSHAKUR MOVIES`;
+  const description = `Explore ${category.name.toLowerCase()} movies and series on OSHAKUR MOVIES.`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `https://oshakurmovies.party/category/${category.id}`,
+    },
+    openGraph: createOpenGraphMetadata(
+      `/category/${category.id}`,
+      title,
+      description,
+    ),
+  };
+}
+
 export default async function CategoryPage({
   params,
 }: CategoryPageProps) {
@@ -62,7 +91,9 @@ export default async function CategoryPage({
   );
 
   return (
-    <main className="min-h-screen bg-[#121212] text-white">
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-[#121212] text-white">
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-10">
         {/* Header */}
         <div className="mb-10">
@@ -96,14 +127,15 @@ export default async function CategoryPage({
                 <Link
                   key={movie.id}
                   href={`/movies/${movie.slug}`}
-                  className="group block min-w-0"
+                  className="group media-tile block min-w-0"
                 >
-                  <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
+                  <div className="media-tile-frame relative overflow-hidden rounded-xl bg-[#2A2A2A]">
                     <img
                       src={`/images/movies/${movie.image}`}
                       alt={movie.title}
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
+                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
 
                     <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/20" />
                   </div>
@@ -142,14 +174,15 @@ export default async function CategoryPage({
                 <Link
                   key={item.id}
                   href={`/series/${item.slug}`}
-                  className="group block min-w-0"
+                  className="group media-tile block min-w-0"
                 >
-                  <div className="relative overflow-hidden rounded-xl bg-[#2A2A2A]">
+                  <div className="media-tile-frame relative overflow-hidden rounded-xl bg-[#2A2A2A]">
                     <img
                       src={`/images/series/${item.image}`}
                       alt={item.title}
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
+                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
 
                     <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/20" />
                   </div>
@@ -195,6 +228,8 @@ export default async function CategoryPage({
             </div>
           )}
       </div>
-    </main>
+      </main>
+      <SiteBottom />
+    </>
   );
 }

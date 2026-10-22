@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { getExplainerImage } from "../lib/explainers";
 
 interface HeroItem {
   id: string;
@@ -91,8 +92,6 @@ export default function Hero({ items }: HeroProps) {
   useEffect(() => {
     if (totalItems <= 1 || isPaused) return;
 
-    setProgress(0);
-
     const startTime = Date.now();
     const duration = 7000;
 
@@ -140,84 +139,39 @@ export default function Hero({ items }: HeroProps) {
     activeItem.type === "movie" ? "Movie" : "Series";
 
   const genres = activeItem.genres ?? [];
+  const getItemPath = (item: HeroItem) => item.type === "movie" ? `/images/movies/${item.image}` : `/images/series/${item.image}`;
+  const neighboringItems = [-2, -1, 0, 1, 2].map((offset) => ({ item: safeItems[(activeIndex + offset + totalItems) % totalItems], offset })).filter(({item}) => Boolean(item));
+  const activeGenre = genres[0];
 
   return (
     <section
-      className="relative overflow-hidden bg-[#0D1117]"
+      className="vod-hero relative overflow-hidden bg-[#090A0E]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       aria-label="Featured movies and series"
     >
-      {/* HERO */}
-      <div className="relative min-h-[600px] md:min-h-[650px]">
-        {/* RIGHT IMAGE — TOUCHES THE RIGHT EDGE */}
-        <div className="absolute inset-y-0 right-0 z-10 w-full md:w-[58%]">
-          <Link
-            href={itemUrl}
-            aria-label={`View ${activeItem.title}`}
-            className="absolute inset-0 block"
-          >
-            <img
-              key={activeItem.id}
-              src={imagePath}
-              alt={activeItem.title}
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
-              sizes="(max-width: 768px) 100vw, 58vw"
-              className={`h-full w-full object-contain object-right ${
-                isChanging
-                  ? "scale-[0.98] opacity-0"
-                  : "scale-100 opacity-100"
-              } transition-all duration-500 ease-out`}
-            />
-          </Link>
-        </div>
-
-        {/* LEFT SHADOW → SMOOTH TRANSPARENT → IMAGE */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-20 hidden w-[76%] bg-gradient-to-r from-[#0D1117] via-[#0D1117]/95 via-[30%] via-[#0D1117]/80 via-[44%] via-[#0D1117]/55 via-[57%] via-[#0D1117]/30 via-[68%] via-[#0D1117]/10 via-[78%] via-transparent via-[88%] to-transparent md:block" />
-
-        {/* MOBILE OVERLAY */}
-        <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-[#0D1117] via-[#0D1117]/55 to-transparent md:hidden" />
-
-        {/* LEFT CONTENT */}
-        <div className="relative z-30 mx-auto flex min-h-[600px] max-w-[1600px] items-center px-5 pb-28 pt-24 sm:px-8 md:min-h-[650px] md:px-10 lg:px-16">
-          <div
-            className={`max-w-xl transition-all duration-500 ${
-              isChanging
-                ? "-translate-x-5 opacity-0"
-                : "translate-x-0 opacity-100"
-            }`}
-          >
+      <div className="vod-hero-backdrop" aria-hidden="true"><img src={imagePath} alt="" /><div /></div>
+      <div className="vod-hero-inner">
+        <div className={`vod-hero-copy ${isChanging ? "vod-copy-changing" : ""}`}>
             {/* BADGES */}
             <div className="flex flex-wrap items-center gap-3">
-              <span className="rounded-md bg-[#2979FF] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-[#2979FF]/20">
-                {activeIndex === 0
-                  ? "NEW"
-                  : activeItem.type === "series"
-                    ? "TRENDING"
-                    : "FEATURED"}
+              <span className="rounded-md bg-[#E50914] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-[#E50914]/20">
+                FEATURED
               </span>
-
-              <span className="flex items-center gap-1 rounded-md bg-black/30 px-3 py-1 text-sm font-semibold text-white backdrop-blur-md">
-                <StarIcon />
-                {activeItem.rating}
-              </span>
-
-              <span className="rounded-md border border-white/15 bg-black/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/85 backdrop-blur-md">
-                {itemType}
-              </span>
+              {activeGenre && <span className="rounded-md border border-white/20 bg-black/30 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/90">{activeGenre}</span>}
+              {activeItem.rating && activeItem.rating !== "N/A" && <span className="flex items-center gap-1 rounded-md bg-black/30 px-3 py-1 text-sm font-semibold text-white backdrop-blur-md"><StarIcon />{activeItem.rating}</span>}
             </div>
 
             {/* TITLE */}
-            <h1 className="mt-5 max-w-2xl text-4xl font-black leading-[0.95] tracking-tight text-white drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mt-5 max-w-2xl text-[clamp(2.4rem,5vw,5rem)] font-black leading-[0.98] tracking-tight text-white drop-shadow-2xl">
               {activeItem.title}
             </h1>
 
             {/* EXPLAINER NAME */}
             {activeItem.explainer && (
-              <p className="mt-3 text-sm font-medium text-[#00E5FF] sm:text-base">
-                🎙 Explained by: {activeItem.explainer}
+              <p className="mt-3 flex items-center gap-2 text-sm font-medium text-white/85 sm:text-base">
+                <img src={getExplainerImage(activeItem.explainer) || "/favicon.svg"} alt="" className="h-8 w-8 rounded-full border border-white/20 object-cover" />
+                Explained by: {activeItem.explainer}
               </p>
             )}
 
@@ -265,7 +219,7 @@ export default function Hero({ items }: HeroProps) {
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href={itemUrl}
-                className="inline-flex items-center gap-2 rounded-lg bg-[#2979FF] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#2979FF]/20 transition hover:-translate-y-0.5 hover:bg-[#1E6BE8]"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#E50914] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#E50914]/20 transition hover:-translate-y-0.5 hover:bg-[#FF2633]"
               >
                 <PlayIcon />
                 Watch Now
@@ -288,7 +242,7 @@ export default function Hero({ items }: HeroProps) {
 
               <div className="h-[3px] flex-1 overflow-hidden rounded-full bg-white/15">
                 <div
-                  className="h-full rounded-full bg-[#2979FF] transition-[width] duration-75"
+                  className="h-full rounded-full bg-[#E50914] transition-[width] duration-75"
                   style={{
                     width: `${progress}%`,
                   }}
@@ -299,50 +253,21 @@ export default function Hero({ items }: HeroProps) {
                 Now Showing
               </span>
             </div>
-          </div>
         </div>
-
-        {/* BOTTOM FADE */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 h-32 bg-gradient-to-t from-[#0D1117]/90 via-[#0D1117]/30 to-transparent" />
-      </div>
-
-      {/* CENTERED THUMBNAILS */}
-      {totalItems > 1 && (
-        <div className="relative z-40 -mt-20 mb-6 flex justify-center">
-          <div className="flex items-end justify-center gap-3 overflow-x-auto px-4 pb-1">
-            {safeItems.map((item, index) => {
-              const thumbnailPath =
-                item.type === "movie"
-                  ? `/images/movies/${item.image}`
-                  : `/images/series/${item.image}`;
-
-              return (
-                <button
-                  key={`thumbnail-${item.type}-${item.id}-${index}`}
-                  type="button"
-                  onClick={() => changeSlide(index)}
-                  aria-label={`Show ${item.title}`}
-                  className={`group relative h-20 w-14 shrink-0 overflow-hidden rounded-md border transition-all duration-300 ${
-                    index === activeIndex
-                      ? "w-16 -translate-y-1 border-[#2979FF] shadow-lg shadow-[#2979FF]/30"
-                      : "border-white/15 opacity-60 hover:-translate-y-1 hover:opacity-100"
-                  }`}
-                >
-                  <img
-                    src={thumbnailPath}
-                    alt={item.title}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-full w-full object-cover"
-                  />
-
-                  <span className="absolute inset-0 bg-black/10 transition group-hover:bg-transparent" />
-                </button>
-              );
+        <div className="vod-carousel" aria-label="Featured title carousel">
+          <div className="vod-carousel-scene" onTouchStart={(event) => { (event.currentTarget as HTMLDivElement).dataset.touchStart = String(event.touches[0].clientX); }} onTouchEnd={(event) => { const start = Number((event.currentTarget as HTMLDivElement).dataset.touchStart); const delta = event.changedTouches[0].clientX - start; if (Math.abs(delta) > 45) changeSlide(activeIndex + (delta < 0 ? 1 : -1)); }}>
+            {neighboringItems.map(({item, offset}) => {
+              const index = safeItems.findIndex((candidate) => candidate.id === item.id && candidate.type === item.type);
+              return <button key={`${item.type}-${item.id}`} type="button" onClick={() => offset === 0 ? window.location.assign(item.type === "movie" ? `/movies/${item.slug}` : `/series/${item.slug}`) : changeSlide(index)} aria-label={offset === 0 ? `Open ${item.title}` : `Show ${item.title}`} aria-current={offset === 0 ? "true" : undefined} className={`vod-poster vod-poster-${offset < 0 ? `m${Math.abs(offset)}` : offset === 0 ? "active" : `p${offset}`}`}>
+                <img src={getItemPath(item)} alt={item.title} loading={offset === 0 ? "eager" : "lazy"} />
+                <span className="vod-poster-shade" />
+                {offset === 0 && <span className="vod-poster-selected">Now featuring</span>}
+              </button>;
             })}
           </div>
+          <div className="vod-carousel-controls"><button type="button" onClick={() => changeSlide(activeIndex - 1)} aria-label="Previous featured title">‹</button><span>{String(activeIndex + 1).padStart(2, "0")} / {String(totalItems).padStart(2, "0")}</span><button type="button" onClick={() => changeSlide(activeIndex + 1)} aria-label="Next featured title">›</button></div>
         </div>
-      )}
+      </div>
 
       {/* DOTS */}
       {totalItems > 1 && (
@@ -355,7 +280,7 @@ export default function Hero({ items }: HeroProps) {
               aria-label={`Go to slide ${index + 1}`}
               className={`h-1.5 rounded-full transition-all duration-300 ${
                 index === activeIndex
-                  ? "w-7 bg-[#2979FF]"
+                  ? "w-7 bg-[#E50914]"
                   : "w-1.5 bg-white/35 hover:bg-white/70"
               }`}
             />
@@ -363,8 +288,7 @@ export default function Hero({ items }: HeroProps) {
         </div>
       )}
 
-      {/* BLUE ACCENT */}
-      <div className="h-1 w-full bg-gradient-to-r from-[#2979FF] via-[#00E5FF] to-transparent opacity-70" />
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#E50914]/50 to-transparent" />
     </section>
   );
 }

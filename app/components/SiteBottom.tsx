@@ -1,190 +1,144 @@
 import Link from "next/link";
 import { FiMail, FiPhone } from "react-icons/fi";
-import {
-  SiInstagram,
-  SiTiktok,
-  SiWhatsapp,
-} from "react-icons/si";
+import { SiInstagram, SiTiktok, SiWhatsapp } from "react-icons/si";
+import OshakurLogo from "./OshakurLogo";
+
+const socialButtonClass =
+  "inline-flex min-h-11 items-center gap-2.5 rounded-[9px] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B1320]";
 
 export default function SiteBottom() {
   return (
-    <footer className="border-t border-white/10 bg-[#0D0D0D] px-6 py-12 lg:px-10">
-      <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-4">
-        {/* Brand */}
-        <div className="sm:col-span-2 lg:col-span-1">
-          <Link href="/" className="inline-block">
-            <div className="flex items-center gap-3">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-[#1B1B1B]">
-                <span className="text-xl font-black text-white">
-                  OM8
-                </span>
-              </div>
+    <footer className="border-t border-white/10 bg-[#0B1320] px-4 py-12 pb-28 sm:px-6 lg:px-10">
+      <div className="mx-auto flex max-w-6xl flex-col items-center text-center">
+        <Link
+          href="/"
+          aria-label="OSHAKUR MOVIES home"
+          className="group inline-flex items-center gap-3 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00E5FF]"
+        >
+          <OshakurLogo className="size-11 shrink-0 transition group-hover:scale-105" />
+          <span className="text-xl font-extrabold tracking-[0.04em] text-white sm:text-2xl">
+            OSHAKUR <span className="text-[#00D8EF]">MOVIES</span>
+          </span>
+        </Link>
 
-              <div>
-                <h2 className="text-2xl font-extrabold tracking-wide text-white">
-                  Oshakuru Movies
-                </h2>
+        <p className="mt-4 max-w-2xl text-sm leading-6 text-[#AAB5C4]">
+          Reba Agasobanuye aho waba uri hose kubuntu. Abasobanuzi, Rocky
+          Kimomo, Junior Giti, Sankara, Savimbi, PK, Gaheza n&apos;abandi.
+        </p>
 
-                <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#00E5FF]">
-                  Oshakuru Movies
-                </p>
-              </div>
-            </div>
+        <nav
+          aria-label="Footer navigation"
+          className="mt-8 flex max-w-4xl flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-medium"
+        >
+          <Link
+            href="/about-us"
+            className="text-[#B8C2CE] transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00E5FF]"
+          >
+            About Us
           </Link>
+          <a
+            href="mailto:oshakurmovies@gmail.com"
+            className="text-[#B8C2CE] transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00E5FF]"
+          >
+            Contact Us
+          </a>
+          <Link
+            href="/privacy"
+            className="font-semibold text-white underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00E5FF]"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            href="/terms"
+            className="text-[#B8C2CE] transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00E5FF]"
+          >
+            Terms
+          </Link>
+        </nav>
 
-          <p className="mt-5 max-w-sm text-sm leading-7 text-[#AAAAAA]">
-            Reba Agasobanuye aho waba uri hose kubuntu. Abasobanuzi,
-            Rocky Kimomo, Junior Giti, Sankara, Savimbi, PK, Gaheza
-            n&apos;abandi.
-          </p>
-        </div>
-
-        {/* Quick Links */}
-        <div>
-          <h3 className="relative inline-block pb-2 font-semibold text-white">
-            Quick Links
-            <span className="absolute bottom-0 left-0 h-[2px] w-8 bg-[#E50914]" />
-          </h3>
-
-          <nav className="mt-5 flex flex-col gap-3 text-sm text-[#AAAAAA]">
-            <Link href="/about-us" className="transition hover:text-white">
-              About Us
-            </Link>
-
-            <Link href="/privacy" className="transition hover:text-white">
-              Privacy Policy
-            </Link>
-
-            <Link href="/terms" className="transition hover:text-white">
-              Terms &amp; Conditions
-            </Link>
-          </nav>
-        </div>
-
-        {/* Follow Us */}
-        <div>
-          <h3 className="relative inline-block pb-2 font-semibold text-white">
+        <section aria-labelledby="footer-follow-heading" className="mt-9 w-full">
+          <h2
+            id="footer-follow-heading"
+            className="text-base font-bold tracking-wide text-white"
+          >
             Follow Us
-            <span className="absolute bottom-0 left-0 h-[2px] w-8 bg-[#E50914]" />
-          </h3>
+          </h2>
 
-          <div className="mt-5 flex flex-col gap-4">
-            {/* TikTok */}
-            <a
-              href="https://www.tiktok.com/@oshakurmovies23"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Oshakur Movies on TikTok"
-              className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-white/30 hover:bg-white/[0.07]"
-            >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-black shadow-lg transition group-hover:scale-110">
-                <SiTiktok size={30} color="#000000" aria-hidden="true" />
-              </span>
-              <span className="text-base font-semibold">TikTok</span>
-              <span className="ml-auto text-xl text-white/50">↗</span>
-            </a>
-
-            {/* Instagram */}
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Oshakur Movies on Instagram"
-              className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#E1306C]/50 hover:bg-[#E1306C]/10"
-            >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#FEDA75] via-[#E1306C] to-[#833AB4] shadow-lg transition group-hover:scale-110">
-                <SiInstagram size={30} color="#FFFFFF" aria-hidden="true" />
-              </span>
-              <span className="text-base font-semibold">Instagram</span>
-              <span className="ml-auto text-xl text-white/50">↗</span>
-            </a>
-
-            {/* WhatsApp Group */}
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
             <a
               href="https://chat.whatsapp.com/J3WZy8GpRpT61LhbugxQBL?s=cl&p=a&mlu=4&ilr=4"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Join Oshakur Movies WhatsApp Group"
-              className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#25D366]/50 hover:bg-[#25D366]/10"
+              aria-label="Join OSHAKUR MOVIES on WhatsApp"
+              className={`${socialButtonClass} bg-[#168B4E] hover:bg-[#1BA85D]`}
             >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#25D366] shadow-lg transition group-hover:scale-110">
-                <SiWhatsapp size={30} color="#FFFFFF" aria-hidden="true" />
-              </span>
-              <span className="text-base font-semibold">WhatsApp Group</span>
-              <span className="ml-auto text-xl text-white/50">↗</span>
+              <SiWhatsapp size={19} aria-hidden="true" />
+              WhatsApp
             </a>
-
-            {/* WhatsApp Channel */}
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="OSHAKUR MOVIES on Instagram"
+              className={`${socialButtonClass} bg-gradient-to-r from-[#9B2A78] via-[#D43569] to-[#E96B45] hover:brightness-110`}
+            >
+              <SiInstagram size={19} aria-hidden="true" />
+              Instagram
+            </a>
+            <a
+              href="https://www.tiktok.com/@oshakurmovies23"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="OSHAKUR MOVIES on TikTok"
+              className={`${socialButtonClass} border border-white/20 bg-[#10141B] hover:border-white/50 hover:bg-[#171D27]`}
+            >
+              <SiTiktok size={18} aria-hidden="true" />
+              TikTok
+            </a>
             <a
               href="https://whatsapp.com/channel/0029Vb9FAiT6hENkuTGlcy1W"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Follow Oshakur Movies WhatsApp Channel"
-              className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#25D366]/50 hover:bg-[#25D366]/10"
+              aria-label="Follow OSHAKUR MOVIES WhatsApp Channel"
+              className={`${socialButtonClass} bg-[#168B4E] hover:bg-[#1BA85D]`}
             >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#25D366] shadow-lg transition group-hover:scale-110">
-                <SiWhatsapp size={30} color="#FFFFFF" aria-hidden="true" />
-              </span>
-              <span className="text-base font-semibold">WhatsApp Channel</span>
-              <span className="ml-auto text-xl text-white/50">↗</span>
+              <SiWhatsapp size={19} aria-hidden="true" />
+              WhatsApp Channel
             </a>
           </div>
-        </div>
+        </section>
 
-        {/* Contact */}
-        <div>
-          <h3 className="relative inline-block pb-2 font-semibold text-white">
-            Contact
-            <span className="absolute bottom-0 left-0 h-[2px] w-8 bg-[#E50914]" />
-          </h3>
-
-          <div className="mt-5 flex flex-col gap-4">
-            {/* Phone */}
-            <a
-              href="tel:+250789063094"
-              className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#00E5FF]/50 hover:bg-[#00E5FF]/10"
-            >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#00B8D4] transition group-hover:scale-110">
-                <FiPhone size={30} color="#FFFFFF" aria-hidden="true" />
-              </span>
-              <span className="text-base font-semibold">+250 789063094</span>
-            </a>
-
-            {/* WhatsApp Contact */}
-            <a
-              href="https://wa.me/250789063094"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Contact Oshakur Movies on WhatsApp"
-              className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#25D366]/50 hover:bg-[#25D366]/10"
-            >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#25D366] transition group-hover:scale-110">
-                <SiWhatsapp size={30} color="#FFFFFF" aria-hidden="true" />
-              </span>
-              <span className="text-base font-semibold">WhatsApp</span>
-            </a>
-
-            {/* Email */}
-            <a
-              href="mailto:oshakurmovies@gmail.com"
-              className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-white transition hover:border-[#E040FB]/50 hover:bg-[#E040FB]/10"
-            >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#E040FB] transition group-hover:scale-110">
-                <FiMail size={30} color="#FFFFFF" aria-hidden="true" />
-              </span>
-              <span className="break-all text-base font-semibold">
-                oshakurmovies@gmail.com
-              </span>
-            </a>
-          </div>
-        </div>
+        <address className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm not-italic text-[#AAB5C4]">
+          <a
+            href="tel:+250789063094"
+            className="inline-flex items-center gap-2 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00E5FF]"
+          >
+            <FiPhone aria-hidden="true" />
+            +250 789063094
+          </a>
+          <a
+            href="https://wa.me/250789063094"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00E5FF]"
+          >
+            <SiWhatsapp aria-hidden="true" />
+            WhatsApp Contact
+          </a>
+          <a
+            href="mailto:oshakurmovies@gmail.com"
+            className="inline-flex items-center gap-2 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00E5FF]"
+          >
+            <FiMail aria-hidden="true" />
+            oshakurmovies@gmail.com
+          </a>
+        </address>
       </div>
 
-      {/* Copyright */}
-      <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-center">
-        <p className="text-xs text-[#666666]">
-          Copyright © {new Date().getFullYear()} Oshakuru Movies. All
-          Rights Reserved.
+      <div className="mx-auto mt-9 max-w-6xl border-t border-white/10 pt-5 text-center">
+        <p className="text-xs tracking-wide text-[#8290A1]">
+          Good night! © {new Date().getFullYear()} OSHAKUR MOVIES. All rights
+          reserved.
         </p>
       </div>
     </footer>
