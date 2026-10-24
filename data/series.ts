@@ -73,7 +73,7 @@ export const series: Series[] = [
     description:
       "A historical drama following Jumong's journey, struggles, relationships, and rise during a time of conflict and political change.",
     language: "Korean",
-    explainer: "",
+    explainer: "Master p",
     genres: ["Drama", "Historical", "Action"],
     isFeatured: false,
     createdAt: "2026-09-28",
@@ -293,7 +293,7 @@ export const series: Series[] = [
     slug: "vis-a-vis",
     year: "2019",
     rating: "8.0",
-    image: "vis-a-vis.jpg",
+    image: "vis-a-vis4.jpg",
     description:
       "A Spanish prison drama following women dealing with dangerous conflicts, alliances, survival, revenge, and unexpected events inside and outside prison.",
     language: "Spanish",
@@ -1036,7 +1036,7 @@ createdAt: "2026-10-09",
   year: "Unknown",
   rating: "N/A",
   image: "nathaniel.jpg",
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-24",
   description:
     "NATHANIEL is a series presented in Agasobanuye by ROCK KIMOMO, with nineteen episodes provided.",
@@ -1044,6 +1044,102 @@ createdAt: "2026-10-09",
   genres: ["Drama", "Thriller"],
   explainer: "ROCK KIMOMO",
 },
+{
+  id: "68",
+  title: "LUPIN",
+  slug: "lupin",
+  year: "2026",
+  rating: "N/A",
+  image: "lupin.jpg",
+  isFeatured: true,
+  createdAt: "2026-10-24",
+  description:
+    "LUPIN Season 4, Episode 1, presented in Agasobanuye by ROCK KIMOMO.",
+  language: "Hindi",
+  genres: ["Crime", "Drama", "Mystery", "Thriller"],
+  explainer: "ROCK KIMOMO",
+},
+{
+  id: "69",
+  title: "VIS A VIS SEASON 3",
+  slug: "vis-a-vis-season-3",
+  year: "2018",
+  rating: "N/A",
+  image: "vis-a-vis3.jpg",
+  isFeatured: true,
+  createdAt: "2026-10-24",
+  description:
+    "VIS A VIS Season 3, presented in Agasobanuye by ROCK KIMOMO, featuring eight episodes.",
+  language: "Spanish",
+  genres: ["Crime", "Drama", "Thriller"],
+  explainer: "ROCK KIMOMO",
+},
+
+{
+  id: "70",
+  title: "VIS A VIS SEASON 2",
+  slug: "vis-a-vis-season-2",
+  year: "2016",
+  rating: "N/A",
+  image: "vis-a-vis2.jpg",
+  isFeatured: true,
+  createdAt: "2026-10-24",
+  description:
+    "VIS A VIS Season 2, presented in Agasobanuye by ROCK KIMOMO, featuring episodes 1–13, including the split episodes 7A and 7B.",
+  language: "Spanish",
+  genres: ["Crime", "Drama", "Thriller"],
+  explainer: "ROCK KIMOMO",
+},
+
+{
+  id: "71",
+  title: "VIS A VIS SEASON 1",
+  slug: "vis-a-vis-season-1",
+  year: "2015",
+  rating: "N/A",
+  image: "vis-a-vis.jpg",
+  isFeatured: true,
+  createdAt: "2026-10-24",
+  description:
+    "VIS A VIS Season 1, presented in Agasobanuye by ROCK KIMOMO, featuring episodes 1–16.",
+  language: "Spanish",
+  genres: ["Crime", "Drama", "Thriller"],
+  explainer: "ROCK KIMOMO",
+},
+
+{
+  id: "72",
+  title: "SIX SEASON 1",
+  slug: "six-season-1",
+  year: "2017",
+  rating: "N/A",
+  image: "six.jpg",
+  isFeatured: true,
+  createdAt: "2026-10-24",
+  description:
+    "SIX Season 1, an action-packed military drama presented in Agasobanuye by Junior, featuring 8 episodes.",
+  language: "English",
+  genres: ["Action", "Drama", "War"],
+  explainer: "Junior",
+},
+
+{
+  id: "73",
+  title: "PINOCCHIO",
+  slug: "pinocchio",
+  year: "2014",
+  rating: "N/A",
+  image: "pinocchio.jpg",
+  isFeatured: true,
+  createdAt: "2026-10-24",
+  description:
+    "Pinocchio, a Korean drama presented in Agasobanuye by Junior, featuring 20 episodes.",
+  language: "Korean",
+  genres: ["Drama", "Romance"],
+  explainer: "ROCK KIMOMO",
+},
+
+
 
 
 ];

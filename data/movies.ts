@@ -6377,8 +6377,31 @@ export const movies: Movie[] = [
     },
   ],
 },
-
-
+{
+  id: "241",
+  title: "ANDHADHUN",
+  slug: "andhadhun",
+  explainer: "ROCK KIMOMO",
+  year: "2018",
+  rating: "",
+  image: "andhadhun.jpg",
+  description: "Andhadhun is presented in an Agasobanuye version by ROCK KIMOMO.",
+  language: "Hindi",
+  genres: ["Crime", "Thriller", "Mystery"],
+  isFeatured: true,
+  createdAt: "2026-10-24",
+  parts: [
+    {
+      id: "241-1",
+      partNumber: 1,
+      title: "ANDHADHUN - Part A",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file/tclzzfqgfrs054n/LUPIN+S04+EP01__.mp4/file",
+    },
+   
+  ],
+},
+  
 ];
 
 
