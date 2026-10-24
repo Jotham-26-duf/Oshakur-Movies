@@ -5480,7 +5480,7 @@ export const movies: Movie[] = [
   explainer: "Yanga",
   year: "1984",
   rating: "",
-  image: "wheels-on-meals.jpg",
+  image: "heels-on-meals.jpg",
   description: "Wheels on Meals is an action-comedy movie presented in an Agasobanuye version by Yanga.",
   language: "English",
   genres: ["Action", "Comedy"],

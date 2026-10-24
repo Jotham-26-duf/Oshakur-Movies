@@ -1195,7 +1195,7 @@ export const episodes: Episode[] = [
   },
     {
     id: "108",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 1,
     title: "Episode 1",
     description:
@@ -1206,7 +1206,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "109",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 2,
     title: "Episode 2",
     description:
@@ -1217,7 +1217,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "110",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 3,
     title: "Episode 3",
     description:
@@ -1228,7 +1228,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "111",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 4,
     title: "Episode 4",
     description:
@@ -1239,7 +1239,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "112",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 5,
     title: "Episode 5",
     description:
@@ -1250,7 +1250,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "113",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 6,
     title: "Episode 6",
     description:
@@ -1261,7 +1261,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "114",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 7,
     title: "Episode 7",
     description:
@@ -1272,7 +1272,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "115",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 8,
     title: "Episode 8",
     description:
@@ -1283,7 +1283,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "116",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 9,
     title: "Episode 9",
     description:
@@ -1294,7 +1294,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "117",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 10,
     title: "Episode 10",
     description:
@@ -1305,7 +1305,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "118",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 11,
     title: "Episode 11",
     description:
@@ -1316,7 +1316,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "119",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 12,
     title: "Episode 12",
     description:
@@ -1327,7 +1327,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "120",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 13,
     title: "Episode 13",
     description:
@@ -1338,7 +1338,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "121",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 14,
     title: "Episode 14",
     description:
@@ -1349,7 +1349,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "122",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 15,
     title: "Episode 15",
     description:
@@ -1360,7 +1360,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "123",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 16,
     title: "Episode 16",
     description:
@@ -1371,7 +1371,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "124",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 17,
     title: "Episode 17",
     description:
@@ -1382,7 +1382,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "125",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 18,
     title: "Episode 18",
     description:
@@ -1393,7 +1393,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "126",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 19,
     title: "Episode 19",
     description:
@@ -1404,7 +1404,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "127",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 20,
     title: "Episode 20",
     description:
@@ -1415,7 +1415,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "128",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 21,
     title: "Episode 21",
     description:
@@ -1426,7 +1426,7 @@ export const episodes: Episode[] = [
   },
   {
     id: "129",
-    seriesSlug: "the-vampire-diaries",
+    seriesSlug: "the-vampire-diaries-season-1",
     episodeNumber: 22,
     title: "Episode 22 - Finale",
     description:
@@ -3711,7 +3711,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 // TRUE STORY — Explainer: Rock Kimomo
 {
   id: "365",
-  seriesSlug: "true-story",
+  seriesSlug: "false -story",
   episodeNumber: 1,
   title: "Episode 1",
   description: "True Story, Episode 1.",
@@ -3720,7 +3720,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "366",
-  seriesSlug: "true-story",
+  seriesSlug: "false -story",
   episodeNumber: 2,
   title: "Episode 2",
   description: "True Story, Episode 2.",
@@ -3729,7 +3729,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "367",
-  seriesSlug: "true-story",
+  seriesSlug: "false -story",
   episodeNumber: 3,
   title: "Episode 3",
   description: "True Story, Episode 3.",
@@ -3738,7 +3738,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "368",
-  seriesSlug: "true-story",
+  seriesSlug: "false -story",
   episodeNumber: 4,
   title: "Episode 4",
   description: "True Story, Episode 4.",
@@ -3747,7 +3747,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "369",
-  seriesSlug: "true-story",
+  seriesSlug: "false -story",
   episodeNumber: 5,
   title: "Episode 5",
   description: "True Story, Episode 5.",
@@ -3756,7 +3756,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "370",
-  seriesSlug: "true-story",
+  seriesSlug: "false -story",
   episodeNumber: 6,
   title: "Episode 6",
   description: "True Story, Episode 6.",
@@ -3765,7 +3765,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "371",
-  seriesSlug: "true-story",
+  seriesSlug: "false -story",
   episodeNumber: 7,
   title: "Episode 7 - Finale",
   description: "True Story, Episode 7 - Finale.",
