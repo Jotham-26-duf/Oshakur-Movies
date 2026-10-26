@@ -6252,7 +6252,7 @@ export const movies: Movie[] = [
   description: "Duplicity is presented in an Agasobanuye version by Dylan.",
   language: "English",
   genres: ["Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-23",
   parts: [
     {
@@ -6328,7 +6328,7 @@ export const movies: Movie[] = [
   description: "Acrimony is presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Drama", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-24",
   parts: [
     {
@@ -6358,7 +6358,7 @@ export const movies: Movie[] = [
   description: "Andhadhun is presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "Hindi",
   genres: ["Crime", "Thriller", "Mystery"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-24",
   parts: [
     {
@@ -6388,7 +6388,7 @@ export const movies: Movie[] = [
   description: "Unthinkable is presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Thriller", "Drama"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6411,7 +6411,7 @@ export const movies: Movie[] = [
   description: "Novocaine is presented in an Agasobanuye version by GENIUS.",
   language: "English",
   genres: ["Action", "Comedy", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6464,7 +6464,7 @@ export const movies: Movie[] = [
   description: "Indemnity is presented in an Agasobanuye version by JUNIOR GITI.",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6605,9 +6605,143 @@ export const movies: Movie[] = [
     },
   ],
 },
+{
+  id: "251",
+  title: "100 YARDS",
+  slug: "100-yards",
+  explainer: "HAKIM",
+  year: "2024",
+  rating: "",
+  image: "100-yards.jpg",
+  description: "100 Yards (2024) is presented in an Agasobanuye version by HAKIM.",
+  language: "Chinese",
+  genres: ["Action", "Drama"],
+  isFeatured: true,
+  createdAt: "2026-10-26",
+  parts: [
+    {
+      id: "251-1",
+      partNumber: 1,
+      title: "100 YARDS - Part A",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file/lapa6kezd5a30dj/100.Yards_2024_A.mp4/file",
+    },
+    {
+      id: "251-2",
+      partNumber: 2,
+      title: "100 YARDS - Part B",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file/eo0b2e2akpz91p0/100.Yards_2024_B.mp4/file",
+    },
+    {
+      id: "251-3",
+      partNumber: 3,
+      title: "100 YARDS - Part C",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file/42oglynfvxp5e0s/100.Yards_2024_C.mp4/file",
+    },
+  ],
+},
+{
+  id: "252",
+  title: "GIRL'S VENGEANCE",
+  slug: "girls-vengeance",
+  explainer: "B THE GREAT",
+  year: "",
+  rating: "",
+  image: "girls-vengeance.jpg",
+  description: "Girl's Vengeance is presented in an Agasobanuye version by B THE GREAT.",
+  language: "",
+  genres: ["Action", "Drama", "Thriller"],
+  isFeatured: true,
+  createdAt: "2026-10-26",
+  parts: [
+    {
+      id: "252-1",
+      partNumber: 1,
+      title: "GIRL'S VENGEANCE",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file_premium/e49awfnx2f357u5/GIRL%27S_VENGEANCE.avi/file",
+    },
+  ],
+},
+{
+  id: "253",
+  title: "THE HUSTLE",
+  slug: "the-hustle",
+  explainer: "ROCK KIMOMO",
+  year: "",
+  rating: "",
+  image: "the-hustle.jpg",
+  description: "The Hustle is presented in an Agasobanuye version by ROCK KIMOMO.",
+  language: "English",
+  genres: ["Comedy", "Crime"],
+  isFeatured: true,
+  createdAt: "2026-10-26",
+  parts: [
+    {
+      id: "253-1",
+      partNumber: 1,
+      title: "THE HUSTLE",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file/c289pn0tj1i2gr5/THE_HUSTLE.mp4/file",
+    },
+  ],
+},
+{
+  id: "254",
+  title: "G.I. JOE: RETALIATION",
+  slug: "gi-joe-retaliation",
+  explainer: "SANKARA",
+  year: "2013",
+  rating: "",
+  image: "gi-joe-retaliation.jpg",
+  description: "G.I. Joe: Retaliation is presented in an Agasobanuye version by SANKARA.",
+  language: "English",
+  genres: ["Action", "Adventure", "Science Fiction"],
+  isFeatured: true,
+  createdAt: "2026-10-26",
+  parts: [
+    {
+      id: "254-1",
+      partNumber: 1,
+      title: "G.I. JOE: RETALIATION",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file/l2s2psk5jtajps0/G_I_Joe_Retaliation_SANKAR.mp4/file",
+    },
+  ],
+},
+{
+  id: "255",
+  title: "WORLD WAR Z",
+  slug: "world-war-z",
+  explainer: "GAHEZA",
+  year: "2013",
+  rating: "",
+  image: "world-war-z.jpg",
+  description: "World War Z is presented in an Agasobanuye version by GAHEZA.",
+  language: "English",
+  genres: ["Action", "Horror", "Science Fiction"],
+  isFeatured: true,
+  createdAt: "2026-10-26",
+  parts: [
+    {
+      id: "255-1",
+      partNumber: 1,
+      title: "WORLD WAR Z - Part A",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file/5zx3wql5bxd0v0u/WORLD_WAR_Z_A.avi/file",
+    },
+    {
+      id: "255-2",
+      partNumber: 2,
+      title: "WORLD WAR Z - Part B",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file/x68mw8a12umgmw0/WORLD_WAR_Z_B.avi/file",
+    },
+  ],
+},
 
-
-];
-
+]
 
 
