@@ -21,6 +21,17 @@ interface SearchPageProps {
   }>;
 }
 
+type SearchableCatalogItem = {
+  title: string;
+  slug: string;
+  year?: string;
+  rating?: string;
+  description?: string;
+  language?: string;
+  explainer?: string;
+  isFeatured?: boolean;
+};
+
 // Normalize spaces, capitalization, and punctuation.
 function normalizeText(value: unknown): string {
   return String(value ?? "")
@@ -33,13 +44,33 @@ function normalizeText(value: unknown): string {
     .trim();
 }
 
-// Match every search word, even if the words are entered
-// with extra spaces or in a different order.
-function matchesSearch(searchableText: string, query: string): boolean {
-  const text = normalizeText(searchableText);
-  const words = normalizeText(query).split(" ").filter(Boolean);
+function buildSearchIndex<T extends SearchableCatalogItem>(items: T[]) {
+  return items.map((item) => ({
+    item,
+    text: normalizeText(
+      [
+        item.title,
+        item.slug,
+        item.year,
+        item.rating,
+        item.description,
+        item.language,
+        item.explainer,
+        item.isFeatured ? "featured" : "",
+      ].join(" "),
+    ),
+  }));
+}
 
-  return words.every((word) => text.includes(word));
+// Catalog data is static; normalize its searchable fields once per Worker
+// isolate rather than rebuilding the same strings for every request.
+const movieSearchIndex = buildSearchIndex(movies);
+const seriesSearchIndex = buildSearchIndex(series);
+
+function findMatches<T>(index: { item: T; text: string }[], words: string[]): T[] {
+  return index
+    .filter(({ text }) => words.every((word) => text.includes(word)))
+    .map(({ item }) => item);
 }
 
 export default async function SearchPage({
@@ -47,40 +78,10 @@ export default async function SearchPage({
 }: SearchPageProps) {
   const params = await searchParams;
   const query = String(params.q ?? "").replace(/\s+/g, " ").trim();
+  const searchWords = normalizeText(query).split(" ").filter(Boolean);
 
-  const movieResults = query
-    ? movies.filter((movie) => {
-        const searchableText = [
-          movie.title,
-          movie.slug,
-          movie.year,
-          movie.rating,
-          movie.description,
-          movie.language,
-          movie.explainer,
-          movie.isFeatured ? "featured" : "",
-        ].join(" ");
-
-        return matchesSearch(searchableText, query);
-      })
-    : [];
-
-  const seriesResults = query
-    ? series.filter((item) => {
-        const searchableText = [
-          item.title,
-          item.slug,
-          item.year,
-          item.rating,
-          item.description,
-          item.language,
-          item.explainer,
-          item.isFeatured ? "featured" : "",
-        ].join(" ");
-
-        return matchesSearch(searchableText, query);
-      })
-    : [];
+  const movieResults = query ? findMatches(movieSearchIndex, searchWords) : [];
+  const seriesResults = query ? findMatches(seriesSearchIndex, searchWords) : [];
 
   const totalResults = movieResults.length + seriesResults.length;
 

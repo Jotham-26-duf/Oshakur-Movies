@@ -1351,4 +1351,19 @@ createdAt: "2026-10-09",
   explainer: "ROCK KIMOMO",
 },
 
+{
+  id: "88",
+  title: "HIERARCHY",
+  slug: "hierarchy",
+  year: "2025",
+  rating: "N/A",
+  image: "hierarchy.jpg",
+  isFeatured: true,
+  createdAt: "2026-10-26",
+  description: "Hierarchy is a Korean drama series presented in Agasobanuye.",
+  language: "Korean",
+  genres: ["Drama", "Romance", "Mystery"],
+  explainer: "ROCK KIMOMO",
+},
+
 ];
