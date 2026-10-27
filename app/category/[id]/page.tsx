@@ -54,7 +54,8 @@ export async function generateMetadata({
 
   if (!category) return {};
 
-  const title = `${category.name} Movies & Series | OSHAKUR MOVIES`;
+  const title = `${category.name} Movies & Series`;
+  const openGraphTitle = `${title} | OSHAKUR MOVIES`;
   const description = `Explore ${category.name.toLowerCase()} movies and series on OSHAKUR MOVIES.`;
 
   return {
@@ -65,7 +66,7 @@ export async function generateMetadata({
     },
     openGraph: createOpenGraphMetadata(
       `/category/${category.id}`,
-      title,
+      openGraphTitle,
       description,
     ),
   };

@@ -3711,7 +3711,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 // TRUE STORY — Explainer: Rock Kimomo
 {
   id: "365",
-  seriesSlug: "false -story",
+  seriesSlug: "true-story",
   episodeNumber: 1,
   title: "Episode 1",
   description: "True Story, Episode 1.",
@@ -3720,7 +3720,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "366",
-  seriesSlug: "false -story",
+  seriesSlug: "true-story",
   episodeNumber: 2,
   title: "Episode 2",
   description: "True Story, Episode 2.",
@@ -3729,7 +3729,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "367",
-  seriesSlug: "false -story",
+  seriesSlug: "true-story",
   episodeNumber: 3,
   title: "Episode 3",
   description: "True Story, Episode 3.",
@@ -3738,7 +3738,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "368",
-  seriesSlug: "false -story",
+  seriesSlug: "true-story",
   episodeNumber: 4,
   title: "Episode 4",
   description: "True Story, Episode 4.",
@@ -3747,7 +3747,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "369",
-  seriesSlug: "false -story",
+  seriesSlug: "true-story",
   episodeNumber: 5,
   title: "Episode 5",
   description: "True Story, Episode 5.",
@@ -3756,7 +3756,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "370",
-  seriesSlug: "false -story",
+  seriesSlug: "true-story",
   episodeNumber: 6,
   title: "Episode 6",
   description: "True Story, Episode 6.",
@@ -3765,7 +3765,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 },
 {
   id: "371",
-  seriesSlug: "false -story",
+  seriesSlug: "true-story",
   episodeNumber: 7,
   title: "Episode 7 - Finale",
   description: "True Story, Episode 7 - Finale.",
@@ -4822,98 +4822,6 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
   downloadUrl: "https://www.mediafire.com/file/yby9nj2xv0poz2y/FAKE_PROFILE_S02EP10_FINAL.mp4/file",
 },
 
-{
-  id: "488",
-  seriesSlug: "the-oval",
-  episodeNumber: 1,
-  title: "Episode 1",
-  description: "THE OVAL, Episode 1.",
-  streamUrl: "https://www.mediafire.com/file/uht09i25t7xdc5g/THE_OVAL_EP_01.mp4/file",
-  downloadUrl: "https://www.mediafire.com/file/uht09i25t7xdc5g/THE_OVAL_EP_01.mp4/file",
-},
-{
-  id: "489",
-  seriesSlug: "the-oval",
-  episodeNumber: 2,
-  title: "Episode 2",
-  description: "THE OVAL, Episode 2.",
-  streamUrl: "https://www.mediafire.com/file/l2g529htnzpkvny/THE_OVAL_EP_02.mp4/file",
-  downloadUrl: "https://www.mediafire.com/file/l2g529htnzpkvny/THE_OVAL_EP_02.mp4/file",
-},
-{
-  id: "490",
-  seriesSlug: "the-oval",
-  episodeNumber: 3,
-  title: "Episode 3",
-  description: "THE OVAL, Episode 3.",
-  streamUrl: "https://www.mediafire.com/file/25e4qlrq7u4mzfv/THE_OVAL_EP_03.mp4/file",
-  downloadUrl: "https://www.mediafire.com/file/25e4qlrq7u4mzfv/THE_OVAL_EP_03.mp4/file",
-},
-{
-  id: "491",
-  seriesSlug: "the-oval",
-  episodeNumber: 4,
-  title: "Episode 4",
-  description: "THE OVAL, Episode 4.",
-  streamUrl: "https://www.mediafire.com/file/k0rnyc419bo1zhd/THE_OVAL_EP_04.mp4/file",
-  downloadUrl: "https://www.mediafire.com/file/k0rnyc419bo1zhd/THE_OVAL_EP_04.mp4/file",
-},
-{
-  id: "492",
-  seriesSlug: "the-oval",
-  episodeNumber: 5,
-  title: "Episode 5",
-  description: "THE OVAL, Episode 5.",
-  streamUrl: "https://www.mediafire.com/file/ndzvrob9sjqpbyh/THE_OVAL_EP_05.mp4/file",
-  downloadUrl: "https://www.mediafire.com/file/ndzvrob9sjqpbyh/THE_OVAL_EP_05.mp4/file",
-},
-{
-  id: "493",
-  seriesSlug: "the-oval",
-  episodeNumber: 6,
-  title: "Episode 6",
-  description: "THE OVAL, Episode 6.",
-  streamUrl: "https://www.mediafire.com/file/5877uz3w2q6um81/THE_OVAL_EP_06.mp4/file",
-  downloadUrl: "https://www.mediafire.com/file/5877uz3w2q6um81/THE_OVAL_EP_06.mp4/file",
-},
-{
-  id: "494",
-  seriesSlug: "the-oval",
-  episodeNumber: 7,
-  title: "Episode 7",
-  description: "THE OVAL, Episode 7.",
-  streamUrl: "https://www.mediafire.com/file/9f6tmnuf3m2jsjn/THE_OVAL_EP_07.mp4/file",
-  downloadUrl: "https://www.mediafire.com/file/9f6tmnuf3m2jsjn/THE_OVAL_EP_07.mp4/file",
-},
-{
-  id: "495",
-  seriesSlug: "the-oval",
-  episodeNumber: 8,
-  title: "Episode 8",
-  description: "THE OVAL, Episode 8.",
-  streamUrl: "https://www.mediafire.com/file/gnb4y4vh9ms2deu/THE_OVAL_EP_08.mp4/file",
-  downloadUrl: "https://www.mediafire.com/file/gnb4y4vh9ms2deu/THE_OVAL_EP_08.mp4/file",
-},
-{
-  id: "496",
-  seriesSlug: "the-oval",
-  episodeNumber: 9,
-  title: "Episode 9",
-  description: "THE OVAL, Episode 9.",
-  streamUrl: "https://www.mediafire.com/file/sun7e5dlnf9nf3o/THE_OVAL_EP_09.mp4/file",
-  downloadUrl: "https://www.mediafire.com/file/sun7e5dlnf9nf3o/THE_OVAL_EP_09.mp4/file",
-},
-{
-  id: "497",
-  seriesSlug: "the-oval",
-  episodeNumber: 10,
-  title: "Episode 10",
-  description: "THE OVAL, Episode 10.",
-  streamUrl: "https://www.mediafire.com/file/x3cfc50elosrayg/THE_OVAL_EP_10.mp4/file",
-  downloadUrl: "https://www.mediafire.com/file/x3cfc50elosrayg/THE_OVAL_EP_10.mp4/file",
-},
-
-
   {
     id: "498",
     seriesSlug: "master-of-the-house",
@@ -5510,7 +5418,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
   },
   {
     id: "564",
-    seriesSlug: "the-oval",
+    seriesSlug: "the-oval-agasobanuye-rock-kimomo",
     episodeNumber: 1,
     title: "Episode 1",
     description: "THE OVAL, Episode 1. Presented in Agasobanuye by ROCK KIMOMO.",
@@ -5519,7 +5427,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
   },
   {
     id: "565",
-    seriesSlug: "the-oval",
+    seriesSlug: "the-oval-agasobanuye-rock-kimomo",
     episodeNumber: 2,
     title: "Episode 2",
     description: "THE OVAL, Episode 2. Presented in Agasobanuye by ROCK KIMOMO.",
@@ -5528,7 +5436,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
   },
   {
     id: "566",
-    seriesSlug: "the-oval",
+    seriesSlug: "the-oval-agasobanuye-rock-kimomo",
     episodeNumber: 3,
     title: "Episode 3",
     description: "THE OVAL, Episode 3. Presented in Agasobanuye by ROCK KIMOMO.",
@@ -5537,7 +5445,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
   },
   {
     id: "567",
-    seriesSlug: "the-oval",
+    seriesSlug: "the-oval-agasobanuye-rock-kimomo",
     episodeNumber: 4,
     title: "Episode 4",
     description: "THE OVAL, Episode 4. Presented in Agasobanuye by ROCK KIMOMO.",
@@ -5546,7 +5454,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
   },
   {
     id: "568",
-    seriesSlug: "the-oval",
+    seriesSlug: "the-oval-agasobanuye-rock-kimomo",
     episodeNumber: 5,
     title: "Episode 5",
     description: "THE OVAL, Episode 5. Presented in Agasobanuye by ROCK KIMOMO.",
@@ -5555,7 +5463,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
   },
   {
     id: "569",
-    seriesSlug: "the-oval",
+    seriesSlug: "the-oval-agasobanuye-rock-kimomo",
     episodeNumber: 6,
     title: "Episode 6",
     description: "THE OVAL, Episode 6. Presented in Agasobanuye by ROCK KIMOMO.",
@@ -5564,7 +5472,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
   },
   {
     id: "570",
-    seriesSlug: "the-oval",
+    seriesSlug: "the-oval-agasobanuye-rock-kimomo",
     episodeNumber: 7,
     title: "Episode 7",
     description: "THE OVAL, Episode 7. Presented in Agasobanuye by ROCK KIMOMO.",
@@ -5573,7 +5481,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
   },
   {
     id: "571",
-    seriesSlug: "the-oval",
+    seriesSlug: "the-oval-agasobanuye-rock-kimomo",
     episodeNumber: 8,
     title: "Episode 8",
     description: "THE OVAL, Episode 8. Presented in Agasobanuye by ROCK KIMOMO.",
@@ -5582,7 +5490,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
   },
   {
     id: "572",
-    seriesSlug: "the-oval",
+    seriesSlug: "the-oval-agasobanuye-rock-kimomo",
     episodeNumber: 9,
     title: "Episode 9",
     description: "THE OVAL, Episode 9. Presented in Agasobanuye by ROCK KIMOMO.",
@@ -5591,7 +5499,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
   },
   {
     id: "573",
-    seriesSlug: "the-oval",
+    seriesSlug: "the-oval-agasobanuye-rock-kimomo",
     episodeNumber: 10,
     title: "Episode 10",
     description: "THE OVAL, Episode 10. Presented in Agasobanuye by ROCK KIMOMO.",
@@ -7750,7 +7658,7 @@ downloadUrl: "https://www.mediafire.com/file/dvz52tphixgstrh/Devious_Maids_S01e0
 // LUPIN — SEASON 4
 {
   id: "812",
-  seriesSlug: "lupin-season-4",
+  seriesSlug: "lupin",
   episodeNumber: 2,
   title: "LUPIN S04 - Episode 2",
   description: "LUPIN Season 4 Episode 2, Agasobanuye by ROCK KIMOMO.",

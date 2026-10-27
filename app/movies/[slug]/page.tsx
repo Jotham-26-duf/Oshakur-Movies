@@ -29,7 +29,8 @@ export async function generateMetadata({
     return {};
   }
 
-  const title = `${movie.title} | OSHAKUR MOVIES`;
+  const title = movie.title;
+  const openGraphTitle = `${movie.title} | OSHAKUR MOVIES`;
   const description = `Watch ${movie.title} on OSHAKUR MOVIES.`;
 
   return {
@@ -40,7 +41,7 @@ export async function generateMetadata({
     },
     openGraph: createOpenGraphMetadata(
       `/movies/${movie.slug}`,
-      title,
+      openGraphTitle,
       description,
     ),
   };

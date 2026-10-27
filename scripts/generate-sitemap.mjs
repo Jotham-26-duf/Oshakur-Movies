@@ -21,10 +21,20 @@ const seriesFile = fs.readFileSync(
 // slug: `kung-fu-panda`
 function extractSlugs(fileContent, fileName) {
   const matches = [
-    ...fileContent.matchAll(/\bslug\s*:\s*["'`]([^"'`]+)["'`]/g),
+    ...fileContent.matchAll(/\bslug\s*:\s*["'`]([^"'`]*)["'`]/g),
   ];
 
-  const slugs = matches.map((match) => match[1].trim());
+  const slugs = matches.map((match) => match[1]);
+
+  const invalidSlugs = slugs.filter(
+    (slug) => !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug),
+  );
+
+  if (invalidSlugs.length > 0) {
+    throw new Error(
+      `${fileName}: invalid URL slug(s): ${invalidSlugs.map((slug) => JSON.stringify(slug)).join(", ")}`,
+    );
+  }
 
   // Remove duplicate slugs while preserving their original order.
   const uniqueSlugs = [...new Set(slugs)];
@@ -44,6 +54,10 @@ const urls = [
   `${baseUrl}/movies`,
   `${baseUrl}/series`,
   `${baseUrl}/trending`,
+
+  ...["1", "2", "3", "4", "5", "6"].map(
+    (categoryId) => `${baseUrl}/category/${categoryId}`,
+  ),
 
   ...movieSlugs.map((slug) => `${baseUrl}/movies/${slug}`),
   ...seriesSlugs.map((slug) => `${baseUrl}/series/${slug}`),

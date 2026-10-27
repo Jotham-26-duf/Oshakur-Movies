@@ -30,7 +30,8 @@ export async function generateMetadata({
     return {};
   }
 
-  const title = `${currentSeries.title} | OSHAKUR MOVIES`;
+  const title = currentSeries.title;
+  const openGraphTitle = `${currentSeries.title} | OSHAKUR MOVIES`;
   const description = `Explore ${currentSeries.title} on OSHAKUR MOVIES and find episodes to watch.`;
 
   return {
@@ -41,7 +42,7 @@ export async function generateMetadata({
     },
     openGraph: createOpenGraphMetadata(
       `/series/${currentSeries.slug}`,
-      title,
+      openGraphTitle,
       description,
     ),
   };

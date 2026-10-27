@@ -6,7 +6,6 @@ import { series } from "@/data/series";
 import { createOpenGraphMetadata, siteName, siteUrl } from "./seo";
 
 export const metadata: Metadata = {
-  title: "OSHAKUR MOVIES | Watch Agasobanye Movies & Series",
   alternates: {
     canonical: siteUrl,
   },

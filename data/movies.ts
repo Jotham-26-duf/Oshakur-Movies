@@ -2402,7 +2402,7 @@ export const movies: Movie[] = [
 {
   id: "91",
   title: "xXx: The Return of Xander Cage",
-  slug: "xxx-the-return-of-xander-cage",
+  slug: "xxx-the-return-of-xander-cage-vibuxer",
   year: "2017",
   rating: "8.0",
   image: "xxx-the-return-of-xander-cage.jpg",
@@ -5100,7 +5100,7 @@ export const movies: Movie[] = [
 {
   id: "194",
   title: "The Kingsman",
-  slug: "the-kingsman",
+  slug: "the-kingsman-gaheza",
   explainer: "Gaheza",
   year: "",
   rating: "",
@@ -5499,7 +5499,7 @@ export const movies: Movie[] = [
 {
   id: "208",
   title: "RED NOTICE",
-  slug: "red-notice",
+  slug: "red-notice-agasobanuye-rock-komomo",
   explainer: "ROCK KOMOMO",
   year: "2021",
   rating: "",
@@ -5658,7 +5658,7 @@ export const movies: Movie[] = [
 {
   id: "214",
   title: "CAPTAIN AMERICA: BRAVE NEW WORLD",
-  slug: "captain-america-brave-new-world",
+  slug: "captain-america-brave-new-world-agasobanuye-sankara",
   explainer: "Sankara",
   year: "2025",
   rating: "",
@@ -5681,7 +5681,7 @@ export const movies: Movie[] = [
 {
   id: "215",
   title: "SAVI",
-  slug: "savi",
+  slug: "savi-agasobanuye-rock-komomo",
   explainer: "ROCK KOMOMO",
   year: "2024",
   rating: "",
@@ -6175,7 +6175,7 @@ export const movies: Movie[] = [
 {
   id: "234",
   title: "KUNG FU DUNK",
-  slug: "kung-fu-dunk",
+  slug: "kung-fu-dunk-agasobanuye-sankara",
   explainer: "Sankara",
   year: "",
   rating: "",
@@ -6456,7 +6456,7 @@ export const movies: Movie[] = [
 {
   id: "245",
   title: "INDEMNITY",
-  slug: "indemnity",
+  slug: "indemnity-agasobanuye-junior-giti",
   explainer: "JUNIOR GITI",
   year: "2021",
   rating: "",
@@ -6479,7 +6479,7 @@ export const movies: Movie[] = [
 {
   id: "246",
   title: "BIG GAME",
-  slug: "big-game",
+  slug: "big-game-agasobanuye-rock-kimomo",
   explainer: "ROCK KIMOMO",
   year: "2014",
   rating: "",
