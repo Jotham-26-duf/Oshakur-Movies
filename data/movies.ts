@@ -6137,7 +6137,7 @@ export const movies: Movie[] = [
   description: "Captain America: The Winter Soldier is presented in an Agasobanuye version by Sankara.",
   language: "English",
   genres: ["Action", "Adventure", "Sci-Fi"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-23",
   parts: [
     {
@@ -6434,7 +6434,7 @@ export const movies: Movie[] = [
   description: "Retribution is presented in an Agasobanuye version by SKOV.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6487,7 +6487,7 @@ export const movies: Movie[] = [
   description: "Big Game is presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Action", "Adventure", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6510,7 +6510,7 @@ export const movies: Movie[] = [
   description: "Brotherhood is presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Action", "Crime", "Drama"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6540,7 +6540,7 @@ export const movies: Movie[] = [
   description: "Seized is presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6563,7 +6563,7 @@ export const movies: Movie[] = [
   description: "Hobbs & Shaw is presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Action", "Adventure", "Comedy"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6586,7 +6586,7 @@ export const movies: Movie[] = [
   description: "Shelter is presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6616,7 +6616,7 @@ export const movies: Movie[] = [
   description: "100 Yards (2024) is presented in an Agasobanuye version by HAKIM.",
   language: "Chinese",
   genres: ["Action", "Drama"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6653,7 +6653,7 @@ export const movies: Movie[] = [
   description: "Girl's Vengeance is presented in an Agasobanuye version by B THE GREAT.",
   language: "",
   genres: ["Action", "Drama", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6676,7 +6676,7 @@ export const movies: Movie[] = [
   description: "The Hustle is presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "English",
   genres: ["Comedy", "Crime"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6699,7 +6699,7 @@ export const movies: Movie[] = [
   description: "G.I. Joe: Retaliation is presented in an Agasobanuye version by SANKARA.",
   language: "English",
   genres: ["Action", "Adventure", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6722,7 +6722,7 @@ export const movies: Movie[] = [
   description: "World War Z is presented in an Agasobanuye version by GAHEZA.",
   language: "English",
   genres: ["Action", "Horror", "Science Fiction"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-26",
   parts: [
     {
@@ -6738,6 +6738,59 @@ export const movies: Movie[] = [
       title: "WORLD WAR Z - Part B",
       streamUrl: "",
       downloadUrl: "https://www.mediafire.com/file/x68mw8a12umgmw0/WORLD_WAR_Z_B.avi/file",
+    },
+  ],
+},
+{
+  id: "256",
+  title: "FACING EL CHAPO",
+  slug: "facing-el-chapo",
+  explainer: "SKOV",
+  year: "2026",
+  rating: "",
+  image: "facing-el-chapo.jpg",
+  description: "Facing El Chapo is presented in an Agasobanuye version by SKOV.",
+  language: "English",
+  genres: ["Action", "Crime", "Drama"],
+  isFeatured: true,
+  createdAt: "2026-10-28",
+  parts: [
+    {
+      id: "256-1",
+      partNumber: 1,
+      title: "FACING EL CHAPO - Part A",
+      streamUrl: "https://hgcloud.to/9lans49vlcxa",
+      downloadUrl: "https://www.mediafire.com/file/dvsxk6mvvjqaxiq/FACING_EL_CHAPO_A.mp4/file",
+    },
+    {
+      id: "256-2",
+      partNumber: 2,
+      title: "FACING EL CHAPO - Part B",
+      streamUrl: "https://hgcloud.to/xzri67toqe8h",
+      downloadUrl: "https://www.mediafire.com/file/bvjtueixtd13ggx/FACING_EL_CHAPO_B.mp4/file",
+    },
+  ],
+},
+{
+  id: "257",
+  title: "THE PURSUIT OF HAPPINESS",
+  slug: "the-pursuit-of-happiness",
+  explainer: "PERFECT",
+  year: "2026",
+  rating: "",
+  image: "the-pursuit-of-happiness.jpg",
+  description: "The Pursuit of Happiness is presented in an Agasobanuye version by PERFECT.",
+  language: "English",
+  genres: ["Drama"],
+  isFeatured: true,
+  createdAt: "2026-10-28",
+  parts: [
+    {
+      id: "257-1",
+      partNumber: 1,
+      title: "THE PURSUIT OF HAPPINESS",
+      streamUrl: "https://hgcloud.to/4wdin20yq26g",
+      downloadUrl: "https://www.mediafire.com/file/cuwbyft22o4tuqj/The+Persuit+Of+Happiness+2026+Perfect.mp4/file",
     },
   ],
 },
