@@ -6137,7 +6137,7 @@ export const movies: Movie[] = [
   description: "Captain America: The Winter Soldier is presented in an Agasobanuye version by Sankara.",
   language: "English",
   genres: ["Action", "Adventure", "Sci-Fi"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-23",
   parts: [
     {
@@ -6298,7 +6298,7 @@ export const movies: Movie[] = [
   description: "PIHU is presented in an Agasobanuye version by ROCK KIMOMO.",
   language: "Hindi",
   genres: ["Drama", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-24",
   parts: [
     {
@@ -6752,7 +6752,7 @@ export const movies: Movie[] = [
   description: "Facing El Chapo is presented in an Agasobanuye version by SKOV.",
   language: "English",
   genres: ["Action", "Crime", "Drama"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-28",
   parts: [
     {
@@ -6791,6 +6791,66 @@ export const movies: Movie[] = [
       title: "THE PURSUIT OF HAPPINESS",
       streamUrl: "https://hgcloud.to/4wdin20yq26g",
       downloadUrl: "https://www.mediafire.com/file/cuwbyft22o4tuqj/The+Persuit+Of+Happiness+2026+Perfect.mp4/file",
+    },
+  ],
+},
+{
+  id: "258",
+  title: "THE DOG STARS",
+  slug: "the-dog-stars",
+  explainer: "SKOV",
+  year: "2026",
+  rating: "",
+  image: "the-dog-stars.jpg",
+  description: "The Dog Stars is presented in an Agasobanuye version by SKOV.",
+  language: "English",
+  genres: ["Drama"],
+  isFeatured: true,
+  createdAt: "2026-10-30",
+  parts: [
+    {
+      id: "258-1",
+      partNumber: 1,
+      title: "THE DOG STARS - PART A",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file/ui95pd0if86szzh/The+Dog+Stars+A.mp4/file",
+    },
+    {
+      id: "258-2",
+      partNumber: 2,
+      title: "THE DOG STARS - PART B",
+      streamUrl: "",
+      downloadUrl: "https://www.mediafire.com/file/5zm671664t6hi12/The+Dog+Stars+B.mp4/file",
+    },
+  ],
+},
+{
+  id: "259",
+  title: "MISS BALA",
+  slug: "miss-bala",
+  explainer: "JUNIOR GITI",
+  year: "2026",
+  rating: "",
+  image: "miss-bala.jpg",
+  description: "Miss Bala is presented in an Agasobanuye version by JUNIOR GITI.",
+  language: "English",
+  genres: ["Action", "Thriller"],
+  isFeatured: true,
+  createdAt: "2026-10-30",
+  parts: [
+    {
+      id: "259-1",
+      partNumber: 1,
+      title: "MISS BALA - PART A",
+      streamUrl: "https://hgcloud.to/0apf1b7wkjld",
+      downloadUrl: "https://www.mediafire.com/file/j6obju3st4j56kb/Miss_Bala_A_Hd.mp4/file",
+    },
+    {
+      id: "259-2",
+      partNumber: 2,
+      title: "MISS BALA - PART B",
+      streamUrl: "https://hgcloud.to/run00qsq6f3d",
+      downloadUrl: "https://www.mediafire.com/file/2yw09ikpzakmjfl/Miss_Bala_B_Hd.mp4/file",
     },
   ],
 },

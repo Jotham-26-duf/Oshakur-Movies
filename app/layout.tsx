@@ -4,7 +4,12 @@ import "./globals.css";
 import MonetagScripts from "./MonetagScripts";
 import AnnouncementBanner from "./components/AnnouncementBanner";
 import WhatsAppChannelButton from "./components/WhatsAppChannelButton";
-import { createOpenGraphMetadata, siteName, siteOpenGraph, siteUrl } from "./seo";
+import {
+  createOpenGraphMetadata,
+  siteName,
+  siteOpenGraph,
+  siteUrl,
+} from "./seo";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -29,11 +34,10 @@ export const metadata: Metadata = {
     "watch series",
   ],
 
-
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/favicon-new.png",
+    shortcut: "/favicon-new.png",
+    apple: "/favicon-new.png",
   },
 
   openGraph: siteOpenGraph,
@@ -92,7 +96,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: siteName,
               url: siteUrl,
-              logo: new URL("/favicon.svg", siteUrl).toString(),
+              logo: new URL("/favicon-new.png", siteUrl).toString(),
             }).replace(/</g, "\\u003c"),
           }}
         />
