@@ -237,9 +237,104 @@ export default function Navbar() {
             </button>
           </div>
         </div>
+        
+        {/* MOBILE SEARCH BAR */}
+        <div className="border-t border-white/10 px-4 py-3 lg:hidden">
+          <form onSubmit={handleSearch} role="search" className="relative">
+            <div className="relative">
+              <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#AAAAAA]">
+                <SearchIcon />
+              </div>
+
+              <input
+                type="search"
+                value={search}
+                onChange={(event) => setSearch(event.target.value)}
+                placeholder="Search movies and series..."
+                aria-label="Search movies and series"
+                aria-controls="mobile-navbar-search-results"
+                autoComplete="off"
+                className="w-full rounded-lg border border-[#292929] bg-[#141414] py-3 pl-11 pr-14 text-sm text-white outline-none placeholder:text-[#777] transition focus:border-[#E50914]/70 focus-visible:ring-2 focus-visible:ring-[#E50914]/30"
+              />
+
+              <button
+                type="submit"
+                aria-label="Search"
+                className="absolute right-1 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-md bg-[#E50914] text-white transition hover:bg-[#F6121D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E50914]"
+              >
+                <SearchIcon />
+              </button>
+            </div>
+
+            {searchTerm && (
+              <div
+                id="mobile-navbar-search-results"
+                className="absolute left-0 right-0 top-full z-50 mt-2 max-h-[360px] overflow-y-auto rounded-2xl border border-white/10 bg-[#1B1B1B] shadow-2xl"
+              >
+                {hasMatches ? (
+                  <div className="p-3">
+                    {matchingMovies.length > 0 && (
+                      <div>
+                        <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-wider text-[#888888]">
+                          Movies
+                        </p>
+
+                        {matchingMovies.map((movie) => (
+                          <Link
+                            key={movie.id}
+                            href={`/movies/${movie.slug}`}
+                            onClick={selectResult}
+                            className="block rounded-lg px-3 py-3 text-sm text-white transition hover:bg-white/10"
+                          >
+                            {movie.title}
+                            <span className="ml-2 text-xs text-[#AAAAAA]">
+                              {movie.year}
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+
+                    {matchingSeries.length > 0 && (
+                      <div className={matchingMovies.length > 0 ? "mt-3 border-t border-white/10 pt-3" : ""}>
+                        <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-wider text-[#888888]">
+                          Series
+                        </p>
+
+                        {matchingSeries.map((item) => (
+                          <Link
+                            key={item.id}
+                            href={`/series/${item.slug}`}
+                            onClick={selectResult}
+                            className="block rounded-lg px-3 py-3 text-sm text-white transition hover:bg-white/10"
+                          >
+                            {item.title}
+                            <span className="ml-2 text-xs text-[#AAAAAA]">
+                              {item.year}
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="p-5 text-center">
+                    <p className="text-sm font-semibold text-white">
+                      No matching results
+                    </p>
+                    <p className="mt-1 text-xs text-[#888888]">
+                      Keep typing or try another title.
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+          </form>
+        </div>
+
 
         {/* SEARCH BAR */}
-        <div className="absolute left-1/2 top-1/2 hidden w-[30vw] max-w-[440px] -translate-x-1/2 -translate-y-1/2 lg:block">
+       <div className="hidden lg:block w-[30vw] max-w-[440px] min-w-[220px] flex-1">
           <form onSubmit={handleSearch} role="search" className="relative mx-auto">
             <div className="relative">
               <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#AAAAAA]">
