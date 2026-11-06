@@ -8052,6 +8052,49 @@ export const movies: Movie[] = [
     },
   ],
 },
-
+{
+  id: "305",
+  title: "MAZE RUNNER 2: THE SCORCH TRIALS",
+  slug: "maze-runner-2-the-scorch-trials",
+  year: "2015",
+  rating: "",
+  image: "maze-runner-2-the-scorch-trials.jpg",
+  description: "Maze Runner: The Scorch Trials follows Thomas and the Gladers as they face dangerous challenges in the Scorch.",
+  language: "English",
+  genres: ["Action", "Science Fiction", "Thriller"],
+  isFeatured: false,
+  createdAt: "2026-11-04",
+  parts: [
+    {
+      id: "305-1",
+      partNumber: 1,
+      title: "MAZE RUNNER 2: THE SCORCH TRIALS - PART 1",
+      streamUrl: "https://hgcloud.to/7g883hn1x22b",
+      downloadUrl: "https://www.mediafire.com/file/f5jue1e1lzzbqr4/MAZE+RUNNER+2+The+Scorch+Trials.mp4/file",
+    },
+  ],
+},
+{
+  id: "306",
+  title: "FROM PARIS WITH LOVE",
+  slug: "from-paris-with-love",
+  year: "2010",
+  rating: "",
+  image: "from-paris-with-love.jpg",
+  description: "From Paris with Love follows an unlikely partnership between two agents on a dangerous mission in Paris.",
+  language: "English",
+  genres: ["Action", "Thriller", "Crime"],
+  isFeatured: false,
+  createdAt: "2026-11-04",
+  parts: [
+    {
+      id: "306-1",
+      partNumber: 1,
+      title: "FROM PARIS WITH LOVE - PART 1",
+      streamUrl: "https://hgcloud.to/dj9gi6bfhqtu",
+      downloadUrl: "https://www.mediafire.com/file/cu3u4rf0wb3bdwt/From_Paris_With_Love.mp4/file",
+    },
+  ],
+},
 ]
 
