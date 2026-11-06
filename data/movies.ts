@@ -6805,7 +6805,7 @@ export const movies: Movie[] = [
   description: "The Dog Stars is presented in an Agasobanuye version by SKOV.",
   language: "English",
   genres: ["Drama"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-10-30",
   parts: [
     {
@@ -6943,7 +6943,7 @@ export const movies: Movie[] = [
   description: "Furious 7 is presented in an Agasobanuye version by SANKARA.",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-02",
   parts: [
     {
@@ -6973,7 +6973,7 @@ export const movies: Movie[] = [
   description: "The Fate of the Furious 8 is presented in an Agasobanuye version by SANKARA.",
   language: "English",
   genres: ["Action", "Crime", "Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-02",
   parts: [
     {
@@ -8194,7 +8194,7 @@ export const movies: Movie[] = [
   description: "The Midnight Meat Train follows a photographer who investigates a mysterious serial killer operating on the city's subway system.",
   language: "English",
   genres: ["Horror", "Thriller", "Mystery"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-11-06",
   parts: [
     {
@@ -8358,7 +8358,7 @@ export const movies: Movie[] = [
   description: "Movie presented in three parts.",
   language: "English",
   genres: ["Drama"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-11-06",
   explainer: "Rock Kimomo",
   parts: [
@@ -8761,7 +8761,7 @@ export const movies: Movie[] = [
   description: "A former special forces officer must protect his family and stop a group of criminals during a major sporting event.",
   language: "English",
   genres: ["Action", "Thriller"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-11-06",
   explainer: "Rock Kimomo",
   parts: [
@@ -8807,7 +8807,7 @@ export const movies: Movie[] = [
   description: "A man organizes a dangerous mission to rescue his younger brother from a powerful Colombian cartel.",
   language: "English",
   genres: ["Action", "Comedy", "Crime"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-11-06",
   explainer: "B The Great",
   parts: [
@@ -8899,7 +8899,7 @@ export const movies: Movie[] = [
   description: "A group of strangers must survive a terrifying supernatural attack after humanity loses divine protection.",
   language: "English",
   genres: ["Action", "Horror", "Fantasy"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-11-06",
   explainer: "Sankara",
   parts: [
