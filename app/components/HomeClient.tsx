@@ -1,10 +1,10 @@
-﻿
-"use client";
+﻿"use client";
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import Hero from "./Hero";
 import MovieCard from "./MovieCard";
+import { FavoriteButton, ViewCount } from "./CatalogFeatures";
 import SiteBottom from "./SiteBottom";
 import Navbar from "./Navbar";
 import { getCanonicalExplainerName, getExplainerImage, normalizeExplainerName } from "../lib/explainers";
@@ -636,7 +636,7 @@ export default function HomeClient({
         </div>
 
         {mixedCatalog.length ? <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-          {mixedCatalog.map((entry) => entry.contentType === "movie" ? <MovieCard key={`movie-${entry.data.id}`} title={entry.data.title} year={entry.data.year} rating={entry.data.rating} image={entry.data.image} slug={entry.data.slug} explainer={entry.data.explainer} createdAt={entry.data.createdAt} onExplainerClick={(name) => setSelectedExplainer(normalizeExplainerName(name))} /> : <article key={`series-${entry.data.id}`} className="cinema-card group min-w-0"><Link href={`/series/${entry.data.slug}`} className="block"><div className="media-poster relative"><img src={`/images/series/${entry.data.image}`} alt={entry.data.title} loading="lazy"/><span className="media-play" aria-hidden="true">▶</span></div><h3 className="media-title">{entry.data.title}</h3></Link><div className="media-byline">{entry.data.explainer?.trim() ? <button type="button" onClick={() => setSelectedExplainer(normalizeExplainerName(entry.data.explainer!))} className="truncate text-left hover:underline">{getExplainerImage(entry.data.explainer) && <img src={getExplainerImage(entry.data.explainer)} alt=""/>}🎙 {entry.data.explainer}</button> : <span className="text-white/35">Explainer unavailable</span>}</div><time className="media-time" dateTime={entry.data.createdAt}>{getTimeAgo(entry.data.createdAt)}</time></article>)}
+          {mixedCatalog.map((entry) => entry.contentType === "movie" ? <MovieCard key={`movie-${entry.data.id}`} title={entry.data.title} year={entry.data.year} rating={entry.data.rating} image={entry.data.image} slug={entry.data.slug} explainer={entry.data.explainer} createdAt={entry.data.createdAt} onExplainerClick={(name) => setSelectedExplainer(normalizeExplainerName(name))} /> : <article key={`series-${entry.data.id}`} className="cinema-card group relative min-w-0"><Link href={`/series/${entry.data.slug}`} className="block"><div className="media-poster relative"><img src={`/images/series/${entry.data.image}`} alt={entry.data.title} loading="lazy"/><span className="media-play" aria-hidden="true">▶</span></div><h3 className="media-title">{entry.data.title}</h3></Link><FavoriteButton contentType="series" slug={entry.data.slug}/><div className="media-byline">{entry.data.explainer?.trim() ? <button type="button" onClick={() => setSelectedExplainer(normalizeExplainerName(entry.data.explainer!))} className="truncate text-left hover:underline">{getExplainerImage(entry.data.explainer) && <img src={getExplainerImage(entry.data.explainer)} alt=""/>}🎙 {entry.data.explainer}</button> : <span className="text-white/35">Explainer unavailable</span>}</div><div className="px-2 pt-1"><ViewCount contentType="series" slug={entry.data.slug}/></div><time className="media-time" dateTime={entry.data.createdAt}>{getTimeAgo(entry.data.createdAt)}</time></article>)}
         </div> : <div className="rounded-xl border border-white/10 bg-white/5 p-8 text-center text-white/50">No movies or series found.</div>}
       </section>
 

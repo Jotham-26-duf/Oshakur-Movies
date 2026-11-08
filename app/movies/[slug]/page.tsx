@@ -11,6 +11,9 @@ import { series } from "@/data/series";
 import { getExplainerImage } from "@/app/lib/explainers";
 import CommentsSection from "@/app/components/CommentsSection";
 import { createOpenGraphMetadata } from "@/app/seo";
+import TrailerPlayer from "@/app/components/TrailerPlayer";
+import { DetailViewTracker, ViewCount } from "@/app/components/CatalogFeatures";
+import MomoSupport from "@/app/components/MomoSupport";
 
 interface MovieDetailsPageProps {
   params: Promise<{
@@ -68,6 +71,7 @@ export default async function MovieDetailsPage({
 
   return (
     <main className="cinema-page min-h-screen text-white">
+      <DetailViewTracker contentType="movie" slug={movie.slug} />
       <Navbar />
       <div className="mx-auto max-w-7xl px-4 pt-5 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl px-4 pt-5 sm:px-6 lg:px-8">
@@ -85,6 +89,7 @@ export default async function MovieDetailsPage({
             {movie.genres.map((genre) => <span key={genre} className="rounded-full bg-[#E50914]/15 px-3 py-1 text-xs font-semibold text-white">{genre}</span>)}
             <span className="text-[#AAA]">{movie.year} · {movie.language}</span>
             {movie.rating && movie.rating !== "N/A" && <span className="rounded-full bg-white/10 px-3 py-1 text-xs">★ {movie.rating}</span>}
+            <ViewCount contentType="movie" slug={movie.slug} />
             {movie.explainer && <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1"><img src={getExplainerImage(movie.explainer) || "/favicon.svg"} alt="" className="h-6 w-6 rounded-full object-cover" />{movie.explainer}</span>}
             {movie.createdAt && <span className="text-xs text-[#888]">Added {new Date(movie.createdAt).toLocaleDateString()}</span>}
           </div>
@@ -104,7 +109,9 @@ export default async function MovieDetailsPage({
         </section>
       </div>
       </div>
+      <TrailerPlayer trailer={movie.trailer} />
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"><h2 className="cinema-section-title text-2xl font-bold">Summary</h2><p className="mt-4 max-w-4xl text-sm leading-7 text-[#AAA] sm:text-base">{movie.description || "No summary is available for this title yet."}</p></section>
+      <div className="pb-10"><MomoSupport /></div>
       <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-12 sm:px-6 lg:grid-cols-[minmax(0,1.8fr)_minmax(280px,1fr)] lg:px-8">
         <div><CommentsSection movieSlug={movie.slug} /></div>
         {recommendations.length > 0 && <aside className="lg:sticky lg:top-28 lg:self-start"><h2 className="cinema-section-title mb-5 text-2xl font-bold">More Films</h2><div className="grid grid-cols-2 gap-4">{recommendations.map((item) => <MovieCard key={`${item.type}-${item.id}`} title={item.title} year={item.year} rating={item.rating ?? ""} image={item.image} slug={item.slug} explainer={item.explainer} createdAt={item.createdAt} hrefPrefix={item.type === "series" ? "/series" : "/movies"} />)}</div></aside>}

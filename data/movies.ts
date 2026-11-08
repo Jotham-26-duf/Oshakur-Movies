@@ -9,6 +9,8 @@ export interface MoviePart {
 
 export interface Movie {
  explainer?: string;
+  trailer?: string;
+  views?: number;
   id: string;
   title: string;
   slug: string;
@@ -1018,7 +1020,7 @@ export const movies: Movie[] = [
     "A psychological thriller exploring a complicated relationship and the dangerous consequences of hidden secrets.",
   language: "English",
   genres: ["Drama", "Thriller", "Mystery"],
-  isFeatured: false ,
+  isFeatured: true,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -1042,7 +1044,7 @@ export const movies: Movie[] = [
     "Two friends become trapped at the top of a remote tower and must find a way to survive.",
   language: "English",
   genres: ["Thriller", "Adventure", "Drama"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -1492,6 +1494,20 @@ export const movies: Movie[] = [
       streamUrl: "https://audinifer.com/31q6wc0x58us",
       downloadUrl:
         "https://www.mediafire.com/file/kz58sonut5sa1g9/Blood+Brothers+B.mp4/file",
+    },
+    {
+      "id": "291-1",
+      "partNumber": 1,
+      "title": "BLOOD BROTHERS - PART A (GAHEZA edition)",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/9gysio11co40cs9/BLOOD_BROTHERS_A.mp4/file"
+    },
+    {
+      "id": "291-2",
+      "partNumber": 2,
+      "title": "BLOOD BROTHERS - PART B (GAHEZA edition)",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/s76uymrigyfqsst/BLOOD__BROTHERS__B.mp4/file"
     },
   ],
 },
@@ -2345,6 +2361,13 @@ export const movies: Movie[] = [
       streamUrl: "https://vibuxer.com/d67be82jk6d6",
       downloadUrl:
         "https://www.mediafire.com/file/mrcnsj8pxkqoerf/FROM+PARIS+WITH+LOVE+FULL.mp4/file",
+    },
+    {
+      "id": "306-1",
+      "partNumber": 1,
+      "title": "Alternative full movie source",
+      "streamUrl": "https://hgcloud.to/dj9gi6bfhqtu",
+      "downloadUrl": "https://hgcloud.to/dj9gi6bfhqtu"
     },
   ],
 },
@@ -4480,7 +4503,7 @@ export const movies: Movie[] = [
   description: "Watch MASTER PLAN on Oshakur Movies. Stream the movie online or download it using the available links.",
   language: "English",
   genres: ["Action", "Adventure", "Comedy"],
-  isFeatured: false ,
+  isFeatured: true,
   createdAt: "2026-10-19",
   parts: [
     {
@@ -6805,7 +6828,7 @@ export const movies: Movie[] = [
   description: "The Dog Stars is presented in an Agasobanuye version by SKOV.",
   language: "English",
   genres: ["Drama"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-10-30",
   parts: [
     {
@@ -7349,29 +7372,7 @@ export const movies: Movie[] = [
     },
   ],
 },
-{
-  id: "279",
-  title: "THE UNBORN",
-  slug: "the-unborn",
-  explainer: "GAHEZA",
-  year: "2026",
-  rating: "",
-  image: "the-unborn.jpg",
-  description: "The Unborn is presented in an Agasobanuye version by GAHEZA.",
-  language: "English",
-  genres: ["Horror", "Thriller"],
-  isFeatured: false,
-  createdAt: "2026-11-02",
-  parts: [
-    {
-      id: "279-1",
-      partNumber: 1,
-      title: "THE UNBORN",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/ud1da65o94unvjj/THE_UNBORN.mp4/file",
-    },
-  ],
-},
+
 {
   id: "280",
   title: "THUNDERBOLTS",
@@ -7684,7 +7685,7 @@ export const movies: Movie[] = [
 {
   id: "291",
   title: "BLOOD BROTHERS",
-  slug: "blood-brothers",
+  slug: "blood-brothers-gaheza",
   explainer: "GAHEZA",
   year: "2026",
   rating: "",
@@ -8074,28 +8075,7 @@ export const movies: Movie[] = [
     },
   ],
 },
-{
-  id: "306",
-  title: "FROM PARIS WITH LOVE",
-  slug: "from-paris-with-love",
-  year: "2010",
-  rating: "",
-  image: "from-paris-with-love.jpg",
-  description: "From Paris with Love follows an unlikely partnership between two agents on a dangerous mission in Paris.",
-  language: "English",
-  genres: ["Action", "Thriller", "Crime"],
-  isFeatured: false,
-  createdAt: "2026-11-04",
-  parts: [
-    {
-      id: "306-1",
-      partNumber: 1,
-      title: "FROM PARIS WITH LOVE - PART 1",
-      streamUrl: "https://hgcloud.to/dj9gi6bfhqtu",
-      downloadUrl: "https://hgcloud.to/dj9gi6bfhqtu",
-    },
-  ],
-},
+
 {
   id: "307",
   title: "FIRST LOVE",
@@ -8194,7 +8174,7 @@ export const movies: Movie[] = [
   description: "The Midnight Meat Train follows a photographer who investigates a mysterious serial killer operating on the city's subway system.",
   language: "English",
   genres: ["Horror", "Thriller", "Mystery"],
-  isFeatured: true,
+  isFeatured:false,
   createdAt: "2026-11-06",
   parts: [
     {
@@ -8358,7 +8338,7 @@ export const movies: Movie[] = [
   description: "Movie presented in three parts.",
   language: "English",
   genres: ["Drama"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-06",
   explainer: "Rock Kimomo",
   parts: [
@@ -8807,7 +8787,7 @@ export const movies: Movie[] = [
   description: "A man organizes a dangerous mission to rescue his younger brother from a powerful Colombian cartel.",
   language: "English",
   genres: ["Action", "Comedy", "Crime"],
-  isFeatured: true,
+  isFeatured:false,
   createdAt: "2026-11-06",
   explainer: "B The Great",
   parts: [
@@ -8899,7 +8879,7 @@ export const movies: Movie[] = [
   description: "A group of strangers must survive a terrifying supernatural attack after humanity loses divine protection.",
   language: "English",
   genres: ["Action", "Horror", "Fantasy"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-06",
   explainer: "Sankara",
   parts: [
@@ -8909,6 +8889,36 @@ export const movies: Movie[] = [
       title: "LEGION - PART 1",
       streamUrl: "https://www.mediafire.com/file/d9pl3lukpdbu79r/LEGION_BY_SANKRA.mp4/file",
       downloadUrl: "https://www.mediafire.com/file/d9pl3lukpdbu79r/LEGION_BY_SANKRA.mp4/file",
+    },
+  ],
+},
+{
+  id: "341",
+  title: "ENEMY AT THE GATE",
+  slug: "enemy-at-the-gate",
+  year: "2001",
+  rating: "",
+  image: "enemy-at-the-gate.jpg",
+  description: "",
+  language: "English",
+  genres: ["Action", "Drama", "War"],
+  isFeatured: true,
+  createdAt: "2026-11-08",
+  explainer: "",
+  parts: [
+    {
+      id: "341-1",
+      partNumber: 1,
+      title: "ENEMY AT THE GATE - PART 1",
+      streamUrl: "https://vsembed.com/tfru7",
+      downloadUrl: "https://www.mediafire.com/file/bimc7tk7yryja9i/Enemy_At_The_gate_A_Hd.mp4/file",
+    },
+    {
+      id: "341-2",
+      partNumber: 2,
+      title: "ENEMY AT THE GATE - PART 2",
+      streamUrl: "https://vsembed.com/i87h2",
+      downloadUrl: "https://www.mediafire.com/file/sq7pehnzn4vzh20/Enemy_At_The_Gate_B_Hd.mp4/file",
     },
   ],
 },

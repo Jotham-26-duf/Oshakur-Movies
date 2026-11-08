@@ -214,6 +214,7 @@ export default function Navbar() {
             <Link href="/trending" aria-current={pathname.startsWith("/trending") ? "page" : undefined} className={navLinkClass("/trending")}>
               <TrendingIcon /> Trending
             </Link>
+            <Link href="/favorites" aria-current={pathname.startsWith("/favorites") ? "page" : undefined} className={navLinkClass("/favorites")}>♡ Favorites</Link>
           </nav>
 
           <div className="ml-auto flex items-center gap-2">
@@ -482,6 +483,7 @@ export default function Navbar() {
               <Link href="/trending" onClick={closeMenu} aria-current={pathname.startsWith("/trending") ? "page" : undefined} className={navLinkClass("/trending")}>
                 <TrendingIcon /> Trending
               </Link>
+              <Link href="/favorites" onClick={closeMenu} aria-current={pathname.startsWith("/favorites") ? "page" : undefined} className={navLinkClass("/favorites")}>♡ Favorites</Link>
             </nav>
           </div>
         )}

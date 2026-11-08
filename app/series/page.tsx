@@ -6,6 +6,7 @@ import SiteBottom from "@/app/components/SiteBottom";
 import { series } from "@/data/series";
 import { episodes } from "@/data/episodes";
 import { createOpenGraphMetadata } from "@/app/seo";
+import { FavoriteButton, ViewCount } from "@/app/components/CatalogFeatures";
 
 export const metadata: Metadata = {
   title: "All Series",
@@ -41,7 +42,7 @@ export default function SeriesPage() {
         {orderedSeries.length > 0 ? (
           <div className="media-grid">
             {orderedSeries.map((item) => (
-              <article key={item.id} className="cinema-card group min-w-0">
+              <article key={item.id} className="cinema-card group relative min-w-0">
                 <Link href={`/series/${item.slug}`} className="block">
                   <div className="media-poster relative">
                     <img src={`/images/series/${item.image}`} alt={item.title} loading="lazy" />
@@ -51,10 +52,12 @@ export default function SeriesPage() {
                   </div>
                   <h2 className="media-title">{item.title}</h2>
                 </Link>
+                <FavoriteButton contentType="series" slug={item.slug} />
                 <div className="media-meta">
                   {(() => { const count = episodes.filter((episode) => episode.seriesSlug === item.slug).length; return count > 0 ? <span className="episode-pill">{count} {count === 1 ? "Episode" : "Episodes"}</span> : null; })()}
                   <span className="media-rating">★ {item.rating}</span>
                 </div>
+                <div className="px-2 pt-1"><ViewCount contentType="series" slug={item.slug} /></div>
                 <div className="media-byline">{item.explainer?.trim() || <span className="text-white/35">Explainer unavailable</span>}</div>
                 {item.createdAt && <time className="media-time" dateTime={item.createdAt}>{relativeTime(item.createdAt)}</time>}
               </article>

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import MonetagScripts from "./MonetagScripts";
 import AnnouncementBanner from "./components/AnnouncementBanner";
+import { CatalogFeaturesProvider } from "./components/CatalogFeatures";
 import WhatsAppChannelButton from "./components/WhatsAppChannelButton";
 import {
   createOpenGraphMetadata,
@@ -83,7 +84,7 @@ export default function RootLayout({
 
         <AnnouncementBanner />
 
-        {children}
+        <CatalogFeaturesProvider>{children}</CatalogFeaturesProvider>
 
         <WhatsAppChannelButton />
 

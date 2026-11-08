@@ -6,6 +6,7 @@ import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
 import { series } from "@/data/series";
 import { createOpenGraphMetadata } from "@/app/seo";
+import { FavoriteButton, ViewCount } from "@/app/components/CatalogFeatures";
 
 export const metadata: Metadata = {
   title: "Trending Movies & Series",
@@ -67,6 +68,7 @@ export default function TrendingPage() {
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               {trendingMovies.map((movie) => (
+                <article key={`movie-${movie.id}`} className="cinema-card group relative min-w-0">
                 <Link
                   key={movie.id}
                   href={`/movies/${movie.slug}`}
@@ -97,6 +99,9 @@ export default function TrendingPage() {
                     </span>
                   </div>
                 </Link>
+                <FavoriteButton contentType="movie" slug={movie.slug} />
+                <div className="px-2 pt-1"><ViewCount contentType="movie" slug={movie.slug} /></div>
+                </article>
               ))}
             </div>
           </section>
@@ -115,6 +120,7 @@ export default function TrendingPage() {
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               {trendingSeries.map((item) => (
+                <article key={`series-${item.id}`} className="cinema-card group relative min-w-0">
                 <Link
                   key={item.id}
                   href={`/series/${item.slug}`}
@@ -145,6 +151,9 @@ export default function TrendingPage() {
                     </span>
                   </div>
                 </Link>
+                <FavoriteButton contentType="series" slug={item.slug} />
+                <div className="px-2 pt-1"><ViewCount contentType="series" slug={item.slug} /></div>
+                </article>
               ))}
             </div>
           </section>

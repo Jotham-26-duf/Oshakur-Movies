@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import { getExplainerImage } from "../lib/explainers";
+import { FavoriteButton, ViewCount } from "./CatalogFeatures";
 
 interface MovieCardProps {
   title: string;
@@ -78,9 +79,10 @@ export default function MovieCard({
 }: MovieCardProps) {
   const timeAgo = getTimeAgo(createdAt);
   const explainerName = explainer?.trim();
+  const contentType = hrefPrefix === "/series" ? "series" : "movie";
 
   return (
-    <article className="cinema-card group block w-full min-w-0">
+    <article className="cinema-card group relative block w-full min-w-0">
       <Link href={`${hrefPrefix}/${slug}`} className="block">
         <div className="media-poster relative">
           <img
@@ -92,6 +94,7 @@ export default function MovieCard({
           <span className="media-play" aria-hidden="true">▶</span>
         </div>
       </Link>
+      <FavoriteButton contentType={contentType} slug={slug} />
 
       <Link href={`${hrefPrefix}/${slug}`} className="block">
         <h3 className="media-title">
@@ -127,6 +130,8 @@ export default function MovieCard({
           </span>
         )}
       </div>
+
+      <div className="px-2 pt-1"><ViewCount contentType={contentType} slug={slug} /></div>
 
       {createdAt && timeAgo !== "Upload date unavailable" && <time title={timeAgo} dateTime={createdAt} className="media-time">{timeAgo}</time>}
 

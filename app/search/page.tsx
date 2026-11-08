@@ -5,6 +5,7 @@ import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
 import { series } from "@/data/series";
+import { FavoriteButton, ViewCount } from "@/app/components/CatalogFeatures";
 
 export const metadata: Metadata = {
   title: "Search Movies & Series",
@@ -143,6 +144,7 @@ export default async function SearchPage({
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               {movieResults.map((movie) => (
+                <article key={`movie-${movie.id}`} className="cinema-card group relative min-w-0">
                 <Link
                   key={movie.id}
                   href={`/movies/${movie.slug}`}
@@ -180,6 +182,9 @@ export default async function SearchPage({
                     </p>
                   )}
                 </Link>
+                  <FavoriteButton contentType="movie" slug={movie.slug} />
+                  <div className="px-2 pt-1"><ViewCount contentType="movie" slug={movie.slug} /></div>
+                </article>
               ))}
             </div>
           </section>
@@ -194,6 +199,7 @@ export default async function SearchPage({
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               {seriesResults.map((item) => (
+                <article key={`series-${item.id}`} className="cinema-card group relative min-w-0">
                 <Link
                   key={item.id}
                   href={`/series/${item.slug}`}
@@ -231,6 +237,9 @@ export default async function SearchPage({
                     </p>
                   )}
                 </Link>
+                  <FavoriteButton contentType="series" slug={item.slug} />
+                  <div className="px-2 pt-1"><ViewCount contentType="series" slug={item.slug} /></div>
+                </article>
               ))}
             </div>
           </section>

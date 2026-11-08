@@ -12,6 +12,9 @@ import { getExplainerImage } from "@/app/lib/explainers";
 import MovieCard from "@/app/components/MovieCard";
 import CommentsSection from "@/app/components/CommentsSection";
 import { createOpenGraphMetadata } from "@/app/seo";
+import TrailerPlayer from "@/app/components/TrailerPlayer";
+import { DetailViewTracker, ViewCount } from "@/app/components/CatalogFeatures";
+import MomoSupport from "@/app/components/MomoSupport";
 
 interface SeriesDetailsPageProps {
   params: Promise<{
@@ -63,6 +66,20 @@ export default async function SeriesDetailsPage({
     .filter((episode) => episode.seriesSlug === currentSeries.slug)
     .sort((a, b) => a.episodeNumber - b.episodeNumber);
 
+  function getEpisodeDisplayTitle(title: string, seriesTitle: string, episodeNumber: number) {
+    let specificTitle = title.trim();
+    seriesTitle = seriesTitle.trim();
+    if (specificTitle.toLowerCase().startsWith(seriesTitle.toLowerCase())) {
+      specificTitle = specificTitle.slice(seriesTitle.length).trim().replace(/^[-:–—]\s*/, "");
+    }
+    specificTitle = specificTitle
+      .replace(new RegExp(`^Episode\\s+0?${episodeNumber}\\b\\s*[-:–—]?\\s*`, "i"), "")
+      .trim();
+    return specificTitle
+      ? `Episode ${episodeNumber} — ${specificTitle}`
+      : `Episode ${episodeNumber}`;
+  }
+
   const recommendations = [
     ...series.filter((item) => item.slug !== currentSeries.slug).map((item) => ({...item, type: "series" as const})),
     ...movies.map((item) => ({...item, type: "movie" as const})),
@@ -70,6 +87,7 @@ export default async function SeriesDetailsPage({
 
   return (
     <main className="cinema-page min-h-screen text-white">
+      <DetailViewTracker contentType="series" slug={currentSeries.slug} />
       <Navbar />
       <div className="mx-auto max-w-7xl px-4 pt-5 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="mb-5 flex min-w-0 items-center gap-2 overflow-hidden text-sm text-[#999]"><Link href="/" className="shrink-0 hover:text-white">Home</Link><span>/</span><Link href="/series" className="shrink-0 hover:text-white">Series</Link><span>/</span><span aria-current="page" className="truncate text-white">{currentSeries.title}</span></nav>
@@ -85,6 +103,7 @@ export default async function SeriesDetailsPage({
             <span className="rounded-full bg-[#E5A93B] px-3 py-1 text-xs font-bold text-black">{currentSeries.title.match(/season\s*\d+/i)?.[0] ?? "Series"}</span>
             <span className="text-[#AAA]">{currentSeries.year} · {currentSeries.language}</span>
             {currentSeries.rating && currentSeries.rating !== "N/A" && <span className="rounded-full bg-white/10 px-3 py-1 text-xs">★ {currentSeries.rating}</span>}
+            <ViewCount contentType="series" slug={currentSeries.slug} />
             {currentSeries.explainer && <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1"><img src={getExplainerImage(currentSeries.explainer) || "/favicon.svg"} alt="" className="h-6 w-6 rounded-full object-cover" />{currentSeries.explainer}</span>}
             {currentSeries.createdAt && <span className="text-xs text-[#888]">Added {new Date(currentSeries.createdAt).toLocaleDateString()}</span>}
           </div>
@@ -92,6 +111,9 @@ export default async function SeriesDetailsPage({
         </section>
       </div>
 
+      <div className="pb-8"><MomoSupport /></div>
+
+      <TrailerPlayer trailer={currentSeries.trailer} />
 
       {/* Episodes */}
       <section
@@ -119,44 +141,43 @@ export default async function SeriesDetailsPage({
             {seriesEpisodes.map((episode) => (
               <article
                 key={episode.id}
-                className="rounded-xl border border-white/10 bg-[#191919] p-4 transition hover:border-white/20 sm:p-5"
+                className="flex flex-col justify-between gap-4 rounded-xl border border-white/10 bg-[#191919] p-4 transition hover:border-white/20 sm:flex-row sm:items-center sm:p-5"
               >
-                <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
-                  <div>
-                    <div>
-                      <p className="mb-2 text-sm font-semibold text-[#E50914]">
-                        Episode {episode.episodeNumber}
-                      </p>
-
-                      <h3 className="mb-3 text-xl font-bold sm:text-2xl">
-                        {episode.title}
-                      </h3>
-
-                      <p className="leading-6 text-gray-400">
-                        {episode.description}
-                      </p>
-                    </div>
-
-                    <div className="mt-6 flex flex-wrap gap-3">
-                      <a
-                        href={episode.streamUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center rounded-lg bg-[#E50914] px-5 py-2.5 font-semibold text-white transition hover:bg-[#FF2633]"
-                      >
-                        ▶ Watch
-                      </a>
-
-                      <a
-                        href={episode.downloadUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 font-semibold text-white transition hover:bg-white/20"
-                      >
-                        ↓ Download
-                      </a>
-                    </div>
-                  </div>
+                <h3 className="min-w-0 text-lg font-bold sm:text-xl">
+                  {getEpisodeDisplayTitle(episode.title, currentSeries.title, episode.episodeNumber)}
+                </h3>
+                <div className="flex flex-wrap gap-2 sm:shrink-0 sm:justify-end">
+                  {episode.streamUrl && (
+                    <a
+                      href={episode.streamUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center rounded-lg bg-[#E50914] px-5 py-2.5 font-semibold text-white transition hover:bg-[#FF2633]"
+                    >
+                      ▶ Watch
+                    </a>
+                  )}
+                  {episode.downloadUrl && (
+                    <a
+                      href={episode.downloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 font-semibold text-white transition hover:bg-white/20"
+                    >
+                      ↓ Download
+                    </a>
+                  )}
+                  {episode.alternateDownloadUrls?.map((downloadUrl, index) => (
+                    <a
+                      key={`${episode.id}-alternate-download-${index}`}
+                      href={downloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 font-semibold text-white transition hover:bg-white/20"
+                    >
+                      ↓ Download {index + 2}
+                    </a>
+                  ))}
                 </div>
               </article>
             ))}
