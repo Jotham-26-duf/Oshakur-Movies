@@ -1020,7 +1020,7 @@ export const movies: Movie[] = [
     "A psychological thriller exploring a complicated relationship and the dangerous consequences of hidden secrets.",
   language: "English",
   genres: ["Drama", "Thriller", "Mystery"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -1044,7 +1044,7 @@ export const movies: Movie[] = [
     "Two friends become trapped at the top of a remote tower and must find a way to survive.",
   language: "English",
   genres: ["Thriller", "Adventure", "Drama"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-09-30",
   parts: [
     {
@@ -4503,7 +4503,7 @@ export const movies: Movie[] = [
   description: "Watch MASTER PLAN on Oshakur Movies. Stream the movie online or download it using the available links.",
   language: "English",
   genres: ["Action", "Adventure", "Comedy"],
-  isFeatured: true,
+  isFeatured: false ,
   createdAt: "2026-10-19",
   parts: [
     {
