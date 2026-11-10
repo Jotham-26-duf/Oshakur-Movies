@@ -8932,7 +8932,7 @@ export const movies: Movie[] = [
   description: "",
   language: "English",
   genres: ["Action", "Thriller", "Crime"],
-  isFeatured: true,
+  isFeatured:false,
   createdAt: "2026-11-09",
   explainer: "Perfect",
   parts: [
@@ -8980,7 +8980,7 @@ export const movies: Movie[] = [
   description: "",
   language: "English",
   genres: ["Action", "Thriller", "Crime"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-09",
   explainer: "Rocky Kimomo",
   parts: [
@@ -9011,7 +9011,7 @@ export const movies: Movie[] = [
   description: "",
   language: "English",
   genres: ["Action", "Thriller", "Crime"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-09",
   explainer: "Sankara",
   parts: [
@@ -9220,6 +9220,76 @@ export const movies: Movie[] = [
     },
   ],
 },
+
+  {
+    id: "353",
+    title: "ALVIN AND THE CHIPMUNKS",
+    slug: "alvin-and-the-chipmunks",
+    year: "2007",
+    rating: "",
+    image: "alvin-and-the-chipmunks.jpg",
+    description: "",
+    language: "English",
+    genres: ["Animation", "Comedy", "Family"],
+    isFeatured: true,
+    createdAt: "2026-11-10",
+    explainer: "Master P",
+    parts: [
+      {
+        id: "353-1",
+        partNumber: 1,
+        title: "ALVIN AND THE CHIPMUNKS",
+        streamUrl: "https://vsembed.com/m8oqi",
+        downloadUrl: "https://www.mediafire.com/file/kr9zjhjvejpvnl1/Alvin_And_The_Chipmunks_Hd.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "354",
+    title: "ALVIN AND THE CHIPMUNKS: THE SQUEAKQUEL",
+    slug: "alvin-and-the-chipmunks-the-squeakquel",
+    year: "2009",
+    rating: "",
+    image: "alvin-and-the-chipmunks-2.jpg",
+    description: "",
+    language: "English",
+    genres: ["Animation", "Comedy", "Family"],
+    isFeatured: true,
+    createdAt: "2026-11-10",
+    explainer: "Master P",
+    parts: [
+      {
+        id: "354-1",
+        partNumber: 1,
+        title: "ALVIN AND THE CHIPMUNKS: THE SQUEAKQUEL",
+        streamUrl: "https://vsembed.com/jvdtx",
+        downloadUrl: "https://www.mediafire.com/file/3x5qz0ba20b5r68/Alvin_And_The_Chipmunks_2-_The_Squeakquel-Hd.mp4/file",
+      },
+    ],
+  },
+  {
+    id: "355",
+    title: "ALVIN AND THE CHIPMUNKS: CHIPWRECKED",
+    slug: "alvin-and-the-chipmunks-chipwrecked",
+    year: "2011",
+    rating: "",
+    image: "alvin-and-the-chipmunks-chipwrecked.jpg",
+    description: "",
+    language: "English",
+    genres: ["Animation", "Comedy", "Family"],
+    isFeatured: false,
+    createdAt: "2026-11-10",
+    explainer: "Master P",
+    parts: [
+      {
+        id: "355-1",
+        partNumber: 1,
+        title: "ALVIN AND THE CHIPMUNKS: CHIPWRECKED",
+        streamUrl: "https://vsembed.com/8ntgs",
+        downloadUrl: "https://www.mediafire.com/file/ajz4ezxsok2gs6t/Alvin_And_The_Chipmunks-_Chipwrecked-Hd.mp4/file",
+      },
+    ],
+  },
 
 ]
 
