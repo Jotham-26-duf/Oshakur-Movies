@@ -9290,6 +9290,36 @@ export const movies: Movie[] = [
       },
     ],
   },
+  {
+  id: "356",
+  title: "ANAMAGAN ",
+  slug: "anamagan-b",
+  year: "",
+  rating: "",
+  image: "anamagan-b.jpg",
+  description: "",
+  language: "English",
+  genres: [],
+  isFeatured: false,
+  createdAt: "2026-11-11",
+  explainer: "Rock Kimomo",
+  parts: [
+    {
+      id: "356-1",
+      partNumber: 1,
+      title: "ANAMAGAN A",
+      streamUrl: "https://vsembed.com/b14dd",
+      downloadUrl: "https://www.mediafire.com/file/8sc7zpfmbpr6puc/Anamagan_A_Hd.mp4/file?action=check",
+    },
+    {
+      id: "356-2",
+      partNumber: 2,
+      title: "ANAMAGAN a",
+      streamUrl: "https://vsembed.com/8wvts",
+      downloadUrl: "https://www.mediafire.com/file/m1rnxd8mrfwq2ov/Anamagan_B_Hd.mp4/file",
+    },
+  ],
+},
 
 ]
 
