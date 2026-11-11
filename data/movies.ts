@@ -8956,7 +8956,7 @@ export const movies: Movie[] = [
   description: "",
   language: "English",
   genres: ["Action", "Thriller", "Crime"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-09",
   explainer: "Sankara",
   parts: [
@@ -9331,7 +9331,7 @@ genres: ["Animation", "Comedy", "Family"],
   description: "",
   language: "English",
  genres: ["Animation", "Comedy", "Family"],
-  isFeatured: false,
+  isFeatured: true ,
   createdAt: "2026-11-11",
   explainer: "Rock Kimomo",
   parts: [
