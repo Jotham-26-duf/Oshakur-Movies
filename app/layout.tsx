@@ -79,6 +79,20 @@ export default function RootLayout({
       </head>
 
       <body>
+        {/* Website structured data — identifies the preferred website name */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: siteName,
+              alternateName: "OSHAKUR",
+              url: siteUrl,
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
+
         {/* Monetag scripts are managed by app/MonetagScripts.tsx */}
         <MonetagScripts />
 
