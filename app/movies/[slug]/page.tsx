@@ -14,6 +14,7 @@ import { createOpenGraphMetadata } from "@/app/seo";
 import TrailerPlayer from "@/app/components/TrailerPlayer";
 import { DetailViewTracker, ViewCount } from "@/app/components/CatalogFeatures";
 import MomoSupport from "@/app/components/MomoSupport";
+import ExpandableDescription from "@/app/components/ExpandableDescription";
 
 interface MovieDetailsPageProps {
   params: Promise<{
@@ -78,7 +79,7 @@ export default async function MovieDetailsPage({
           <Link href="/" className="shrink-0 hover:text-white">Home</Link><span>/</span><Link href="/movies" className="shrink-0 hover:text-white">Movies</Link><span>/</span><span aria-current="page" className="truncate text-white">{movie.title}</span>
         </nav>
       </div>
-      <TrailerPlayer trailer={movie.trailer} />
+      <TrailerPlayer trailer={movie.trailer} info={{ type: "movie", title: movie.title, image: movie.image, year: movie.year, genres: movie.genres, language: movie.language, rating: movie.rating }} />
       <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
         <section>
           <h1 className="text-3xl font-black tracking-tight sm:text-5xl">{movie.title}</h1>
@@ -105,7 +106,7 @@ export default async function MovieDetailsPage({
           </div>
         </section>
       </div>
-      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"><h2 className="cinema-section-title text-2xl font-bold">Summary</h2><p className="mt-4 max-w-4xl text-sm leading-7 text-[#AAA] sm:text-base">{movie.description || "No summary is available for this title yet."}</p></section>
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"><h2 className="cinema-section-title text-2xl font-bold">Summary</h2><ExpandableDescription description={movie.description} className="mt-4" /></section>
       <div className="pb-10"><MomoSupport /></div>
       <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-12 sm:px-6 lg:grid-cols-[minmax(0,1.8fr)_minmax(280px,1fr)] lg:px-8">
         <div><CommentsSection movieSlug={movie.slug} /></div>

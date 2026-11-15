@@ -15,6 +15,7 @@ import { createOpenGraphMetadata } from "@/app/seo";
 import TrailerPlayer from "@/app/components/TrailerPlayer";
 import { DetailViewTracker, ViewCount } from "@/app/components/CatalogFeatures";
 import MomoSupport from "@/app/components/MomoSupport";
+import ExpandableDescription from "@/app/components/ExpandableDescription";
 
 interface SeriesDetailsPageProps {
   params: Promise<{
@@ -92,7 +93,7 @@ export default async function SeriesDetailsPage({
       <div className="mx-auto max-w-7xl px-4 pt-5 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="mb-5 flex min-w-0 items-center gap-2 overflow-hidden text-sm text-[#999]"><Link href="/" className="shrink-0 hover:text-white">Home</Link><span>/</span><Link href="/series" className="shrink-0 hover:text-white">Series</Link><span>/</span><span aria-current="page" className="truncate text-white">{currentSeries.title}</span></nav>
       </div>
-      <TrailerPlayer trailer={currentSeries.trailer} />
+      <TrailerPlayer trailer={currentSeries.trailer} info={{ type: "series", title: currentSeries.title, image: currentSeries.image, year: currentSeries.year, genres: currentSeries.genres, language: currentSeries.language, rating: currentSeries.rating }} />
       <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
         <section>
           <h1 className="text-3xl font-black tracking-tight sm:text-5xl">{currentSeries.title}</h1>
@@ -105,7 +106,7 @@ export default async function SeriesDetailsPage({
             {currentSeries.explainer && <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1"><img src={getExplainerImage(currentSeries.explainer) || "/favicon.svg"} alt="" className="h-6 w-6 rounded-full object-cover" />{currentSeries.explainer}</span>}
             {currentSeries.createdAt && <span className="text-xs text-[#888]">Added {new Date(currentSeries.createdAt).toLocaleDateString()}</span>}
           </div>
-          <p className="mt-4 max-w-4xl text-sm leading-7 text-[#AAA] sm:text-base">{currentSeries.description || "No summary is available for this title yet."}</p>
+          <ExpandableDescription description={currentSeries.description} className="mt-4" />
         </section>
       </div>
 
