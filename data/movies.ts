@@ -11695,7 +11695,7 @@ genres: ["Animation", "Comedy", "Family"],
     description: "",
     language: "Kinyarwanda",
     genres: ["Action", "Adventure", "Romance"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-11-15",
     explainer: "Sankara",
     trailer: "",
@@ -12046,7 +12046,7 @@ genres: ["Animation", "Comedy", "Family"],
     description: "",
     language: "Kinyarwanda",
     genres: ["Action", "Adventure", "Romance"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-11-15",
     explainer: "Gaheza",
     trailer: "",
@@ -13756,7 +13756,7 @@ genres: ["Animation", "Comedy", "Family"],
   description: "The genius sniper Anna is forced to accept an assassination assignment. In the process, she gradually finds her true calling to fight for kindness and to defend a greater love. Tai, a special agent for the UN army, stands up for justice when drug lords try to harm innocent citizens. The two join forces to block the bill to legalize drug cultivation and distribution in Libiwala. They fight to the death with the drug lord Luo Jie and eventually foil his plans, protecting the people from the drugs. This is the exciting story of them working together to save a nation.",
   language: "Kinyarwanda",
   genres: ["Action", "Adventure", "Romance"],
-  isFeatured: false,
+  isFeatured: true,
   createdAt: "2026-11-15",
   explainer: "B the Great",
   trailer: "",
@@ -13774,6 +13774,54 @@ genres: ["Animation", "Comedy", "Family"],
       title: "Part 2",
       streamUrl: "https://isatafilez.my/files/Serie%2FTHE_KING_OF_SNIPER_IN_NORTHEAST_B.mp4",
       downloadUrl: "https://isatafilez.my/files/Serie%2FTHE_KING_OF_SNIPER_IN_NORTHEAST_B.mp4"
+    }
+  ]
+},
+{
+  id: "512",
+  title: "The Bucket List",
+  slug: "the-bucket-list",
+  year: "",
+  rating: "",
+  image: "the-bucket-list.jpg",
+  description: "Two terminally ill men escape from the cancer ward and embark on a road trip full of adventures. Determined to fulfil their dreams before their time runs out, they experience unforgettable moments and discover the true meaning of life.",
+  language: "Kinyarwanda",
+  genres: ["Drama", "Adventure"],
+  isFeatured: true,
+  createdAt: "2026-11-17",
+  explainer: "Rocky Kimomo",
+  trailer: "Mussa Savimbi",
+  parts: [
+    {
+      id: "512-1",
+      partNumber: 1,
+      title: "Full Movie",
+      streamUrl: "https://vsembed.com/qpqrw",
+      downloadUrl: "https://www.mediafire.com/file/k1kiqbgou2wwe8i/THE_BUCKET_LIST.mp4/file"
+    }
+  ]
+},
+{
+  id: "513",
+  title: "Constantine",
+  slug: "constantine",
+  year: "2005",
+  rating: "",
+  image: "constantine.jpg",
+  description: "Detective Angela approaches Constantine, a demon hunter, to investigate the mysterious death of her twin sister. As Constantine investigates, he discovers that demons are planning to enter the human world. He must face supernatural forces and fight to prevent darkness from taking over the world.",
+  language: "Kinyarwanda",
+  genres: ["Horror", "Fantasy", "Action"],
+  isFeatured: true,
+  createdAt: "2026-11-17",
+  explainer: "Mussa Savimbi",
+  trailer: "",
+  parts: [
+    {
+      id: "513-1",
+      partNumber: 1,
+      title: "Full Movie",
+      streamUrl: "https://vsembed.com/xkdo6j",
+      downloadUrl: "https://www.mediafire.com/file/m9kfs6llpqh2geu/Constantine+Hd.mp4/file"
     }
   ]
 }
