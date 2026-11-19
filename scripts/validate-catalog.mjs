@@ -83,7 +83,14 @@ function reportDuplicates(items, field, label, issues) {
 
 const movies = loadCatalog("movies.ts", "movies");
 const series = loadCatalog("series.ts", "series");
-const episodes = loadCatalog("episodes.ts", "episodes");
+const episodes = series.flatMap((parent) =>
+  (parent.episodes ?? []).map((episode) => ({
+    ...episode,
+    seriesSlug: parent.slug,
+    sourceFile: "series.ts",
+    sourceLine: parent.sourceLine,
+  })),
+);
 const issues = [];
 
 reportDuplicates(movies, "id", "Movie ID", issues);
@@ -92,13 +99,15 @@ reportDuplicates(series, "id", "Series ID", issues);
 reportDuplicates(series, "slug", "Series slug", issues);
 reportDuplicates(episodes, "id", "Episode ID", issues);
 
-const seriesSlugs = new Set(series.map((item) => item.slug));
-for (const episode of episodes) {
-  if (seriesSlugs.has(episode.seriesSlug)) continue;
-
-  issues.push(
-    `Episode ${episode.id} (${JSON.stringify(episode.title)}) references missing series slug ${JSON.stringify(episode.seriesSlug)} at ${episode.sourceFile}:${episode.sourceLine}`,
-  );
+for (const parent of series) {
+  if (!Array.isArray(parent.episodes)) {
+    issues.push(`Series ${parent.slug} is missing its nested episodes array.`);
+  }
+  for (const episode of parent.episodes ?? []) {
+    if (!Number.isInteger(episode.episodeNumber) || episode.episodeNumber < 1) {
+      issues.push(`Episode ${episode.id} (${JSON.stringify(episode.title)}) has invalid episode number ${JSON.stringify(episode.episodeNumber)}.`);
+    }
+  }
 }
 
 if (issues.length > 0) {
@@ -107,6 +116,6 @@ if (issues.length > 0) {
   process.exitCode = 1;
 } else {
   console.log(
-    `Catalog validation passed: ${movies.length} movies, ${series.length} series, ${episodes.length} episodes; no duplicate IDs/slugs or dangling episode references.`,
+    `Catalog validation passed: ${movies.length} movies, ${series.length} series, ${episodes.length} episodes; no duplicate IDs/slugs and every episode has a valid number and nested parent.`,
   );
 }

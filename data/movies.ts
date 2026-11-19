@@ -5,6 +5,8 @@ export interface MoviePart {
   title: string;
   streamUrl: string;
   downloadUrl: string;
+  alternateStreamUrls?: string[];
+  alternateDownloadUrls?: string[];
 }
 
 export interface Movie {
@@ -23,6 +25,8 @@ export interface Movie {
   isFeatured: boolean;
   createdAt: string;
   parts: MoviePart[];
+  alternateParts?: MoviePart[];
+  alternateImages?: string[];
 
 }
 
@@ -1574,7 +1578,7 @@ export const movies: Movie[] = [
         "https://www.mediafire.com/file/7jkgwmzmaoovsjm/Kuch+Kuch+Hota+Hai-720P.mp4/file",
     },
   ],
-  
+
 },
 
 {
@@ -5998,34 +6002,45 @@ export const movies: Movie[] = [
 },
 
 {
-  id: "226",
-  title: "EYE FOR AN EYE 2",
-  slug: "eye-for-an-eye-2",
-  explainer: "",
-  year: "",
-  rating: "",
-  image: "eye-for-an-eye-2.jpg",
-  description: "Eye for an Eye 2 is presented in two parts in an Agasobanuye version.",
-  language: "English",
-  genres: ["Action", "Thriller"],
-  isFeatured: false,
-  createdAt: "2026-10-23",
-  parts: [
-    {
-      id: "226-1",
-      partNumber: 1,
-      title: "Part A",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/lt60cvzw1wq8dcw/eye_for_an_eye_2_A.mp4/file",
-    },
-    {
-      id: "226-2",
-      partNumber: 2,
-      title: "Part B",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/bpi277ndn786id8/eye_for_an_eye_2_B.mp4/file",
-    },
+  "id": "226",
+  "title": "EYE FOR AN EYE 2",
+  "slug": "eye-for-an-eye-2",
+  "explainer": "Master P",
+  "year": "",
+  "rating": "",
+  "image": "eye-for-an-eye-2.jpg",
+  "description": "Eye for an Eye 2 is presented in two parts in an Agasobanuye version.",
+  "language": "English / Kinyarwanda",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Adventure",
+    "Romance"
   ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "parts": [
+    {
+      "id": "226-1",
+      "partNumber": 1,
+      "title": "Part A",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/lt60cvzw1wq8dcw/eye_for_an_eye_2_A.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/lt60cvzw1wq8dcw/eye_for_an_eye_2_A.mp4/file"
+      ]
+    },
+    {
+      "id": "226-2",
+      "partNumber": 2,
+      "title": "Part B",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/bpi277ndn786id8/eye_for_an_eye_2_B.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/bpi277ndn786id8/eye_for_an_eye_2_B.mp4/file"
+      ]
+    }
+  ]
 },
 {
   id: "227",
@@ -6120,34 +6135,44 @@ export const movies: Movie[] = [
   ],
 },
 {
-  id: "231",
-  title: "SECTION 375",
-  slug: "section-375",
-  explainer: "Rocky",
-  year: "",
-  rating: "",
-  image: "section-375.jpg",
-  description: "Section 375 is presented in two parts in an Agasobanuye version by Rocky.",
-  language: "English",
-  genres: ["Drama", "Thriller"],
-  isFeatured: false,
-  createdAt: "2026-10-23",
-  parts: [
-    {
-      id: "231-1",
-      partNumber: 1,
-      title: "Part A",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/qc6vj3a8cwa6ot0/Section_375_A.%2528isata.pythonanywhere.com%2529.mp4/file",
-    },
-    {
-      id: "231-2",
-      partNumber: 2,
-      title: "Part B",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/lrn44rmqr79dvym/Section_375_B.%2528isata.pythonanywhere.com%2529.mp4/file",
-    },
+  "id": "231",
+  "title": "SECTION 375",
+  "slug": "section-375",
+  "explainer": "Rocky / Rocky kirabiranya",
+  "year": "",
+  "rating": "",
+  "image": "section-375.jpg",
+  "description": "Section 375 is presented in two parts in an Agasobanuye version by Rocky.",
+  "language": "English / Kinyarwanda",
+  "genres": [
+    "Drama",
+    "Thriller",
+    "Crime"
   ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "parts": [
+    {
+      "id": "231-1",
+      "partNumber": 1,
+      "title": "Part A",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/qc6vj3a8cwa6ot0/Section_375_A.%2528isata.pythonanywhere.com%2529.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/qc6vj3a8cwa6ot0/Section_375_A.%2528isata.pythonanywhere.com%2529.mp4/file"
+      ]
+    },
+    {
+      "id": "231-2",
+      "partNumber": 2,
+      "title": "Part B",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/lrn44rmqr79dvym/Section_375_B.%2528isata.pythonanywhere.com%2529.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/lrn44rmqr79dvym/Section_375_B.%2528isata.pythonanywhere.com%2529.mp4/file"
+      ]
+    }
+  ]
 },
 {
   id: "232",
@@ -6242,27 +6267,38 @@ export const movies: Movie[] = [
   ],
 },
 {
-  id: "236",
-  title: "ABDUCTION",
-  slug: "abduction",
-  explainer: "Sankara The Premier",
-  year: "",
-  rating: "",
-  image: "abduction.jpg",
-  description: "Abduction is presented in an Agasobanuye version by Sankara The Premier.",
-  language: "English",
-  genres: ["Action", "Thriller"],
-  isFeatured: false,
-  createdAt: "2026-10-23",
-  parts: [
-    {
-      id: "236-1",
-      partNumber: 1,
-      title: "Full Movie",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/ugo2behqm2xn6jl/ABDUCTIN_DJ_ERIC_NYANZA_0790881712.mp4/file",
-    },
+  "id": "236",
+  "title": "ABDUCTION",
+  "slug": "abduction",
+  "explainer": "Sankara The Premier / Junior Giti",
+  "year": "",
+  "rating": "",
+  "image": "abduction.jpg",
+  "description": "Abduction is presented in an Agasobanuye version by Sankara The Premier.",
+  "language": "English / Kinyarwanda",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Adventure",
+    "Romance"
   ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "parts": [
+    {
+      "id": "236-1",
+      "partNumber": 1,
+      "title": "Full Movie",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/ugo2behqm2xn6jl/ABDUCTIN_DJ_ERIC_NYANZA_0790881712.mp4/file",
+      "alternateStreamUrls": [
+        "https://mega.nz/file/ojxV0SYa#ym9KtCCjA1mOQ4eoeHeFOr1qGaOFfO-pw0CsErt7tug"
+      ],
+      "alternateDownloadUrls": [
+        "https://mega.nz/file/ojxV0SYa#ym9KtCCjA1mOQ4eoeHeFOr1qGaOFfO-pw0CsErt7tug"
+      ]
+    }
+  ]
 },
 {
   id: "237",
@@ -6371,34 +6407,53 @@ export const movies: Movie[] = [
   ],
 },
 {
-  id: "241",
-  title: "ANDHADHUN",
-  slug: "andhadhun",
-  explainer: "ROCK KIMOMO",
-  year: "2018",
-  rating: "",
-  image: "andhadhun.jpg",
-  description: "Andhadhun is presented in an Agasobanuye version by ROCK KIMOMO.",
-  language: "Hindi",
-  genres: ["Crime", "Thriller", "Mystery"],
-  isFeatured: false,
-  createdAt: "2026-10-24",
-  parts: [
-    {
-      id: "241-1",
-      partNumber: 1,
-      title: "ANDHADHUN - Part A",
-      streamUrl: "https://drive.google.com/file/d/1_96pYHtQn1PPu7j_XQNOWbIxh_Z412Ec/view?usp=sharing",
-      downloadUrl: "https://drive.google.com/file/d/1_96pYHtQn1PPu7j_XQNOWbIxh_Z412Ec/view?usp=sharing",
-    },
-    {
-      id: "241-2",
-      partNumber: 2,
-      title: "ANDHADHUN - Part B",
-      streamUrl: "https://drive.google.com/file/d/151XsAzVz-HjMAU4I0GXu3g9iVuj9IZI2/view?usp=drive_link",
-      downloadUrl: "https://drive.google.com/file/d/151XsAzVz-HjMAU4I0GXu3g9iVuj9IZI2/view?usp=drive_link",
-    },
+  "id": "241",
+  "title": "ANDHADHUN",
+  "slug": "andhadhun",
+  "explainer": "ROCK KIMOMO / Rocky",
+  "year": "2018",
+  "rating": "",
+  "image": "andhadhun.jpg",
+  "description": "Andhadhun is presented in an Agasobanuye version by ROCK KIMOMO.\n\nA series of mysterious events changes the life of a blind pianist who now must report a crime that was actually never witnessed by him.",
+  "language": "Hindi / Kinyarwanda",
+  "genres": [
+    "Crime",
+    "Thriller",
+    "Mystery"
   ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "parts": [
+    {
+      "id": "241-1",
+      "partNumber": 1,
+      "title": "ANDHADHUN - Part A",
+      "streamUrl": "https://drive.google.com/file/d/1_96pYHtQn1PPu7j_XQNOWbIxh_Z412Ec/view?usp=sharing",
+      "downloadUrl": "https://drive.google.com/file/d/1_96pYHtQn1PPu7j_XQNOWbIxh_Z412Ec/view?usp=sharing",
+      "alternateStreamUrls": [
+        "https://isatafilez.my/files/series%2F2026%2Findia%2Frocky%2FAndhadhun_A.mp4"
+      ],
+      "alternateDownloadUrls": [
+        "https://isatafilez.my/files/series%2F2026%2Findia%2Frocky%2FAndhadhun_A.mp4"
+      ]
+    },
+    {
+      "id": "241-2",
+      "partNumber": 2,
+      "title": "ANDHADHUN - Part B",
+      "streamUrl": "https://drive.google.com/file/d/151XsAzVz-HjMAU4I0GXu3g9iVuj9IZI2/view?usp=drive_link",
+      "downloadUrl": "https://drive.google.com/file/d/151XsAzVz-HjMAU4I0GXu3g9iVuj9IZI2/view?usp=drive_link",
+      "alternateStreamUrls": [
+        "https://isatafilez.my/files/series%2F2026%2Findia%2Frocky%2FAndhadhun_B.mp4"
+      ],
+      "alternateDownloadUrls": [
+        "https://isatafilez.my/files/series%2F2026%2Findia%2Frocky%2FAndhadhun_B.mp4"
+      ]
+    }
+  ],
+  "alternateImages": [
+    "andhadhunn.jpg"
+  ]
 },
 {
   id: "242",
@@ -6859,7 +6914,7 @@ export const movies: Movie[] = [
   language: "English",
   genres: ["Action", "Thriller"],
   isFeatured: false
-  
+
   ,
   createdAt: "2026-10-30",
   parts: [
@@ -7607,57 +7662,74 @@ export const movies: Movie[] = [
   ],
 },
 {
-  id: "288",
-  title: "THE GUEST",
-  slug: "the-guest",
-  explainer: "SANKARA",
-  year: "2026",
-  rating: "",
-  image: "the-guest.jpg",
-  description: "The Guest is presented in an Agasobanuye version by SANKARA.",
-  language: "English",
-  genres: ["Action", "Thriller"],
-  isFeatured: false,
-  createdAt: "2026-11-02",
-  parts: [
-    {
-      id: "288-1",
-      partNumber: 1,
-      title: "THE GUEST",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/izztjj95mka01je/The_Guest_Sankara.mp4/file",
-    },
+  "id": "288",
+  "title": "THE GUEST",
+  "slug": "the-guest",
+  "explainer": "SANKARA / Sankara",
+  "year": "2026",
+  "rating": "",
+  "image": "the-guest.jpg",
+  "description": "The Guest is presented in an Agasobanuye version by SANKARA.",
+  "language": "English",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Crime"
   ],
+  "isFeatured": false,
+  "createdAt": "2026-11-09",
+  "parts": [
+    {
+      "id": "288-1",
+      "partNumber": 1,
+      "title": "THE GUEST",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/izztjj95mka01je/The_Guest_Sankara.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/izztjj95mka01je/The_Guest_Sankara.mp4/file"
+      ]
+    }
+  ]
 },
 {
-  id: "289",
-  title: "DUNE: PART ONE",
-  slug: "dune-part-one",
-  explainer: "SANKARA",
-  year: "2021",
-  rating: "",
-  image: "dune-part-one.jpg",
-  description: "Dune: Part One is presented in an Agasobanuye version by SANKARA.",
-  language: "English",
-  genres: ["Action", "Adventure", "Sci-Fi"],
-  isFeatured: false,
-  createdAt: "2026-11-02",
-  parts: [
-    {
-      id: "289-1",
-      partNumber: 1,
-      title: "DUNE: PART ONE - PART A",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/i0v30z29cy7b5e8/Dune_Part_One_A.mp4/file",
-    },
-    {
-      id: "289-2",
-      partNumber: 2,
-      title: "DUNE: PART ONE - PART B",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/a7gqap1w0r9ltej/Dune_Part_One_B.mp4/file",
-    },
+  "id": "289",
+  "title": "DUNE: PART ONE",
+  "slug": "dune-part-one",
+  "explainer": "SANKARA",
+  "year": "2021",
+  "rating": "",
+  "image": "dune-part-one.jpg",
+  "description": "Dune: Part One is presented in an Agasobanuye version by SANKARA.",
+  "language": "English / Kinyarwanda",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Sci-Fi"
   ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "parts": [
+    {
+      "id": "289-1",
+      "partNumber": 1,
+      "title": "DUNE: PART ONE - PART A",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/i0v30z29cy7b5e8/Dune_Part_One_A.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/i0v30z29cy7b5e8/Dune_Part_One_A.mp4/file"
+      ]
+    },
+    {
+      "id": "289-2",
+      "partNumber": 2,
+      "title": "DUNE: PART ONE - PART B",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/a7gqap1w0r9ltej/Dune_Part_One_B.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/a7gqap1w0r9ltej/Dune_Part_One_B.mp4/file"
+      ]
+    }
+  ]
 },
 {
   id: "290",
@@ -7826,34 +7898,44 @@ export const movies: Movie[] = [
   ],
 },
 {
-  id: "296",
-  title: "NADAANIYAN",
-  slug: "nadaaniyan",
-  explainer: "ROCK KIMOMO",
-  year: "2026",
-  rating: "",
-  image: "nadaaniyan.jpg",
-  description: "Nadaaniyan is presented in an Agasobanuye version by ROCK KIMOMO.",
-  language: "Hindi",
-  genres: ["Romance", "Drama"],
-  isFeatured: false,
-  createdAt: "2026-11-02",
-  parts: [
-    {
-      id: "296-1",
-      partNumber: 1,
-      title: "NADAANIYAN - PART A",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/ilrn5g63pedhmt8/NADAANIYAN_A.mp4/file",
-    },
-    {
-      id: "296-2",
-      partNumber: 2,
-      title: "NADAANIYAN - PART B",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/hb628gi7f88zfyx/NADAANIYAN_B.mp4/file",
-    },
+  "id": "296",
+  "title": "NADAANIYAN",
+  "slug": "nadaaniyan",
+  "explainer": "ROCK KIMOMO / Rocky",
+  "year": "2026",
+  "rating": "",
+  "image": "nadaaniyan.jpg",
+  "description": "Nadaaniyan is presented in an Agasobanuye version by ROCK KIMOMO.",
+  "language": "Hindi / Kinyarwanda",
+  "genres": [
+    "Romance",
+    "Drama",
+    "Comedy"
   ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "parts": [
+    {
+      "id": "296-1",
+      "partNumber": 1,
+      "title": "NADAANIYAN - PART A",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/ilrn5g63pedhmt8/NADAANIYAN_A.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/ilrn5g63pedhmt8/NADAANIYAN_A.mp4/file"
+      ]
+    },
+    {
+      "id": "296-2",
+      "partNumber": 2,
+      "title": "NADAANIYAN - PART B",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/hb628gi7f88zfyx/NADAANIYAN_B.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/hb628gi7f88zfyx/NADAANIYAN_B.mp4/file"
+      ]
+    }
+  ]
 },
 {
   id: "297",
@@ -7879,34 +7961,45 @@ export const movies: Movie[] = [
   ],
 },
 {
-  id: "298",
-  title: "GOLDEN KAMUY",
-  slug: "golden-kamuy",
-  explainer: "HAKIM",
-  year: "2026",
-  rating: "",
-  image: "golden-kamuy.jpg",
-  description: "Golden Kamuy is presented in an Agasobanuye version by HAKIM.",
-  language: "Japanese",
-  genres: ["Action", "Adventure", "Drama"],
-  isFeatured: false,
-  createdAt: "2026-11-02",
-  parts: [
-    {
-      id: "298-1",
-      partNumber: 1,
-      title: "GOLDEN KAMUY - PART A",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/wqq2vzd336rjrs0/Golden_Kamuy_A.vob/file",
-    },
-    {
-      id: "298-2",
-      partNumber: 2,
-      title: "GOLDEN KAMUY - PART B",
-      streamUrl: "",
-      downloadUrl: "https://www.mediafire.com/file/2vnob87l17gjr2g/Golden_Kamuy_B.vob/file",
-    },
+  "id": "298",
+  "title": "GOLDEN KAMUY",
+  "slug": "golden-kamuy",
+  "explainer": "HAKIM / Hakim The Professor",
+  "year": "2026",
+  "rating": "",
+  "image": "golden-kamuy.jpg",
+  "description": "Golden Kamuy is presented in an Agasobanuye version by HAKIM.",
+  "language": "Japanese / Kinyarwanda",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Drama",
+    "History"
   ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "parts": [
+    {
+      "id": "298-1",
+      "partNumber": 1,
+      "title": "GOLDEN KAMUY - PART A",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/wqq2vzd336rjrs0/Golden_Kamuy_A.vob/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/wqq2vzd336rjrs0/Golden_Kamuy_A.vob/file"
+      ]
+    },
+    {
+      "id": "298-2",
+      "partNumber": 2,
+      "title": "GOLDEN KAMUY - PART B",
+      "streamUrl": "",
+      "downloadUrl": "https://www.mediafire.com/file/2vnob87l17gjr2g/Golden_Kamuy_B.vob/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/2vnob87l17gjr2g/Golden_Kamuy_B.vob/file"
+      ]
+    }
+  ]
 },
 {
   id: "299",
@@ -7939,27 +8032,35 @@ export const movies: Movie[] = [
   ],
 },
 {
-  id: "300",
-  title: "SANAK",
-  slug: "sanak",
-  explainer: "B THE GREAT",
-  year: "2026",
-  rating: "",
-  image: "sanak.jpg",
-  description: "Sanak is presented in an Agasobanuye version by B THE GREAT.",
-  language: "Hindi",
-  genres: ["Action", "Thriller"],
-  isFeatured: false,
-  createdAt: "2026-11-02",
-  parts: [
-    {
-      id: "300-1",
-      partNumber: 1,
-      title: "SANAK",
-      streamUrl: "https://www.mediafire.com/file/md12j746ui0l88u/SANAK.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/md12j746ui0l88u/SANAK.mp4/file",
-    },
+  "id": "300",
+  "title": "SANAK",
+  "slug": "sanak",
+  "explainer": "B THE GREAT / B the Greater",
+  "year": "2026",
+  "rating": "",
+  "image": "sanak.jpg",
+  "description": "Sanak is presented in an Agasobanuye version by B THE GREAT.",
+  "language": "Hindi / Kinyarwanda",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Adventure",
+    "Romance"
   ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "parts": [
+    {
+      "id": "300-1",
+      "partNumber": 1,
+      "title": "SANAK",
+      "streamUrl": "https://www.mediafire.com/file/md12j746ui0l88u/SANAK.mp4/file",
+      "downloadUrl": "https://www.mediafire.com/file/md12j746ui0l88u/SANAK.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/md12j746ui0l88u/SANAK.mp4/file"
+      ]
+    }
+  ]
 },
 {
   id: "301",
@@ -8709,27 +8810,34 @@ export const movies: Movie[] = [
   ],
 },
 {
-  id: "333",
-  title: "SHERIFF",
-  slug: "sheriff",
-  year: "",
-  rating: "",
-  image: "sheriff.jpg",
-  description: "SHERIFF presents an action-packed story involving crime, conflict, and dangerous encounters.",
-  language: "English",
-  genres: ["Action", "Crime", "Drama"],
-  isFeatured: false,
-  createdAt: "2026-11-06",
-  explainer: "B The Great",
-  parts: [
-    {
-      id: "333-1",
-      partNumber: 1,
-      title: "SHERIFF - PART 1",
-      streamUrl: "https://www.mediafire.com/file/u5ov3yszrjydygo/SHERIFF.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/u5ov3yszrjydygo/SHERIFF.mp4/file",
-    },
+  "id": "333",
+  "title": "SHERIFF",
+  "slug": "sheriff",
+  "year": "",
+  "rating": "",
+  "image": "sheriff.jpg",
+  "description": "SHERIFF presents an action-packed story involving crime, conflict, and dangerous encounters.",
+  "language": "English / Kinyarwanda",
+  "genres": [
+    "Action",
+    "Crime",
+    "Drama"
   ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "explainer": "B The Great",
+  "parts": [
+    {
+      "id": "333-1",
+      "partNumber": 1,
+      "title": "SHERIFF - PART 1",
+      "streamUrl": "https://www.mediafire.com/file/u5ov3yszrjydygo/SHERIFF.mp4/file",
+      "downloadUrl": "https://www.mediafire.com/file/u5ov3yszrjydygo/SHERIFF.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/u5ov3yszrjydygo/SHERIFF.mp4/file"
+      ]
+    }
+  ]
 },
 {
   id: "334",
@@ -9001,29 +9109,7 @@ export const movies: Movie[] = [
   ],
 },
 
-{
-  id: "345",
-  title: "THE GUEST",
-  slug: "the-guest",
-  year: "",
-  rating: "",
-  image: "the-guest.jpg",
-  description: "",
-  language: "English",
-  genres: ["Action", "Thriller", "Crime"],
-  isFeatured: false,
-  createdAt: "2026-11-09",
-  explainer: "Sankara",
-  parts: [
-    {
-      id: "345-1",
-      partNumber: 1,
-      title: "THE GUEST",
-      streamUrl: "https://www.mediafire.com/file/izztjj95mka01je/The_Guest_Sankara.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/izztjj95mka01je/The_Guest_Sankara.mp4/file",
-    },
-  ],
-},
+
 
 {
   id: "346",
@@ -10377,29 +10463,42 @@ genres: ["Animation", "Comedy", "Family"],
     ],
   },
   {
-    id: "394",
-    title: "THE PRIEST",
-    slug: "the-priest",
-    year: "",
-    rating: "",
-    image: "the-priestt.jpg",
-    description: "",
-    language: "Kinyarwanda",
-    genres: ["Horror", "Thriller", "Mystery"],
-    isFeatured: false,
-    createdAt: "2026-11-15",
-    explainer: "Sankara",
-    trailer: "",
-    parts: [
-      {
-        id: "394-1",
-        partNumber: 1,
-        title: "THE PRIEST",
-        streamUrl: "https://www.mediafire.com/file/ux1f2bwlgjjdyxw/PRIEST.mp4/file",
-        downloadUrl: "https://www.mediafire.com/file/ux1f2bwlgjjdyxw/PRIEST.mp4/file",
-      },
-    ],
-  },
+  "id": "394",
+  "title": "THE PRIEST",
+  "slug": "the-priest",
+  "year": "",
+  "rating": "",
+  "image": "the-priestt.jpg",
+  "description": "",
+  "language": "Kinyarwanda",
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Mystery",
+    "Action",
+    "Adventure",
+    "Romance"
+  ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "explainer": "Sankara / Sankar",
+  "trailer": "",
+  "parts": [
+    {
+      "id": "394-1",
+      "partNumber": 1,
+      "title": "THE PRIEST",
+      "streamUrl": "https://www.mediafire.com/file/ux1f2bwlgjjdyxw/PRIEST.mp4/file",
+      "downloadUrl": "https://www.mediafire.com/file/ux1f2bwlgjjdyxw/PRIEST.mp4/file",
+      "alternateStreamUrls": [
+        "https://www.mediafire.com/file/ux1f2bwlgjjdyxw/PRIEST.mp4/file"
+      ]
+    }
+  ],
+  "alternateImages": [
+    "the-priest.jpg"
+  ]
+},
   {
     id: "395",
     title: "DOCTOR STRANGER",
@@ -10610,37 +10709,7 @@ genres: ["Animation", "Comedy", "Family"],
       },
     ],
   },
-  {
-    id: "402",
-    title: "SECTION 375",
-    slug: "section-375",
-    year: "",
-    rating: "",
-    image: "section-375.jpg",
-    description: "",
-    language: "Kinyarwanda",
-    genres: ["Crime", "Drama", "Thriller"],
-    isFeatured: false,
-    createdAt: "2026-11-15",
-    explainer: "Rocky kirabiranya",
-    trailer: "",
-    parts: [
-      {
-        id: "402-1",
-        partNumber: 1,
-        title: "SECTION 375 A",
-        streamUrl: "https://www.mediafire.com/file/qc6vj3a8cwa6ot0/Section_375_A.%2528isata.pythonanywhere.com%2529.mp4/file",
-        downloadUrl: "https://www.mediafire.com/file/qc6vj3a8cwa6ot0/Section_375_A.%2528isata.pythonanywhere.com%2529.mp4/file",
-      },
-      {
-        id: "402-2",
-        partNumber: 2,
-        title: "SECTION 375 B",
-        streamUrl: "https://www.mediafire.com/file/lrn44rmqr79dvym/Section_375_B.%2528isata.pythonanywhere.com%2529.mp4/file",
-        downloadUrl: "https://www.mediafire.com/file/lrn44rmqr79dvym/Section_375_B.%2528isata.pythonanywhere.com%2529.mp4/file",
-      },
-    ],
-  },
+
   {
     id: "403",
     title: "NAKED WEAPON",
@@ -11262,37 +11331,7 @@ genres: ["Animation", "Comedy", "Family"],
       },
     ],
   },
-  {
-    id: "425",
-    title: "DUNE: PART ONE",
-    slug: "dune-part-one",
-    year: "2021",
-    rating: "",
-    image: "dune-part-one.jpg",
-    description: "",
-    language: "Kinyarwanda",
-    genres: ["Sci-Fi", "Adventure", "Action"],
-    isFeatured: false,
-    createdAt: "2026-11-15",
-    explainer: "",
-    trailer: "",
-    parts: [
-      {
-        id: "425-1",
-        partNumber: 1,
-        title: "DUNE PART ONE A",
-        streamUrl: "https://www.mediafire.com/file/i0v30z29cy7b5e8/Dune_Part_One_A.mp4/file",
-        downloadUrl: "https://www.mediafire.com/file/i0v30z29cy7b5e8/Dune_Part_One_A.mp4/file",
-      },
-      {
-        id: "425-2",
-        partNumber: 2,
-        title: "DUNE PART ONE B",
-        streamUrl: "https://www.mediafire.com/file/a7gqap1w0r9ltej/Dune_Part_One_B.mp4/file",
-        downloadUrl: "https://www.mediafire.com/file/a7gqap1w0r9ltej/Dune_Part_One_B.mp4/file",
-      },
-    ],
-  },
+
   {
     id: "426",
     title: "TABAAH",
@@ -11363,36 +11402,49 @@ genres: ["Animation", "Comedy", "Family"],
     ],
   },
   {
-    id: "428",
-    title: "THE OLD GUARD 2",
-    slug: "the-old-guard-2",
-    year: "2025",
-    rating: "",
-    image: "the-old-guard-2.jpg",
-    description: "",
-    language: "Kinyarwanda",
-    genres: ["Action", "Fantasy", "Adventure"],
-    isFeatured: false,
-    createdAt: "2026-11-15",
-    explainer: "Rocky",
-    trailer: "",
-    parts: [
-      {
-        id: "428-1",
-        partNumber: 1,
-        title: "THE OLD GUARD 2 A",
-        streamUrl: "https://www.mediafire.com/file/iyb4ubfr1owmghh/OLD_GUARD_2_A.mp4/file",
-        downloadUrl: "https://www.mediafire.com/file/iyb4ubfr1owmghh/OLD_GUARD_2_A.mp4/file",
-      },
-      {
-        id: "428-2",
-        partNumber: 2,
-        title: "THE OLD GUARD 2 B",
-        streamUrl: "https://www.mediafire.com/file/x96f61qyq6zh6f2/OLD_GUARD_2_B.mp4/file",
-        downloadUrl: "https://www.mediafire.com/file/x96f61qyq6zh6f2/OLD_GUARD_2_B.mp4/file",
-      },
-    ],
-  },
+  "id": "428",
+  "title": "THE OLD GUARD 2",
+  "slug": "the-old-guard-2",
+  "year": "2025",
+  "rating": "",
+  "image": "the-old-guard-2.jpg",
+  "description": "",
+  "language": "Kinyarwanda",
+  "genres": [
+    "Action",
+    "Fantasy",
+    "Adventure"
+  ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "explainer": "Rocky / B The Great",
+  "trailer": "",
+  "parts": [
+    {
+      "id": "428-1",
+      "partNumber": 1,
+      "title": "THE OLD GUARD 2 A",
+      "streamUrl": "https://www.mediafire.com/file/iyb4ubfr1owmghh/OLD_GUARD_2_A.mp4/file",
+      "downloadUrl": "https://www.mediafire.com/file/iyb4ubfr1owmghh/OLD_GUARD_2_A.mp4/file"
+    },
+    {
+      "id": "428-2",
+      "partNumber": 2,
+      "title": "THE OLD GUARD 2 B",
+      "streamUrl": "https://www.mediafire.com/file/x96f61qyq6zh6f2/OLD_GUARD_2_B.mp4/file",
+      "downloadUrl": "https://www.mediafire.com/file/x96f61qyq6zh6f2/OLD_GUARD_2_B.mp4/file"
+    }
+  ],
+  "alternateParts": [
+    {
+      "id": "483-1",
+      "partNumber": 1,
+      "title": "Part 1",
+      "streamUrl": "https://www.mediafire.com/file/d3nycn0bhl17wlq/THE_OLD_GUARD_2_.mp4/file",
+      "downloadUrl": "https://www.mediafire.com/file/d3nycn0bhl17wlq/THE_OLD_GUARD_2_.mp4/file"
+    }
+  ]
+},
   {
     id: "429",
     title: "KILL",
@@ -11441,37 +11493,7 @@ genres: ["Animation", "Comedy", "Family"],
       },
     ],
   },
-  {
-    id: "431",
-    title: "ANDHADHUN",
-    slug: "andhadhun",
-    year: "2018",
-    rating: "",
-    image: "andhadhunn.jpg",
-    description: "A series of mysterious events changes the life of a blind pianist who now must report a crime that was actually never witnessed by him.",
-    language: "Kinyarwanda",
-    genres: ["Crime", "Thriller", "Mystery"],
-    isFeatured: false,
-    createdAt: "2026-11-15",
-    explainer: "Rocky",
-    trailer: "",
-    parts: [
-      {
-        id: "431-1",
-        partNumber: 1,
-        title: "ANDHADHUN A",
-        streamUrl: "https://isatafilez.my/files/series%2F2026%2Findia%2Frocky%2FAndhadhun_A.mp4",
-        downloadUrl: "https://isatafilez.my/files/series%2F2026%2Findia%2Frocky%2FAndhadhun_A.mp4",
-      },
-      {
-        id: "431-2",
-        partNumber: 2,
-        title: "ANDHADHUN B",
-        streamUrl: "https://isatafilez.my/files/series%2F2026%2Findia%2Frocky%2FAndhadhun_B.mp4",
-        downloadUrl: "https://isatafilez.my/files/series%2F2026%2Findia%2Frocky%2FAndhadhun_B.mp4",
-      },
-    ],
-  },
+
   {
     id: "432",
     title: "THE 355",
@@ -11582,30 +11604,7 @@ genres: ["Animation", "Comedy", "Family"],
       },
     ],
   },
-  {
-    id: "436",
-    title: "ABDUCTION",
-    slug: "abduction",
-    year: "",
-    rating: "",
-    image: "abduction.jpg",
-    description: "",
-    language: "Kinyarwanda",
-    genres: ["Action", "Adventure", "Romance"],
-    isFeatured: false,
-    createdAt: "2026-11-15",
-    explainer: "Junior Giti",
-    trailer: "",
-    parts: [
-      {
-        id: "436-1",
-        partNumber: 1,
-        title: "ABDUCTION",
-        streamUrl: "https://mega.nz/file/ojxV0SYa#ym9KtCCjA1mOQ4eoeHeFOr1qGaOFfO-pw0CsErt7tug",
-        downloadUrl: "https://mega.nz/file/ojxV0SYa#ym9KtCCjA1mOQ4eoeHeFOr1qGaOFfO-pw0CsErt7tug",
-      },
-    ],
-  },
+
   {
     id: "437",
     title: "AUGUST RUSH",
@@ -11796,43 +11795,59 @@ genres: ["Animation", "Comedy", "Family"],
     ],
   },
   {
-    id: "444",
-    title: "SNIPER: G.R.I.T. - GLOBAL RESPONSE & INTELLIGENCE TEAM",
-    slug: "sniper-grit-global-response-intelligence-team",
-    year: "2023",
-    rating: "",
-    image: "sniper-grit-global-response-intelligence-team.jpg",
-    description: "When an international terrorist cult threatens global political stability and kidnaps a fellow agent, Ace Sniper Brandon Beckett and the newly formed Global Response & Intelligence Team, led by Colonel Stone, must travel to Malta, infiltrate the cult, and stop its leader.",
-    language: "Kinyarwanda",
-    genres: ["Action", "Adventure", "Romance"],
-    isFeatured: false,
-    createdAt: "2026-11-15",
-    explainer: "Erick Da Chief",
-    trailer: "",
-    parts: [
-      {
-        id: "444-1",
-        partNumber: 1,
-        title: "SNIPER G.R.I.T. - PART 1",
-        streamUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_A.mp4",
-        downloadUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_A.mp4",
-      },
-      {
-        id: "444-2",
-        partNumber: 2,
-        title: "SNIPER G.R.I.T. - PART 2",
-        streamUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_B.mp4",
-        downloadUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_B.mp4",
-      },
-      {
-        id: "444-3",
-        partNumber: 3,
-        title: "SNIPER G.R.I.T. - PART 3",
-        streamUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_C.mp4",
-        downloadUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_C.mp4",
-      },
-    ],
-  },
+  "id": "444",
+  "title": "SNIPER: G.R.I.T. - GLOBAL RESPONSE & INTELLIGENCE TEAM",
+  "slug": "sniper-grit-global-response-intelligence-team",
+  "year": "2023",
+  "rating": "",
+  "image": "sniper-grit-global-response-intelligence-team.jpg",
+  "description": "When an international terrorist cult threatens global political stability and kidnaps a fellow agent, Ace Sniper Brandon Beckett and the newly formed Global Response & Intelligence Team, led by Colonel Stone, must travel to Malta, infiltrate the cult, and stop its leader.\n\nWhen an international terrorist cult threatens global political stability and kidnaps a fellow agent, Ace Sniper Brandon Beckett and the newly-formed Global Response & Intelligence Team – or G.R.I.T. – led by Colonel Stone must travel across the world to Malta, infiltrate the cult, and take out its leader to free Lady Death and stop the global threat.",
+  "language": "Kinyarwanda",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Romance"
+  ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "explainer": "Erick Da Chief / ERICK DA CHIEF",
+  "trailer": "",
+  "parts": [
+    {
+      "id": "444-1",
+      "partNumber": 1,
+      "title": "SNIPER G.R.I.T. - PART 1",
+      "streamUrl": "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_A.mp4",
+      "downloadUrl": "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_A.mp4",
+      "alternateStreamUrls": [
+        "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_A.mp4"
+      ]
+    },
+    {
+      "id": "444-2",
+      "partNumber": 2,
+      "title": "SNIPER G.R.I.T. - PART 2",
+      "streamUrl": "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_B.mp4",
+      "downloadUrl": "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_B.mp4",
+      "alternateStreamUrls": [
+        "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_B.mp4"
+      ]
+    },
+    {
+      "id": "444-3",
+      "partNumber": 3,
+      "title": "SNIPER G.R.I.T. - PART 3",
+      "streamUrl": "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_C.mp4",
+      "downloadUrl": "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_C.mp4",
+      "alternateStreamUrls": [
+        "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_C.mp4"
+      ]
+    }
+  ],
+  "alternateImages": [
+    "sniper-grit.jpg"
+  ]
+},
   {
     id: "445",
     title: "G20",
@@ -12414,30 +12429,7 @@ genres: ["Animation", "Comedy", "Family"],
     },
   ],
 },
-{
-  id: "466",
-  title: "SHERIFF",
-  slug: "sheriff",
-  year: "",
-  rating: "",
-  image: "sheriff.jpg",
-  description: "",
-  language: "Kinyarwanda",
-  genres: ["Action", "Crime", "Drama"],
-  isFeatured: false,
-  createdAt: "2026-11-15",
-  explainer: "B The Great",
-  trailer: "",
-  parts: [
-    {
-      id: "466-1",
-      partNumber: 1,
-      title: "Part 1",
-      streamUrl: "https://www.mediafire.com/file/u5ov3yszrjydygo/SHERIFF.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/u5ov3yszrjydygo/SHERIFF.mp4/file",
-    },
-  ],
-},
+
 {
   id: "467",
   title: "UNDERCOVER GRANDPA",
@@ -12486,68 +12478,8 @@ genres: ["Animation", "Comedy", "Family"],
     },
   ],
 },
-{
-  id: "469",
-  title: "NADAANIYAN",
-  slug: "nadaaniyan",
-  year: "",
-  rating: "",
-  image: "nadaaniyan.jpg",
-  description: "",
-  language: "Kinyarwanda",
-  genres: ["Romance", "Drama", "Comedy"],
-  isFeatured: false,
-  createdAt: "2026-11-15",
-  explainer: "Rocky",
-  trailer: "",
-  parts: [
-    {
-      id: "469-1",
-      partNumber: 1,
-      title: "Part 1",
-      streamUrl: "https://www.mediafire.com/file/ilrn5g63pedhmt8/NADAANIYAN_A.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/ilrn5g63pedhmt8/NADAANIYAN_A.mp4/file",
-    },
-    {
-      id: "469-2",
-      partNumber: 2,
-      title: "Part 2",
-      streamUrl: "https://www.mediafire.com/file/hb628gi7f88zfyx/NADAANIYAN_B.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/hb628gi7f88zfyx/NADAANIYAN_B.mp4/file",
-    },
-  ],
-},
-{
-  id: "470",
-  title: "GOLDEN KAMUY",
-  slug: "golden-kamuy",
-  year: "",
-  rating: "",
-  image: "golden-kamuy.jpg",
-  description: "",
-  language: "Kinyarwanda",
-  genres: ["Action", "Adventure", "History"],
-  isFeatured: false,
-  createdAt: "2026-11-15",
-  explainer: "Hakim The Professor",
-  trailer: "",
-  parts: [
-    {
-      id: "470-1",
-      partNumber: 1,
-      title: "Part 1",
-      streamUrl: "https://www.mediafire.com/file/wqq2vzd336rjrs0/Golden_Kamuy_A.vob/file",
-      downloadUrl: "https://www.mediafire.com/file/wqq2vzd336rjrs0/Golden_Kamuy_A.vob/file",
-    },
-    {
-      id: "470-2",
-      partNumber: 2,
-      title: "Part 2",
-      streamUrl: "https://www.mediafire.com/file/2vnob87l17gjr2g/Golden_Kamuy_B.vob/file",
-      downloadUrl: "https://www.mediafire.com/file/2vnob87l17gjr2g/Golden_Kamuy_B.vob/file",
-    },
-  ],
-},
+
+
 {
   id: "471",
   title: "FANTASTIC BEASTS",
@@ -12913,30 +12845,7 @@ genres: ["Animation", "Comedy", "Family"],
     },
   ],
 },
-{
-  id: "483",
-  title: "THE OLD GUARD 2",
-  slug: "the-old-guard-2",
-  year: "",
-  rating: "",
-  image: "the-old-guard-2.jpg",
-  description: "",
-  language: "Kinyarwanda",
-  genres: ["Action", "Fantasy", "Adventure"],
-  isFeatured: false,
-  createdAt: "2026-11-15",
-  explainer: "B The Great",
-  trailer: "",
-  parts: [
-    {
-      id: "483-1",
-      partNumber: 1,
-      title: "Part 1",
-      streamUrl: "https://www.mediafire.com/file/d3nycn0bhl17wlq/THE_OLD_GUARD_2_.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/d3nycn0bhl17wlq/THE_OLD_GUARD_2_.mp4/file",
-    },
-  ],
-},
+
 {
   id: "484",
   title: "TATSULOK",
@@ -13176,26 +13085,30 @@ genres: ["Animation", "Comedy", "Family"],
   ]
 },
 {
-  id: "491",
-  title: "Ready or Not",
-  slug: "ready-or-not",
-  year: "",
-  rating: "",
-  image: "ready-or-not.jpg",
-  description: "",
-  language: "Kinyarwanda",
-  genres: ["Action", "Adventure", "Romance"],
-  isFeatured: false,
-  createdAt: "2026-11-15",
-  explainer: "rocky",
-  trailer: "",
-  parts: [
+  "id": "491",
+  "title": "Ready or Not",
+  "slug": "ready-or-not-rocky",
+  "year": "",
+  "rating": "",
+  "image": "ready-or-not.jpg",
+  "description": "",
+  "language": "Kinyarwanda",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Romance"
+  ],
+  "isFeatured": false,
+  "createdAt": "2026-11-15",
+  "explainer": "rocky",
+  "trailer": "",
+  "parts": [
     {
-      id: "491-1",
-      partNumber: 1,
-      title: "Part 1",
-      streamUrl: "https://www.mediafire.com/file/xdpllzq52n9eslx/Ready_Or_Not_Rocky.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/xdpllzq52n9eslx/Ready_Or_Not_Rocky.mp4/file"
+      "id": "491-1",
+      "partNumber": 1,
+      "title": "Part 1",
+      "streamUrl": "https://www.mediafire.com/file/xdpllzq52n9eslx/Ready_Or_Not_Rocky.mp4/file",
+      "downloadUrl": "https://www.mediafire.com/file/xdpllzq52n9eslx/Ready_Or_Not_Rocky.mp4/file"
     }
   ]
 },
@@ -13299,37 +13212,7 @@ genres: ["Animation", "Comedy", "Family"],
     }
   ]
 },
-{
-  id: "495",
-  title: "Eye For An Eye 2",
-  slug: "eye-for-an-eye-2",
-  year: "",
-  rating: "",
-  image: "eye-for-an-eye-2.jpg",
-  description: "",
-  language: "Kinyarwanda",
-  genres: ["Action", "Adventure", "Romance"],
-  isFeatured: false,
-  createdAt: "2026-11-15",
-  explainer: "Master P",
-  trailer: "",
-  parts: [
-    {
-      id: "495-1",
-      partNumber: 1,
-      title: "Part 1",
-      streamUrl: "https://www.mediafire.com/file/lt60cvzw1wq8dcw/eye_for_an_eye_2_A.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/lt60cvzw1wq8dcw/eye_for_an_eye_2_A.mp4/file"
-    },
-    {
-      id: "495-2",
-      partNumber: 2,
-      title: "Part 2",
-      streamUrl: "https://www.mediafire.com/file/bpi277ndn786id8/eye_for_an_eye_2_B.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/bpi277ndn786id8/eye_for_an_eye_2_B.mp4/file"
-    }
-  ]
-},
+
 {
   id: "496",
   title: "VICIOUS AFFAIR",
@@ -13354,30 +13237,7 @@ genres: ["Animation", "Comedy", "Family"],
     }
   ]
 },
-{
-  id: "497",
-  title: "The Priest",
-  slug: "the-priest",
-  year: "",
-  rating: "",
-  image: "the-priest.jpg",
-  description: "",
-  language: "Kinyarwanda",
-  genres: ["Action", "Adventure", "Romance"],
-  isFeatured: false,
-  createdAt: "2026-11-15",
-  explainer: "Sankar",
-  trailer: "",
-  parts: [
-    {
-      id: "497-1",
-      partNumber: 1,
-      title: "Part 1",
-      streamUrl: "https://www.mediafire.com/file/ux1f2bwlgjjdyxw/PRIEST.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/ux1f2bwlgjjdyxw/PRIEST.mp4/file"
-    }
-  ]
-},
+
 {
   id: "498",
   title: "Operation Mekong",
@@ -13512,44 +13372,7 @@ genres: ["Animation", "Comedy", "Family"],
     }
   ]
 },
-{
-  id: "503",
-  title: "Sniper: G.R.I.T. - Global Response & Intelligence Team",
-  slug: "sniper-grit-global-response-intelligence-team",
-  year: "2023",
-  rating: "",
-  image: "sniper-grit.jpg",
-  description: "When an international terrorist cult threatens global political stability and kidnaps a fellow agent, Ace Sniper Brandon Beckett and the newly-formed Global Response & Intelligence Team – or G.R.I.T. – led by Colonel Stone must travel across the world to Malta, infiltrate the cult, and take out its leader to free Lady Death and stop the global threat.",
-  language: "Kinyarwanda",
-  genres: ["Action", "Adventure", "Romance"],
-  isFeatured: false,
-  createdAt: "2026-11-15",
-  explainer: "ERICK DA CHIEF",
-  trailer: "",
-  parts: [
-    {
-      id: "503-1",
-      partNumber: 1,
-      title: "Part 1",
-      streamUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_A.mp4",
-      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_A.mp4"
-    },
-    {
-      id: "503-2",
-      partNumber: 2,
-      title: "Part 2",
-      streamUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_B.mp4",
-      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_B.mp4"
-    },
-    {
-      id: "503-3",
-      partNumber: 3,
-      title: "Part 3",
-      streamUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_C.mp4",
-      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Find%2FSNIPER_GRIT_C.mp4"
-    }
-  ]
-},
+
 {
   id: "504",
   title: "Bangkok Dog - Fey",
@@ -13660,30 +13483,7 @@ genres: ["Animation", "Comedy", "Family"],
     }
   ]
 },
-{
-  id: "508",
-  title: "SANAK",
-  slug: "sanak",
-  year: "",
-  rating: "",
-  image: "sanak.jpg",
-  description: "",
-  language: "Kinyarwanda",
-  genres: ["Action", "Adventure", "Romance"],
-  isFeatured: false,
-  createdAt: "2026-11-15",
-  explainer: "B the Greater",
-  trailer: "",
-  parts: [
-    {
-      id: "508-1",
-      partNumber: 1,
-      title: "Part 1",
-      streamUrl: "https://www.mediafire.com/file/md12j746ui0l88u/SANAK.mp4/file",
-      downloadUrl: "https://www.mediafire.com/file/md12j746ui0l88u/SANAK.mp4/file"
-    }
-  ]
-},
+
 {
   id: "509",
   title: "Pad Man",

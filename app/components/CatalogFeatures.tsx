@@ -3,51 +3,33 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 
 type ContentType = "movie" | "series";
-type Favorite = { content_type: ContentType; slug: string };
 type CatalogContextValue = {
   views: Record<string, number>;
-  favorites: Set<string>;
   ready: boolean;
   loadError: boolean;
   viewErrors: Set<string>;
   retryLoad: () => void;
-  toggleFavorite: (type: ContentType, slug: string, favorite: boolean) => Promise<void>;
   trackView: (type: ContentType, slug: string, eventId: string) => Promise<void>;
 };
 
 const CatalogContext = createContext<CatalogContextValue | null>(null);
 const itemKey = (type: ContentType, slug: string) => `${type}:${slug}`;
 
-function getVisitorId() {
-  const key = "oshakur:visitor-id";
-  let id = window.localStorage.getItem(key);
-  if (!id) {
-    id = window.crypto.randomUUID();
-    window.localStorage.setItem(key, id);
-  }
-  return id;
-}
-
 export function CatalogFeaturesProvider({ children }: { children: React.ReactNode }) {
   const [views, setViews] = useState<Record<string, number>>({});
-  const [favorites, setFavorites] = useState<Set<string>>(new Set());
   const [ready, setReady] = useState(false);
   const [loadError, setLoadError] = useState(false);
   const [viewErrors, setViewErrors] = useState<Set<string>>(new Set());
   const [loadAttempt, setLoadAttempt] = useState(0);
-  const visitorId = useRef<string | null>(null);
-
   useEffect(() => {
     let cancelled = false;
     async function loadCatalog() {
       try {
-        visitorId.current = getVisitorId();
-        const response = await fetch(`/api/catalog?visitorId=${encodeURIComponent(visitorId.current)}`);
+        const response = await fetch("/api/catalog", { cache: "no-store" });
         if (!response.ok) throw new Error("Catalog unavailable");
-        const data = await response.json() as { metrics: { content_type: ContentType; slug: string; view_count: number }[]; favorites: Favorite[] };
+        const data = await response.json() as { metrics: { content_type: ContentType; slug: string; view_count: number }[] };
         if (cancelled) return;
         setViews(Object.fromEntries(data.metrics.map((item) => [itemKey(item.content_type, item.slug), Number(item.view_count)])));
-        setFavorites(new Set(data.favorites.map((item) => itemKey(item.content_type, item.slug))));
       } catch {
         if (!cancelled) setLoadError(true);
       } finally {
@@ -63,39 +45,6 @@ export function CatalogFeaturesProvider({ children }: { children: React.ReactNod
     setLoadError(false);
     setLoadAttempt((attempt) => attempt + 1);
   }, []);
-
-  const toggleFavorite = useCallback(async (type: ContentType, slug: string, favorite: boolean) => {
-    let id: string;
-    try {
-      id = visitorId.current ?? getVisitorId();
-    } catch (error) {
-      throw error;
-    }
-    visitorId.current = id;
-    const key = itemKey(type, slug);
-    const wasFavorite = favorites.has(key);
-    setFavorites((current) => {
-      const updated = new Set(current);
-      if (favorite) updated.add(key); else updated.delete(key);
-      return updated;
-    });
-    try {
-      const response = await fetch("/api/catalog", {
-        method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ visitorId: id, contentType: type, slug, favorite }),
-      });
-      if (!response.ok) throw new Error("Unable to save favorite");
-      const result = await response.json() as { favorite?: unknown };
-      if (result.favorite !== favorite) throw new Error("Favorite change could not be confirmed");
-    } catch (error) {
-      setFavorites((current) => {
-        const updated = new Set(current);
-        if (wasFavorite) updated.add(key); else updated.delete(key);
-        return updated;
-      });
-      throw error;
-    }
-  }, [favorites]);
 
   const trackView = useCallback(async (type: ContentType, slug: string, eventId: string) => {
     const key = itemKey(type, slug);
@@ -117,32 +66,12 @@ export function CatalogFeaturesProvider({ children }: { children: React.ReactNod
     setViewErrors((current) => new Set(current).add(key));
   }, []);
 
-  const value = useMemo(() => ({ views, favorites, ready, loadError, viewErrors, retryLoad, toggleFavorite, trackView }), [views, favorites, ready, loadError, viewErrors, retryLoad, toggleFavorite, trackView]);
+  const value = useMemo(() => ({ views, ready, loadError, viewErrors, retryLoad, trackView }), [views, ready, loadError, viewErrors, retryLoad, trackView]);
   return <CatalogContext.Provider value={value}>{children}</CatalogContext.Provider>;
 }
 
 export function useCatalog() {
   return useContext(CatalogContext);
-}
-
-export function FavoriteButton({ contentType, slug }: { contentType: ContentType; slug: string }) {
-  const catalog = useCatalog();
-  const selected = catalog?.favorites.has(itemKey(contentType, slug)) ?? false;
-  const [saving, setSaving] = useState(false);
-  const [failed, setFailed] = useState(false);
-  async function toggle(event: React.MouseEvent<HTMLButtonElement>) {
-    event.preventDefault();
-    event.stopPropagation();
-    if (!catalog || saving) return;
-    setSaving(true);
-    setFailed(false);
-    try { await catalog.toggleFavorite(contentType, slug, !selected); }
-    catch { setFailed(true); }
-    finally { setSaving(false); }
-  }
-  return <><button type="button" onClick={toggle} disabled={!catalog?.ready || saving} aria-label={failed ? "Could not save favorite. Try again." : selected ? "Remove from favorites" : "Add to favorites"} aria-pressed={selected} className="absolute right-2 top-2 z-10 grid h-9 w-9 place-items-center rounded-full border border-white/20 bg-black/65 text-lg text-white shadow transition hover:scale-105 hover:bg-black/85 disabled:opacity-70">
-    <span className={selected ? "text-[#E50914]" : "text-white"} aria-hidden="true">{selected ? "♥" : "♡"}</span>
-  </button>{failed && <span role="alert" className="absolute right-2 top-12 z-20 rounded bg-black/90 px-2 py-1 text-[10px] text-red-200">Couldn’t save. Tap to retry.</span>}</>;
 }
 
 export function ViewCount({ contentType, slug }: { contentType: ContentType; slug: string }) {
@@ -157,17 +86,16 @@ export function ViewCount({ contentType, slug }: { contentType: ContentType; slu
 export function DetailViewTracker({ contentType, slug }: { contentType: ContentType; slug: string }) {
   const catalog = useCatalog();
   const trackView = catalog?.trackView;
+  const visitRef = useRef<{ key: string; eventId: string } | null>(null);
   useEffect(() => {
-    const contentKey = itemKey(contentType, slug);
     if (!trackView) return;
-    const storageKey = `oshakur:view-event:${contentKey}`;
-    let eventId: string;
-    try {
-      eventId = window.sessionStorage.getItem(storageKey) ?? window.crypto.randomUUID();
-      window.sessionStorage.setItem(storageKey, eventId);
-    } catch {
-      eventId = window.crypto.randomUUID();
+    const key = itemKey(contentType, slug);
+    // Reuse the ID across Strict Mode's effect cleanup/replay, but create a
+    // fresh ID when this tracker mounts for a different detail visit.
+    if (!visitRef.current || visitRef.current.key !== key) {
+      visitRef.current = { key, eventId: window.crypto.randomUUID() };
     }
+    const eventId = visitRef.current.eventId;
     void trackView(contentType, slug, eventId);
   }, [trackView, contentType, slug]);
   return null;

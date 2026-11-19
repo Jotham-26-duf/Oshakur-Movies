@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import { getExplainerImage } from "../lib/explainers";
-import { FavoriteButton, ViewCount } from "./CatalogFeatures";
+import { ViewCount } from "./CatalogFeatures";
 import PosterImage from "./PosterImage";
 
 interface MovieCardProps {
@@ -94,8 +94,6 @@ export default function MovieCard({
           <span className="media-play" aria-hidden="true">▶</span>
         </div>
       </Link>
-      <FavoriteButton contentType={contentType} slug={slug} />
-
       <Link href={`${hrefPrefix}/${slug}`} className="block">
         <h3 className="media-title">
           {title}

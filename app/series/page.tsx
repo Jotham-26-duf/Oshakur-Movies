@@ -3,10 +3,9 @@ import Link from "next/link";
 
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
-import { series } from "@/data/series";
-import { episodes } from "@/data/episodes";
+import { getSeriesSummaries, series } from "@/data/series";
 import { createOpenGraphMetadata } from "@/app/seo";
-import { FavoriteButton, ViewCount } from "@/app/components/CatalogFeatures";
+import { ViewCount } from "@/app/components/CatalogFeatures";
 
 export const metadata: Metadata = {
   title: "All Series",
@@ -30,7 +29,7 @@ export default function SeriesPage() {
 
   return (
     <main className="cinema-page min-h-screen text-white">
-      <Navbar />
+      <Navbar series={getSeriesSummaries()} />
 
       <section className="mx-auto max-w-[1600px] px-4 pb-16 pt-7 sm:px-6 lg:px-[5%]">
         <header className="mb-8">
@@ -52,9 +51,8 @@ export default function SeriesPage() {
                   </div>
                   <h2 className="media-title">{item.title}</h2>
                 </Link>
-                <FavoriteButton contentType="series" slug={item.slug} />
                 <div className="media-meta">
-                  {(() => { const count = episodes.filter((episode) => episode.seriesSlug === item.slug).length; return count > 0 ? <span className="episode-pill">{count} {count === 1 ? "Episode" : "Episodes"}</span> : null; })()}
+                  {item.episodes.length > 0 && <span className="episode-pill">{item.episodes.length} {item.episodes.length === 1 ? "Episode" : "Episodes"}</span>}
                   <span className="media-rating">★ {item.rating}</span>
                 </div>
                 <div className="px-2 pt-1"><ViewCount contentType="series" slug={item.slug} /></div>

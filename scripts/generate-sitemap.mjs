@@ -21,7 +21,7 @@ const seriesFile = fs.readFileSync(
 // slug: `kung-fu-panda`
 function extractSlugs(fileContent, fileName) {
   const matches = [
-    ...fileContent.matchAll(/\bslug\s*:\s*["'`]([^"'`]*)["'`]/g),
+    ...fileContent.matchAll(/\bslug["']?\s*:\s*["'`]([^"'`]*)["'`]/g),
   ];
 
   const slugs = matches.map((match) => match[1]);

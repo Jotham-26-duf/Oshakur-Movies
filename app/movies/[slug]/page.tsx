@@ -6,15 +6,50 @@ import { notFound } from "next/navigation";
 import MovieCard from "@/app/components/MovieCard";
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
-import { movies } from "@/data/movies";
-import { series } from "@/data/series";
+import { movies, type MoviePart } from "@/data/movies";
+import { getSeriesSummaries, series } from "@/data/series";
 import { getExplainerImage } from "@/app/lib/explainers";
-import CommentsSection from "@/app/components/CommentsSection";
 import { createOpenGraphMetadata } from "@/app/seo";
 import TrailerPlayer from "@/app/components/TrailerPlayer";
 import { DetailViewTracker, ViewCount } from "@/app/components/CatalogFeatures";
 import MomoSupport from "@/app/components/MomoSupport";
 import ExpandableDescription from "@/app/components/ExpandableDescription";
+
+function MoviePartLinks({ part, single = false }: { part: MoviePart; single?: boolean }) {
+  const streamUrls = [part.streamUrl, ...(part.alternateStreamUrls ?? [])].filter(
+    (url, index, urls) => Boolean(url) && urls.indexOf(url) === index,
+  );
+  const downloadUrls = [part.downloadUrl, ...(part.alternateDownloadUrls ?? [])].filter(
+    (url, index, urls) => Boolean(url) && urls.indexOf(url) === index,
+  );
+
+  return (
+    <div className="flex flex-wrap gap-2">
+      {streamUrls.map((url, index) => (
+        <a key={`watch-${url}`} href={url} target="_blank" rel="noopener noreferrer" className={`rounded-lg bg-[#E50914] font-semibold hover:bg-[#FF2633] ${single ? "px-5 py-3 text-base" : "px-5 py-2.5 text-sm"}`}>
+          ▶ {single && index === 0 ? "Watch Now" : `Watch${index ? ` ${index + 1}` : ""}`}
+        </a>
+      ))}
+      {downloadUrls.map((url, index) => (
+        <a key={`download-${url}`} href={url} target="_blank" rel="noopener noreferrer" className={`rounded-lg border border-white/15 bg-white/10 font-semibold hover:bg-white/20 ${single ? "px-5 py-3 text-base" : "px-5 py-2.5 text-sm"}`}>
+          ↓ {index ? `Download ${index + 1}` : "Download"}
+        </a>
+      ))}
+    </div>
+  );
+}
+
+function MoviePartRow({ part, alternate = false }: { part: MoviePart; alternate?: boolean }) {
+  return (
+    <div className="flex flex-col justify-between gap-4 rounded-xl border border-white/10 bg-[#191919] p-4 transition hover:border-white/20 sm:flex-row sm:items-center">
+      <div>
+        <h3 className="font-semibold">{part.title}</h3>
+        <p className="mt-1 text-sm text-[#777]">{alternate ? "Alternate version" : `Part ${part.partNumber}`}</p>
+      </div>
+      <MoviePartLinks part={part} />
+    </div>
+  );
+}
 
 interface MovieDetailsPageProps {
   params: Promise<{
@@ -73,7 +108,7 @@ export default async function MovieDetailsPage({
   return (
     <main className="cinema-page min-h-screen text-white">
       <DetailViewTracker contentType="movie" slug={movie.slug} />
-      <Navbar />
+      <Navbar series={getSeriesSummaries()} />
       <div className="mx-auto max-w-7xl px-4 pt-5 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="mb-5 flex min-w-0 items-center gap-2 overflow-hidden text-sm text-[#999]">
           <Link href="/" className="shrink-0 hover:text-white">Home</Link><span>/</span><Link href="/movies" className="shrink-0 hover:text-white">Movies</Link><span>/</span><span aria-current="page" className="truncate text-white">{movie.title}</span>
@@ -94,13 +129,11 @@ export default async function MovieDetailsPage({
           <div className="mt-9">
             <h2 className="cinema-section-title mb-4 text-xl font-bold sm:text-2xl">Watch / Download</h2>
             {isSinglePart ? (
-              <div className="flex flex-wrap gap-3">
-                {singlePart?.streamUrl && <a href={singlePart.streamUrl} target="_blank" rel="noopener noreferrer" className="rounded-lg bg-[#E50914] px-5 py-3 font-semibold text-white hover:bg-[#FF2633]">▶ Watch Now</a>}
-                {singlePart?.downloadUrl && <a href={singlePart.downloadUrl} target="_blank" rel="noopener noreferrer" className="rounded-lg border border-white/15 bg-white/10 px-5 py-3 font-semibold text-white hover:bg-white/20">↓ Download</a>}
-              </div>
+              singlePart ? <MoviePartLinks part={singlePart} single /> : null
             ) : (
               <div className="space-y-3">
-                {movie.parts.map((part) => <div key={part.id} className="flex flex-col justify-between gap-4 rounded-xl border border-white/10 bg-[#191919] p-4 transition hover:border-white/20 sm:flex-row sm:items-center"><div><h3 className="font-semibold">{part.title}</h3><p className="mt-1 text-sm text-[#777]">Part {part.partNumber}</p></div><div className="flex flex-wrap gap-2">{part.streamUrl && <a href={part.streamUrl} target="_blank" rel="noopener noreferrer" className="rounded-lg bg-[#E50914] px-5 py-2.5 text-sm font-semibold hover:bg-[#FF2633]">▶ Watch</a>}{part.downloadUrl && <a href={part.downloadUrl} target="_blank" rel="noopener noreferrer" className="rounded-lg border border-white/15 bg-white/10 px-5 py-2.5 text-sm font-semibold hover:bg-white/20">↓ Download</a>}</div></div>)}
+                {movie.parts.map((part) => <MoviePartRow key={part.id} part={part} />)}
+                {movie.alternateParts?.map((part) => <MoviePartRow key={`alternate-${part.id}`} part={part} alternate />)}
               </div>
             )}
           </div>
@@ -109,7 +142,6 @@ export default async function MovieDetailsPage({
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"><h2 className="cinema-section-title text-2xl font-bold">Summary</h2><ExpandableDescription description={movie.description} className="mt-4" /></section>
       <div className="pb-10"><MomoSupport /></div>
       <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-12 sm:px-6 lg:grid-cols-[minmax(0,1.8fr)_minmax(280px,1fr)] lg:px-8">
-        <div><CommentsSection movieSlug={movie.slug} /></div>
         {recommendations.length > 0 && <aside className="lg:sticky lg:top-28 lg:self-start"><h2 className="cinema-section-title mb-5 text-2xl font-bold">More Films</h2><div className="grid grid-cols-2 gap-4">{recommendations.map((item) => <MovieCard key={`${item.type}-${item.id}`} title={item.title} year={item.year} rating={item.rating ?? ""} image={item.image} slug={item.slug} explainer={item.explainer} createdAt={item.createdAt} hrefPrefix={item.type === "series" ? "/series" : "/movies"} />)}</div></aside>}
       </div>
 

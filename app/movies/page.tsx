@@ -5,6 +5,7 @@ import MovieCard from "@/app/components/MovieCard";
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
+import { getSeriesSummaries } from "@/data/series";
 import { createOpenGraphMetadata } from "@/app/seo";
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ export default function MoviesPage() {
 
   return (
     <main className="cinema-page min-h-screen text-white">
-      <Navbar />
+      <Navbar series={getSeriesSummaries()} />
 
       <section className="mx-auto max-w-[1600px] px-4 pb-16 pt-7 sm:px-6 lg:px-[5%]">
         <header className="mb-8">

@@ -1,10 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
-
-import { movies } from "@/data/movies";
-import { series } from "@/data/series";
+import { useEffect, useMemo, useState } from "react";
 
 interface Category {
   id: string;
@@ -38,26 +35,33 @@ const categories: Category[] = [
   },
 ];
 
-const categoryImages = categories.map((category) => {
-  const movieImages = movies
-    .filter((movie) => movie.genres.includes(category.name))
-    .map((movie) => `/images/movies/${movie.image}`);
+type CategorySectionProps = {
+  movies: Array<Pick<Movie, "image" | "genres">>;
+  series: Array<Pick<SeriesSummary, "image" | "genres">>;
+};
 
-  const seriesImages = series
-    .filter((item) => item.genres.includes(category.name))
-    .map((item) => `/images/series/${item.image}`);
+import type { Movie } from "@/data/movies";
+import type { SeriesSummary } from "@/data/series";
 
-  const images = [...movieImages, ...seriesImages].filter(
-    (image) => image && !image.includes("...")
-  );
+export default function CategorySection({ movies, series }: CategorySectionProps) {
+  const categoryImages = useMemo(() => categories.map((category) => {
+    const movieImages = movies
+      .filter((movie) => movie.genres.includes(category.name))
+      .map((movie) => `/images/movies/${movie.image}`);
 
-  return {
-    ...category,
-    images: images.length > 0 ? images : ["/placeholder.jpg"],
-  };
-});
+    const seriesImages = series
+      .filter((item) => item.genres.includes(category.name))
+      .map((item) => `/images/series/${item.image}`);
 
-export default function CategorySection() {
+    const images = [...movieImages, ...seriesImages].filter(
+      (image) => image && !image.includes("...")
+    );
+
+    return {
+      ...category,
+      images: images.length > 0 ? images : ["/placeholder.jpg"],
+    };
+  }), [movies, series]);
   const [imageIndexes, setImageIndexes] = useState<number[]>(
     categories.map(() => 0)
   );
@@ -79,7 +83,7 @@ export default function CategorySection() {
     }, 6000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [categoryImages]);
 
   return (
     <section className="px-4 py-12 sm:px-6 lg:px-10">

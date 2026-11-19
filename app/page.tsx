@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import HomeClient from "./components/HomeClient";
 import { movies } from "@/data/movies";
-import { series } from "@/data/series";
+import { getSeriesSummaries } from "@/data/series";
 import { createOpenGraphMetadata, siteName, siteUrl } from "./seo";
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function Home() {
           __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <HomeClient movies={movies} series={series} />
+      <HomeClient movies={movies} series={getSeriesSummaries()} />
     </>
   );
 }

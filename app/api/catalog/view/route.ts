@@ -37,7 +37,7 @@ export async function POST(request: Request) {
       logCatalogError("track-view", new Error("RPC returned an invalid view count"));
       return NextResponse.json({ error: "Unable to confirm this view." }, { status: 502 });
     }
-    return NextResponse.json({ views });
+    return NextResponse.json({ views }, { headers: { "Cache-Control": "no-store" } });
   } catch (error) {
     logCatalogError("track-view", error);
     return NextResponse.json({ error: "Unable to record this view." }, { status: 503 });

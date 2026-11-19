@@ -5,7 +5,7 @@ import { type FormEvent, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 import { movies } from "@/data/movies";
-import { series } from "@/data/series";
+import type { SeriesSummary } from "@/data/series";
 import { SiWhatsapp } from "react-icons/si";
 import OshakurLogo from "./OshakurLogo";
 
@@ -102,7 +102,7 @@ function CloseIcon() {
   );
 }
 
-export default function Navbar() {
+export default function Navbar({ series }: { series: SeriesSummary[] }) {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -214,17 +214,9 @@ export default function Navbar() {
             <Link href="/trending" aria-current={pathname.startsWith("/trending") ? "page" : undefined} className={navLinkClass("/trending")}>
               <TrendingIcon /> Trending
             </Link>
-            <Link href="/favorites" aria-current={pathname.startsWith("/favorites") ? "page" : undefined} className={navLinkClass("/favorites")}>♡ Favorites</Link>
           </nav>
 
           <div className="ml-auto flex items-center gap-2">
-            <Link
-              href="/login"
-              className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-semibold text-white transition hover:border-[#E50914]/50 hover:bg-white/[0.08] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E50914]"
-            >
-              Login
-            </Link>
-
             <a href="https://wa.me/250789063094" target="_blank" rel="noopener noreferrer" aria-label="Contact OSHAKUR MOVIES on WhatsApp" className="hidden rounded-lg border border-white/10 bg-white/[0.04] p-2.5 text-white transition hover:border-[#E50914] hover:text-[#FF2633] sm:inline-flex"><SiWhatsapp size={19} aria-hidden="true" /></a>
 
             <button
@@ -483,7 +475,6 @@ export default function Navbar() {
               <Link href="/trending" onClick={closeMenu} aria-current={pathname.startsWith("/trending") ? "page" : undefined} className={navLinkClass("/trending")}>
                 <TrendingIcon /> Trending
               </Link>
-              <Link href="/favorites" onClick={closeMenu} aria-current={pathname.startsWith("/favorites") ? "page" : undefined} className={navLinkClass("/favorites")}>♡ Favorites</Link>
             </nav>
           </div>
         )}

@@ -5,12 +5,10 @@ import { notFound } from "next/navigation";
 
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
-import { episodes } from "@/data/episodes";
-import { series } from "@/data/series";
+import { getSeriesSummaries, series } from "@/data/series";
 import { movies } from "@/data/movies";
 import { getExplainerImage } from "@/app/lib/explainers";
 import MovieCard from "@/app/components/MovieCard";
-import CommentsSection from "@/app/components/CommentsSection";
 import { createOpenGraphMetadata } from "@/app/seo";
 import TrailerPlayer from "@/app/components/TrailerPlayer";
 import { DetailViewTracker, ViewCount } from "@/app/components/CatalogFeatures";
@@ -63,9 +61,7 @@ export default async function SeriesDetailsPage({
     notFound();
   }
 
-  const seriesEpisodes = episodes
-    .filter((episode) => episode.seriesSlug === currentSeries.slug)
-    .sort((a, b) => a.episodeNumber - b.episodeNumber);
+  const seriesEpisodes = currentSeries.episodes;
 
   function getEpisodeDisplayTitle(title: string, seriesTitle: string, episodeNumber: number) {
     let specificTitle = title.trim();
@@ -89,7 +85,7 @@ export default async function SeriesDetailsPage({
   return (
     <main className="cinema-page min-h-screen text-white">
       <DetailViewTracker contentType="series" slug={currentSeries.slug} />
-      <Navbar />
+      <Navbar series={getSeriesSummaries()} />
       <div className="mx-auto max-w-7xl px-4 pt-5 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="mb-5 flex min-w-0 items-center gap-2 overflow-hidden text-sm text-[#999]"><Link href="/" className="shrink-0 hover:text-white">Home</Link><span>/</span><Link href="/series" className="shrink-0 hover:text-white">Series</Link><span>/</span><span aria-current="page" className="truncate text-white">{currentSeries.title}</span></nav>
       </div>
@@ -183,7 +179,6 @@ export default async function SeriesDetailsPage({
       </section>
 
       <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-12 sm:px-6 lg:grid-cols-[minmax(0,1.8fr)_minmax(280px,1fr)] lg:px-8">
-        <div><CommentsSection seriesSlug={currentSeries.slug} /></div>
         {recommendations.length > 0 && <aside className="lg:sticky lg:top-28 lg:self-start"><h2 className="cinema-section-title mb-5 text-2xl font-bold">More Films</h2><div className="grid grid-cols-2 gap-4">{recommendations.map((item) => <MovieCard key={`${item.type}-${item.id}`} title={item.title} year={item.year} rating={item.rating ?? ""} image={item.image} slug={item.slug} explainer={item.explainer} createdAt={item.createdAt} hrefPrefix={item.type === "series" ? "/series" : "/movies"} />)}</div></aside>}
       </div>
 

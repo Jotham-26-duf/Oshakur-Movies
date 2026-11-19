@@ -4,9 +4,9 @@ import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
-import { series } from "@/data/series";
+import { getSeriesSummaries, series } from "@/data/series";
 import { createOpenGraphMetadata } from "@/app/seo";
-import { FavoriteButton, ViewCount } from "@/app/components/CatalogFeatures";
+import { ViewCount } from "@/app/components/CatalogFeatures";
 
 export const metadata: Metadata = {
   title: "Trending Movies & Series",
@@ -33,7 +33,7 @@ export default function TrendingPage() {
 
   return (
     <main className="cinema-page min-h-screen text-white">
-      <Navbar />
+      <Navbar series={getSeriesSummaries()} />
 
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-10">
         {/* Header */}
@@ -99,7 +99,6 @@ export default function TrendingPage() {
                     </span>
                   </div>
                 </Link>
-                <FavoriteButton contentType="movie" slug={movie.slug} />
                 <div className="px-2 pt-1"><ViewCount contentType="movie" slug={movie.slug} /></div>
                 </article>
               ))}
@@ -151,7 +150,6 @@ export default function TrendingPage() {
                     </span>
                   </div>
                 </Link>
-                <FavoriteButton contentType="series" slug={item.slug} />
                 <div className="px-2 pt-1"><ViewCount contentType="series" slug={item.slug} /></div>
                 </article>
               ))}
