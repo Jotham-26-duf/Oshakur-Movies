@@ -20625,7 +20625,7 @@ createdAt: "2026-10-09",
     slug: "da-vincis-demons-season-2",
     year: "2014",
     rating: "7.9/10",
-    image: "da-vincis-demons1.jpg",
+    image: "da-vincis-demons2.jpg",
     isFeatured: false,
     createdAt: "2026-11-17",
     description: "Season 2 continues Leonardo da Vinci's adventures as he faces new enemies, political conflicts, dangerous mysteries, and challenges that test his intelligence and inventions.",
@@ -20753,12 +20753,233 @@ createdAt: "2026-10-09",
   },
 
 
+  {
+    id: "161",
+    title: "SENIOR HIGH",
+    slug: "senior-high",
+    year: "",
+    rating: "",
+    image: "senior-high.jpg",
+    isFeatured: true,
+    createdAt: "2026-11-19",
+    description: "Senior High is a drama series exploring the lives of students as they navigate school, friendships, relationships, personal struggles, and unexpected secrets. Their experiences reveal the challenges of growing up and the complicated realities of life in a school community.",
+    language: "",
+    genres: ["Drama"],
+    explainer: "",
+    trailer: "",
+
+    episodes: [
+      {
+        "id": "2269",
+        "episodeNumber": 1,
+        "title": "SENIOR HIGH - Episode 1",
+        "description": "Senior High Season 1 Episode 1",
+        "streamUrl": "https://www.mediafire.com/file/1bq33psfbtsmaaf/SENIOR_HIGH_EP1.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/1bq33psfbtsmaaf/SENIOR_HIGH_EP1.mp4/file"
+      },
+      {
+        "id": "2250",
+        "episodeNumber": 2,
+        "title": "SENIOR HIGH - Episode 2",
+        "description": "Senior High Season 1 Episode 2",
+        "streamUrl": "https://www.mediafire.com/file/kcbixhn0cjdwx80/SENIOR+HIGH+EP2.cineva.storemp4.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/kcbixhn0cjdwx80/SENIOR+HIGH+EP2.cineva.storemp4.mp4/file"
+      }
+    ],
+  },
+
+  {
+    id: "162",
+    title: "ME - SEASON 1",
+    slug: "me-season-1",
+    year: "",
+    rating: "",
+    image: "me-season-1.jpg",
+    isFeatured: true,
+    createdAt: "2026-11-19",
+    description: "Me Season 1 follows a journey of self-discovery, identity, personal growth, and the challenges of finding one's place in the world. Through changing experiences and relationships, the series explores what it means to understand yourself and face life's unexpected situations.",
+    language: "",
+    genres: ["Drama"],
+    explainer: "",
+    trailer: "",
+
+    episodes: [
+      {
+        "id": "2251",
+        "episodeNumber": 1,
+        "title": "ME - S1 Episode 1",
+        "description": "Me Season 1 Episode 1",
+        "streamUrl": "https://www.mediafire.com/file/8iedkcxictl0rn5/Me-s1-ep1.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/8iedkcxictl0rn5/Me-s1-ep1.mp4/file"
+      },
+      {
+        "id": "2252",
+        "episodeNumber": 2,
+        "title": "ME - S1 Episode 2",
+        "description": "Me Season 1 Episode 2",
+        "streamUrl": "https://www.mediafire.com/file/uai3oi5lxijxfe9/Me-s1-ep2.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/uai3oi5lxijxfe9/Me-s1-ep2.mp4/file"
+      },
+      {
+        "id": "2253",
+        "episodeNumber": 3,
+        "title": "ME - S1 Episode 3",
+        "description": "Me Season 1 Episode 3",
+        "streamUrl": "https://www.mediafire.com/file/a9nz76fqb11zl94/Me-s1-ep3.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/a9nz76fqb11zl94/Me-s1-ep3.mp4/file"
+      },
+      {
+        "id": "2254",
+        "episodeNumber": 4,
+        "title": "ME - S1 Episode 4",
+        "description": "Me Season 1 Episode 4",
+        "streamUrl": "https://www.mediafire.com/file/keaxwhyqkmrkzxs/Me-s1-ep4.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/keaxwhyqkmrkzxs/Me-s1-ep4.mp4/file"
+      },
+      {
+        "id": "2255",
+        "episodeNumber": 5,
+        "title": "ME - S1 Episode 5",
+        "description": "Me Season 1 Episode 5",
+        "streamUrl": "https://www.mediafire.com/file/tsqat4ngt6hreoo/Me-s1-ep5.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/tsqat4ngt6hreoo/Me-s1-ep5.mp4/file"
+      },
+      {
+        "id": "2256",
+        "episodeNumber": 6,
+        "title": "ME - S1 Episode 6A",
+        "description": "Me Season 1 Episode 6A - Part A",
+        "streamUrl": "https://www.mediafire.com/file/850qh0te9zr006r/Me-s1-ep6A.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/850qh0te9zr006r/Me-s1-ep6A.mp4/file"
+      },
+      {
+        "id": "2257",
+        "episodeNumber": 6,
+        "title": "ME - S1 Episode 6B",
+        "description": "Me Season 1 Episode 6B - Part B",
+        "streamUrl": "https://www.mediafire.com/file/2enw4gga8dvelxt/Me-s1-ep6B.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/2enw4gga8dvelxt/Me-s1-ep6B.mp4/file"
+      },
+      {
+        "id": "2258",
+        "episodeNumber": 7,
+        "title": "ME - S1 Episode 7",
+        "description": "Me Season 1 Episode 7",
+        "streamUrl": "https://www.mediafire.com/file/c8qgpzbop06jgfs/Me-s1-ep7.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/c8qgpzbop06jgfs/Me-s1-ep7.mp4/file"
+      },
+      {
+        "id": "2259",
+        "episodeNumber": 9,
+        "title": "ME - S1 Episode 9A",
+        "description": "Me Season 1 Episode 9A - Part A",
+        "streamUrl": "https://www.mediafire.com/file/0tmxw9rpy31ti7k/Me-s1-ep9A.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/0tmxw9rpy31ti7k/Me-s1-ep9A.mp4/file"
+      },
+      {
+        "id": "2260",
+        "episodeNumber": 9,
+        "title": "ME - S1 Episode 9B",
+        "description": "Me Season 1 Episode 9B - Part B",
+        "streamUrl": "https://www.mediafire.com/file/ap96i9rwawj0bk1/Me-s1-ep9B.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/ap96i9rwawj0bk1/Me-s1-ep9B.mp4/file"
+      },
+      {
+        "id": "2261",
+        "episodeNumber": 10,
+        "title": "ME - S1 Episode 10 FINAL",
+        "description": "Me Season 1 Episode 10 - Final Episode",
+        "streamUrl": "https://www.mediafire.com/file/kbwmxpxu2fulkxa/Me-s1-ep10+FINAL.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/kbwmxpxu2fulkxa/Me-s1-ep10+FINAL.mp4/file"
+      }
+    ],
+  },
+
+  {
+    id: "163",
+    title: "SHADOW PUNISHER",
+    slug: "shadow-punisher",
+    year: "",
+    rating: "",
+    image: "shadow-punisher.jpg",
+    isFeatured: true,
+    createdAt: "2026-11-19",
+    description: "Shadow Punisher is an action and thriller series centered on justice, revenge, and the confrontation between those who seek to punish wrongdoing and the forces standing in their way. The story explores conflict, danger, and the consequences of fighting against powerful enemies.",
+    language: "",
+    genres: ["Action", "Thriller"],
+    explainer: "",
+    trailer: "",
+
+    episodes: [
+      {
+        "id": "2262",
+        "episodeNumber": 1,
+        "title": "SHADOW PUNISHER - Episode 1",
+        "description": "Shadow Punisher Episode 1",
+        "streamUrl": "https://www.mediafire.com/file/ooodjfl4mamo8ff/SHADOW_PUNISHER_E01.CINEVA.STOREmp4.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/ooodjfl4mamo8ff/SHADOW_PUNISHER_E01.CINEVA.STOREmp4.mp4/file"
+      },
+      {
+        "id": "2263",
+        "episodeNumber": 2,
+        "title": "SHADOW PUNISHER - Episode 2",
+        "description": "Shadow Punisher Episode 2",
+        "streamUrl": "https://www.mediafire.com/file/j0nfkouxs71202l/SHADOW+PUNISHER+E02.mp4/file?action=check",
+        "downloadUrl": "https://www.mediafire.com/file/j0nfkouxs71202l/SHADOW+PUNISHER+E02.mp4/file?action=check"
+      },
+      {
+        "id": "2264",
+        "episodeNumber": 3,
+        "title": "SHADOW PUNISHER - Episode 3",
+        "description": "Shadow Punisher Episode 3",
+        "streamUrl": "https://www.mediafire.com/file/uzekgbua9n4jlit/SHADOW_PUNISHER_E03.CINEVA.STIRE+mp4.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/uzekgbua9n4jlit/SHADOW_PUNISHER_E03.CINEVA.STIRE+mp4.mp4/file"
+      },
+      {
+        "id": "2265",
+        "episodeNumber": 4,
+        "title": "SHADOW PUNISHER - Episode 4",
+        "description": "Shadow Punisher Episode 4",
+        "streamUrl": "https://www.mediafire.com/file/6fg1rkjszpzchw4/SHADOW_PUNISHER_E04.CINEVA.STORE+mp4.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/6fg1rkjszpzchw4/SHADOW_PUNISHER_E04.CINEVA.STORE+mp4.mp4/file"
+      },
+      {
+        "id": "2266",
+        "episodeNumber": 5,
+        "title": "SHADOW PUNISHER - Episode 5",
+        "description": "Shadow Punisher Episode 5",
+        "streamUrl": "https://www.mediafire.com/file/xxwjjmxidgaho56/Shadow+Punisher+ep5.cineva.store+mp4.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/xxwjjmxidgaho56/Shadow+Punisher+ep5.cineva.store+mp4.mp4/file"
+      },
+      {
+        "id": "2267",
+        "episodeNumber": 6,
+        "title": "SHADOW PUNISHER - Episode 6",
+        "description": "Shadow Punisher Episode 6",
+        "streamUrl": "https://www.mediafire.com/file/hfmqgwdsaxm5luh/Shadow+Punisher+ep6cineva.store.mp4/file?action=check",
+        "downloadUrl": "https://www.mediafire.com/file/hfmqgwdsaxm5luh/Shadow+Punisher+ep6cineva.store.mp4/file?action=check"
+      },
+      {
+        "id": "2268",
+        "episodeNumber": 7,
+        "title": "SHADOW PUNISHER - Episode 7",
+        "description": "Shadow Punisher Episode 7",
+        "streamUrl": "https://www.mediafire.com/file/s5rokf7c6jh0ca2/Shadow+Punisher+ep7cineva.store+.mp4/file",
+        "downloadUrl": "https://www.mediafire.com/file/s5rokf7c6jh0ca2/Shadow+Punisher+ep7cineva.store+.mp4/file"
+      }
+    ],
+  }
+
+
+
 ];
 
-export function getSeriesSummaries(): SeriesSummary[] {
-  return series.map((item) => {
+const seriesSummaries: readonly SeriesSummary[] = Object.freeze(series.map((item) => {
     const { episodes, ...summary } = item;
     void episodes;
-    return summary;
-  });
+    return Object.freeze(summary);
+  }));
+
+export function getSeriesSummaries(): readonly SeriesSummary[] {
+  return seriesSummaries;
 }

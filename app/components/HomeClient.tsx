@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import Hero from "./Hero";
 import MovieCard from "./MovieCard";
+import PosterImage from "./PosterImage";
 import { ViewCount } from "./CatalogFeatures";
 import SiteBottom from "./SiteBottom";
 import Navbar from "./Navbar";
@@ -30,7 +31,7 @@ type HomeSeries = SeriesSummary;
 
 type HomeClientProps = {
   movies: HomeMovie[];
-  series: HomeSeries[];
+  series: readonly HomeSeries[];
 };
 
 type ContentFilter = "all" | "new" | "old";
@@ -367,12 +368,9 @@ export default function HomeClient({
                     className="block"
                   >
                     <div className="media-tile-frame relative aspect-[2/3]">
-                      <img
-                        src={
-                          isMovie
-                            ? `/images/movies/${content.image}`
-                            : `/images/series/${content.image}`
-                        }
+                      <PosterImage
+                        src={content.image}
+                        contentType={isMovie ? "movie" : "series"}
                         alt={content.title}
                         loading="lazy"
                         className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
@@ -537,8 +535,9 @@ export default function HomeClient({
                       onClick={() => setSelectedExplainer(null)}
                       className="flex items-center gap-3 rounded-lg border border-white/10 p-3 transition hover:border-[#E50914]/40 hover:bg-white/5"
                     >
-                      <img
-                        src={`/images/movies/${movie.image}`}
+                      <PosterImage
+                        src={movie.image}
+                        contentType="movie"
                         alt=""
                         className="h-16 w-11 rounded object-cover"
                         loading="lazy"
@@ -569,8 +568,9 @@ export default function HomeClient({
                       onClick={() => setSelectedExplainer(null)}
                       className="flex items-center gap-3 rounded-lg border border-white/10 p-3 transition hover:border-[#E50914]/40 hover:bg-white/5"
                     >
-                      <img
-                        src={`/images/series/${item.image}`}
+                      <PosterImage
+                        src={item.image}
+                        contentType="series"
                         alt=""
                         className="h-16 w-11 rounded object-cover"
                         loading="lazy"
@@ -624,7 +624,7 @@ export default function HomeClient({
         </div>
 
         {mixedCatalog.length ? <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-          {mixedCatalog.map((entry) => entry.contentType === "movie" ? <MovieCard key={`movie-${entry.data.id}`} title={entry.data.title} year={entry.data.year} rating={entry.data.rating} image={entry.data.image} slug={entry.data.slug} explainer={entry.data.explainer} createdAt={entry.data.createdAt} onExplainerClick={(name) => setSelectedExplainer(normalizeExplainerName(name))} /> : <article key={`series-${entry.data.id}`} className="cinema-card group relative min-w-0"><Link href={`/series/${entry.data.slug}`} className="block"><div className="media-poster relative"><img src={`/images/series/${entry.data.image}`} alt={entry.data.title} loading="lazy"/><span className="media-play" aria-hidden="true">▶</span></div><h3 className="media-title">{entry.data.title}</h3></Link><div className="media-byline">{entry.data.explainer?.trim() ? <button type="button" onClick={() => setSelectedExplainer(normalizeExplainerName(entry.data.explainer!))} className="truncate text-left hover:underline">{getExplainerImage(entry.data.explainer) && <img src={getExplainerImage(entry.data.explainer)} alt=""/>}🎙 {entry.data.explainer}</button> : <span className="text-white/35">Explainer unavailable</span>}</div><div className="px-2 pt-1"><ViewCount contentType="series" slug={entry.data.slug}/></div><time className="media-time" dateTime={entry.data.createdAt}>{getTimeAgo(entry.data.createdAt)}</time></article>)}
+          {mixedCatalog.map((entry) => entry.contentType === "movie" ? <MovieCard key={`movie-${entry.data.id}`} title={entry.data.title} year={entry.data.year} rating={entry.data.rating} image={entry.data.image} slug={entry.data.slug} explainer={entry.data.explainer} createdAt={entry.data.createdAt} onExplainerClick={(name) => setSelectedExplainer(normalizeExplainerName(name))} /> : <article key={`series-${entry.data.id}`} className="cinema-card group relative min-w-0"><Link href={`/series/${entry.data.slug}`} className="block"><div className="media-poster relative"><PosterImage src={entry.data.image} contentType="series" alt={entry.data.title} loading="lazy"/><span className="media-play" aria-hidden="true">▶</span></div><h3 className="media-title">{entry.data.title}</h3></Link><div className="media-byline">{entry.data.explainer?.trim() ? <button type="button" onClick={() => setSelectedExplainer(normalizeExplainerName(entry.data.explainer!))} className="truncate text-left hover:underline">{getExplainerImage(entry.data.explainer) && <img src={getExplainerImage(entry.data.explainer)} alt=""/>}🎙 {entry.data.explainer}</button> : <span className="text-white/35">Explainer unavailable</span>}</div><div className="px-2 pt-1"><ViewCount contentType="series" slug={entry.data.slug}/></div><time className="media-time" dateTime={entry.data.createdAt}>{getTimeAgo(entry.data.createdAt)}</time></article>)}
         </div> : <div className="rounded-xl border border-white/10 bg-white/5 p-8 text-center text-white/50">No movies or series found.</div>}
       </section>
 

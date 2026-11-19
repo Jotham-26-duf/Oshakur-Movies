@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import PosterImage from "./PosterImage";
 
 interface Category {
   id: string;
@@ -47,19 +48,19 @@ export default function CategorySection({ movies, series }: CategorySectionProps
   const categoryImages = useMemo(() => categories.map((category) => {
     const movieImages = movies
       .filter((movie) => movie.genres.includes(category.name))
-      .map((movie) => `/images/movies/${movie.image}`);
+      .map((movie) => ({ src: movie.image, contentType: "movie" as const }));
 
     const seriesImages = series
       .filter((item) => item.genres.includes(category.name))
-      .map((item) => `/images/series/${item.image}`);
+      .map((item) => ({ src: item.image, contentType: "series" as const }));
 
     const images = [...movieImages, ...seriesImages].filter(
-      (image) => image && !image.includes("...")
+      (image) => image.src && !image.src.includes("...")
     );
 
     return {
       ...category,
-      images: images.length > 0 ? images : ["/placeholder.jpg"],
+      images: images.length > 0 ? images : [{ src: "/placeholder.jpg", contentType: "movie" as const }],
     };
   }), [movies, series]);
   const [imageIndexes, setImageIndexes] = useState<number[]>(
@@ -110,8 +111,9 @@ export default function CategorySection({ movies, series }: CategorySectionProps
                 className="group media-tile block min-w-0"
               >
                 <div className="media-tile-frame">
-                  <img
-                    src={currentImage}
+                  <PosterImage
+                    src={currentImage.src}
+                    contentType={currentImage.contentType}
                     alt={category.name}
                     className="aspect-[2/3] w-full object-cover transition duration-700 group-hover:scale-105"
                   />

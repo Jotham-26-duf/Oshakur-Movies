@@ -6,6 +6,7 @@ import SiteBottom from "@/app/components/SiteBottom";
 import { getSeriesSummaries, series } from "@/data/series";
 import { createOpenGraphMetadata } from "@/app/seo";
 import { ViewCount } from "@/app/components/CatalogFeatures";
+import PosterImage from "@/app/components/PosterImage";
 
 export const metadata: Metadata = {
   title: "All Series",
@@ -44,7 +45,7 @@ export default function SeriesPage() {
               <article key={item.id} className="cinema-card group relative min-w-0">
                 <Link href={`/series/${item.slug}`} className="block">
                   <div className="media-poster relative">
-                    <img src={`/images/series/${item.image}`} alt={item.title} loading="lazy" />
+                    <PosterImage src={item.image} contentType="series" alt={item.title} loading="lazy" />
                     {item.genres?.[0] && <span className="media-genre">{item.genres[0]}</span>}
                     {/(season|series)/i.test(item.title) && <span className="media-season">SEASON</span>}
                     <span className="media-play" aria-hidden="true">▶</span>

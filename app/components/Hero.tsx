@@ -4,6 +4,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { getExplainerImage } from "../lib/explainers";
+import PosterImage from "./PosterImage";
 
 interface HeroItem {
   id: string;
@@ -130,16 +131,10 @@ export default function Hero({ items }: HeroProps) {
       ? `/movies/${activeItem.slug}`
       : `/series/${activeItem.slug}`;
 
-  const imagePath =
-    activeItem.type === "movie"
-      ? `/images/movies/${activeItem.image}`
-      : `/images/series/${activeItem.image}`;
-
   const itemType =
     activeItem.type === "movie" ? "Movie" : "Series";
 
   const genres = activeItem.genres ?? [];
-  const getItemPath = (item: HeroItem) => item.type === "movie" ? `/images/movies/${item.image}` : `/images/series/${item.image}`;
   const neighboringItems = [-2, -1, 0, 1, 2].map((offset) => ({ item: safeItems[(activeIndex + offset + totalItems) % totalItems], offset })).filter(({item}) => Boolean(item));
   const activeGenre = genres[0];
 
@@ -150,7 +145,7 @@ export default function Hero({ items }: HeroProps) {
       onMouseLeave={() => setIsPaused(false)}
       aria-label="Featured movies and series"
     >
-      <div className="vod-hero-backdrop" aria-hidden="true"><img src={imagePath} alt="" /><div /></div>
+      <div className="vod-hero-backdrop" aria-hidden="true"><PosterImage src={activeItem.image} contentType={activeItem.type} alt="" className="vod-hero-backdrop-image" /><div /></div>
       <div className="vod-hero-inner">
         <div className={`vod-hero-copy ${isChanging ? "vod-copy-changing" : ""}`}>
             {/* BADGES */}
@@ -259,7 +254,7 @@ export default function Hero({ items }: HeroProps) {
             {neighboringItems.map(({item, offset}) => {
               const index = safeItems.findIndex((candidate) => candidate.id === item.id && candidate.type === item.type);
               return <button key={`${item.type}-${item.id}`} type="button" onClick={() => offset === 0 ? window.location.assign(item.type === "movie" ? `/movies/${item.slug}` : `/series/${item.slug}`) : changeSlide(index)} aria-label={offset === 0 ? `Open ${item.title}` : `Show ${item.title}`} aria-current={offset === 0 ? "true" : undefined} className={`vod-poster vod-poster-${offset < 0 ? `m${Math.abs(offset)}` : offset === 0 ? "active" : `p${offset}`}`}>
-                <img src={getItemPath(item)} alt={item.title} loading={offset === 0 ? "eager" : "lazy"} />
+                <PosterImage src={item.image} contentType={item.type} alt={item.title} loading={offset === 0 ? "eager" : "lazy"} className="h-full w-full object-cover" />
                 <span className="vod-poster-shade" />
                 {offset === 0 && <span className="vod-poster-selected">Now featuring</span>}
               </button>;

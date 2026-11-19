@@ -13556,7 +13556,7 @@ genres: ["Animation", "Comedy", "Family"],
   description: "The genius sniper Anna is forced to accept an assassination assignment. In the process, she gradually finds her true calling to fight for kindness and to defend a greater love. Tai, a special agent for the UN army, stands up for justice when drug lords try to harm innocent citizens. The two join forces to block the bill to legalize drug cultivation and distribution in Libiwala. They fight to the death with the drug lord Luo Jie and eventually foil his plans, protecting the people from the drugs. This is the exciting story of them working together to save a nation.",
   language: "Kinyarwanda",
   genres: ["Action", "Adventure", "Romance"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-15",
   explainer: "B the Great",
   trailer: "",
@@ -13587,7 +13587,7 @@ genres: ["Animation", "Comedy", "Family"],
   description: "Two terminally ill men escape from the cancer ward and embark on a road trip full of adventures. Determined to fulfil their dreams before their time runs out, they experience unforgettable moments and discover the true meaning of life.",
   language: "Kinyarwanda",
   genres: ["Drama", "Adventure"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-17",
   explainer: "Rocky Kimomo",
   trailer: "Mussa Savimbi",
@@ -13611,7 +13611,7 @@ genres: ["Animation", "Comedy", "Family"],
   description: "Detective Angela approaches Constantine, a demon hunter, to investigate the mysterious death of her twin sister. As Constantine investigates, he discovers that demons are planning to enter the human world. He must face supernatural forces and fight to prevent darkness from taking over the world.",
   language: "Kinyarwanda",
   genres: ["Horror", "Fantasy", "Action"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-17",
   explainer: "Mussa Savimbi",
   trailer: "",
@@ -13624,7 +13624,71 @@ genres: ["Animation", "Comedy", "Family"],
       downloadUrl: "https://www.mediafire.com/file/m9kfs6llpqh2geu/Constantine+Hd.mp4/file"
     }
   ]
-}
+},
+
+  {
+    id: "515",
+    title: "K.G.F: Chapter 2",
+    slug: "kgf-chapter-2",
+    year: "",
+    rating: "",
+    image: "kgf-chapter-2.jpg",
+    description: "",
+    language: "Kinyarwanda",
+    genres: ["Action", "Crime", "Drama"],
+    isFeatured: true,
+    createdAt: "2026-11-19",
+    explainer: "",
+    trailer: "",
+    parts: [
+      {
+        id: "513-1",
+        partNumber: 1,
+        title: "Part A",
+        streamUrl: "",
+        downloadUrl: "https://www.mediafire.com/file/lhqghicmikaey0v/K.G.F-_Chapter_2_A.mp4/file"
+      },
+      {
+        id: "513-2",
+        partNumber: 2,
+        title: "Part B",
+        streamUrl: "",
+        downloadUrl: "https://www.mediafire.com/file/xggflsu3h6m1vpg/K.G.F-+Chapter+2+B.mp4/file"
+      },
+      {
+        id: "513-3",
+        partNumber: 3,
+        title: "Part C",
+        streamUrl: "",
+        downloadUrl: "https://www.mediafire.com/file/3hqwx7p63jq55qd/K.G.F-_Chapter_2_C.mp4/file"
+      }
+    ]
+  },
+  {
+    id: "514",
+    title: "Death at a Funeral",
+    slug: "death-at-a-funeral",
+    year: "",
+    rating: "",
+    image: "death-at-a-funeral.jpg",
+    description: "",
+    language: "Kinyarwanda",
+    genres: ["Comedy", "Drama"],
+    isFeatured: true,
+    createdAt: "2026-11-19",
+    explainer: "",
+    trailer: "",
+    parts: [
+      {
+        id: "514-1",
+        partNumber: 1,
+        title: "Full Movie",
+        streamUrl: "",
+        downloadUrl: "https://www.mediafire.com/file/f3sksu1v51wrhav/DEATH_AT_A_FUNERAL.mp4/file"
+      }
+    ]
+  }
+
 
 
 ]

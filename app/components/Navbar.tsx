@@ -8,6 +8,7 @@ import { movies } from "@/data/movies";
 import type { SeriesSummary } from "@/data/series";
 import { SiWhatsapp } from "react-icons/si";
 import OshakurLogo from "./OshakurLogo";
+import PosterImage from "./PosterImage";
 
 function normalizeSearchText(value: unknown): string {
   return String(value ?? "")
@@ -102,7 +103,7 @@ function CloseIcon() {
   );
 }
 
-export default function Navbar({ series }: { series: SeriesSummary[] }) {
+export default function Navbar({ series }: { series: readonly SeriesSummary[] }) {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -375,8 +376,9 @@ export default function Navbar({ series }: { series: SeriesSummary[] }) {
                               onClick={selectResult}
                               className="group flex items-center gap-3 rounded-xl p-2 transition duration-200 hover:-translate-y-0.5 hover:bg-[#2A2A2A] hover:shadow-lg focus-visible:bg-[#2A2A2A]"
                             >
-                              <img
-                                src={`/images/movies/${movie.image}`}
+                              <PosterImage
+                                src={movie.image}
+                                contentType="movie"
                                 alt={movie.title}
                                 loading="lazy"
                                 className="h-14 w-10 shrink-0 rounded-md object-cover"
@@ -415,8 +417,9 @@ export default function Navbar({ series }: { series: SeriesSummary[] }) {
                               onClick={selectResult}
                               className="group flex items-center gap-3 rounded-xl p-2 transition duration-200 hover:-translate-y-0.5 hover:bg-[#2A2A2A] hover:shadow-lg focus-visible:bg-[#2A2A2A]"
                             >
-                              <img
-                                src={`/images/series/${item.image}`}
+                              <PosterImage
+                                src={item.image}
+                                contentType="series"
                                 alt={item.title}
                                 loading="lazy"
                                 className="h-14 w-10 shrink-0 rounded-md object-cover"

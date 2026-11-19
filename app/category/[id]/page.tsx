@@ -8,6 +8,7 @@ import { movies } from "@/data/movies";
 import { getSeriesSummaries, series } from "@/data/series";
 import { createOpenGraphMetadata } from "@/app/seo";
 import { ViewCount } from "@/app/components/CatalogFeatures";
+import PosterImage from "@/app/components/PosterImage";
 
 interface Category {
   id: string;
@@ -133,8 +134,9 @@ export default async function CategoryPage({
                   className="group media-tile block min-w-0"
                 >
                   <div className="media-tile-frame relative overflow-hidden rounded-xl bg-[#2A2A2A]">
-                    <img
-                      src={`/images/movies/${movie.image}`}
+                    <PosterImage
+                      src={movie.image}
+                      contentType="movie"
                       alt={movie.title}
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
@@ -183,8 +185,9 @@ export default async function CategoryPage({
                   className="group media-tile block min-w-0"
                 >
                   <div className="media-tile-frame relative overflow-hidden rounded-xl bg-[#2A2A2A]">
-                    <img
-                      src={`/images/series/${item.image}`}
+                    <PosterImage
+                      src={item.image}
+                      contentType="series"
                       alt={item.title}
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import PosterImage from "./PosterImage";
+import PosterImage, { getPosterImageSrc } from "./PosterImage";
 
 interface TrailerInfo {
   type: "movie" | "series";
@@ -52,9 +52,7 @@ export default function TrailerPlayer({ trailer, info }: { trailer?: string; inf
   const [embedFailed, setEmbedFailed] = useState(false);
   const parsed = parseTrailer(trailer);
   const heading = <h2 className="cinema-section-title mb-4 text-xl font-bold sm:text-2xl">Official Trailer</h2>;
-  const poster = info.image.startsWith("/") || /^(https?:|data:|blob:)/i.test(info.image)
-    ? info.image
-    : `/images/${info.type === "series" ? "series" : "movies"}/${info.image.replace(/^\/+/, "")}`;
+  const poster = getPosterImageSrc(info.image, info.type);
 
   if (!parsed) {
     const hasTrailerValue = Boolean(trailer?.trim());

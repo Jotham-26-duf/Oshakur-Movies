@@ -14,6 +14,7 @@ import TrailerPlayer from "@/app/components/TrailerPlayer";
 import { DetailViewTracker, ViewCount } from "@/app/components/CatalogFeatures";
 import MomoSupport from "@/app/components/MomoSupport";
 import ExpandableDescription from "@/app/components/ExpandableDescription";
+import { selectRecommendations } from "@/lib/recommendations";
 
 function MoviePartLinks({ part, single = false }: { part: MoviePart; single?: boolean }) {
   const streamUrls = [part.streamUrl, ...(part.alternateStreamUrls ?? [])].filter(
@@ -97,10 +98,10 @@ export default async function MovieDetailsPage({
     notFound();
   }
 
-  const recommendations = [
-    ...movies.filter((item) => item.slug !== movie.slug).map((item) => ({...item, type: "movie" as const})),
-    ...series.map((item) => ({...item, type: "series" as const})),
-  ].sort((a,b) => Number(b.genres?.some((genre) => movie.genres.includes(genre))) - Number(a.genres?.some((genre) => movie.genres.includes(genre))) || Number(b.explainer?.trim().toLowerCase() === movie.explainer?.trim().toLowerCase()) - Number(a.explainer?.trim().toLowerCase() === movie.explainer?.trim().toLowerCase()) || (b.createdAt ?? "").localeCompare(a.createdAt ?? "")).slice(0, 6);
+  const recommendations = selectRecommendations([
+    ...movies.map((item) => ({ ...item, type: "movie" as const })),
+    ...series.map((item) => ({ ...item, type: "series" as const })),
+  ], movie, "movie");
 
   const isSinglePart = movie.parts.length === 1;
   const singlePart = movie.parts[0];

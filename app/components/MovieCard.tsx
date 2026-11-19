@@ -81,15 +81,12 @@ export default function MovieCard({
   const timeAgo = getTimeAgo(createdAt);
   const explainerName = explainer?.trim();
   const contentType = hrefPrefix === "/series" ? "series" : "movie";
-  const imagePath = image.startsWith("/") || /^(https?:|data:|blob:)/i.test(image)
-    ? image
-    : `/images/${contentType === "series" ? "series" : "movies"}/${image.replace(/^\/+/, "")}`;
 
   return (
     <article className="cinema-card group relative block w-full min-w-0">
       <Link href={`${hrefPrefix}/${slug}`} className="block">
         <div className="media-poster relative">
-          <PosterImage src={imagePath} alt={title} contentType={contentType} />
+          <PosterImage src={image} alt={title} contentType={contentType} />
           {genres?.[0] && <span className="media-genre">{genres[0]}</span>}
           <span className="media-play" aria-hidden="true">▶</span>
         </div>

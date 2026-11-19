@@ -14,6 +14,7 @@ import TrailerPlayer from "@/app/components/TrailerPlayer";
 import { DetailViewTracker, ViewCount } from "@/app/components/CatalogFeatures";
 import MomoSupport from "@/app/components/MomoSupport";
 import ExpandableDescription from "@/app/components/ExpandableDescription";
+import { selectRecommendations } from "@/lib/recommendations";
 
 interface SeriesDetailsPageProps {
   params: Promise<{
@@ -77,10 +78,10 @@ export default async function SeriesDetailsPage({
       : `Episode ${episodeNumber}`;
   }
 
-  const recommendations = [
-    ...series.filter((item) => item.slug !== currentSeries.slug).map((item) => ({...item, type: "series" as const})),
-    ...movies.map((item) => ({...item, type: "movie" as const})),
-  ].sort((a,b) => Number(b.genres?.some((genre) => currentSeries.genres.includes(genre))) - Number(a.genres?.some((genre) => currentSeries.genres.includes(genre))) || Number(b.explainer?.trim().toLowerCase() === currentSeries.explainer?.trim().toLowerCase()) - Number(a.explainer?.trim().toLowerCase() === currentSeries.explainer?.trim().toLowerCase()) || (b.createdAt ?? "").localeCompare(a.createdAt ?? "")).slice(0, 6);
+  const recommendations = selectRecommendations([
+    ...series.map((item) => ({ ...item, type: "series" as const })),
+    ...movies.map((item) => ({ ...item, type: "movie" as const })),
+  ], currentSeries, "series");
 
   return (
     <main className="cinema-page min-h-screen text-white">

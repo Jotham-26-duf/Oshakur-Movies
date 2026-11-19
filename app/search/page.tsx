@@ -6,6 +6,7 @@ import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
 import { getSeriesSummaries, series } from "@/data/series";
 import { ViewCount } from "@/app/components/CatalogFeatures";
+import PosterImage from "@/app/components/PosterImage";
 
 export const metadata: Metadata = {
   title: "Search Movies & Series",
@@ -151,8 +152,9 @@ export default async function SearchPage({
                   className="group media-tile min-w-0"
                 >
                   <div className="media-tile-frame overflow-hidden rounded-xl bg-[#2A2A2A]">
-                    <img
-                      src={`/images/movies/${movie.image}`}
+                    <PosterImage
+                      src={movie.image}
+                      contentType="movie"
                       alt={movie.title}
                       loading="lazy"
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
@@ -205,8 +207,9 @@ export default async function SearchPage({
                   className="group media-tile min-w-0"
                 >
                   <div className="media-tile-frame overflow-hidden rounded-xl bg-[#2A2A2A]">
-                    <img
-                      src={`/images/series/${item.image}`}
+                    <PosterImage
+                      src={item.image}
+                      contentType="series"
                       alt={item.title}
                       loading="lazy"
                       className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"

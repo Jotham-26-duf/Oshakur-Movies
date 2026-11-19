@@ -14,6 +14,23 @@ type CatalogContextValue = {
 
 const CatalogContext = createContext<CatalogContextValue | null>(null);
 const itemKey = (type: ContentType, slug: string) => `${type}:${slug}`;
+const METRICS_CACHE_MS = 30_000;
+let metricsCache: { expiresAt: number; metrics: { content_type: ContentType; slug: string; view_count: number }[] } | null = null;
+let metricsRequest: Promise<{ content_type: ContentType; slug: string; view_count: number }[]> | null = null;
+
+async function loadMetrics() {
+  if (metricsCache && metricsCache.expiresAt > Date.now()) return metricsCache.metrics;
+  if (!metricsRequest) {
+    metricsRequest = (async () => {
+      const response = await fetch("/api/catalog", { cache: "no-store" });
+      if (!response.ok) throw new Error("Catalog unavailable");
+      const data = await response.json() as { metrics: { content_type: ContentType; slug: string; view_count: number }[] };
+      metricsCache = { metrics: data.metrics, expiresAt: Date.now() + METRICS_CACHE_MS };
+      return data.metrics;
+    })().finally(() => { metricsRequest = null; });
+  }
+  return metricsRequest;
+}
 
 export function CatalogFeaturesProvider({ children }: { children: React.ReactNode }) {
   const [views, setViews] = useState<Record<string, number>>({});
@@ -25,11 +42,9 @@ export function CatalogFeaturesProvider({ children }: { children: React.ReactNod
     let cancelled = false;
     async function loadCatalog() {
       try {
-        const response = await fetch("/api/catalog", { cache: "no-store" });
-        if (!response.ok) throw new Error("Catalog unavailable");
-        const data = await response.json() as { metrics: { content_type: ContentType; slug: string; view_count: number }[] };
+        const metrics = await loadMetrics();
         if (cancelled) return;
-        setViews(Object.fromEntries(data.metrics.map((item) => [itemKey(item.content_type, item.slug), Number(item.view_count)])));
+        setViews(Object.fromEntries(metrics.map((item) => [itemKey(item.content_type, item.slug), Number(item.view_count)])));
       } catch {
         if (!cancelled) setLoadError(true);
       } finally {
@@ -57,6 +72,14 @@ export function CatalogFeaturesProvider({ children }: { children: React.ReactNod
         if (!response.ok) continue;
         const data = await response.json() as { views: number };
         setViews((current) => ({ ...current, [key]: data.views }));
+        if (metricsCache) {
+          metricsCache = {
+            expiresAt: metricsCache.expiresAt,
+            metrics: metricsCache.metrics.map((item) => item.content_type === type && item.slug === slug
+              ? { ...item, view_count: data.views }
+              : item),
+          };
+        }
         setViewErrors((current) => { const next = new Set(current); next.delete(key); return next; });
         return;
       } catch {
