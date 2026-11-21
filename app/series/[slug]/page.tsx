@@ -92,7 +92,11 @@ export default async function SeriesDetailsPage({
       </div>
       <TrailerPlayer trailer={currentSeries.trailer} info={{ type: "series", title: currentSeries.title, image: currentSeries.image, year: currentSeries.year, genres: currentSeries.genres, language: currentSeries.language, rating: currentSeries.rating }} />
       <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
-        <section>
+        <section className="grid gap-5 rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:gap-7 sm:p-6 md:grid-cols-[minmax(150px,220px)_minmax(0,1fr)] md:items-start lg:p-8">
+          <div className="mx-auto w-full max-w-[190px] md:max-w-none">
+            <div className="media-poster"><img src={`/images/series/${currentSeries.image}`} alt={currentSeries.title} /></div>
+          </div>
+          <div className="min-w-0">
           <h1 className="text-3xl font-black tracking-tight sm:text-5xl">{currentSeries.title}</h1>
           <div className="mt-5 flex flex-wrap items-center gap-2 text-sm">
             {currentSeries.genres.map((genre) => <span key={genre} className="rounded-full bg-[#E50914]/15 px-3 py-1 text-xs font-semibold text-white">{genre}</span>)}
@@ -104,6 +108,7 @@ export default async function SeriesDetailsPage({
             {currentSeries.createdAt && <span className="text-xs text-[#888]">Added {new Date(currentSeries.createdAt).toLocaleDateString()}</span>}
           </div>
           <ExpandableDescription description={currentSeries.description} className="mt-4" />
+          </div>
         </section>
       </div>
 
@@ -179,8 +184,8 @@ export default async function SeriesDetailsPage({
         )}
       </section>
 
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-12 sm:px-6 lg:grid-cols-[minmax(0,1.8fr)_minmax(280px,1fr)] lg:px-8">
-        {recommendations.length > 0 && <aside className="lg:sticky lg:top-28 lg:self-start"><h2 className="cinema-section-title mb-5 text-2xl font-bold">More Films</h2><div className="grid grid-cols-2 gap-4">{recommendations.map((item) => <MovieCard key={`${item.type}-${item.id}`} title={item.title} year={item.year} rating={item.rating ?? ""} image={item.image} slug={item.slug} explainer={item.explainer} createdAt={item.createdAt} hrefPrefix={item.type === "series" ? "/series" : "/movies"} />)}</div></aside>}
+      <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+        {recommendations.length > 0 && <aside><h2 className="cinema-section-title mb-4 text-2xl font-bold">More Films</h2><div className="grid grid-cols-2 items-start gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">{recommendations.map((item) => <div key={`${item.type}-${item.id}`} className="mx-auto w-full max-w-[190px] min-w-0"><MovieCard title={item.title} year={item.year} rating={item.rating ?? ""} image={item.image} slug={item.slug} explainer={item.explainer} createdAt={item.createdAt} hrefPrefix={item.type === "series" ? "/series" : "/movies"} /></div>)}</div></aside>}
       </div>
 
       <SiteBottom />

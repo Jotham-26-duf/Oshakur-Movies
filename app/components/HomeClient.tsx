@@ -257,10 +257,17 @@ export default function HomeClient({
 
   const mixedCatalog = useMemo(() => {
     const result: TrendingItem[] = [];
+    const seen = new Set<string>();
+    const appendUnique = (contentType: TrendingItem["contentType"], data: HomeMovie | HomeSeries) => {
+      const identity = `${contentType}:${data.id}`;
+      if (seen.has(identity)) return;
+      seen.add(identity);
+      result.push({ contentType, data } as TrendingItem);
+    };
     const appendGroups = (moviePool: HomeMovie[], seriesPool: HomeSeries[]) => {
       for (let index = 0; index < Math.max(moviePool.length, seriesPool.length); index += 2) {
-        moviePool.slice(index, index + 2).forEach((data) => result.push({ contentType: "movie", data }));
-        seriesPool.slice(index, index + 2).forEach((data) => result.push({ contentType: "series", data }));
+        moviePool.slice(index, index + 2).forEach((data) => appendUnique("movie", data));
+        seriesPool.slice(index, index + 2).forEach((data) => appendUnique("series", data));
       }
     };
     appendGroups(orderedMovies.filter((item) => item.isFeatured), orderedSeries.filter((item) => item.isFeatured));

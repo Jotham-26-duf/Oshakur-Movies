@@ -4507,7 +4507,7 @@ export const movies: Movie[] = [
   description: "Watch MASTER PLAN on Oshakur Movies. Stream the movie online or download it using the available links.",
   language: "English",
   genres: ["Action", "Adventure", "Comedy"],
-  isFeatured: false ,
+  isFeatured: true ,
   createdAt: "2026-10-19",
   parts: [
     {
@@ -11056,7 +11056,7 @@ genres: ["Animation", "Comedy", "Family"],
     description: "Robert Neville is a scientist who was unable to stop the spread of a terrible man-made virus that was incurable. Immune, Neville is now the last human survivor in what is left of New York City and perhaps the world. For three years, Neville has faithfully sent out daily radio messages, desperate to find any other survivors. But he is not alone.",
     language: "Kinyarwanda",
     genres: ["Action", "Drama", "Sci-Fi"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-11-15",
     explainer: "Junior Giti",
     trailer: "",
@@ -11773,7 +11773,7 @@ genres: ["Animation", "Comedy", "Family"],
     description: "",
     language: "Kinyarwanda",
     genres: ["Action", "Adventure", "Romance"],
-    isFeatured: false,
+    isFeatured: true,
     createdAt: "2026-11-15",
     explainer: "B The Great",
     trailer: "",
@@ -13602,7 +13602,7 @@ genres: ["Animation", "Comedy", "Family"],
   ]
 },
 {
-  id: "513",
+  id: "515",
   title: "Constantine",
   slug: "constantine",
   year: "2005",
@@ -13617,7 +13617,7 @@ genres: ["Animation", "Comedy", "Family"],
   trailer: "",
   parts: [
     {
-      id: "513-1",
+      id: "515-1",
       partNumber: 1,
       title: "Full Movie",
       streamUrl: "https://vsembed.com/xkdo6j",
@@ -13627,7 +13627,7 @@ genres: ["Animation", "Comedy", "Family"],
 },
 
   {
-    id: "515",
+    id: "513",
     title: "K.G.F: Chapter 2",
     slug: "kgf-chapter-2",
     year: "",
@@ -13636,7 +13636,7 @@ genres: ["Animation", "Comedy", "Family"],
     description: "",
     language: "Kinyarwanda",
     genres: ["Action", "Crime", "Drama"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-11-19",
     explainer: "",
     trailer: "",
@@ -13674,7 +13674,8 @@ genres: ["Animation", "Comedy", "Family"],
     description: "",
     language: "Kinyarwanda",
     genres: ["Comedy", "Drama"],
-    isFeatured: true,
+    isFeatured: false
+    ,
     createdAt: "2026-11-19",
     explainer: "",
     trailer: "",
@@ -13687,7 +13688,64 @@ genres: ["Animation", "Comedy", "Family"],
         downloadUrl: "https://www.mediafire.com/file/f3sksu1v51wrhav/DEATH_AT_A_FUNERAL.mp4/file"
       }
     ]
-  }
+  },
+
+{
+  id: "515",
+  title: "Other Mommy",
+  slug: "other-mommy",
+  year: "2026",
+  rating: "",
+  image: "other-mommy.jpg",
+  description: "Young Bela forms a relationship with a sinister entity in her home that looks uncannily like her own mother, drawing her into a terrifying and increasingly dark world.",
+  language: "Kinyarwanda",
+  genres: ["Horror", "Thriller"],
+  isFeatured: true,
+  createdAt: "2026-11-21",
+  explainer: "Peferct",
+  trailer: "https://www.youtube.com/watch?v=-mnTITqqiT0",
+  parts: [
+    {
+      id: "515-1",
+      partNumber: 1,
+      title: "Full Movie",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Famerica%2Fperf%2Fmovie%2FOTHER_MOMMY_2026_perfect.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Famerica%2Fperf%2Fmovie%2FOTHER_MOMMY_2026_perfect.mp4"
+    }
+  ]
+},
+{
+  id: "516",
+  title: "Ready or Not: Here I Come",
+  slug: "ready-or-not-here-i-come",
+  year: "2026",
+  rating: "",
+  image: "ready-or-not-here-i-come.jpg",
+  description: "Moments after surviving an all-out attack from the Le Domas family, Grace discovers she has reached the next level of the nightmarish game. With her estranged sister Faith at her side, she must survive four rival families hunting her for the throne and claim the High Seat of the Council that controls the world.",
+  language: "Kinyarwanda",
+  genres: ["Horror", "Thriller", "Comedy"],
+  isFeatured: true,
+  createdAt: "2026-11-21",
+  explainer: "Gaheza",
+  trailer: "https://www.youtube.com/watch?v=AXeYU6Kmrek",
+  parts: [
+    {
+      id: "516-1",
+      partNumber: 1,
+      title: "Part A",
+      streamUrl: "http://isatafilez.my/files/series/2026/america/gahe/movie/READY_OR_NOT_2_HERE_I_COME_A.mp4",
+      downloadUrl: "http://isatafilez.my/files/series/2026/america/gahe/movie/READY_OR_NOT_2_HERE_I_COME_A.mp4"
+    },
+    {
+      id: "516-2",
+      partNumber: 2,
+      title: "Part B",
+      streamUrl: "http://isatafilez.my/files/series/2026/america/gahe/movie/READY_OR_NOT_2_HERE_I_COME_B.mp4",
+      downloadUrl: "http://isatafilez.my/files/series/2026/america/gahe/movie/READY_OR_NOT_2_HERE_I_COME_B.mp4"
+    }
+  ]
+}
+
 
 
 
