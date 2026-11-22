@@ -1,12 +1,10 @@
 
 import type { Metadata } from "next";
-import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
 import { getSeriesSummaries, series } from "@/data/series";
-import { ViewCount } from "@/app/components/CatalogFeatures";
-import PosterImage from "@/app/components/PosterImage";
+import MovieCard from "@/app/components/MovieCard";
 
 export const metadata: Metadata = {
   title: "Search Movies & Series",
@@ -143,49 +141,9 @@ export default async function SearchPage({
               Movies ({movieResults.length})
             </h2>
 
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            <div className="catalog-card-grid">
               {movieResults.map((movie) => (
-                <article key={`movie-${movie.id}`} className="cinema-card group relative min-w-0">
-                <Link
-                  key={movie.id}
-                  href={`/movies/${movie.slug}`}
-                  className="group media-tile min-w-0"
-                >
-                  <div className="media-tile-frame overflow-hidden rounded-xl bg-[#2A2A2A]">
-                    <PosterImage
-                      src={movie.image}
-                      contentType="movie"
-                      alt={movie.title}
-                      loading="lazy"
-                      className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
-                  </div>
-
-                  <h3 className="mt-3 font-semibold transition group-hover:text-[#00E5FF]">
-                    {movie.title}
-                  </h3>
-
-                  <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-[#AAAAAA]">
-                    <span>{movie.year}</span>
-                    <span>•</span>
-                    <span>★ {movie.rating}</span>
-                  </div>
-
-                  {movie.language && (
-                    <p className="mt-1 text-xs text-[#888888]">
-                      {movie.language}
-                    </p>
-                  )}
-
-                  {movie.explainer?.trim() && (
-                    <p className="mt-1 text-xs text-[#00E5FF]">
-                      🎙 {movie.explainer}
-                    </p>
-                  )}
-                </Link>
-                  <div className="px-2 pt-1"><ViewCount contentType="movie" slug={movie.slug} /></div>
-                </article>
+                <MovieCard key={`movie-${movie.id}`} title={movie.title} year={movie.year ?? ""} rating={movie.rating ?? ""} image={movie.image} slug={movie.slug} explainer={movie.explainer} />
               ))}
             </div>
           </section>
@@ -198,49 +156,9 @@ export default async function SearchPage({
               Series ({seriesResults.length})
             </h2>
 
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            <div className="catalog-card-grid">
               {seriesResults.map((item) => (
-                <article key={`series-${item.id}`} className="cinema-card group relative min-w-0">
-                <Link
-                  key={item.id}
-                  href={`/series/${item.slug}`}
-                  className="group media-tile min-w-0"
-                >
-                  <div className="media-tile-frame overflow-hidden rounded-xl bg-[#2A2A2A]">
-                    <PosterImage
-                      src={item.image}
-                      contentType="series"
-                      alt={item.title}
-                      loading="lazy"
-                      className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
-                  </div>
-
-                  <h3 className="mt-3 font-semibold transition group-hover:text-[#00E5FF]">
-                    {item.title}
-                  </h3>
-
-                  <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-[#AAAAAA]">
-                    <span>{item.year}</span>
-                    <span>•</span>
-                    <span>★ {item.rating}</span>
-                  </div>
-
-                  {item.language && (
-                    <p className="mt-1 text-xs text-[#888888]">
-                      {item.language}
-                    </p>
-                  )}
-
-                  {item.explainer?.trim() && (
-                    <p className="mt-1 text-xs text-[#00E5FF]">
-                      🎙 {item.explainer}
-                    </p>
-                  )}
-                </Link>
-                  <div className="px-2 pt-1"><ViewCount contentType="series" slug={item.slug} /></div>
-                </article>
+                <MovieCard key={`series-${item.id}`} title={item.title} year={item.year ?? ""} rating={item.rating ?? ""} image={item.image} slug={item.slug} hrefPrefix="/series" explainer={item.explainer} />
               ))}
             </div>
           </section>

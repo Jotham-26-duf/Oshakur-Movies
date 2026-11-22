@@ -40,7 +40,7 @@ export default function MoviesPage() {
         </header>
 
         {orderedMovies.length > 0 ? (
-          <div className="media-grid">
+          <div className="catalog-card-grid">
             {orderedMovies.map((movie) => (
               <MovieCard
                 key={movie.id}

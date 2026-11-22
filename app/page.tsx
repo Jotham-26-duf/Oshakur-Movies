@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import HomeClient from "./components/HomeClient";
 import { movies } from "@/data/movies";
-import { getSeriesSummaries } from "@/data/series";
+import { getSeriesSummaries, series } from "@/data/series";
 import { createOpenGraphMetadata, siteName, siteUrl } from "./seo";
 
 export const metadata: Metadata = {
@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const seriesForCount = new Map(series.map((item) => [item.id, item.episodes.length]));
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -33,7 +34,13 @@ export default function Home() {
           __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <HomeClient movies={movies} series={getSeriesSummaries()} />
+      <HomeClient
+        movies={movies}
+        series={getSeriesSummaries().map((item) => ({
+          ...item,
+          episodeCount: seriesForCount.get(item.id) ?? 0,
+        }))}
+      />
     </>
   );
 }

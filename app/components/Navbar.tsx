@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { type FormEvent, useState } from "react";
+import { type FormEvent, useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 import { movies } from "@/data/movies";
@@ -110,6 +110,15 @@ export default function Navbar({ series }: { series: readonly SeriesSummary[] })
   const [search, setSearch] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
+
   const searchTerm = normalizeSearchText(search);
 
   const matchingMovies = searchTerm
@@ -160,6 +169,7 @@ export default function Navbar({ series }: { series: readonly SeriesSummary[] })
 
     if (!query) return;
 
+    window.dispatchEvent(new Event("oshakur:navigation-start"));
     router.push(`/search?q=${encodeURIComponent(query)}`);
   }
 
@@ -183,7 +193,7 @@ export default function Navbar({ series }: { series: readonly SeriesSummary[] })
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0D0D0D]/95 shadow-[0_12px_32px_rgba(0,0,0,0.24)] backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-gradient-to-b from-black/85 via-black/75 to-black/90 shadow-[0_12px_32px_rgba(0,0,0,0.24)] backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-[1600px] items-center px-4 sm:h-[72px] sm:px-6 lg:px-[5%]">
           <Link
             href="/"
@@ -223,8 +233,9 @@ export default function Navbar({ series }: { series: readonly SeriesSummary[] })
             <button
               type="button"
               onClick={() => setMenuOpen((open) => !open)}
-              className="rounded-lg p-2 text-white transition hover:bg-white/10 lg:hidden"
+              className="inline-flex items-center justify-center rounded-md bg-red-700 p-2 text-white transition-colors hover:bg-red-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:ring-offset-2 focus-visible:ring-offset-black lg:hidden"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-controls="mobile-primary-navigation"
               aria-expanded={menuOpen}
             >
               {menuOpen ? <CloseIcon /> : <MenuIcon />}
@@ -461,7 +472,7 @@ export default function Navbar({ series }: { series: readonly SeriesSummary[] })
 
         {/* MOBILE MENU */}
         {menuOpen && (
-          <div className="border-t border-white/10 bg-[#0B1320] px-4 py-4 shadow-2xl lg:hidden">
+          <div id="mobile-primary-navigation" className="border-t border-white/10 bg-gradient-to-b from-black/85 via-black/55 to-black/90 px-4 py-4 shadow-2xl backdrop-blur-md lg:hidden">
             <nav className="flex flex-col gap-2" aria-label="Mobile navigation">
               <Link href="/" onClick={closeMenu} aria-current={pathname === "/" ? "page" : undefined} className={navLinkClass("/")}>
                 <HomeIcon /> Home

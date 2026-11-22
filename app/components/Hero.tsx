@@ -253,11 +253,9 @@ export default function Hero({ items }: HeroProps) {
           <div className="vod-carousel-scene" onTouchStart={(event) => { (event.currentTarget as HTMLDivElement).dataset.touchStart = String(event.touches[0].clientX); }} onTouchEnd={(event) => { const start = Number((event.currentTarget as HTMLDivElement).dataset.touchStart); const delta = event.changedTouches[0].clientX - start; if (Math.abs(delta) > 45) changeSlide(activeIndex + (delta < 0 ? 1 : -1)); }}>
             {neighboringItems.map(({item, offset}) => {
               const index = safeItems.findIndex((candidate) => candidate.id === item.id && candidate.type === item.type);
-              return <button key={`${item.type}-${item.id}`} type="button" onClick={() => offset === 0 ? window.location.assign(item.type === "movie" ? `/movies/${item.slug}` : `/series/${item.slug}`) : changeSlide(index)} aria-label={offset === 0 ? `Open ${item.title}` : `Show ${item.title}`} aria-current={offset === 0 ? "true" : undefined} className={`vod-poster vod-poster-${offset < 0 ? `m${Math.abs(offset)}` : offset === 0 ? "active" : `p${offset}`}`}>
-                <PosterImage src={item.image} contentType={item.type} alt={item.title} loading={offset === 0 ? "eager" : "lazy"} className="h-full w-full object-cover" />
-                <span className="vod-poster-shade" />
-                {offset === 0 && <span className="vod-poster-selected">Now featuring</span>}
-              </button>;
+              const posterClass = `vod-poster vod-poster-${offset < 0 ? `m${Math.abs(offset)}` : offset === 0 ? "active" : `p${offset}`} ${offset === 0 ? "vod-poster-active" : "vod-poster-neighbor"}`;
+              const posterContent = <><PosterImage src={item.image} contentType={item.type} alt={item.title} loading={offset === 0 ? "eager" : "lazy"} className="h-full w-full object-cover" /><span className="vod-poster-shade" />{offset === 0 && <span className="vod-poster-selected">Now featuring</span>}</>;
+              return offset === 0 ? <Link key={`${item.type}-${item.id}`} href={item.type === "movie" ? `/movies/${item.slug}` : `/series/${item.slug}`} aria-label={`Open ${item.title}`} aria-current="true" className={posterClass}>{posterContent}</Link> : <button key={`${item.type}-${item.id}`} type="button" onClick={() => changeSlide(index)} aria-label={`Show ${item.title}`} className={posterClass}>{posterContent}</button>;
             })}
           </div>
           <div className="vod-carousel-controls"><button type="button" onClick={() => changeSlide(activeIndex - 1)} aria-label="Previous featured title">‹</button><span>{String(activeIndex + 1).padStart(2, "0")} / {String(totalItems).padStart(2, "0")}</span><button type="button" onClick={() => changeSlide(activeIndex + 1)} aria-label="Next featured title">›</button></div>

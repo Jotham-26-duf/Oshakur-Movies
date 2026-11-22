@@ -16,6 +16,10 @@ interface MovieCardProps {
   streamUrl?: string;
   downloadUrl?: string;
   genres?: string[];
+  episodeCount?: number;
+  partCount?: number;
+  season?: string;
+  isNewEpisode?: boolean;
   onExplainerClick?: (name: string) => void;
 }
 
@@ -66,7 +70,7 @@ function getTimeAgo(createdAt?: string): string {
 
 export default function MovieCard({
   title,
-  year,
+  year: _year,
   rating,
   image,
   slug,
@@ -76,6 +80,10 @@ export default function MovieCard({
   streamUrl,
   downloadUrl,
   genres,
+  episodeCount,
+  partCount,
+  season,
+  isNewEpisode = false,
   onExplainerClick,
 }: MovieCardProps) {
   const timeAgo = getTimeAgo(createdAt);
@@ -88,6 +96,9 @@ export default function MovieCard({
         <div className="media-poster relative">
           <PosterImage src={image} alt={title} contentType={contentType} />
           {genres?.[0] && <span className="media-genre">{genres[0]}</span>}
+          {season && <span className="media-season">{season}</span>}
+          {(episodeCount !== undefined || partCount !== undefined) && <span className="media-count-badge">{episodeCount !== undefined ? `${episodeCount} ${episodeCount === 1 ? "Episode" : "Episodes"}` : `${partCount} ${partCount === 1 ? "Part" : "Parts"}`}</span>}
+          {isNewEpisode && <span className="media-new">NEW EPISODE</span>}
           <span className="media-play" aria-hidden="true">▶</span>
         </div>
       </Link>
@@ -97,8 +108,9 @@ export default function MovieCard({
         </h3>
       </Link>
 
-      <div className="media-byline">
-        {explainerName ? (
+      <div className="media-card-footer">
+        <div className="media-byline">
+          {explainerName ? (
           <span className="flex min-w-0 items-center gap-1.5">
             {getExplainerImage(explainerName) && <img src={getExplainerImage(explainerName)} alt="" className="h-5 w-5 shrink-0 rounded-full object-cover" />}
             {onExplainerClick ? (
@@ -119,16 +131,16 @@ export default function MovieCard({
               </span>
             )}
           </span>
-        ) : (
+          ) : (
           <span className="min-w-0 text-xs text-white/40">
             Explainer unavailable
           </span>
-        )}
+          )}
+        </div>
+        {createdAt && timeAgo !== "Upload date unavailable" && <time title={timeAgo} dateTime={createdAt} className="media-time">{timeAgo}</time>}
       </div>
 
       <div className="px-2 pt-1"><ViewCount contentType={contentType} slug={slug} /></div>
-
-      {createdAt && timeAgo !== "Upload date unavailable" && <time title={timeAgo} dateTime={createdAt} className="media-time">{timeAgo}</time>}
 
       {rating && rating !== "N/A" && (
         <div className="media-meta">

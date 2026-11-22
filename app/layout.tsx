@@ -5,6 +5,7 @@ import MonetagScripts from "./MonetagScripts";
 import AnnouncementBanner from "./components/AnnouncementBanner";
 import { CatalogFeaturesProvider } from "./components/CatalogFeatures";
 import WhatsAppChannelButton from "./components/WhatsAppChannelButton";
+import NavigationProgress from "./components/NavigationProgress";
 import {
   createOpenGraphMetadata,
   siteName,
@@ -79,6 +80,7 @@ export default function RootLayout({
       </head>
 
       <body>
+        <NavigationProgress />
         {/* Website structured data — identifies the preferred website name */}
         <script
           type="application/ld+json"

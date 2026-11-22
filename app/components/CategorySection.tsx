@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import PosterImage from "./PosterImage";
+import type { Genre } from "@/data/genres";
 
 interface Category {
   id: string;
-  name: string;
+  name: Genre;
 }
 
 const categories: Category[] = [

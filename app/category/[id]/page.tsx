@@ -5,14 +5,15 @@ import type { Metadata } from "next";
 import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
-import { getSeriesSummaries, series } from "@/data/series";
+import { getSeriesSummaries } from "@/data/series";
 import { createOpenGraphMetadata } from "@/app/seo";
-import { ViewCount } from "@/app/components/CatalogFeatures";
-import PosterImage from "@/app/components/PosterImage";
+import type { Genre } from "@/data/genres";
+import MovieCard from "@/app/components/MovieCard";
+import { getGenreCollection } from "@/app/lib/genreCollections";
 
 interface Category {
   id: string;
-  name: string;
+  name: Genre;
 }
 
 const categories: Category[] = [
@@ -85,13 +86,7 @@ export default async function CategoryPage({
     notFound();
   }
 
-  const categoryMovies = movies.filter((movie) =>
-    movie.genres.includes(category.name)
-  );
-
-  const categorySeries = series.filter((item) =>
-    item.genres.includes(category.name)
-  );
+  const categoryEntries = getGenreCollection(movies, getSeriesSummaries(), category.name);
 
   return (
     <>
@@ -120,107 +115,10 @@ export default async function CategoryPage({
           </p>
         </div>
 
-        {/* Movies */}
-        {categoryMovies.length > 0 && (
-          <section>
-            <h2 className="mb-5 text-2xl font-bold">Movies</h2>
-
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-              {categoryMovies.map((movie) => (
-                <article key={`movie-${movie.id}`} className="cinema-card group relative min-w-0">
-                <Link
-                  key={movie.id}
-                  href={`/movies/${movie.slug}`}
-                  className="group media-tile block min-w-0"
-                >
-                  <div className="media-tile-frame relative overflow-hidden rounded-xl bg-[#2A2A2A]">
-                    <PosterImage
-                      src={movie.image}
-                      contentType="movie"
-                      alt={movie.title}
-                      className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
-
-                    <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/20" />
-                  </div>
-
-                  <h3 className="mt-3 truncate font-semibold text-white transition group-hover:text-[#00E5FF]">
-                    {movie.title}
-                  </h3>
-
-                  <div className="mt-2 flex items-center gap-2 text-sm text-[#AAAAAA]">
-                    <span>{movie.year}</span>
-
-                    <span>•</span>
-
-                    <span className="flex items-center gap-1">
-                      <span className="text-[#FFC107]">★</span>
-                      {movie.rating}
-                    </span>
-                  </div>
-                </Link>
-                <div className="px-2 pt-1"><ViewCount contentType="movie" slug={movie.slug} /></div>
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Series */}
-        {categorySeries.length > 0 && (
-          <section
-            className={
-              categoryMovies.length > 0 ? "mt-12" : ""
-            }
-          >
-            <h2 className="mb-5 text-2xl font-bold">Series</h2>
-
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-              {categorySeries.map((item) => (
-                <article key={`series-${item.id}`} className="cinema-card group relative min-w-0">
-                <Link
-                  key={item.id}
-                  href={`/series/${item.slug}`}
-                  className="group media-tile block min-w-0"
-                >
-                  <div className="media-tile-frame relative overflow-hidden rounded-xl bg-[#2A2A2A]">
-                    <PosterImage
-                      src={item.image}
-                      contentType="series"
-                      alt={item.title}
-                      className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
-
-                    <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/20" />
-                  </div>
-
-                  <h3 className="mt-3 truncate font-semibold text-white transition group-hover:text-[#00E5FF]">
-                    {item.title}
-                  </h3>
-
-                  <div className="mt-2 flex items-center gap-2 text-sm text-[#AAAAAA]">
-                    <span>{item.year}</span>
-
-                    <span>•</span>
-
-                    <span className="flex items-center gap-1">
-                      <span className="text-[#FFC107]">★</span>
-                      {item.rating}
-                    </span>
-                  </div>
-                </Link>
-                <div className="px-2 pt-1"><ViewCount contentType="series" slug={item.slug} /></div>
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
+        {categoryEntries.length > 0 && <section aria-label={`${category.name} movies and series`}><h2 className="mb-5 text-2xl font-bold">Movies &amp; Series</h2><div className="catalog-card-grid">{categoryEntries.map(({ type, item }) => <MovieCard key={`${type}-${item.id}`} title={item.title} year={item.year} rating={item.rating} image={item.image} slug={item.slug} hrefPrefix={type === "movie" ? "/movies" : "/series"} explainer={item.explainer} createdAt={item.createdAt} genres={item.genres} partCount={type === "movie" ? item.parts.length : undefined} />)}</div></section>}
 
         {/* Empty category */}
-        {categoryMovies.length === 0 &&
-          categorySeries.length === 0 && (
+        {categoryEntries.length === 0 && (
             <div className="rounded-2xl border border-white/10 bg-[#1B1B1B] p-8 text-center">
               <h2 className="text-lg font-semibold">
                 No content in this category yet

@@ -185,7 +185,7 @@ export default async function SeriesDetailsPage({
       </section>
 
       <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
-        {recommendations.length > 0 && <aside><h2 className="cinema-section-title mb-4 text-2xl font-bold">More Films</h2><div className="grid grid-cols-2 items-start gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">{recommendations.map((item) => <div key={`${item.type}-${item.id}`} className="mx-auto w-full max-w-[190px] min-w-0"><MovieCard title={item.title} year={item.year} rating={item.rating ?? ""} image={item.image} slug={item.slug} explainer={item.explainer} createdAt={item.createdAt} hrefPrefix={item.type === "series" ? "/series" : "/movies"} /></div>)}</div></aside>}
+        {recommendations.length > 0 && <aside><h2 className="cinema-section-title mb-4 text-2xl font-bold">More Films</h2><div className="catalog-card-grid">{recommendations.map((item) => <MovieCard key={`${item.type}-${item.id}`} title={item.title} year={item.year} rating={item.rating ?? ""} image={item.image} slug={item.slug} explainer={item.explainer} createdAt={item.createdAt} hrefPrefix={item.type === "series" ? "/series" : "/movies"} />)}</div></aside>}
       </div>
 
       <SiteBottom />

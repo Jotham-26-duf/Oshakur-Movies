@@ -6,8 +6,7 @@ import SiteBottom from "@/app/components/SiteBottom";
 import { movies } from "@/data/movies";
 import { getSeriesSummaries, series } from "@/data/series";
 import { createOpenGraphMetadata } from "@/app/seo";
-import { ViewCount } from "@/app/components/CatalogFeatures";
-import PosterImage from "@/app/components/PosterImage";
+import MovieCard from "@/app/components/MovieCard";
 
 export const metadata: Metadata = {
   title: "Trending Movies & Series",
@@ -67,42 +66,9 @@ export default function TrendingPage() {
               Trending Movies
             </h2>
 
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            <div className="catalog-card-grid">
               {trendingMovies.map((movie) => (
-                <article key={`movie-${movie.id}`} className="cinema-card group relative min-w-0">
-                <Link
-                  key={movie.id}
-                  href={`/movies/${movie.slug}`}
-                  className="group media-tile block min-w-0"
-                >
-                  <div className="media-tile-frame">
-                    <PosterImage
-                      src={movie.image}
-                      contentType="movie"
-                      alt={movie.title}
-                      className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-
-                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
-
-                    <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/20" />
-                  </div>
-
-                  <h3 className="mt-3 truncate font-semibold text-white transition group-hover:text-[#00E5FF]">
-                    {movie.title}
-                  </h3>
-
-                  <div className="mt-2 flex items-center gap-2 text-sm text-[#AAAAAA]">
-                    <span>{movie.year}</span>
-                    <span>•</span>
-                    <span className="flex items-center gap-1">
-                      <span className="text-[#FFC107]">★</span>
-                      {movie.rating}
-                    </span>
-                  </div>
-                </Link>
-                <div className="px-2 pt-1"><ViewCount contentType="movie" slug={movie.slug} /></div>
-                </article>
+                <MovieCard key={`movie-${movie.id}`} title={movie.title} year={movie.year} rating={movie.rating} image={movie.image} slug={movie.slug} explainer={movie.explainer} createdAt={movie.createdAt} genres={movie.genres} />
               ))}
             </div>
           </section>
@@ -119,42 +85,9 @@ export default function TrendingPage() {
               Trending Series
             </h2>
 
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            <div className="catalog-card-grid">
               {trendingSeries.map((item) => (
-                <article key={`series-${item.id}`} className="cinema-card group relative min-w-0">
-                <Link
-                  key={item.id}
-                  href={`/series/${item.slug}`}
-                  className="group media-tile block min-w-0"
-                >
-                  <div className="media-tile-frame">
-                    <PosterImage
-                      src={item.image}
-                      contentType="series"
-                      alt={item.title}
-                      className="aspect-[2/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-
-                    <span className="media-tile-overlay pointer-events-none absolute inset-0 grid place-items-center bg-black/0 text-2xl text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">▶</span>
-
-                    <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/20" />
-                  </div>
-
-                  <h3 className="mt-3 truncate font-semibold text-white transition group-hover:text-[#00E5FF]">
-                    {item.title}
-                  </h3>
-
-                  <div className="mt-2 flex items-center gap-2 text-sm text-[#AAAAAA]">
-                    <span>{item.year}</span>
-                    <span>•</span>
-                    <span className="flex items-center gap-1">
-                      <span className="text-[#FFC107]">★</span>
-                      {item.rating}
-                    </span>
-                  </div>
-                </Link>
-                <div className="px-2 pt-1"><ViewCount contentType="series" slug={item.slug} /></div>
-                </article>
+                <MovieCard key={`series-${item.id}`} title={item.title} year={item.year} rating={item.rating} image={item.image} slug={item.slug} hrefPrefix="/series" explainer={item.explainer} createdAt={item.createdAt} genres={item.genres} />
               ))}
             </div>
           </section>

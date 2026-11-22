@@ -1,3 +1,5 @@
+import type { Genre } from "./genres";
+
 export interface Episode {
   id: string;
   episodeNumber: number;
@@ -20,7 +22,7 @@ export interface Series {
   description: string;
   language: string;
   explainer?: string;
-  genres: string[];
+  genres: Genre[];
   isFeatured: boolean;
   createdAt: string;
 
@@ -103,7 +105,7 @@ export const series: Series[] = [
       "An action thriller about covert operatives connected to a secret government program.",
     language: "English",
     explainer: "",
-    genres: ["Action", "Drama", "Thriller"],
+    genres: ["Action"],
     isFeatured: false,
     createdAt: "2026-02-05",
 
@@ -130,7 +132,7 @@ export const series: Series[] = [
       "A historical drama following Jumong's journey, struggles, relationships, and rise during a time of conflict and political change.",
     language: "Korean",
     explainer: "Master p",
-    genres: ["Drama", "Historical", "Action"],
+    genres: ["Drama"],
     isFeatured: false,
     createdAt: "2026-09-28",
 
@@ -773,7 +775,7 @@ export const series: Series[] = [
       "The story continues with new adventures, challenges, friendships, conflicts, and unexpected events.",
     language: "English",
     explainer: "",
-    genres: ["Adventure", "Drama", "Mystery", "Thriller"],
+    genres: ["Adventure"],
     isFeatured: false,
     createdAt: "2026-09-28",
 
@@ -872,7 +874,7 @@ export const series: Series[] = [
       "A family drama exploring the relationship between a father and his son as they face challenges, conflicts, and unexpected events.",
     language: "English",
     explainer: "",
-    genres: ["Drama", "Family"],
+    genres: ["Drama"],
     isFeatured: false,
     createdAt: "2026-09-28",
 
@@ -963,7 +965,7 @@ export const series: Series[] = [
       "A family drama exploring relationships, challenges, conflicts, and experiences that connect different generations.",
     language: "English",
     explainer: "",
-    genres: ["Drama", "Family"],
+    genres: ["Drama"],
     isFeatured: false,
     createdAt: "2026-09-29",
 
@@ -1078,7 +1080,7 @@ export const series: Series[] = [
       "A suspenseful series following characters who face dangerous challenges and unexpected events.",
     language: "Korean",
     explainer: "",
-    genres: ["Drama", "Thriller", "Mystery"],
+    genres: ["Mystery"],
     isFeatured: false,
     createdAt: "2026-09-30",
 
@@ -1161,7 +1163,7 @@ export const series: Series[] = [
       "An action series following Agent Kim through dangerous missions, conflicts, and unexpected challenges.",
     language: "English",
     explainer: "",
-    genres: ["Action", "Drama", "Thriller"],
+    genres: ["Action"],
     isFeatured: false,
     createdAt: "2026-09-30",
 
@@ -1260,7 +1262,7 @@ export const series: Series[] = [
       "A thriller following a dangerous investigation filled with secrets, conflicts, and unexpected events.",
     language: "English",
     explainer: "",
-    genres: ["Action", "Drama", "Thriller"],
+    genres: ["Thriller"],
     isFeatured: false,
     createdAt: "2026-09-30",
 
@@ -1391,7 +1393,7 @@ export const series: Series[] = [
       "An action series following an elite team as they face dangerous missions and powerful enemies.",
     language: "English",
     explainer: "",
-    genres: ["Action", "Drama", "Thriller"],
+    genres: ["Action"],
     isFeatured: false,
     createdAt: "2026-09-30",
 
@@ -1458,7 +1460,7 @@ export const series: Series[] = [
       "A historical drama filled with palace conflicts, relationships, ambition, and unexpected events.",
     language: "Chinese",
     explainer: "",
-    genres: ["Drama", "Historical", "Romance"],
+    genres: ["Drama"],
     isFeatured: false,
     createdAt: "2026-09-30",
 
@@ -1541,7 +1543,7 @@ export const series: Series[] = [
       "A drama series following characters who become involved in complicated situations and difficult challenges.",
     language: "English",
     explainer: "",
-    genres: ["Drama", "Thriller"],
+    genres: ["Drama"],
     isFeatured: false,
     createdAt: "2026-09-30",
 
@@ -1576,7 +1578,7 @@ export const series: Series[] = [
       "A mystery drama following characters as they uncover secrets and face unexpected events.",
     language: "English",
     explainer: "",
-    genres: ["Drama", "Mystery", "Thriller"],
+    genres: ["Mystery"],
     isFeatured: false,
     createdAt: "2026-09-30",
 
@@ -1611,7 +1613,7 @@ export const series: Series[] = [
       "A supernatural drama following Elena Gilbert and the Salvatore brothers as their lives become connected to the mysterious supernatural world of Mystic Falls.",
     language: "English",
     explainer: "",
-    genres: ["Drama", "Fantasy", "Horror", "Romance", "Thriller"],
+    genres: ["Drama"],
     isFeatured: false ,
     createdAt: "2026-09-30",
 
@@ -1806,7 +1808,7 @@ export const series: Series[] = [
       "A drama series following complicated relationships, personal struggles, secrets, and unexpected events that change the lives of its characters.",
     language: "English",
     explainer: "",
-    genres: ["Drama", "Thriller"],
+    genres: ["Drama"],
     isFeatured: false ,
     createdAt: "2026-10-04",
 
@@ -1881,7 +1883,7 @@ export const series: Series[] = [
       "A historical drama continuing the story of the early followers of Jesus as they face persecution, political conflict, faith, and difficult challenges.",
     language: "English",
     explainer: "",
-    genres: ["Drama", "Historical"],
+    genres: ["Drama"],
     isFeatured: false ,
     createdAt: "2026-10-04",
 
@@ -1996,7 +1998,7 @@ export const series: Series[] = [
       "A Spanish prison drama following women dealing with dangerous conflicts, alliances, survival, revenge, and unexpected events inside and outside prison.",
     language: "Spanish",
     explainer: "",
-    genres: ["Drama", "Thriller", "Crime"],
+    genres: ["Drama"],
     isFeatured: false ,
     createdAt: "2026-10-04",
 
@@ -2079,7 +2081,7 @@ export const series: Series[] = [
       "The story continues with new conflicts, betrayals, relationships, power struggles, and dangerous challenges surrounding the characters.",
     language: "English",
     explainer: "",
-    genres: ["Drama", "Thriller"],
+    genres: ["Drama"],
     isFeatured: false ,
     createdAt: "2026-10-04",
 
@@ -2162,7 +2164,7 @@ export const series: Series[] = [
       "A historical Korean drama following two friends whose relationship is tested by political conflict, ambition, loyalty, war, and their different visions for the future.",
     language: "Korean",
     explainer: "",
-    genres: ["Drama", "Historical", "Action"],
+    genres: ["Drama"],
     isFeatured: false ,
     createdAt: "2026-10-04",
 
@@ -2309,7 +2311,7 @@ export const series: Series[] = [
       "A psychological drama exploring relationships, jealousy, secrets, family dynamics, and the complicated connection between a woman and her son's girlfriend.",
     language: "English",
     explainer: "",
-    genres: ["Drama", "Thriller"],
+    genres: ["Drama"],
     isFeatured: false ,
     createdAt: "2026-10-04",
 
@@ -2376,7 +2378,7 @@ export const series: Series[] = [
       "A political drama following a powerful family inside the White House while exploring political secrets, family conflicts, relationships, power, and dangerous struggles.",
     language: "English",
     explainer: "",
-    genres: ["Drama", "Thriller", "Political"],
+    genres: ["Drama"],
     isFeatured: false ,
     createdAt: "2026-10-04",
 
@@ -2595,7 +2597,7 @@ export const series: Series[] = [
       "A drama series exploring relationships, challenges, conflicts, and unexpected events surrounding its characters.",
     language: "English",
     explainer: "",
-    genres: ["Drama", "Thriller"],
+    genres: ["Drama"],
     isFeatured: false ,
     createdAt: "2026-10-06",
 
@@ -2646,7 +2648,7 @@ export const series: Series[] = [
       "An action thriller series following Bryan Mills and his journey through dangerous missions, investigations, and unexpected threats.",
     language: "English",
     explainer: "",
-    genres: ["Action", "Drama", "Thriller"],
+    genres: ["Action"],
     isFeatured: false ,
     createdAt: "2026-10-06",
 
@@ -2704,7 +2706,7 @@ export const series: Series[] = [
       "A Filipino romantic comedy-drama following a strong-willed girl and a popular school basketball player whose rivalry gradually develops into romance, friendship, and unexpected challenges.",
     language: "Filipino",
     explainer: "",
-    genres: ["Romance", "Drama", "Comedy"],
+    genres: ["Romance"],
     isFeatured: false ,
     createdAt: "2026-10-09",
 
@@ -2770,7 +2772,7 @@ description:
 "A mystery drama following four Latina maids working in the homes of Beverly Hills' wealthiest families, where secrets, scandals, and murder complicate their lives.",
 language: "English",
 explainer: "ROCK KIMOMO",
-genres: ["Drama", "Comedy", "Mystery"],
+genres: ["Mystery"],
 isFeatured: false ,
 createdAt: "2026-10-09",
 
@@ -2852,7 +2854,7 @@ createdAt: "2026-10-09",
     "A biblical drama following Jesus and His disciples as their faith is tested and their understanding of His mission deepens through powerful encounters and life-changing teachings.",
   language: "English",
   explainer: "Mussa Savimbi",
-  genres: ["Drama", "History"],
+  genres: ["Drama"],
   isFeatured: false ,
   createdAt: "2026-10-13",
 
@@ -2894,7 +2896,7 @@ createdAt: "2026-10-09",
     "A supernatural fantasy series set in a mysterious academy where young witches face dangerous secrets, hidden rivalries, and challenges that test their magical abilities.",
   language: "English",
   explainer: "Skov",
-  genres: ["Drama", "Fantasy", "Mystery"],
+  genres: ["Fantasy"],
   isFeatured: false ,
   createdAt: "2026-10-13",
 
@@ -3009,7 +3011,7 @@ createdAt: "2026-10-09",
     "The secrets of Beverly Hills grow more dangerous as four maids navigate complicated relationships, wealthy employers, shocking revelations, and mysteries that threaten their lives.",
   language: "English",
   explainer: "ROCK KIMOMO",
-  genres: ["Drama", "Comedy", "Mystery"],
+  genres: ["Mystery"],
   isFeatured: false ,
   createdAt: "2026-10-13",
 
@@ -3052,7 +3054,7 @@ createdAt: "2026-10-09",
     "A fantasy prequel set in an ancient elven world, exploring the events that led to the creation of the first Witcher and the Conjunction of the Spheres.",
   language: "English",
   explainer: "",
-  genres: ["Action", "Adventure", "Drama", "Fantasy"],
+  genres: ["Fantasy"],
   isFeatured: false ,
   createdAt: "2026-10-16",
 
@@ -3158,7 +3160,7 @@ createdAt: "2026-10-09",
     "A fantasy adventure following a modern man transported into an ancient world, where he uses his knowledge and investigative skills to solve mysteries and confront powerful enemies.",
   language: "Chinese",
   explainer: "B The Great",
-  genres: ["Action", "Adventure", "Fantasy", "Mystery"],
+  genres: ["Fantasy"],
   isFeatured: false ,
   createdAt: "2026-10-16",
 
@@ -3200,7 +3202,7 @@ createdAt: "2026-10-09",
     "A mystery thriller following survivors of a plane crash in a remote Mexican jungle, where a series of deaths turns their struggle for survival into a frightening investigation.",
   language: "English",
   explainer: "Gaheza",
-  genres: ["Drama", "Mystery", "Thriller"],
+  genres: ["Mystery"],
   isFeatured: false ,
   createdAt: "2026-10-16",
 
@@ -3266,7 +3268,7 @@ createdAt: "2026-10-09",
     "A drama exploring relationships, personal struggles, secrets, and unexpected events that shape the lives of its characters.",
   language: "English",
   explainer: "Gaheza",
-  genres: ["Drama", "Romance"],
+  genres: ["Drama"],
   isFeatured: false ,
   createdAt: "2026-10-16",
 
@@ -3372,7 +3374,7 @@ createdAt: "2026-10-09",
     "A romantic drama exploring love, family responsibilities, difficult choices, and the challenges that test relationships.",
   language: "English",
   explainer: "ROCK KIMOMO",
-  genres: ["Drama", "Romance"],
+  genres: ["Romance"],
   isFeatured: false ,
   createdAt: "2026-10-16",
 
@@ -3422,7 +3424,7 @@ createdAt: "2026-10-09",
     "A French action crime thriller following a young woman drawn into the dangerous criminal underworld of Paris, where she encounters a mysterious figure known as the Fury.",
   language: "French",
   explainer: "Rocky & Hakim",
-  genres: ["Action", "Crime", "Drama", "Thriller"],
+  genres: ["Action"],
   isFeatured: false ,
   createdAt: "2026-10-16",
 
@@ -3496,7 +3498,7 @@ createdAt: "2026-10-09",
     "A fantasy adventure following the young wizard Merlin as he protects Prince Arthur and navigates the mysteries, dangers, and magic of Camelot.",
   language: "English",
   explainer: "Hakim The Professor",
-  genres: ["Adventure", "Drama", "Fantasy"],
+  genres: ["Fantasy"],
   isFeatured: false ,
   createdAt: "2026-10-16",
 
@@ -3618,7 +3620,7 @@ createdAt: "2026-10-09",
     "A historical action drama set in the Dutch East Indies, following people caught in a struggle against colonial oppression and injustice.",
   language: "English",
   explainer: "Junior Giti",
-  genres: ["Action", "Drama", "History"],
+  genres: ["Action"],
   isFeatured: false ,
   createdAt: "2026-10-16",
 
@@ -3716,7 +3718,7 @@ createdAt: "2026-10-09",
     "A Colombian thriller about a man seeking revenge against an organ-trafficking organization after his wife dies, uncovering a disturbing conspiracy involving a heart transplant.",
   language: "Spanish",
   explainer: "Sankara",
-  genres: ["Crime", "Drama", "Mystery", "Thriller"],
+  genres: ["Thriller"],
   isFeatured: false ,
   createdAt: "2026-10-16",
 
@@ -3904,7 +3906,7 @@ createdAt: "2026-10-09",
     "A South Korean science-fiction horror thriller in which mysterious parasitic organisms invade human hosts, forcing survivors to fight for humanity's future.",
   language: "Korean",
   explainer: "",
-  genres: ["Action", "Horror", "Sci-Fi", "Thriller"],
+  genres: ["Horror"],
   isFeatured: false ,
   createdAt: "2026-10-16",
 
@@ -3970,7 +3972,7 @@ createdAt: "2026-10-09",
     "A South African erotic psychological thriller about a married professor whose passionate affair leads to betrayal, secrets, and dangerous consequences.",
   language: "English",
   explainer: "Rocky kimono",
-  genres: ["Drama", "Mystery", "Th,riller"],
+  genres: ["Thriller"],
   isFeatured: false ,
   createdAt: "2026-10-16",
 
@@ -4028,7 +4030,7 @@ createdAt: "2026-10-09",
     "A political thriller following a mysterious man whose public appearances attract a worldwide following and lead intelligence agents to investigate whether he is a spiritual leader or a dangerous manipulator.",
   language: "English",
   explainer: "ROCK KIMOMO",
-  genres: ["Drama", "Mystery", "Thriller"],
+  genres: ["Thriller"],
   isFeatured: false,
   createdAt: "2026-10-16",
 
@@ -4125,7 +4127,7 @@ createdAt: "2026-10-09",
   description:
     "Season 2 follows Joe and her team as they face dangerous missions, new threats, and difficult personal sacrifices.",
   language: "English",
-  genres: ["Action", "Drama", "Thriller"],
+  genres: ["Action"],
    isFeatured: false ,
     createdAt: "2026-10-16",
   explainer: "Skov",
@@ -4209,7 +4211,7 @@ createdAt: "2026-10-09",
   description:
     "A female police constable goes undercover in a dangerous mission that changes her life.",
   language: "English",
-  genres: ["Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "Nyabami",
 
     episodes: [
@@ -4283,7 +4285,7 @@ createdAt: "2026-10-09",
   description:
     "A gripping drama about a comedian whose life takes a dangerous turn after meeting a fan.",
   language: "English",
-  genres: ["Drama", "Thriller"],
+  genres: ["Drama"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -4357,7 +4359,7 @@ createdAt: "2026-10-09",
   description:
     "A survivor and a teenage girl travel through a dangerous post-apocalyptic world.",
   language: "English",
-  genres: ["Action", "Drama", "Adventure"],
+  genres: ["Drama"],
 
     episodes: [
       {
@@ -4446,7 +4448,7 @@ createdAt: "2026-10-09",
   description:
     "A group of teenagers pursue treasure while facing danger, rivalry, and unexpected discoveries.",
   language: "English",
-  genres: ["Adventure", "Drama", "Mystery"],
+  genres: ["Adventure"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -4602,7 +4604,7 @@ createdAt: "2026-10-09",
   description:
     "A woman discovers that a town is home to people connected to a world of fairy tales.",
   language: "English",
-  genres: ["Fantasy", "Adventure", "Drama"],
+  genres: ["Fantasy"],
   explainer: "Rock Komomo",
 
     episodes: [
@@ -4772,7 +4774,7 @@ createdAt: "2026-10-09",
   description:
     "An undercover investigation takes a police officer into a dangerous criminal organization.",
   language: "Korean",
-  genres: ["Action", "Crime", "Thriller"],
+  genres: ["Crime"],
   explainer: "Sankara",
 
     episodes: [
@@ -5152,7 +5154,7 @@ createdAt: "2026-10-09",
   description:
     "A drama series presented in Agasobanuye by Junior Giti, with multiple episodes available to watch and download.",
   language: "Kinyarwanda",
-  genres: ["Action", "Drama", "Thriller"],
+  genres: ["Drama"],
   explainer: "Junior Giti",
 
     episodes: [
@@ -5274,7 +5276,7 @@ createdAt: "2026-10-09",
   description:
     "S.O.Z. Season 2 is a series presented in Agasobanuye by Nkuba Porter, featuring eight episodes with streaming and download links.",
   language: "Kinyarwanda",
-  genres: ["Action", "Drama", "Thriller"],
+  genres: ["Action"],
   explainer: "Nkuba Porter",
 
     episodes: [
@@ -5356,7 +5358,7 @@ createdAt: "2026-10-09",
   description:
     "FAKE PROFILE Season 2 is presented in Agasobanuye by ROCK KIMOMO, with episodes available to watch and download.",
   language: "Kinyarwanda",
-  genres: ["Drama", "Thriller", "Mystery"],
+  genres: ["Thriller"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -5518,7 +5520,7 @@ createdAt: "2026-10-09",
   description:
     "THE OVAL is presented in Agasobanuye by ROCK KIMOMO, featuring ten episodes available to watch and download.",
   language: "Kinyarwanda",
-  genres: ["Drama", "Thriller"],
+  genres: ["Drama"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -5616,7 +5618,7 @@ createdAt: "2026-10-09",
   description:
     "BUTTERFLY SHADOW is presented in Agasobanuye by ROCK KIMOMO, featuring episodes 1 through 40.",
   language: "Kinyarwanda",
-  genres: ["Drama", "Thriller", "Mystery"],
+  genres: ["Drama"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -5954,7 +5956,7 @@ createdAt: "2026-10-09",
   description:
     "MY NAME is a series presented in Agasobanuye by B THE GREAT, with episodes available through the provided links.",
   language: "Kinyarwanda",
-  genres: ["Action", "Crime", "Thriller"],
+  genres: ["Crime"],
   explainer: "B THE GREAT",
 
     episodes: [
@@ -6036,7 +6038,7 @@ createdAt: "2026-10-09",
   description:
     "NIGHT HAS COME is presented in Agasobanuye by ROCK KIMOMO, featuring twelve episodes available to watch and download.",
   language: "Kinyarwanda",
-  genres: ["Drama", "Mystery", "Thriller"],
+  genres: ["Thriller"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -6150,7 +6152,7 @@ createdAt: "2026-10-09",
   description:
     "WHO KILLED SARA is a mystery thriller series with episodes shared through the provided MEGA links.",
   language: "Kinyarwanda",
-  genres: ["Crime", "Drama", "Mystery", "Thriller"],
+  genres: ["Mystery"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -6248,7 +6250,7 @@ createdAt: "2026-10-09",
   description:
     "WAG MONG Season 1 is presented in Agasobanuye by ROCK KIMOMO, featuring eight episodes.",
   language: "Kinyarwanda",
-  genres: ["Drama", "Romance", "Thriller"],
+  genres: ["Thriller"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -6330,7 +6332,7 @@ createdAt: "2026-10-09",
   description:
     "BERLIN Season 1 is presented in Agasobanuye by ROCK KIMOMO, featuring eight episodes.",
   language: "Kinyarwanda",
-  genres: ["Action", "Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -6412,7 +6414,7 @@ createdAt: "2026-10-09",
   description:
     "THE LAST SHEEP is presented in Agasobanuye by ROCK KIMOMO, featuring fifteen episodes, including split episodes and final episodes.",
   language: "Kinyarwanda",
-  genres: ["Drama", "Thriller"],
+  genres: ["Drama"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -6550,7 +6552,7 @@ createdAt: "2026-10-09",
   description:
     "MASTER OF THE HOUSE is a series presented in Agasobanuye by ROCK KIMOMO, featuring seven episodes.",
   language: "Kinyarwanda",
-  genres: ["Drama", "Thriller"],
+  genres: ["Drama"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -6624,7 +6626,7 @@ createdAt: "2026-10-09",
   description:
     "An edgy one-night stand turns into a nightmare for Aditya when he wakes up with blood on his hands and cannot remember the crime.",
   language: "Kinyarwanda",
-  genres: ["Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -6722,7 +6724,7 @@ createdAt: "2026-10-09",
   description:
     "THE 100 Season 1, presented in Agasobanuye by ROCK KIMOMO, featuring thirteen episodes.",
   language: "Kinyarwanda",
-  genres: ["Action", "Drama", "Science Fiction"],
+  genres: ["Sci-Fi"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -6844,7 +6846,7 @@ createdAt: "2026-10-09",
   description:
     "DIARY OF GIGOLA is a series presented in Agasobanuye, with episode links available for viewing and downloading.",
   language: "Kinyarwanda",
-  genres: ["Drama", "Thriller"],
+  genres: ["Drama"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -6942,7 +6944,7 @@ createdAt: "2026-10-09",
   description:
     "NATHANIEL is a series presented in Agasobanuye by ROCK KIMOMO, with nineteen episodes provided.",
   language: "Kinyarwanda",
-  genres: ["Drama", "Thriller"],
+  genres: ["Drama"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -7112,7 +7114,7 @@ createdAt: "2026-10-09",
   description:
     "LUPIN Season 4, Episode 1, presented in Agasobanuye by ROCK KIMOMO.",
   language: "Hindi",
-  genres: ["Crime", "Drama", "Mystery", "Thriller"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -7194,7 +7196,7 @@ createdAt: "2026-10-09",
   description:
     "VIS A VIS Season 3, presented in Agasobanuye by ROCK KIMOMO, featuring eight episodes.",
   language: "Spanish",
-  genres: ["Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -7277,7 +7279,7 @@ createdAt: "2026-10-09",
   description:
     "VIS A VIS Season 2, presented in Agasobanuye by ROCK KIMOMO, featuring episodes 1–13, including the split episodes 7A and 7B.",
   language: "Spanish",
-  genres: ["Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -7408,7 +7410,7 @@ createdAt: "2026-10-09",
   description:
     "VIS A VIS Season 1, presented in Agasobanuye by ROCK KIMOMO, featuring episodes 1–16.",
   language: "Spanish",
-  genres: ["Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -7556,7 +7558,7 @@ createdAt: "2026-10-09",
   description:
     "SIX Season 1, an action-packed military drama presented in Agasobanuye by Junior, featuring 8 episodes.",
   language: "English",
-  genres: ["Action", "Drama", "War"],
+  genres: ["War"],
   explainer: "Junior",
 
     episodes: [
@@ -7639,7 +7641,7 @@ createdAt: "2026-10-09",
   description:
     "Pinocchio, a Korean drama presented in Agasobanuye by Junior, featuring 20 episodes.",
   language: "Korean",
-  genres: ["Drama", "Romance"],
+  genres: ["Drama"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -7817,7 +7819,7 @@ createdAt: "2026-10-09",
   description:
     "Lupin Season 2 is a French crime thriller following Assane Diop, featuring 5 episodes presented in Agasobanuye.",
   language: "French",
-  genres: ["Crime", "Drama", "Mystery", "Thriller"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -7875,7 +7877,7 @@ createdAt: "2026-10-09",
   description:
     "Lupin Season 3 is a French crime thriller following Assane Diop, featuring 7 episodes presented in Agasobanuye.",
   language: "French",
-  genres: ["Crime", "Drama", "Mystery", "Thriller"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -7952,7 +7954,7 @@ createdAt: "2026-10-09",
   description:
     "Prison Break Season 1 follows Michael Scofield's plan to break his brother out of prison, presented in Agasobanuye by JUNIOR.",
   language: "English",
-  genres: ["Action", "Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "JUNIOR",
 
     episodes: [
@@ -8146,7 +8148,7 @@ createdAt: "2026-10-09",
   description:
     "Prison Break Season 2 follows the escaped prisoners as they attempt to evade capture, presented in Agasobanuye by JUNIOR.",
   language: "English",
-  genres: ["Action", "Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "JUNIOR",
 
     episodes: [
@@ -8340,7 +8342,7 @@ createdAt: "2026-10-09",
   description:
     "Prison Break Season 3 follows Michael as he struggles to survive inside Sona prison, presented in Agasobanuye by JUNIOR.",
   language: "English",
-  genres: ["Action", "Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "JUNIOR",
 
     episodes: [
@@ -8454,7 +8456,7 @@ createdAt: "2026-10-09",
   description:
     "Prison Break Season 5 follows Michael Scofield's return, presented in Agasobanuye by JUNIOR.",
   language: "English",
-  genres: ["Action", "Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "JUNIOR",
 
     episodes: [
@@ -8544,7 +8546,7 @@ createdAt: "2026-10-09",
   description:
     "Berlin Season 2 follows Berlin and his crew through another heist, presented in Agasobanuye by ROCK KIMOMO.",
   language: "Spanish",
-  genres: ["Action", "Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -8602,7 +8604,7 @@ createdAt: "2026-10-09",
   description:
     "One Piece Season 2 follows the Straw Hat Pirates on their next adventures, presented in Agasobanuye by ROCK KIMOMO.",
   language: "Japanese",
-  genres: ["Action", "Adventure", "Fantasy"],
+  genres: ["Adventure"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -8684,7 +8686,7 @@ createdAt: "2026-10-09",
   description:
     "Lupin Season 1 is a French mystery thriller following Assane Diop, a clever man inspired by the adventures of Arsène Lupin. Presented in Agasobanuye.",
   language: "French",
-  genres: ["Crime", "Drama", "Mystery", "Thriller"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -8904,7 +8906,7 @@ createdAt: "2026-10-09",
   description:
     "Outer Banks Season 1 follows teenagers searching for treasure while uncovering secrets and rivalries.",
   language: "English",
-  genres: ["Action", "Adventure", "Crime", "Drama", "Mystery"],
+  genres: ["Mystery"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -9002,7 +9004,7 @@ createdAt: "2026-10-09",
   description:
     "Outer Banks Season 2 continues the Pogues' search for treasure amid danger and rivalries.",
   language: "English",
-  genres: ["Action", "Adventure", "Crime", "Drama", "Mystery"],
+  genres: ["Adventure"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -9100,7 +9102,7 @@ createdAt: "2026-10-09",
   description:
     "Outer Banks Season 4 continues the Pogues' treasure hunt. Episodes 1–6 and 8–10 are provided.",
   language: "English",
-  genres: ["Action", "Adventure", "Crime", "Drama", "Mystery"],
+  genres: ["Adventure"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -9189,7 +9191,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-26",
   description: "Blade Man is an action series presented in Agasobanuye by Rock Kimomo.",
   language: "Chinese",
-  genres: ["Action", "Drama", "Romance"],
+  genres: ["Action"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -9351,7 +9353,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-26",
   description: "Hierarchy is a Korean drama series presented in Agasobanuye.",
   language: "Korean",
-  genres: ["Drama", "Romance", "Mystery"],
+  genres: ["Drama"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -9425,7 +9427,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-29",
   description: "Butterfly Season 1 is a series presented in Agasobanuye, with six episodes.",
   language: "Korean",
-  genres: ["Drama", "Action", "Thriller"],
+  genres: ["Action"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -9490,7 +9492,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-29",
   description: "Yu Yu Hakusho is a series shared by Skov. Open the MediaFire folder to access the available episodes.",
   language: "Japanese",
-  genres: ["Action", "Adventure", "Fantasy"],
+  genres: ["Fantasy"],
   explainer: "SKOV",
 
     episodes: [
@@ -9515,7 +9517,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-29",
   description: "Red Swan is a drama series presented in Agasobanuye by Sankara, with ten episodes.",
   language: "Korean",
-  genres: ["Drama", "Romance", "Thriller"],
+  genres: ["Drama"],
   explainer: "SANKARA",
 
     episodes: [
@@ -9612,7 +9614,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-29",
   description: "Triada is a series presented in Agasobanuye by B the Great, with eight episodes.",
   language: "N/A",
-  genres: ["Drama", "Mystery", "Thriller"],
+  genres: ["Thriller"],
   explainer: "B THE GREAT",
 
     episodes: [
@@ -9693,7 +9695,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-29",
   description: "Wanru's Journey is a series presented in Agasobanuye by Junior Giti, with 24 episodes.",
   language: "Chinese",
-  genres: ["Drama", "Romance", "Historical"],
+  genres: ["Romance"],
   explainer: "JUNIOR GITI",
 
     episodes: [
@@ -9902,7 +9904,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-29",
   description: "King's Affection is a series presented in Agasobanuye by B the Great. Episodes 2, 3, and 4 are currently listed.",
   language: "Korean",
-  genres: ["Drama", "Romance", "Historical"],
+  genres: ["Romance"],
   explainer: "B THE GREAT",
 
     episodes: [
@@ -9943,7 +9945,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-29",
   description: "The Ring is a series presented in Agasobanuye by Dylan Kabaka, with ten episodes.",
   language: "N/A",
-  genres: ["Drama", "Mystery", "Thriller"],
+  genres: ["Mystery"],
   explainer: "DYLAN KABAKA",
 
     episodes: [
@@ -10040,7 +10042,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-29",
   description: "From Season 1 is presented in Agasobanuye by ROCK KIMOMO, with ten episodes listed.",
   language: "English",
-  genres: ["Horror", "Mystery", "Drama"],
+  genres: ["Horror"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -10137,7 +10139,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-29",
   description: "Joy of Life is a historical drama presented in Agasobanuye. The supplied links cover episodes 1–46.",
   language: "Chinese",
-  genres: ["Drama", "Historical", "Romance"],
+  genres: ["Drama"],
   explainer: "SANKARA",
 
     episodes: [
@@ -10195,7 +10197,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-29",
   description: "All American is a sports drama series presented in Agasobanuye. The supplied links cover Season 1, Episodes 1–16.",
   language: "English",
-  genres: ["Drama", "Sports"],
+  genres: ["Drama"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -10581,7 +10583,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-10-29",
   description: "Fangs of Fortune is a Chinese fantasy drama presented in Agasobanuye. The supplied links cover Episodes 1–5.",
   language: "Chinese",
-  genres: ["Fantasy", "Historical", "Drama"],
+  genres: ["Fantasy"],
   explainer: "B THE GREAT",
 
     episodes: [
@@ -10638,7 +10640,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-01",
   description: "Cypher is a crime thriller series. The supplied links cover Season 1, Episodes 1–7.",
   language: "English",
-  genres: ["Crime", "Thriller", "Drama"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -10711,7 +10713,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "The Rebel: Hong Gil Dong is a historical action drama following the life of a legendary figure who challenges corruption and fights for the oppressed. The supplied links cover Season 1, Episodes 1–4.",
   language: "Korean",
-  genres: ["Action", "Historical", "Drama"],
+  genres: ["Action"],
   explainer: "JUNIOR GITI",
 
     episodes: [
@@ -11056,7 +11058,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Let's Fight Ghost is a supernatural comedy series involving a young exorcist who encounters ghosts and becomes involved in unexpected adventures. The supplied links cover Season 1, Episodes 1–16.",
   language: "Korean",
-  genres: ["Comedy", "Fantasy", "Horror", "Romance"],
+  genres: ["Comedy"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -11201,7 +11203,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Harper's Island is a mystery horror thriller series about a group of friends and family members whose reunion on an isolated island turns into a terrifying struggle for survival. The supplied links cover Season 1, Episodes 1–11.",
   language: "English",
-  genres: ["Mystery", "Horror", "Thriller"],
+  genres: ["Horror"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -11306,7 +11308,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Memorist is a Korean mystery thriller about a detective with supernatural memory-reading abilities who investigates dangerous criminal cases. The supplied links cover Season 1, Episodes 1–6.",
   language: "Korean",
-  genres: ["Mystery", "Thriller", "Crime", "Fantasy"],
+  genres: ["Crime"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -11371,7 +11373,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Smallville follows the early life of Clark Kent as he discovers his extraordinary abilities while facing mysterious events and challenges in his hometown. The supplied links cover Season 2, Episodes 1–21.",
   language: "English",
-  genres: ["Action", "Adventure", "Drama", "Science Fiction"],
+  genres: ["Sci-Fi"],
   explainer: "MOSES",
 
     episodes: [
@@ -11556,7 +11558,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Smallville explores the teenage years of Clark Kent before he becomes Superman, following his discovery of extraordinary powers and the secrets surrounding his origins. The supplied links cover Season 1, Episodes 1–18.",
   language: "English",
-  genres: ["Action", "Adventure", "Drama", "Science Fiction"],
+  genres: ["Sci-Fi"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -11717,7 +11719,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Queen for Seven Days is a historical Korean romantic drama inspired by the tragic love story of Queen Dangyeong and King Jungjong during the Joseon Dynasty. The supplied links cover Season 1, Episodes 1–20.",
   language: "Korean",
-  genres: ["Historical", "Romance", "Drama"],
+  genres: ["Romance"],
   explainer: "",
 
     episodes: [
@@ -12117,7 +12119,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Off Campus is presented in an Agasobanuye version by PERFECT.",
   language: "English",
-  genres: ["Drama", "Romance"],
+  genres: ["Romance"],
   explainer: "PERFECT",
 
     episodes: [
@@ -12200,7 +12202,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Watching You is presented in an Agasobanuye version by SANKARA.",
   language: "English",
-  genres: ["Thriller", "Drama"],
+  genres: ["Thriller"],
   explainer: "SANKARA",
 
     episodes: [
@@ -12462,7 +12464,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Game of Thrones Season 6 is presented in an Agasobanuye version by PK-The Sound.",
   language: "English",
-  genres: ["Fantasy", "Drama", "Adventure"],
+  genres: ["Fantasy"],
   explainer: "PK-The Sound",
 
     episodes: [
@@ -12561,7 +12563,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Game of Thrones Season 7 is presented in an Agasobanuye version by PK-The Sound.",
   language: "English",
-  genres: ["Fantasy", "Drama", "Adventure"],
+  genres: ["Fantasy"],
   explainer: "PK-The Sound",
 
     episodes: [
@@ -12636,7 +12638,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Game of Thrones Season 8 is presented in an Agasobanuye version by PK-The Sound.",
   language: "English",
-  genres: ["Fantasy", "Drama", "Adventure"],
+  genres: ["Fantasy"],
   explainer: "PK-The Sound",
 
     episodes: [
@@ -12702,7 +12704,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "UMTHETHO is presented in an Agasobanuye version by Mussa Savimbi. The available collection contains 5 episodes.",
   language: "English",
-  genres: ["Drama", "Crime"],
+  genres: ["Crime"],
   explainer: "MUSSA SAVIMBI",
 
     episodes: [
@@ -12761,7 +12763,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "OASIS is presented in an Agasobanuye version by Dylan. The available collection contains 3 episodes.",
   language: "English",
-  genres: ["Drama", "Romance"],
+  genres: ["Romance"],
   explainer: "DYLAN",
 
     episodes: [
@@ -12804,7 +12806,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "SALAKAAR is presented in an Agasobanuye version by Skov. The available collection contains 6 episode entries, including Episode 3 Part B.",
   language: "English",
-  genres: ["Crime", "Thriller", "Mystery"],
+  genres: ["Crime"],
   explainer: "SKOV",
 
     episodes: [
@@ -12871,7 +12873,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "M.I.A is presented in an Agasobanuye version by Skov. The available collection contains 9 episodes.",
   language: "English",
-  genres: ["Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "SKOV",
 
     episodes: [
@@ -12962,7 +12964,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "50 States of Fright is presented in an Agasobanuye version by Rock Kimomo. The collection contains 10 numbered episodes, with Episode 6 split into Parts A and B.",
   language: "English",
-  genres: ["Horror", "Thriller", "Mystery"],
+  genres: ["Horror"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -13069,7 +13071,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "SEE Season 1 is presented in an Agasobanuye version by Rock Kimomo. The available collection contains Episodes 1, 2, 3, 5, 6, 7 and 8.",
   language: "English",
-  genres: ["Fantasy", "Drama", "Adventure"],
+  genres: ["Sci-Fi"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -13142,7 +13144,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "Lady Voyeur Season 1 is presented as an Agasobanuye version and contains 10 episodes.",
   language: "Portuguese",
-  genres: ["Drama", "Thriller", "Mystery"],
+  genres: ["Thriller"],
   explainer: "Rock Kimomo",
 
     episodes: [
@@ -13274,7 +13276,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "LIVE UP TO YOUR NAME is presented in an Agasobanuye version by ROCK KIMOMO. The available collection contains Episodes 1 to 24, including split parts.",
   language: "",
-  genres: [],
+  genres: ["Romance"],
   explainer: "ROCK KIMOMO",
 
     episodes: [
@@ -13533,7 +13535,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "INCOGNITO is presented in an Agasobanuye version by ROCK KIMOMO. The available collection contains 21 episodes.",
   language: "",
- genres: ["Drama", "Thriller", "Mystery"],
+ genres: ["Thriller"],
   explainer: "B THE GREAT",
 
     episodes: [
@@ -14574,7 +14576,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "GANGS OF MANILA is presented in an Agasobanuye version. The available collection contains episodes from Season 2.",
   language: "",
-  genres: ["Action", "Crime", "Drama", "Thriller"],
+  genres: ["Crime"],
   explainer: "Sankara",
 
     episodes: [
@@ -15383,7 +15385,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "SQUID GAME is presented in an Agasobanuye version by Rocky Kimono.",
   language: "Korean",
-  genres: ["Action", "Drama", "Mystery", "Thriller"],
+  genres: ["Thriller"],
   explainer: "Rocky Kimono",
 
     episodes: [
@@ -15481,7 +15483,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "ALL OF US ARE DEAD is presented in an Agasobanuye version.",
   language: "Korean",
-  genres: ["Action", "Drama", "Horror", "Thriller"],
+  genres: ["Horror"],
   explainer: "Rock Kimomo",
 
     episodes: [
@@ -15594,7 +15596,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-05",
   description: "PARIS HAS FALLEN is presented in an Agasobanuye version.",
   language: "English",
-  genres: ["Action", "Drama", "Thriller"],
+  genres: ["Action"],
   explainer: "Rock Kimomo",
 
     episodes: [
@@ -15748,7 +15750,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "NOW AND FOREVER is presented in an Agasobanuye version.",
   language: "Filipino",
-  genres: ["Drama", "Romance"],
+  genres: ["Romance"],
   explainer: "Gaheza",
 
     episodes: [
@@ -16213,7 +16215,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "VEIL OF SHADOWS is presented in an Agasobanuye version.",
   language: "Chinese",
-  genres: ["Drama", "Romance"],
+  genres: ["Fantasy"],
   explainer: "B The Great",
 
     episodes: [
@@ -16462,7 +16464,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "FATE CHOOSES YOU is presented in an Agasobanuye version.",
   language: "Chinese",
-  genres: ["Drama", "Romance"],
+  genres: ["Romance"],
   explainer: "B The Great",
 
     episodes: [
@@ -16799,7 +16801,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "THE ETERNAL FRAGRANCE is presented in an Agasobanuye version.",
   language: "Chinese",
-  genres: ["Drama", "Romance"],
+  genres: ["Romance"],
   explainer: "B The Great",
 
     episodes: [
@@ -17080,7 +17082,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "YOUNG SWORDSMAN is presented in an Agasobanuye version.",
   language: "Chinese",
-  genres: ["Action", "Drama"],
+  genres: ["Action"],
   explainer: "B The Great",
 
     episodes: [
@@ -17305,7 +17307,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "SWORD is presented in an Agasobanuye version.",
   language: "Chinese",
-  genres: ["Action", "Drama"],
+  genres: ["Action"],
   explainer: "B The Great",
 
     episodes: [
@@ -17530,7 +17532,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "PRELUDE OF THE WHITE SNAKE is presented in an Agasobanuye version.",
   language: "Chinese",
-  genres: ["Action", "Fantasy", "Romance"],
+  genres: ["Fantasy"],
   explainer: "B The Great",
 
     episodes: [
@@ -17683,7 +17685,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "BE YOURSELF is presented in an Agasobanuye version.",
   language: "Chinese",
-  genres: ["Drama", "Romance"],
+  genres: ["Drama"],
   explainer: "B The Great",
 
     episodes: [
@@ -17892,7 +17894,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "SWORD AND BELOVED is presented in an Agasobanuye version.",
   language: "Chinese",
-  genres: ["Action", "Drama", "Fantasy"],
+  genres: ["Fantasy"],
   explainer: "B The Great",
 
     episodes: [
@@ -18189,7 +18191,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "THE JOURNEY OF LEGEND is presented in an Agasobanuye version.",
   language: "Chinese",
-  genres: ["Action", "Adventure", "Drama"],
+  genres: ["Adventure"],
   explainer: "B The Great",
 
     episodes: [
@@ -18526,7 +18528,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "REALM'S NIGHT RAIN is presented in an Agasobanuye version.",
   language: "Chinese",
-  genres: ["Action", "Drama", "Fantasy"],
+  genres: ["Fantasy"],
   explainer: "B The Great",
 
     episodes: [
@@ -18751,7 +18753,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "SHADOW LOVE is presented in an Agasobanuye version.",
   language: "Chinese",
-  genres: ["Drama", "Romance"],
+  genres: ["Romance"],
   explainer: "B The Great",
 
     episodes: [
@@ -19072,7 +19074,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "SQUID GAME is presented in an Agasobanuye version.",
   language: "Korean",
-  genres: ["Action", "Drama", "Thriller"],
+  genres: ["Thriller"],
   explainer: "Rock Kimomo",
 
     episodes: [
@@ -19137,7 +19139,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "RAISING DION SEASON 2 is presented in a Gaheza version.",
   language: "English",
-  genres: ["Action", "Drama", "Fantasy"],
+  genres: ["Fantasy"],
   explainer: "Gaheza",
 
     episodes: [
@@ -19202,7 +19204,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "DEAD END JOB is presented in a Gaheza version.",
   language: "Korean",
-  genres: ["Drama", "Thriller"],
+  genres: ["Thriller"],
   explainer: "Gaheza",
 
     episodes: [
@@ -19251,7 +19253,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "THE ROYAL GAMBLER is presented in a Junior Giti version.",
   language: "Korean",
-  genres: ["Action", "Drama", "History"],
+  genres: ["Drama"],
   explainer: "Junior Giti",
 
     episodes: [
@@ -19460,7 +19462,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "BLOOD VS DUTY is presented in a B The Great version.",
   language: "Filipino",
-  genres: ["Action", "Drama", "Crime"],
+  genres: ["Crime"],
   explainer: "B The Great",
 
     episodes: [
@@ -19717,7 +19719,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "CARRIE SEASON 1 is presented in a Perfect version.",
   language: "English",
-  genres: ["Horror", "Drama", "Thriller"],
+  genres: ["Horror"],
   explainer: "Perfect",
 
     episodes: [
@@ -19798,7 +19800,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-06",
   description: "A BONA FIDE KILLER is presented in a Perfect version.",
   language: "Korean",
-  genres: ["Action", "Crime", "Thriller"],
+  genres: ["Crime"],
   explainer: "Perfect",
 
     episodes: [
@@ -19935,7 +19937,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-08",
   description: "STRANGER THINGS SEASON 1 follows a group of friends as they investigate a mysterious disappearance and discover supernatural secrets.",
   language: "English",
-  genres: ["Drama", "Fantasy", "Horror", "Mystery"],
+  genres: ["Horror"],
   explainer: "Perfect",
 
     episodes: [
@@ -20016,7 +20018,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-08",
   description: "STRANGER THINGS SEASON 2 continues the story as the friends face new supernatural threats in Hawkins.",
   language: "English",
-  genres: ["Drama", "Fantasy", "Horror", "Mystery"],
+  genres: ["Fantasy"],
   explainer: "Perfect",
 
     episodes: [
@@ -20105,7 +20107,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-08",
   description: "STRANGER THINGS SEASON 3 follows the group as new dangers emerge in Hawkins during the summer.",
   language: "English",
-  genres: ["Drama", "Fantasy", "Horror", "Mystery"],
+  genres: ["Horror"],
   explainer: "Perfect",
 
     episodes: [
@@ -20186,7 +20188,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-08",
   description: "RAISING DION S1 FINAL AGASOBANUYE follows Dion, a young boy who discovers extraordinary supernatural abilities while facing dangerous challenges.",
   language: "Kinyarwanda",
-  genres: ["Drama", "Fantasy", "Science Fiction"],
+  genres: ["Fantasy"],
   explainer: "Perfect",
 
     episodes: [
@@ -20315,7 +20317,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-08",
   description: "WITHIN THE GRIP follows a gripping story of characters facing dangerous challenges and unexpected events.",
   language: "Kinyarwanda",
-  genres: ["Drama", "Thriller"],
+  genres: ["Thriller"],
   explainer: "B The Great",
   trailer: "https://www.youtube.com/shorts/SjTKv5T-E9M?t=10&feature=share",
 
@@ -20541,7 +20543,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-14",
   description: "FRIENDS, SEX AND GAMES follows a story of friendship, relationships, romance, and unexpected challenges.",
   language: "English",
-  genres: ["Drama", "Romance"],
+  genres: ["Romance"],
   explainer: "Sankara",
   trailer: "https://www.youtube.com/watch?v=sqdIqL1I-BY&pp=ygUWRlJJRU5EUywgU0VYIEFORCBHQU1FU9IHCQnHBwGHKiGM7w%3D%3D",
 
@@ -20668,7 +20670,7 @@ createdAt: "2026-10-09",
     createdAt: "2026-11-17",
     description: "Season 1 of Da Vinci's Demons follows the young Leonardo da Vinci in Renaissance Florence as he investigates mysterious secrets, faces political conspiracies, and searches for the Book of Leaves.",
     language: "English",
-    genres: ["Drama", "Romance"],
+    genres: ["Drama"],
     explainer: "Gaheza",
     trailer: "https://www.youtube.com/results?search_query=Da+Vinci%27s+Demons+Season+1+trailer",
 
@@ -20750,7 +20752,7 @@ createdAt: "2026-10-09",
     createdAt: "2026-11-17",
     description: "Season 2 continues Leonardo da Vinci's adventures as he faces new enemies, political conflicts, dangerous mysteries, and challenges that test his intelligence and inventions.",
     language: "English",
-    genres: ["Drama", "Romance"],
+    genres: ["Drama"],
     explainer: "Gaheza",
     trailer: "https://www.youtube.com/results?search_query=Da+Vinci%27s+Demons+Season+2+trailer",
 
@@ -20856,7 +20858,7 @@ createdAt: "2026-10-09",
     createdAt: "2026-11-17",
     description: "Season 3 follows Leonardo as he confronts the consequences of his discoveries and faces his greatest challenges in a world filled with secrets, war, betrayal, and powerful enemies.",
     language: "English",
-   genres: ["Drama", "Romance"],
+   genres: ["Drama"],
     explainer: "Gaheza",
     trailer: "https://www.youtube.com/results?search_query=Da+Vinci%27s+Demons+Season+3+trailer",
 
@@ -21026,7 +21028,7 @@ createdAt: "2026-10-09",
     createdAt: "2026-11-19",
     description: "Shadow Punisher is an action and thriller series centered on justice, revenge, and the confrontation between those who seek to punish wrongdoing and the forces standing in their way. The story explores conflict, danger, and the consequences of fighting against powerful enemies.",
     language: "",
-    genres: ["Action", "Thriller"],
+    genres: ["Action"],
     explainer: "B The Great",
     trailer: "",
 
@@ -21100,7 +21102,7 @@ createdAt: "2026-10-09",
     createdAt: "2026-11-20",
     description: "The Immortal Ascension Season 1.",
     language: "",
-    genres: [],
+    genres: ["Fantasy"],
     explainer: "B The Great",
     trailer: "",
 
@@ -21358,7 +21360,7 @@ createdAt: "2026-10-09",
   createdAt: "2026-11-20",
   description: "Agasobanuye by Junior Giti. A modern-day doctor is wrenched away from her life and sent back in time. But will she find love – 700 years in the past – with an abrasive general?",
   language: "",
-  genres: [],
+  genres: ["Romance"],
   explainer: "Junior Giti",
   trailer: "https://www.youtube.com/watch?v=W5j1WZj1f3s&pp=ygUgdGhlLWdyZWF0LWRvY3Rvci1mYWl0aC4gdHJhaWxlciDSBwkJEAgBhyohjO8%3D",
 

@@ -5,8 +5,7 @@ import Navbar from "@/app/components/Navbar";
 import SiteBottom from "@/app/components/SiteBottom";
 import { getSeriesSummaries, series } from "@/data/series";
 import { createOpenGraphMetadata } from "@/app/seo";
-import { ViewCount } from "@/app/components/CatalogFeatures";
-import PosterImage from "@/app/components/PosterImage";
+import MovieCard from "@/app/components/MovieCard";
 
 export const metadata: Metadata = {
   title: "All Series",
@@ -40,26 +39,9 @@ export default function SeriesPage() {
         </header>
 
         {orderedSeries.length > 0 ? (
-          <div className="media-grid">
+          <div className="catalog-card-grid">
             {orderedSeries.map((item) => (
-              <article key={item.id} className="cinema-card group relative min-w-0">
-                <Link href={`/series/${item.slug}`} className="block">
-                  <div className="media-poster relative">
-                    <PosterImage src={item.image} contentType="series" alt={item.title} loading="lazy" />
-                    {item.genres?.[0] && <span className="media-genre">{item.genres[0]}</span>}
-                    {/(season|series)/i.test(item.title) && <span className="media-season">SEASON</span>}
-                    <span className="media-play" aria-hidden="true">▶</span>
-                  </div>
-                  <h2 className="media-title">{item.title}</h2>
-                </Link>
-                <div className="media-meta">
-                  {item.episodes.length > 0 && <span className="episode-pill">{item.episodes.length} {item.episodes.length === 1 ? "Episode" : "Episodes"}</span>}
-                  <span className="media-rating">★ {item.rating}</span>
-                </div>
-                <div className="px-2 pt-1"><ViewCount contentType="series" slug={item.slug} /></div>
-                <div className="media-byline">{item.explainer?.trim() || <span className="text-white/35">Explainer unavailable</span>}</div>
-                {item.createdAt && <time className="media-time" dateTime={item.createdAt}>{relativeTime(item.createdAt)}</time>}
-              </article>
+              <MovieCard key={item.id} title={item.title} year={item.year} rating={item.rating} image={item.image} slug={item.slug} hrefPrefix="/series" explainer={item.explainer} createdAt={item.createdAt} genres={item.genres} episodeCount={item.episodes.length} season={/(season|series)/i.test(item.title) ? "SEASON" : undefined} />
             ))}
           </div>
         ) : (
@@ -76,15 +58,4 @@ export default function SeriesPage() {
       <SiteBottom />
     </main>
   );
-}
-
-function relativeTime(value: string): string {
-  const timestamp = new Date(value).getTime();
-  if (!Number.isFinite(timestamp)) return "";
-  const days = Math.max(0, Math.floor((Date.now() - timestamp) / 86_400_000));
-  if (days < 1) return "Today";
-  if (days < 7) return `${days} ${days === 1 ? "day" : "days"} ago`;
-  if (days < 30) { const weeks = Math.floor(days / 7); return `${weeks} ${weeks === 1 ? "week" : "weeks"} ago`; }
-  if (days < 365) { const months = Math.floor(days / 30); return `${months} ${months === 1 ? "month" : "months"} ago`; }
-  const years = Math.floor(days / 365); return `${years} ${years === 1 ? "year" : "years"} ago`;
 }
