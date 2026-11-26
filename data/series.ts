@@ -1,3 +1,4 @@
+import { title } from "process";
 import type { Genre } from "./genres";
 
 export interface Episode {
@@ -21088,7 +21089,71 @@ createdAt: "2026-10-09",
         description: "Shadow Punisher Episode 7",
         streamUrl: "https://www.mediafire.com/file/s5rokf7c6jh0ca2/Shadow+Punisher+ep7cineva.store+.mp4/file",
         downloadUrl: "https://www.mediafire.com/file/s5rokf7c6jh0ca2/Shadow+Punisher+ep7cineva.store+.mp4/file"
-      }
+      },
+      {
+  id: "163-8",
+  episodeNumber: 8,
+  title: "SHADOW PUNISHER - Episode 8",
+  description: "Shadow Punisher Episode 8.",
+  streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2Fshadow%2Fnew%2FSHADOW_PUNISHER_E08.mp4",
+  downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2Fshadow%2Fnew%2FSHADOW_PUNISHER_E08.mp4"
+},
+{
+  id: "163-9",
+  episodeNumber: 9,
+  title: "SHADOW PUNISHER - Episode 9",
+  description: "Shadow Punisher Episode 9.",
+  streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2Fshadow%2Fnew%2FSHADOW_PUNISHER_E09.mp4",
+  downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2Fshadow%2Fnew%2FSHADOW_PUNISHER_E09.mp4"
+},
+{
+  id: "163-10",
+  episodeNumber: 10,
+  title: "SHADOW PUNISHER - Episode 10",
+  description: "Shadow Punisher Episode 10.",
+  streamUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP10.mp4",
+  downloadUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP10.mp4"
+},
+{
+  id: "163-11",
+  episodeNumber: 11,
+  title: "SHADOW PUNISHER - Episode 11",
+  description: "Shadow Punisher Episode 11.",
+  streamUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP11.mp4",
+  downloadUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP11.mp4"
+},
+{
+  id: "163-12",
+  episodeNumber: 12,
+  title: "SHADOW PUNISHER - Episode 12",
+  description: "Shadow Punisher Episode 12.",
+  streamUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP12.mp4",
+  downloadUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP12.mp4"
+},
+{
+  id: "163-13",
+  episodeNumber: 13,
+  title: "SHADOW PUNISHER - Episode 13",
+  description: "Shadow Punisher Episode 13.",
+  streamUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP13.mp4",
+  downloadUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP13.mp4"
+},
+{
+  id: "163-14",
+  episodeNumber: 14,
+  title: "SHADOW PUNISHER - Episode 14",
+  description: "Shadow Punisher Episode 14.",
+  streamUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP14.mp4",
+  downloadUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP14.mp4"
+},
+{
+  id: "163-15",
+  episodeNumber: 15,
+  title: "SHADOW PUNISHER - Episode 15",
+  description: "Shadow Punisher Episode 15.",
+  streamUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP15.mp4",
+  downloadUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/Shadow_Punisher_EP15.mp4"
+}
     ],
   },
     {
@@ -21098,7 +21163,7 @@ createdAt: "2026-10-09",
     year: "",
     rating: "",
     image: "the-immortal-ascension-season-1.jpg",
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-11-20",
     description: "The Immortal Ascension Season 1.",
     language: "",
@@ -21412,9 +21477,285 @@ createdAt: "2026-10-09",
       description: "THE GREAT DOCTOR - FAITH Episode 6.",
       streamUrl: "http://isatafilez.my/files/series/2026/korea/junio/faith/FAITH_-_THE_GREAT_DOCTOR_EP_06.mp4",
       downloadUrl: "http://isatafilez.my/files/series/2026/korea/junio/faith/FAITH_-_THE_GREAT_DOCTOR_EP_06.mp4"
+    },
+
+ {
+    id: "165-7",
+    episodeNumber: 7,
+    title: "THE GREAT DOCTOR - FAITH - Episode 7",
+    description: "THE GREAT DOCTOR - FAITH Episode 7.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_07.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_07.mp4"
+  },
+  {
+    id: "165-8",
+    episodeNumber: 8,
+    title: "THE GREAT DOCTOR - FAITH - Episode 8",
+    description: "THE GREAT DOCTOR - FAITH Episode 8.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_08.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_08.mp4"
+  },
+  {
+    id: "165-9",
+    episodeNumber: 9,
+    title: "THE GREAT DOCTOR - FAITH - Episode 9",
+    description: "THE GREAT DOCTOR - FAITH Episode 9.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_09.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_09.mp4"
+  },
+  {
+    id: "165-10",
+    episodeNumber: 10,
+    title: "THE GREAT DOCTOR - FAITH - Episode 10",
+    description: "THE GREAT DOCTOR - FAITH Episode 10.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_10.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_10.mp4"
+  },
+  {
+    id: "165-11",
+    episodeNumber: 11,
+    title: "THE GREAT DOCTOR - FAITH - Episode 11",
+    description: "THE GREAT DOCTOR - FAITH Episode 11.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_11.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_11.mp4"
+  },
+  {
+    id: "165-12",
+    episodeNumber: 12,
+    title: "THE GREAT DOCTOR - FAITH - Episode 12",
+    description: "THE GREAT DOCTOR - FAITH Episode 12.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_12.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_12.mp4"
+  },
+  {
+    id: "165-13",
+    episodeNumber: 13,
+    title: "THE GREAT DOCTOR - FAITH - Episode 13",
+    description: "THE GREAT DOCTOR - FAITH Episode 13.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_13.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_13.mp4"
+  },
+  {
+    id: "165-14",
+    episodeNumber: 14,
+    title: "THE GREAT DOCTOR - FAITH - Episode 14",
+    description: "THE GREAT DOCTOR - FAITH Episode 14.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_14.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_14.mp4"
+  },
+  {
+    id: "165-15",
+    episodeNumber: 15,
+    title: "THE GREAT DOCTOR - FAITH - Episode 15",
+    description: "THE GREAT DOCTOR - FAITH Episode 15.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_15.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_15.mp4"
+  },
+  {
+    id: "165-16",
+    episodeNumber: 16,
+    title: "THE GREAT DOCTOR - FAITH - Episode 16",
+    description: "THE GREAT DOCTOR - FAITH Episode 16.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_16.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_16.mp4"
+  },
+  {
+    id: "165-17",
+    episodeNumber: 17,
+    title: "THE GREAT DOCTOR - FAITH - Episode 17",
+    description: "THE GREAT DOCTOR - FAITH Episode 17.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_17.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_17.mp4"
+  },
+  {
+    id: "165-18",
+    episodeNumber: 18,
+    title: "THE GREAT DOCTOR - FAITH - Episode 18",
+    description: "THE GREAT DOCTOR - FAITH Episode 18.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_18.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_18.mp4"
+  },
+  {
+    id: "165-19",
+    episodeNumber: 19,
+    title: "THE GREAT DOCTOR - FAITH - Episode 19",
+    description: "THE GREAT DOCTOR - FAITH Episode 19.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_19.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_19.mp4"
+  },
+  {
+    id: "165-20",
+    episodeNumber: 20,
+    title: "THE GREAT DOCTOR - FAITH - Episode 20",
+    description: "THE GREAT DOCTOR - FAITH Episode 20.",
+    streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_20.mp4",
+    downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_20.mp4"
+  }
+
+
+  ]
+},
+
+ {
+    id: "166",
+    title: "THE LEGEND OF HEROES - SEASON 2",
+    slug: "the-legend-of-heroes-season-2",
+    year: "2024",
+    rating: "",
+    image: "the-legend-of-heroes-season-2.jpg",
+    isFeatured: true,
+    createdAt: "2026-11-26",
+    description: "Set during the late Southern Song Dynasty, as the Jin forces invade China, the story follows the Guo and Yang families. Qiu Chuji makes a bet with the Seven Freaks of Jiangnan concerning the future of their descendants. Guo Jing and Yang Kang grow up on different paths, while Guo Jing's journey brings him into a relationship with Huang Rong.",
+    language: "",
+    genres: ["Drama", "Action"],
+    explainer: "B The Great",
+    trailer: "https://www.youtube.com/embed/21uG8LqZB-s",
+
+    episodes: [
+    
+    {
+      id: "166-1",
+      episodeNumber: 1,
+      title: "THE LEGEND OF HEROES - S2 Episode 1",
+      description: "THE LEGEND OF HEROES - S2 Episode 1.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E01.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E01.mp4"
+    },
+    {
+      id: "166-2",
+      episodeNumber: 2,
+      title: "THE LEGEND OF HEROES - S2 Episode 2",
+      description: "THE LEGEND OF HEROES - S2 Episode 2.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E02.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E02.mp4"
+    },
+    {
+      id: "166-3",
+      episodeNumber: 3,
+      title: "THE LEGEND OF HEROES - S2 Episode 3",
+      description: "THE LEGEND OF HEROES - S2 Episode 3.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E03.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E03.mp4"
+    },
+    {
+      id: "166-4",
+      episodeNumber: 4,
+      title: "THE LEGEND OF HEROES - S2 Episode 4",
+      description: "THE LEGEND OF HEROES - S2 Episode 4.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E04.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E04.mp4"
+    },
+    {
+      id: "166-5",
+      episodeNumber: 5,
+      title: "THE LEGEND OF HEROES - S2 Episode 5",
+      description: "THE LEGEND OF HEROES - S2 Episode 5.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E05.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E05.mp4"
+    },
+    {
+      id: "166-6",
+      episodeNumber: 6,
+      title: "THE LEGEND OF HEROES - S2 Episode 6",
+      description: "THE LEGEND OF HEROES - S2 Episode 6.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E06.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E06.mp4"
+    },
+    {
+      id: "166-7",
+      episodeNumber: 7,
+      title: "THE LEGEND OF HEROES - S2 Episode 7",
+      description: "THE LEGEND OF HEROES - S2 Episode 7.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E07.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E07.mp4"
+    },
+    {
+      id: "166-8",
+      episodeNumber: 8,
+      title: "THE LEGEND OF HEROES - S2 Episode 8",
+      description: "THE LEGEND OF HEROES - S2 Episode 8.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E08.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E08.mp4"
+    },
+    {
+      id: "166-9",
+      episodeNumber: 9,
+      title: "THE LEGEND OF HEROES - S2 Episode 9",
+      description: "THE LEGEND OF HEROES - S2 Episode 9.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E09.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E09.mp4"
+    },
+    {
+      id: "166-10",
+      episodeNumber: 10,
+      title: "THE LEGEND OF HEROES - S2 Episode 10",
+      description: "THE LEGEND OF HEROES - S2 Episode 10.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E10.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2Fgreat%2FTHE_LEGEND_OF_HEROES_S02E10.mp4"
+    },
+    {
+      id: "166-11",
+      episodeNumber: 11,
+      title: "THE LEGEND OF HEROES - S2 Episode 11",
+      description: "THE LEGEND OF HEROES - S2 Episode 11.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2FTHE_LEGEND_OF_HEROES_S02E11.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2FTHE_LEGEND_OF_HEROES_S02E11.mp4"
+    },
+    {
+      id: "166-12",
+      episodeNumber: 12,
+      title: "THE LEGEND OF HEROES - S2 Episode 12",
+      description: "THE LEGEND OF HEROES - S2 Episode 12.",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2FTHE_LEGEND_OF_HEROES_S02E12.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fchinese%2FTHE_LEGEND_OF_HEROES_S02E12.mp4"
     }
   ]
-}
+},
+
+  {
+    id: "167",
+    title: "GRISELDA",
+    slug: "griselda",
+    year: "2024",
+    rating: "",
+    image: "griselda.jpg",
+    isFeatured: true,
+    createdAt: "2026-11-26",
+    description: "Griselda is a fictional dramatization inspired by real events. It follows Griselda Blanco's journey from Medellín to becoming the Godmother of Miami's drug empire.",
+    language: "",
+    genres: ["Drama", "Crime"],
+    explainer: "Sikov",
+    trailer: "",
+
+    episodes: [
+      {
+        id: "167-1",
+        episodeNumber: 1,
+        title: "GRISELDA Episode 1",
+        description: "Griselda Episode 1",
+        streamUrl: "http://isatafilez.my/files/series/2026/america/siko/new/Griselda_EP1.mp4",
+        downloadUrl: "http://isatafilez.my/files/series/2026/america/siko/new/Griselda_EP1.mp4"
+      },
+      {
+        id: "167-2",
+        episodeNumber: 2,
+        title: "GRISELDA Episode 2",
+        description: "Griselda Episode 2",
+        streamUrl: "http://isatafilez.my/files/series/2026/america/siko/new/Griselda_EP2.mp4",
+        downloadUrl: "http://isatafilez.my/files/series/2026/america/siko/new/Griselda_EP2.mp4"
+      },
+      {
+        id: "167-3",
+        episodeNumber: 3,
+        title: "GRISELDA Episode 3",
+        description: "Griselda Episode 3",
+        streamUrl: "http://isatafilez.my/files/series/2026/america/siko/new/Griselda_EP3.mp4",
+        downloadUrl: "http://isatafilez.my/files/series/2026/america/siko/new/Griselda_EP3.mp4"
+      }
+    ]
+  }
+
+
 
 
 

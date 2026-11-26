@@ -4509,7 +4509,7 @@ export const movies: Movie[] = [
   description: "Watch MASTER PLAN on Oshakur Movies. Stream the movie online or download it using the available links.",
   language: "English",
   genres: ["Action"],
-  isFeatured: true ,
+  isFeatured: false ,
   createdAt: "2026-10-19",
   parts: [
     {
@@ -11720,7 +11720,7 @@ genres: ["Action"],
     description: "",
     language: "Kinyarwanda",
     genres: ["Action"],
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-11-15",
     explainer: "B The Great",
     trailer: "",
@@ -13639,7 +13639,7 @@ genres: ["Action"],
   description: "Young Bela forms a relationship with a sinister entity in her home that looks uncannily like her own mother, drawing her into a terrifying and increasingly dark world.",
   language: "Kinyarwanda",
   genres: ["Horror"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-21",
   explainer: "Peferct",
   trailer: "https://www.youtube.com/watch?v=-mnTITqqiT0",
@@ -13663,7 +13663,7 @@ genres: ["Action"],
   description: "Moments after surviving an all-out attack from the Le Domas family, Grace discovers she has reached the next level of the nightmarish game. With her estranged sister Faith at her side, she must survive four rival families hunting her for the throne and claim the High Seat of the Council that controls the world.",
   language: "Kinyarwanda",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-21",
   explainer: "Gaheza",
   trailer: "https://www.youtube.com/watch?v=AXeYU6Kmrek",
@@ -13694,7 +13694,7 @@ genres: ["Action"],
   description: "",
   language: "Kinyarwanda",
   genres: ["Drama"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-22",
   explainer: "Rocky",
   trailer: "https://www.youtube.com/watch?v=FixQE61iSDg&pp=ygUMTWVuIG9mIEhvbm9y",
@@ -13921,7 +13921,7 @@ genres: ["Action"],
   description: "Trapped in an underground pit during a storm, three students from an all-girls school must confront their personal conflicts as they fight to survive.",
   language: "Kinyarwanda",
   genres: ["Thriller"],
-  isFeatured: true  ,
+  isFeatured: false  ,
   createdAt: "2026-11-22",
   explainer: "Mr Fire",
   trailer: "https://www.youtube.com/watch?v=0Uc4M9JvL0g&pp=ygUXRnJvbSB0aGUgQXNoZXM6IFRoZSBQaXTSBwkJEAgBhyohjO8%3D",
@@ -13976,7 +13976,7 @@ genres: ["Action"],
   description: "",
   language: "Kinyarwanda",
   genres: ["Indian"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-22",
   explainer: "Master P",
   trailer: "https://www.youtube.com/watch?v=CdBe6qiM1m4&pp=ygUNS3VuZyBGdSBHYW1lcw%3D%3D",
@@ -14045,7 +14045,7 @@ genres: ["Action"],
   description: "",
   language: "Kinyarwanda",
   genres: ["Thriller"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-22",
   explainer: "Eric Pro",
   trailer: "https://www.youtube.com/watch?v=Dhg-3ME2L6M&pp=ygUIaUhvc3RhZ2U%3D",
@@ -14083,7 +14083,7 @@ genres: ["Action"],
   description: "",
   language: "Kinyarwanda",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-22",
   explainer: "B the Greater",
   trailer: "https://www.youtube.com/watch?v=FItgZOuaPVY&pp=ygUZIGZvcmNlIDEgbW92aWVzIHRyYWlsbGVyIA%3D%3D",
@@ -14107,7 +14107,7 @@ genres: ["Action"],
   description: "",
   language: "Kinyarwanda",
   genres: ["Action"],
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-22",
   explainer: "Rocky",
   trailer: "https://www.youtube.com/watch?v=AFoflf-hass&pp=ygUSdHJhaWxlciBUaGUgU3lzdGVt",
@@ -14121,6 +14121,316 @@ genres: ["Action"],
     }
   ]
 },
+
+{
+  id: "532",
+  title: "Snatched",
+  slug: "snatched",
+  year: "2024",
+  rating: "",
+  image: "snatched.jpg",
+  description: "When a dangerous criminal from her past breaks out of prison, a former CIA agent must tap back into her lethal skills to protect her family.",
+  language: "",
+  genres: ["Action", "Thriller"],
+  isFeatured: false,
+  createdAt: "2026-11-26",
+  explainer: "Sikov",
+  trailer: "",
+  parts: [
+    {
+      id: "532-1",
+      partNumber: 1,
+      title: "Full Movie",
+      streamUrl: "https://isatafilez.my/files/series/2026/america/siko/new/Snatched.mp4",
+      downloadUrl: "https://isatafilez.my/files/series/2026/america/siko/new/Snatched.mp4"
+    }
+  ]
+},
+{
+  id: "533",
+  title: "Ready or Not: Here I Come",
+  slug: "ready-or-not-here-i-come",
+  year: "2026",
+  rating: "",
+  image: "ready-or-not-here-i-come.jpg",
+  description: "Moments after surviving an all-out attack from the Le Domas family, Grace discovers she has reached the next level of the nightmarish game. This time, her estranged sister Faith is at her side. Grace must survive, protect her sister, and claim the High Seat of the Council while four rival families hunt them.",
+  language: "",
+  genres: ["Horror", "Thriller", "Comedy"],
+  isFeatured: false,
+  createdAt: "2026-11-26",
+  explainer: "Gaheza",
+  trailer: "",
+  parts: [
+    {
+      id: "533-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl: "http://isatafilez.my/files/series/2026/america/gahe/movie/READY_OR_NOT_2_HERE_I_COME_A.mp4",
+      downloadUrl: "http://isatafilez.my/files/series/2026/america/gahe/movie/READY_OR_NOT_2_HERE_I_COME_A.mp4"
+    },
+    {
+      id: "533-2",
+      partNumber: 2,
+      title: "Part 2",
+      streamUrl: "http://isatafilez.my/files/series/2026/america/gahe/movie/READY_OR_NOT_2_HERE_I_COME_B.mp4",
+      downloadUrl: "http://isatafilez.my/files/series/2026/america/gahe/movie/READY_OR_NOT_2_HERE_I_COME_B.mp4"
+    }
+  ]
+},
+{
+  id: "534",
+  title: "Jurassic World Rebirth",
+  slug: "jurassic-world-rebirth",
+  year: "",
+  rating: "",
+  image: "jurassic-world-rebirth.jpg",
+  description: "",
+  language: "",
+  genres: ["Sci-Fi", "Action", "Adventure"],
+  isFeatured: false,
+  createdAt: "2026-11-26",
+  explainer: "Sikov",
+  trailer: "",
+  parts: [
+    {
+      id: "534-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl: "https://www.mediafire.com/file/7ddc3c8ibzofpa3/Jurasic_World_Rebirth_A-1.m4v/file",
+      downloadUrl: "https://www.mediafire.com/file/7ddc3c8ibzofpa3/Jurasic_World_Rebirth_A-1.m4v/file"
+    },
+    {
+      id: "534-2",
+      partNumber: 2,
+      title: "Part 2",
+      streamUrl: "https://www.mediafire.com/file/j8a6qpj7924zw76/Jurassic+World+Rebirth+B+-1.m4v/file",
+      downloadUrl: "https://www.mediafire.com/file/j8a6qpj7924zw76/Jurassic+World+Rebirth+B+-1.m4v/file"
+    },
+    {
+      id: "534-3",
+      partNumber: 3,
+      title: "Part 3",
+      streamUrl: "https://www.mediafire.com/file/qcks854b0w3pbbn/JURASSIC+WORLD+C.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/qcks854b0w3pbbn/JURASSIC+WORLD+C.mp4/file"
+    }
+  ]
+},
+{
+  id: "535",
+  title: "Dangerous Lies",
+  slug: "dangerous-lies",
+  year: "",
+  rating: "",
+  image: "dangerous-lies.jpg",
+  description: "",
+  language: "",
+  genres: ["Thriller", "Mystery"],
+  isFeatured: false,
+  createdAt: "2026-11-26",
+  explainer: "Rocky",
+  trailer: "",
+  parts: [
+    {
+      id: "535-1",
+      partNumber: 1,
+      title: "Full Movie",
+      streamUrl: "https://www.mediafire.com/file/p5vfg0sgb76z64y/Dangerous_Lies.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/p5vfg0sgb76z64y/Dangerous_Lies.mp4/file"
+    }
+  ]
+},
+{
+  id: "536",
+  title: "Carter",
+  slug: "carter",
+  year: "2022",
+  rating: "",
+  image: "carter.jpg",
+  description: "Carter awakens two months into a deadly pandemic originating from the DMZ that has devastated the United States and North Korea. With no memory of his past, he discovers a mysterious device in his head and a lethal bomb in his mouth. Guided by a voice in his ears, he is thrown into a dangerous operation while the CIA and a North Korean coup pursue him.",
+  language: "",
+  genres: ["Action", "Thriller"],
+  isFeatured: true,
+  createdAt: "2026-11-26",
+  explainer: "Giti",
+  trailer: "",
+  parts: [
+    {
+      id: "536-1",
+      partNumber: 1,
+      title: "Full Movie",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Famerica%2Fsanka%2Fnew%2FCarter.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Famerica%2Fsanka%2Fnew%2FCarter.mp4"
+    }
+  ]
+},
+{
+  id: "537",
+  title: "Anna",
+  slug: "anna",
+  year: "",
+  rating: "",
+  image: "anna.jpg",
+  description: "",
+  language: "",
+  genres: ["Action", "Thriller"],
+  isFeatured: false,
+  createdAt: "2026-11-26",
+  explainer: "Mr Fire",
+  trailer: "",
+  parts: [
+    {
+      id: "537-1",
+      partNumber: 1,
+      title: "Full Movie",
+      streamUrl: "https://isatafilez.my/files/series%2F2025%2Fmrfire%2FAnna_By_Mr_Fire.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2025%2Fmrfire%2FAnna_By_Mr_Fire.mp4"
+    }
+  ]
+},
+{
+  id: "538",
+  title: "I, Nobody",
+  slug: "i-nobody",
+  year: "2026",
+  rating: "",
+  image: "i-nobody.jpg",
+  description: "Rajeevan, an ordinary government employee, witnesses something he was never meant to see and is thrust into the centre of a serious crime. Branded a troublemaker and hunted by the system, he must protect his family while fighting to survive against forces far beyond his control.",
+  language: "",
+  genres: ["Action", "Thriller", "Drama"],
+  isFeatured: false,
+  createdAt: "2026-11-26",
+  explainer: "Perfect",
+  trailer: "",
+  parts: [
+    {
+      id: "538-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Find%2Fperf%2FI_Nobody_Privitiraj_A_2026_Perfect.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Find%2Fperf%2FI_Nobody_Privitiraj_A_2026_Perfect.mp4"
+    },
+    {
+      id: "538-2",
+      partNumber: 2,
+      title: "Part 2",
+      streamUrl: "https://isatafilez.my/files/series%2F2026%2Find%2Fperf%2FI_Nobody_Privitiraj_B_2026_Perfect.mp4",
+      downloadUrl: "https://isatafilez.my/files/series%2F2026%2Find%2Fperf%2FI_Nobody_Privitiraj_B_2026_Perfect.mp4"
+    }
+  ]
+},
+{
+  id: "539",
+  title: "The Family Plan",
+  slug: "the-family-plan",
+  year: "",
+  rating: "",
+  image: "the-family-plan.jpg",
+  description: "",
+  language: "",
+  genres: ["Action", "Comedy"],
+  isFeatured: true,
+  createdAt: "2026-11-26",
+  explainer: "Rocky",
+  trailer: "",
+  parts: [
+    {
+      id: "539-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl: "https://isatafilez.my/files/Serie%2FRocky%2FFAMILY_PLAN_A.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FRocky%2FFAMILY_PLAN_A.mp4"
+    },
+    {
+      id: "539-2",
+      partNumber: 2,
+      title: "Part 2",
+      streamUrl: "https://isatafilez.my/files/Serie%2FRocky%2FFAMILY_PLAN_B.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FRocky%2FFAMILY_PLAN_B.mp4"
+    }
+  ]
+},
+
+{
+  id: "540",
+  title: "The Five Juanas",
+  slug: "the-five-juanas",
+  year: "",
+  rating: "",
+  image: "the-five-juanas.jpg",
+  description: "Five women with the same birthmark set out to unravel the truth about their pasts and discover a tragic web of lies spun by a powerful politician.",
+  language: "",
+  genres: ["Drama", "Mystery"],
+  isFeatured: true,
+  createdAt: "2026-11-26",
+  explainer: "Junior Giti",
+  trailer: "",
+  parts: [
+    {
+      id: "540-1",
+      partNumber: 1,
+      title: "Full Movie",
+      streamUrl: "https://www.mediafire.com/file/ni1jcd8a5orpcwf/the+five+juan.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/ni1jcd8a5orpcwf/the+five+juan.mp4/file"
+    }
+  ]
+},
+{
+  id: "541",
+  title: "The Call of the Wild",
+  slug: "the-call-of-the-wild",
+  year: "",
+  rating: "",
+  image: "the-call-of-the-wild.jpg",
+  description: "Buck, a giant yet generous dog, is abducted from his home and transported to the remote Yukon, where Perrault decides to use him for his dog sled mail operations.",
+  language: "",
+  genres: ["Drama", "Adventure"],
+  isFeatured: true,
+  createdAt: "2026-11-26",
+  explainer: "Gaheza Simba",
+  trailer: "",
+  parts: [
+    {
+      id: "541-1",
+      partNumber: 1,
+      title: "Full Movie",
+      streamUrl: "https://vsembed.com/18rsa",
+      downloadUrl: "https://www.mediafire.com/file/yv0f4ewsdqi0vwo/The+Call+Of+The+Wild+Hd+1.mp4/file"
+    }
+  ]
+},
+
+{
+  id: "542",
+  title: "Heart of Stone",
+  slug: "heart-of-stone",
+  year: "",
+  rating: "",
+  image: "heart-of-stone.jpg",
+  description: "",
+  language: "",
+  genres: ["Action"],
+  isFeatured: false,
+  createdAt: "2026-11-26",
+  explainer: "Rocky Kimomo",
+  trailer: "",
+  parts: [
+    {
+      id: "542-1",
+      partNumber: 1,
+      title: "Part 1",
+      streamUrl: "https://vsembed.com/xlwdb",
+      downloadUrl: "https://www.mediafire.com/file/ihmlwcathn0x3pv/HEART_OF_STONE_A.mp4/file"
+    },
+    {
+      id: "542-2",
+      partNumber: 2,
+      title: "Part 2",
+      streamUrl: "https://vsembed.com/8tgqg",
+      downloadUrl: "https://www.mediafire.com/file/8ztb8453q0ocupk/HEART_OF_STONE_B.mp4/file"
+    }
+  ]
+},
+
 
 
 
