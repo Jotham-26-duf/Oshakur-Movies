@@ -14485,6 +14485,30 @@ genres: ["Action"],
     }
   ]
 },
+{
+  id: "545",
+  title: "TOP GUN MAVERICK",
+  slug: "top-gun-maverick",
+  year: "2022",
+  rating: "",
+  image: "top-gun-maverick.jpg",
+  description: "Thirty years of service leads Maverick to train a group of elite TOPGUN graduates to prepare for a high-profile mission while Maverick battles his past demons.",
+  language: "",
+  genres: ["Action"],
+  isFeatured: true,
+  createdAt: "2026-11-27",
+  explainer: "Gaheza Simba",
+  trailer: "",
+  parts: [
+    {
+      id: "545-1",
+      partNumber: 1,
+      title: "TOP GUN MAVERICK",
+      streamUrl: "https://vsembed.com/sj7et",
+      downloadUrl: "https://www.mediafire.com/file/c78gekpi927np3h/TOP_GUN_MAVERICK.mp4/file"
+    }
+  ]
+},
 
 
 

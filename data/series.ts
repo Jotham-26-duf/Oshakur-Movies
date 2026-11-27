@@ -21795,7 +21795,7 @@ createdAt: "2026-10-09",
   year: "",
   rating: "",
   image: "the-last-ship-season-2.jpg",
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-27",
   description: "",
   language: "",
@@ -21917,7 +21917,7 @@ createdAt: "2026-10-09",
   year: "2026",
   rating: "",
   image: "blossom-in-darkness.jpg",
-  isFeatured: true,
+  isFeatured: false,
   createdAt: "2026-11-27",
   description: "Qi Fengyin, a feared demon lord blamed for all evil, encounters Ya Mao, a girl whose flesh is coveted for its extraordinary powers. Forced into a bond, the two clash yet gradually become each other's salvation. Together, they unravel six bizarre mysteries involving deadly curses, demons, resurrection, and forbidden love. As they expose a hidden conspiracy, they clear their names, free the world from its shackles, and give lovers a chance to stay together.",
   language: "",
@@ -22841,7 +22841,64 @@ createdAt: "2026-10-09",
       downloadUrl: "https://www.mediafire.com/file/rfbs55t8okf1reo/WHEN_THEY_SEE_US_EP_4FINAL.%2528isata.pythonanywhere.com%2529.avi/file"
     }
   ]
-}
+},
+{
+  id: "175",
+  title: "CRIMINAL JUSTICE",
+  slug: "criminal-justice",
+  year: "",
+  rating: "",
+  image: "criminal-justice.jpg",
+  isFeatured: true,
+  createdAt: "2026-11-27",
+  description: "",
+  language: "",
+  genres: ["Crime", "Drama"],
+  explainer: "Rock Kimomo",
+  trailer: "",
+  episodes: [
+    {
+      id: "175-1",
+      episodeNumber: 1,
+      title: "CRIMINAL JUSTICE Episode 1",
+      description: "",
+      streamUrl: "https://vsembed.com/plus3",
+      downloadUrl: "https://www.mediafire.com/file/soymvn6cupvayof/Criminal_Justice_Ep1_Hd.mp4/file"
+    },
+    {
+      id: "175-2",
+      episodeNumber: 2,
+      title: "CRIMINAL JUSTICE Episode 2",
+      description: "",
+      streamUrl: "https://vsembed.com/ubk9j",
+      downloadUrl: "https://www.mediafire.com/file/ir7981u5hdzm2bt/Criminal_Justice_Ep2_Hd.mp4/file"
+    },
+    {
+      id: "175-3",
+      episodeNumber: 3,
+      title: "CRIMINAL JUSTICE Episode 3",
+      description: "",
+      streamUrl: "https://vsembed.com/gqozt",
+      downloadUrl: "https://www.mediafire.com/file/crudwyc6w2c41v7/Criminal_Justice_Ep3_Hd.mp4/file"
+    },
+    {
+      id: "175-4",
+      episodeNumber: 4,
+      title: "CRIMINAL JUSTICE Episode 4",
+      description: "",
+      streamUrl: "https://vsembed.com/8zu4a",
+      downloadUrl: "https://www.mediafire.com/file/8ie0nbbpetl2cny/Criminal_Justice_Ep4_Hd.mp4/file"
+    },
+    {
+      id: "175-5",
+      episodeNumber: 5,
+      title: "CRIMINAL JUSTICE Episode 5",
+      description: "",
+      streamUrl: "https://vsembed.com/k7ehf",
+      downloadUrl: "https://www.mediafire.com/file/dmsb1y3dicpsx2c/Criminal_Justice_Ep5_Hd.mp4/file"
+    }
+  ]
+},
 
 
 
