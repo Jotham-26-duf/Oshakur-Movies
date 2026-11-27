@@ -21025,7 +21025,7 @@ createdAt: "2026-10-09",
     year: "",
     rating: "",
     image: "shadow-punisher.jpg",
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-11-19",
     description: "Shadow Punisher is an action and thriller series centered on justice, revenge, and the confrontation between those who seek to punish wrongdoing and the forces standing in their way. The story explores conflict, danger, and the consequences of fighting against powerful enemies.",
     language: "",
@@ -21590,7 +21590,40 @@ createdAt: "2026-10-09",
     description: "THE GREAT DOCTOR - FAITH Episode 20.",
     streamUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_20.mp4",
     downloadUrl: "https://isatafilez.my/files/series%2F2026%2Fkorea%2Fjunio%2Ffaith%2FFAITH_-_THE_GREAT_DOCTOR_EP_20.mp4"
-  }
+  },
+
+{
+  id: "165-21",
+  episodeNumber: 21,
+  title: "The Great Doctor - Faith Episode 21",
+  description: "The Great Doctor - Faith Episode 21",
+  streamUrl: "http://isatafilez.my/files/series/2026/korea/junio/faith/FAITH_-_THE_GREAT_DOCTOR_EP_21.mp4",
+  downloadUrl: "http://isatafilez.my/files/series/2026/korea/junio/faith/FAITH_-_THE_GREAT_DOCTOR_EP_21.mp4"
+},
+{
+  id: "165-22",
+  episodeNumber: 22,
+  title: "The Great Doctor - Faith Episode 22",
+  description: "The Great Doctor - Faith Episode 22",
+  streamUrl: "http://isatafilez.my/files/series/2026/korea/junio/faith/FAITH_-_THE_GREAT_DOCTOR_EP_22.mp4",
+  downloadUrl: "http://isatafilez.my/files/series/2026/korea/junio/faith/FAITH_-_THE_GREAT_DOCTOR_EP_22.mp4"
+},
+{
+  id: "165-23",
+  episodeNumber: 23,
+  title: "The Great Doctor - Faith Episode 23",
+  description: "The Great Doctor - Faith Episode 23",
+  streamUrl: "http://isatafilez.my/files/series/2026/korea/junio/faith/FAITH_-_THE_GREAT_DOCTOR_EP_23.mp4",
+  downloadUrl: "http://isatafilez.my/files/series/2026/korea/junio/faith/FAITH_-_THE_GREAT_DOCTOR_EP_23.mp4"
+},
+{
+  id: "165-24",
+  episodeNumber: 24,
+  title: "The Great Doctor - Faith Episode 24 (Final)",
+  description: "The Great Doctor - Faith Episode 24 - The End",
+  streamUrl: "http://isatafilez.my/files/series/2026/korea/junio/faith/FAITH_-_THE_GREAT_DOCTOR_EP_24_THE_END.mp4",
+  downloadUrl: "http://isatafilez.my/files/series/2026/korea/junio/faith/FAITH_-_THE_GREAT_DOCTOR_EP_24_THE_END.mp4"
+},
 
 
   ]
@@ -21603,7 +21636,7 @@ createdAt: "2026-10-09",
     year: "2024",
     rating: "",
     image: "the-legend-of-heroes-season-2.jpg",
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-11-26",
     description: "Set during the late Southern Song Dynasty, as the Jin forces invade China, the story follows the Guo and Yang families. Qiu Chuji makes a bet with the Seven Freaks of Jiangnan concerning the future of their descendants. Guo Jing and Yang Kang grow up on different paths, while Guo Jing's journey brings him into a relationship with Huang Rong.",
     language: "",
@@ -21719,7 +21752,7 @@ createdAt: "2026-10-09",
     year: "2024",
     rating: "",
     image: "griselda.jpg",
-    isFeatured: true,
+    isFeatured: false,
     createdAt: "2026-11-26",
     description: "Griselda is a fictional dramatization inspired by real events. It follows Griselda Blanco's journey from Medellín to becoming the Godmother of Miami's drug empire.",
     language: "",
@@ -21753,9 +21786,1062 @@ createdAt: "2026-10-09",
         downloadUrl: "http://isatafilez.my/files/series/2026/america/siko/new/Griselda_EP3.mp4"
       }
     ]
-  }
+  },
 
+{
+  id: "168",
+  title: "THE LAST SHIP - SEASON 2",
+  slug: "the-last-ship-season-2",
+  year: "",
+  rating: "",
+  image: "the-last-ship-season-2.jpg",
+  isFeatured: true,
+  createdAt: "2026-11-27",
+  description: "",
+  language: "",
+  genres: ["Action", "Drama", "Thriller"],
+  explainer: "Rock Kimomo",
+  trailer: "",
 
+  episodes: [
+    {
+      id: "168-1",
+      episodeNumber: 1,
+      title: "THE LAST SHIP Season 2 Episode 1",
+      description: "The Last Ship Season 2 Episode 1",
+      streamUrl: "https://www.mediafire.com/file/nb35jcookejmwkh/The_Last_Ship_S2_Ep1.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/nb35jcookejmwkh/The_Last_Ship_S2_Ep1.mp4/file"
+    },
+    {
+      id: "168-2",
+      episodeNumber: 2,
+      title: "THE LAST SHIP Season 2 Episode 2",
+      description: "The Last Ship Season 2 Episode 2",
+      streamUrl: "https://www.mediafire.com/file/jdt8w8xj1ab2tmd/The_Last_Ship_S2_Ep2.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/jdt8w8xj1ab2tmd/The_Last_Ship_S2_Ep2.mp4/file"
+    },
+    {
+      id: "168-3",
+      episodeNumber: 3,
+      title: "THE LAST SHIP Season 2 Episode 3",
+      description: "The Last Ship Season 2 Episode 3",
+      streamUrl: "https://www.mediafire.com/file/zmijugpmiib86y9/The_Last_Ship_S2_Ep3.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/zmijugpmiib86y9/The_Last_Ship_S2_Ep3.mp4/file"
+    },
+    {
+      id: "168-4",
+      episodeNumber: 4,
+      title: "THE LAST SHIP Season 2 Episode 4",
+      description: "The Last Ship Season 2 Episode 4",
+      streamUrl: "https://www.mediafire.com/file/xedklbm90y8nc5q/The_Last_Ship_S2_Ep4.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/xedklbm90y8nc5q/The_Last_Ship_S2_Ep4.mp4/file"
+    },
+    {
+      id: "168-5",
+      episodeNumber: 5,
+      title: "THE LAST SHIP Season 2 Episode 5",
+      description: "The Last Ship Season 2 Episode 5",
+      streamUrl: "https://www.mediafire.com/file/rf82it86cblnuy8/The_Last_Ship_S2_Ep5.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/rf82it86cblnuy8/The_Last_Ship_S2_Ep5.mp4/file"
+    },
+    {
+      id: "168-6",
+      episodeNumber: 6,
+      title: "THE LAST SHIP Season 2 Episode 6",
+      description: "The Last Ship Season 2 Episode 6",
+      streamUrl: "https://www.mediafire.com/file/06yll1rin8duqtd/The_last_ship_s2_EP6.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/06yll1rin8duqtd/The_last_ship_s2_EP6.mp4/file"
+    },
+    {
+      id: "168-7",
+      episodeNumber: 7,
+      title: "THE LAST SHIP Season 2 Episode 7",
+      description: "The Last Ship Season 2 Episode 7",
+      streamUrl: "https://www.mediafire.com/file/flfbth4gva1aecn/The_Last_Ship_S2_Ep7.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/flfbth4gva1aecn/The_Last_Ship_S2_Ep7.mp4/file"
+    },
+    {
+      id: "168-8",
+      episodeNumber: 8,
+      title: "THE LAST SHIP Season 2 Episode 8",
+      description: "The Last Ship Season 2 Episode 8",
+      streamUrl: "https://www.mediafire.com/file/s4nnsy5qgwsezx8/The_Last_Ship_S2_Ep8.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/s4nnsy5qgwsezx8/The_Last_Ship_S2_Ep8.mp4/file"
+    },
+    {
+      id: "168-9",
+      episodeNumber: 9,
+      title: "THE LAST SHIP Season 2 Episode 9",
+      description: "The Last Ship Season 2 Episode 9",
+      streamUrl: "https://www.mediafire.com/file/13rqd7sm5dixer1/The_Last_Ship_S2_Ep9.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/13rqd7sm5dixer1/The_Last_Ship_S2_Ep9.mp4/file"
+    },
+    {
+      id: "168-10",
+      episodeNumber: 10,
+      title: "THE LAST SHIP Season 2 Episode 10",
+      description: "The Last Ship Season 2 Episode 10",
+      streamUrl: "https://www.mediafire.com/file/epzc73zwg1mirus/The_Last_Ship_S2_Ep10.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/epzc73zwg1mirus/The_Last_Ship_S2_Ep10.mp4/file"
+    },
+    {
+      id: "168-11",
+      episodeNumber: 11,
+      title: "THE LAST SHIP Season 2 Episode 11",
+      description: "The Last Ship Season 2 Episode 11",
+      streamUrl: "https://www.mediafire.com/file/zdhhdgcp84lc7yf/The_Last_Ship_S2_Ep11.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/zdhhdgcp84lc7yf/The_Last_Ship_S2_Ep11.mp4/file"
+    },
+    {
+      id: "168-12",
+      episodeNumber: 12,
+      title: "THE LAST SHIP Season 2 Episode 12",
+      description: "The Last Ship Season 2 Episode 12",
+      streamUrl: "https://www.mediafire.com/file/uknpfb9g5oicvf9/The_Last_Ship_S2_Ep12.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/uknpfb9g5oicvf9/The_Last_Ship_S2_Ep12.mp4/file"
+    },
+    {
+      id: "168-13",
+      episodeNumber: 13,
+      title: "THE LAST SHIP Season 2 Episode 13 (Final)",
+      description: "The Last Ship Season 2 Episode 13 - Final Episode",
+      streamUrl: "https://www.mediafire.com/file/8g7lqrtyiuft5x0/The_Last_Ship_S2_Ep13FAINL.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/8g7lqrtyiuft5x0/The_Last_Ship_S2_Ep13FAINL.mp4/file"
+    },
+  ]
+},
+{
+  id: "169",
+  title: "BLOSSOM IN DARKNESS",
+  slug: "blossom-in-darkness",
+  year: "2026",
+  rating: "",
+  image: "blossom-in-darkness.jpg",
+  isFeatured: true,
+  createdAt: "2026-11-27",
+  description: "Qi Fengyin, a feared demon lord blamed for all evil, encounters Ya Mao, a girl whose flesh is coveted for its extraordinary powers. Forced into a bond, the two clash yet gradually become each other's salvation. Together, they unravel six bizarre mysteries involving deadly curses, demons, resurrection, and forbidden love. As they expose a hidden conspiracy, they clear their names, free the world from its shackles, and give lovers a chance to stay together.",
+  language: "",
+  genres: ["Fantasy", "Mystery", "Romance"],
+  explainer: "B the Great",
+  trailer: "",
+  episodes: [
+    {
+      id: "169-1",
+      episodeNumber: 1,
+      title: "BLOSSOM IN DARKNESS Episode 1",
+      description: "Blossom in Darkness Episode 1",
+      streamUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/BLOSSOM_IN_DARKNESS_EP01.mp4",
+      downloadUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/BLOSSOM_IN_DARKNESS_EP01.mp4"
+    },
+    {
+      id: "169-2",
+      episodeNumber: 2,
+      title: "BLOSSOM IN DARKNESS Episode 2",
+      description: "Blossom in Darkness Episode 2",
+      streamUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/BLOSSOM_IN_DARKNESS_EP02.mp4",
+      downloadUrl: "http://isatafilez.my/files/series/2026/chinese/great/shadow/new/BLOSSOM_IN_DARKNESS_EP02.mp4"
+    }
+  ]
+},
+
+{
+  id: "170",
+  title: "AVENUES OF THE DIAMOND",
+  slug: "avenues-of-the-diamond",
+  year: "2025–",
+  rating: "",
+  image: "avenues-of-the-diamond.jpg",
+  isFeatured:true,
+  createdAt: "2026-11-27",
+  description: "",
+  language: "",
+  genres: ["Action"],
+  explainer: "Sikov",
+  trailer: "",
+  episodes: [
+    {
+      id: "170-1",
+      episodeNumber: 1,
+      title: "AVENUES OF THE DIAMOND Episode 1",
+      description: "Avenues of the Diamond Season 1 Episode 1",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E1.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E1.mp4"
+    },
+    {
+      id: "170-2",
+      episodeNumber: 2,
+      title: "AVENUES OF THE DIAMOND Episode 2",
+      description: "Avenues of the Diamond Season 1 Episode 2",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E2.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E2.mp4"
+    },
+    {
+      id: "170-3",
+      episodeNumber: 3,
+      title: "AVENUES OF THE DIAMOND Episode 3",
+      description: "Avenues of the Diamond Season 1 Episode 3",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E3.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E3.mp4"
+    },
+    {
+      id: "170-4",
+      episodeNumber: 4,
+      title: "AVENUES OF THE DIAMOND Episode 4",
+      description: "Avenues of the Diamond Season 1 Episode 4",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E4.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E4.mp4"
+    },
+    {
+      id: "170-5",
+      episodeNumber: 5,
+      title: "AVENUES OF THE DIAMOND Episode 5",
+      description: "Avenues of the Diamond Season 1 Episode 5",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E5.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E5.mp4"
+    },
+    {
+      id: "170-6",
+      episodeNumber: 6,
+      title: "AVENUES OF THE DIAMOND Episode 6",
+      description: "Avenues of the Diamond Season 1 Episode 6",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E6.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E6.mp4"
+    },
+    {
+      id: "170-7",
+      episodeNumber: 7,
+      title: "AVENUES OF THE DIAMOND Episode 7",
+      description: "Avenues of the Diamond Season 1 Episode 7",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E7.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E7.mp4"
+    },
+    {
+      id: "170-8",
+      episodeNumber: 8,
+      title: "AVENUES OF THE DIAMOND Episode 8",
+      description: "Avenues of the Diamond Season 1 Episode 8",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E8.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E8.mp4"
+    },
+    {
+      id: "170-9",
+      episodeNumber: 9,
+      title: "AVENUES OF THE DIAMOND Episode 9A",
+      description: "Avenues of the Diamond Season 1 Episode 9 Part A",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E9_A.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E9_A.mp4"
+    },
+    {
+      id: "170-10",
+      episodeNumber: 9,
+      title: "AVENUES OF THE DIAMOND Episode 9B",
+      description: "Avenues of the Diamond Season 1 Episode 9 Part B",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E9_B.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E9_B.mp4"
+    },
+    {
+      id: "170-11",
+      episodeNumber: 10,
+      title: "AVENUES OF THE DIAMOND Episode 10",
+      description: "Avenues of the Diamond Season 1 Episode 10",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E10.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E10.mp4"
+    },
+    {
+      id: "170-12",
+      episodeNumber: 11,
+      title: "AVENUES OF THE DIAMOND Episode 11",
+      description: "Avenues of the Diamond Season 1 Episode 11",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E11.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E11.mp4"
+    },
+    {
+      id: "170-13",
+      episodeNumber: 12,
+      title: "AVENUES OF THE DIAMOND Episode 12",
+      description: "Avenues of the Diamond Season 1 Episode 12",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E12.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E12.mp4"
+    },
+    {
+      id: "170-14",
+      episodeNumber: 13,
+      title: "AVENUES OF THE DIAMOND Episode 13",
+      description: "Avenues of the Diamond Season 1 Episode 13",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E13.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E13.mp4"
+    },
+    {
+      id: "170-15",
+      episodeNumber: 14,
+      title: "AVENUES OF THE DIAMOND Episode 14",
+      description: "Avenues of the Diamond Season 1 Episode 14",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E14.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E14.mp4"
+    },
+    {
+      id: "170-16",
+      episodeNumber: 15,
+      title: "AVENUES OF THE DIAMOND Episode 15",
+      description: "Avenues of the Diamond Season 1 Episode 15",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E15.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E15.mp4"
+    },
+    {
+      id: "170-17",
+      episodeNumber: 16,
+      title: "AVENUES OF THE DIAMOND Episode 16 (Final)",
+      description: "Avenues of the Diamond Season 1 Episode 16 - Final Episode",
+      streamUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E16_Final.mp4",
+      downloadUrl: "https://isatafilez.my/files/Serie%2FPhilip%2FAvenues_of_the_Diamond_S1E16_Final.mp4"
+    }
+  ]
+}
+,
+
+{
+  id: "171",
+  title: "LOVE IN PAVILION",
+  slug: "love-in-pavilion",
+  year: "2025",
+  rating: "",
+  image: "love-in-pavilion.jpg",
+  isFeatured: false,
+  createdAt: "2026-11-27",
+  description: "Love in Pavilion is a Chinese historical fantasy romance drama adapted from the Zhu Ye Arc of Fox Spirit Matchmaker. It tells the story of Dongfang Huaizhu and Wangquan Hongye, the leaders of two powerful families, the Dongfangs and the Wangquans. In a time of conflict between humans and demons, they work together to stabilize the situation and revive the Unity Alliance. Their fates become intertwined at the Bamboo Pavilion by the Huai River, beginning a heartwarming story of love, loyalty, sacrifice, and promises that endure for generations. The drama explores the relationship between humans and demons while revealing the challenges faced by two families.",
+  language: "Mandarin",
+  genres: ["Fantasy", "Romance", "Historical", "Drama"],
+  explainer: "B The Great",
+  trailer: "",
+  episodes: [
+    {
+      id: "171-1",
+      episodeNumber: 1,
+      title: "LOVE IN PAVILION Episode 1",
+      description: "Love in Pavilion Episode 1",
+      streamUrl: "https://www.mediafire.com/file/jn0tvs4kwcsau5s/LOVE_IN_PAVILION_01.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/jn0tvs4kwcsau5s/LOVE_IN_PAVILION_01.mp4/file"
+    },
+    {
+      id: "171-2",
+      episodeNumber: 2,
+      title: "LOVE IN PAVILION Episode 2",
+      description: "Love in Pavilion Episode 2",
+      streamUrl: "https://www.mediafire.com/file/xodtjpaq4ajmeuj/LOVE+IN+PAVILION+02.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/xodtjpaq4ajmeuj/LOVE+IN+PAVILION+02.mp4/file"
+    },
+    {
+      id: "171-3",
+      episodeNumber: 3,
+      title: "LOVE IN PAVILION Episode 3",
+      description: "Love in Pavilion Episode 3",
+      streamUrl: "https://www.mediafire.com/file/2cnh45ekzq7rf71/LOVE_IN_PAVILION_03.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/2cnh45ekzq7rf71/LOVE_IN_PAVILION_03.mp4/file"
+    },
+    {
+      id: "171-4",
+      episodeNumber: 4,
+      title: "LOVE IN PAVILION Episode 4",
+      description: "Love in Pavilion Episode 4",
+      streamUrl: "https://www.mediafire.com/file/6wrl9dxeddojr12/LOVE_IN_PAVILION_04.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/6wrl9dxeddojr12/LOVE_IN_PAVILION_04.mp4/file"
+    },
+    {
+      id: "171-5",
+      episodeNumber: 5,
+      title: "LOVE IN PAVILION Episode 5",
+      description: "Love in Pavilion Episode 5",
+      streamUrl: "https://www.mediafire.com/file/hdrne6ud11qy9pu/LOVE_IN_PAVILION_05.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/hdrne6ud11qy9pu/LOVE_IN_PAVILION_05.mp4/file"
+    },
+    {
+      id: "171-6",
+      episodeNumber: 6,
+      title: "LOVE IN PAVILION Episode 6",
+      description: "Love in Pavilion Episode 6",
+      streamUrl: "https://www.mediafire.com/file/cg3ajtrsz99b7j1/LOVE_IN_PAVILION_06.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/cg3ajtrsz99b7j1/LOVE_IN_PAVILION_06.mp4/file"
+    },
+    {
+      id: "171-7",
+      episodeNumber: 7,
+      title: "LOVE IN PAVILION Episode 7",
+      description: "Love in Pavilion Episode 7",
+      streamUrl: "https://www.mediafire.com/file/nke4veg7uovn5qq/LOVE_IN_PAVILION_07.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/nke4veg7uovn5qq/LOVE_IN_PAVILION_07.mp4/file"
+    },
+    {
+      id: "171-8",
+      episodeNumber: 8,
+      title: "LOVE IN PAVILION Episode 8",
+      description: "Love in Pavilion Episode 8",
+      streamUrl: "https://www.mediafire.com/file/z3l3o3e4ms309of/LOVE_IN_PAVILION_08.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/z3l3o3e4ms309of/LOVE_IN_PAVILION_08.mp4/file"
+    },
+    {
+      id: "171-9",
+      episodeNumber: 9,
+      title: "LOVE IN PAVILION Episode 9",
+      description: "Love in Pavilion Episode 9",
+      streamUrl: "https://www.mediafire.com/file/aqynewub2hunyq6/LOVE_IN_PAVILION_09.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/aqynewub2hunyq6/LOVE_IN_PAVILION_09.mp4/file"
+    },
+    {
+      id: "171-10",
+      episodeNumber: 10,
+      title: "LOVE IN PAVILION Episode 10",
+      description: "Love in Pavilion Episode 10",
+      streamUrl: "https://www.mediafire.com/file/4px47gv0nlguru5/LOVE_IN_PAVILION_10.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/4px47gv0nlguru5/LOVE_IN_PAVILION_10.mp4/file"
+    },
+    {
+      id: "171-11",
+      episodeNumber: 11,
+      title: "LOVE IN PAVILION Episode 11",
+      description: "Love in Pavilion Episode 11",
+      streamUrl: "https://www.mediafire.com/file/01p0a9nr9d0yevd/LOVE_IN_PAVILION_11.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/01p0a9nr9d0yevd/LOVE_IN_PAVILION_11.mp4/file"
+    },
+    {
+      id: "171-12",
+      episodeNumber: 12,
+      title: "LOVE IN PAVILION Episode 12",
+      description: "Love in Pavilion Episode 12",
+      streamUrl: "https://www.mediafire.com/file/fv3es14d76wwuxp/LOVE_IN_PAVILION_12.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/fv3es14d76wwuxp/LOVE_IN_PAVILION_12.mp4/file"
+    },
+    {
+      id: "171-13",
+      episodeNumber: 13,
+      title: "LOVE IN PAVILION Episode 13",
+      description: "Love in Pavilion Episode 13",
+      streamUrl: "https://www.mediafire.com/file/wtps78v3x2e0lo0/LOVE_IN_PAVILION_13.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/wtps78v3x2e0lo0/LOVE_IN_PAVILION_13.mp4/file"
+    },
+    {
+      id: "171-14",
+      episodeNumber: 14,
+      title: "LOVE IN PAVILION Episode 14",
+      description: "Love in Pavilion Episode 14",
+      streamUrl: "https://www.mediafire.com/file/7tdqryw4azsv9vl/LOVE_IN_PAVILION_14.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/7tdqryw4azsv9vl/LOVE_IN_PAVILION_14.mp4/file"
+    },
+    {
+      id: "171-15",
+      episodeNumber: 15,
+      title: "LOVE IN PAVILION Episode 15",
+      description: "Love in Pavilion Episode 15",
+      streamUrl: "https://www.mediafire.com/file/nwn6yod3s89q44i/LOVE_IN_PAVILION_15.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/nwn6yod3s89q44i/LOVE_IN_PAVILION_15.mp4/file"
+    },
+    {
+      id: "171-16",
+      episodeNumber: 16,
+      title: "LOVE IN PAVILION Episode 16",
+      description: "Love in Pavilion Episode 16",
+      streamUrl: "https://www.mediafire.com/file/8akak747m7fvuhv/LOVE_IN_PAVILION_16.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/8akak747m7fvuhv/LOVE_IN_PAVILION_16.mp4/file"
+    },
+    {
+      id: "171-17",
+      episodeNumber: 17,
+      title: "LOVE IN PAVILION Episode 17",
+      description: "Love in Pavilion Episode 17",
+      streamUrl: "https://www.mediafire.com/file/072ng2vteckbcoa/LOVE+IN+PAVILION+17.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/072ng2vteckbcoa/LOVE+IN+PAVILION+17.mp4/file"
+    },
+    {
+      id: "171-18",
+      episodeNumber: 18,
+      title: "LOVE IN PAVILION Episode 18",
+      description: "Love in Pavilion Episode 18",
+      streamUrl: "https://www.mediafire.com/file/pvo4611qfdz1pik/LOVE+IN+PAVILION+18.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/pvo4611qfdz1pik/LOVE+IN+PAVILION+18.mp4/file"
+    },
+    {
+      id: "171-19",
+      episodeNumber: 19,
+      title: "LOVE IN PAVILION Episode 19",
+      description: "Love in Pavilion Episode 19",
+      streamUrl: "https://www.mediafire.com/file/r1y7kcxz5245k5m/LOVE+IN+PAVILION+19.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/r1y7kcxz5245k5m/LOVE+IN+PAVILION+19.mp4/file"
+    },
+    {
+      id: "171-20",
+      episodeNumber: 20,
+      title: "LOVE IN PAVILION Episode 20",
+      description: "Love in Pavilion Episode 20",
+      streamUrl: "https://www.mediafire.com/file/vd18sx16kmfku1q/LOVE+IN+PAVILION+20.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/vd18sx16kmfku1q/LOVE+IN+PAVILION+20.mp4/file"
+    },
+    {
+      id: "171-21",
+      episodeNumber: 21,
+      title: "LOVE IN PAVILION Episode 21",
+      description: "Love in Pavilion Episode 21",
+      streamUrl: "https://www.mediafire.com/file/m693i5gzijvnjxr/LOVE_IN_PAVILION_21.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/m693i5gzijvnjxr/LOVE_IN_PAVILION_21.mp4/file"
+    },
+    {
+      id: "171-22",
+      episodeNumber: 22,
+      title: "LOVE IN PAVILION Episode 22",
+      description: "Love in Pavilion Episode 22",
+      streamUrl: "https://www.mediafire.com/file/ih4j3z4sccam8dw/LOVE_IN_PAVILION_22.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/ih4j3z4sccam8dw/LOVE_IN_PAVILION_22.mp4/file"
+    },
+    {
+      id: "171-23",
+      episodeNumber: 23,
+      title: "LOVE IN PAVILION Episode 23",
+      description: "Love in Pavilion Episode 23",
+      streamUrl: "https://www.mediafire.com/file/6izx1r25ytm4thc/LOVE_IN_PAVILION_23.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/6izx1r25ytm4thc/LOVE_IN_PAVILION_23.mp4/file"
+    },
+    {
+      id: "171-24",
+      episodeNumber: 24,
+      title: "LOVE IN PAVILION Episode 24",
+      description: "Love in Pavilion Episode 24",
+      streamUrl: "https://www.mediafire.com/file/6ij35cl4vnc2qof/LOVE_IN_PAVILION_24.mp4/file?dkey=6ij35cl4vnc2qof",
+      downloadUrl: "https://www.mediafire.com/file/6ij35cl4vnc2qof/LOVE_IN_PAVILION_24.mp4/file?dkey=6ij35cl4vnc2qof"
+    },
+
+    {
+      id: "171-25",
+      episodeNumber: 25,
+      title: "LOVE IN PAVILION Episode 25",
+      description: "Love in Pavilion Episode 25",
+      streamUrl: "https://www.mediafire.com/file/458stey4xyqhegc/LOVE_IN_PAVILION_25.mp4/file?dkey=458stey4xyqhegc",
+      downloadUrl: "https://www.mediafire.com/file/458stey4xyqhegc/LOVE_IN_PAVILION_25.mp4/file?dkey=458stey4xyqhegc"
+    },
+    {
+      id: "171-26",
+      episodeNumber: 26,
+      title: "LOVE IN PAVILION Episode 26",
+      description: "Love in Pavilion Episode 26",
+      streamUrl: "https://www.mediafire.com/file/f7p49j2s0tqgi74/LOVE_IN_PAVILION_26.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/f7p49j2s0tqgi74/LOVE_IN_PAVILION_26.mp4/file"
+    },
+    {
+      id: "171-27",
+      episodeNumber: 27,
+      title: "LOVE IN PAVILION Episode 27",
+      description: "Love in Pavilion Episode 27",
+      streamUrl: "https://www.mediafire.com/file/045mwxcwr3snung/LOVE_IN_PAVILION_27.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/045mwxcwr3snung/LOVE_IN_PAVILION_27.mp4/file"
+    },
+    {
+      id: "171-28",
+      episodeNumber: 28,
+      title: "LOVE IN PAVILION Episode 28",
+      description: "Love in Pavilion Episode 28",
+      streamUrl: "https://www.mediafire.com/file/g8n2ksrn4kwv6df/LOVE_IN_PAVILION_28.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/g8n2ksrn4kwv6df/LOVE_IN_PAVILION_28.mp4/file"
+    },
+    {
+      id: "171-29",
+      episodeNumber: 29,
+      title: "LOVE IN PAVILION Episode 29",
+      description: "Love in Pavilion Episode 29",
+      streamUrl: "https://www.mediafire.com/file/hgsb8yx8sg9a28w/LOVE_IN_PAVILION_29.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/hgsb8yx8sg9a28w/LOVE_IN_PAVILION_29.mp4/file"
+    },
+    {
+      id: "171-30",
+      episodeNumber: 30,
+      title: "LOVE IN PAVILION Episode 30",
+      description: "Love in Pavilion Episode 30",
+      streamUrl: "https://www.mediafire.com/file/ibtkjt9b2u9ipuu/LOVE_IN_PAVILION_30.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/ibtkjt9b2u9ipuu/LOVE_IN_PAVILION_30.mp4/file"
+    },
+    {
+      id: "171-31",
+      episodeNumber: 31,
+      title: "LOVE IN PAVILION Episode 31",
+      description: "Love in Pavilion Episode 31",
+      streamUrl: "https://www.mediafire.com/file/dslm16wa4xmu03n/LOVE_IN_PAVILION_31.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/dslm16wa4xmu03n/LOVE_IN_PAVILION_31.mp4/file"
+    },
+    {
+      id: "171-32",
+      episodeNumber: 32,
+      title: "LOVE IN PAVILION Episode 32",
+      description: "Love in Pavilion Episode 32",
+      streamUrl: "https://www.mediafire.com/file/sbk1k0sctw89jok/LOVE_IN_PAVILION_32.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/sbk1k0sctw89jok/LOVE_IN_PAVILION_32.mp4/file"
+    },
+    {
+      id: "171-33",
+      episodeNumber: 33,
+      title: "LOVE IN PAVILION Episode 33",
+      description: "Love in Pavilion Episode 33",
+      streamUrl: "https://www.mediafire.com/file/ovmvr8f1f33odox/LOVE_IN_PAVILION_33.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/ovmvr8f1f33odox/LOVE_IN_PAVILION_33.mp4/file"
+    },
+    {
+      id: "171-34",
+      episodeNumber: 34,
+      title: "LOVE IN PAVILION Episode 34",
+      description: "Love in Pavilion Episode 34",
+      streamUrl: "https://www.mediafire.com/file/36lvwnlr97q9h7v/LOVE_IN_PAVILION_34.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/36lvwnlr97q9h7v/LOVE_IN_PAVILION_34.mp4/file"
+    },
+    {
+      id: "171-35",
+      episodeNumber: 35,
+      title: "LOVE IN PAVILION Episode 35",
+      description: "Love in Pavilion Episode 35",
+      streamUrl: "https://www.mediafire.com/file/v0gzuvblljvcmng/LOVE_IN_PAVILION_35.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/v0gzuvblljvcmng/LOVE_IN_PAVILION_35.mp4/file"
+    },
+    {
+      id: "171-36",
+      episodeNumber: 36,
+      title: "LOVE IN PAVILION Episode 36 (Final)",
+      description: "Love in Pavilion Episode 36 - Final Episode",
+      streamUrl: "https://www.mediafire.com/file/4joxacqh9xjhb62/LOVE_IN_PAVILION_36_FINALE.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/4joxacqh9xjhb62/LOVE_IN_PAVILION_36_FINALE.mp4/file"
+    }
+
+  ]
+},
+{
+  id: "172",
+  title: "LUCIFER",
+  slug: "lucifer",
+  year: "2016–2021",
+  rating: "8.0",
+  image: "lucifer.jpg",
+  isFeatured: true,
+  createdAt: "2026-11-27",
+  description: "Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.",
+  language: "",
+  genres: ["Romance"],
+  explainer: "Rocky Kimomo",
+  trailer: "",
+  episodes: [
+    {
+      id: "172-1",
+      episodeNumber: 1,
+      title: "LUCIFER Episode 1A",
+      description: "Aired: 12/21/2024",
+      streamUrl: "https://www.mediafire.com/file/p0r22wiz05az982/LUCIFER_1A%2528mujyosi.store%2529.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/p0r22wiz05az982/LUCIFER_1A%2528mujyosi.store%2529.mp4/file"
+    },
+    {
+      id: "172-2",
+      episodeNumber: 1,
+      title: "LUCIFER Episode 1B",
+      description: "Aired: 12/21/2024",
+      streamUrl: "https://www.mediafire.com/file/3unnff86qlj5eib/LUCIFER_1B%2528mujyosi.store%2529.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/3unnff86qlj5eib/LUCIFER_1B%2528mujyosi.store%2529.mp4/file"
+    },
+    {
+      id: "172-3",
+      episodeNumber: 2,
+      title: "LUCIFER Episode 2A",
+      description: "Aired: 12/22/2024",
+      streamUrl: "https://www.mediafire.com/file/5c2nmcof2gzhota/LUCIFER_2A%2528mujyosi.store%2529.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/5c2nmcof2gzhota/LUCIFER_2A%2528mujyosi.store%2529.mp4/file"
+    },
+    {
+      id: "172-4",
+      episodeNumber: 2,
+      title: "LUCIFER Episode 2B",
+      description: "Aired: 12/22/2024",
+      streamUrl: "https://www.mediafire.com/file/t457csbsr34ukzz/LUCIFER_2B%2528mujyosi.store%2529.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/t457csbsr34ukzz/LUCIFER_2B%2528mujyosi.store%2529.mp4/file"
+    },
+    {
+      id: "172-5",
+      episodeNumber: 3,
+      title: "LUCIFER Episode 3",
+      description: "Aired: 12/22/2024",
+      streamUrl: "https://www.mediafire.com/file/zt56nl2aff5qlk4/LUCIFER_3%2528mujyosi.store%2529.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/zt56nl2aff5qlk4/LUCIFER_3%2528mujyosi.store%2529.mp4/file"
+    },
+    {
+      id: "172-6",
+      episodeNumber: 4,
+      title: "LUCIFER Episode 4",
+      description: "Aired: 12/22/2024",
+      streamUrl: "https://www.mediafire.com/file/ur3g0264nantrsi/LUCIFER_4%2528mujyosi.store%2529.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/ur3g0264nantrsi/LUCIFER_4%2528mujyosi.store%2529.mp4/file"
+    },
+    {
+      id: "172-7",
+      episodeNumber: 5,
+      title: "LUCIFER Episode 5",
+      description: "Aired: 12/24/2024",
+      streamUrl: "https://www.mediafire.com/file/kkc8rj2txykrejh/LUCIFER_5%2528mujyosi.store%2529.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/kkc8rj2txykrejh/LUCIFER_5%2528mujyosi.store%2529.mp4/file"
+    },
+    {
+      id: "172-8",
+      episodeNumber: 6,
+      title: "LUCIFER Episode 6",
+      description: "Aired: 12/24/2024",
+      streamUrl: "https://www.mediafire.com/file/gkdj8bpy3npnwof/LUCIFER_6.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/gkdj8bpy3npnwof/LUCIFER_6.mp4/file"
+    },
+    {
+      id: "172-9",
+      episodeNumber: 7,
+      title: "LUCIFER Episode 7",
+      description: "Aired: 12/24/2024",
+      streamUrl: "https://www.mediafire.com/file/ogk6cnrdnl05xnb/LUCIFER_7.mpg/file",
+      downloadUrl: "https://www.mediafire.com/file/ogk6cnrdnl05xnb/LUCIFER_7.mpg/file"
+    },
+    {
+      id: "172-10",
+      episodeNumber: 8,
+      title: "LUCIFER Episode 8",
+      description: "Aired: 12/24/2024",
+      streamUrl: "https://www.mediafire.com/file/l0rxq4874635ist/LUCIFER_08.mpg/file",
+      downloadUrl: "https://www.mediafire.com/file/l0rxq4874635ist/LUCIFER_08.mpg/file"
+    },
+    {
+      id: "172-11",
+      episodeNumber: 9,
+      title: "LUCIFER Episode 9",
+      description: "Aired: 12/24/2024",
+      streamUrl: "https://www.mediafire.com/file/xb9rtnyoaxjwyzh/LUCIFER_S1_EP10.avi/file",
+      downloadUrl: "https://www.mediafire.com/file/xb9rtnyoaxjwyzh/LUCIFER_S1_EP10.avi/file"
+    },
+    {
+      id: "172-12",
+      episodeNumber: 10,
+      title: "LUCIFER Episode 10",
+      description: "Aired: 12/24/2024",
+      streamUrl: "https://www.mediafire.com/file/xb9rtnyoaxjwyzh/LUCIFER_S1_EP10.avi/file",
+      downloadUrl: "https://www.mediafire.com/file/xb9rtnyoaxjwyzh/LUCIFER_S1_EP10.avi/file"
+    },
+    {
+      id: "172-13",
+      episodeNumber: 11,
+      title: "LUCIFER Episode 11",
+      description: "Aired: 12/24/2024",
+      streamUrl: "https://www.mediafire.com/file/1mg51nw62f8xva4/LUCIFER_S1_EP11.avi/file",
+      downloadUrl: "https://www.mediafire.com/file/1mg51nw62f8xva4/LUCIFER_S1_EP11.avi/file"
+    },
+    {
+      id: "172-14",
+      episodeNumber: 12,
+      title: "LUCIFER Episode 12",
+      description: "Aired: 12/24/2024",
+      streamUrl: "https://www.mediafire.com/file/s4w8wvrmjkuc3nx/LUCIFER_S1_EP12.avi/file",
+      downloadUrl: "https://www.mediafire.com/file/s4w8wvrmjkuc3nx/LUCIFER_S1_EP12.avi/file"
+    },
+    {
+      id: "172-15",
+      episodeNumber: 13,
+      title: "LUCIFER Episode 13 (Final)",
+      description: "Aired: 12/24/2024",
+      streamUrl: "https://www.mediafire.com/file/j2rdl10hrbp0g6v/LUCIFER_S1_EP13_final.avi/file",
+      downloadUrl: "https://www.mediafire.com/file/j2rdl10hrbp0g6v/LUCIFER_S1_EP13_final.avi/file"
+    }
+  ]
+},
+{
+  id: "172",
+  title: "CAN'T BUY ME LOVE",
+  slug: "cant-buy-me-love",
+  year: "2023–2024",
+  rating: "6.7",
+  image: "cant-buy-me-love.jpg",
+  isFeatured: true,
+  createdAt: "2026-11-27",
+  description: "When a young man gets caught up in a deadly plot against a rich woman, he pays a devastating cost to free her - creating a debt that binds them together.",
+  language: "",
+  genres: ['Romance'],
+  explainer: "Saga Mwiza",
+  trailer: "",
+  episodes: [
+    {
+      id: "172-1",
+      episodeNumber: 1,
+      title: "CAN'T BUY ME LOVE Episodes 1-10",
+      description: "Episodes 1-10. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/ax2k0xm6p1spjx3,j7yz7jtx9u1pa18,rcbabttvkhg8c9u,1yq5z0djkub7nb9,kds3b7mghf06r2m,6rrdbv22zv1hubp,gn92c0etr16btob,ghfoscz60ruwzco,9rmem5m5cy15hvf,te7pi2xv19o0yoe/shared",
+      downloadUrl: "https://www.mediafire.com/folder/ax2k0xm6p1spjx3,j7yz7jtx9u1pa18,rcbabttvkhg8c9u,1yq5z0djkub7nb9,kds3b7mghf06r2m,6rrdbv22zv1hubp,gn92c0etr16btob,ghfoscz60ruwzco,9rmem5m5cy15hvf,te7pi2xv19o0yoe/shared"
+    },
+    {
+      id: "172-2",
+      episodeNumber: 11,
+      title: "CAN'T BUY ME LOVE Episodes 11-20",
+      description: "Episodes 11-20. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/7i97vsnxk4i8rhw,ekjguk0ntcok1t6,ndi4efcdfyx70h6,1uhfg9fcd6audfw,q1ntqaukn18yizs,3d5dvqfnavp1pj6,m255o19777uu4da,tfn3f3oudacu4or,6gr0srusnpxv1fr,w0rbyyfjbg98yxq/shared",
+      downloadUrl: "https://www.mediafire.com/folder/7i97vsnxk4i8rhw,ekjguk0ntcok1t6,ndi4efcdfyx70h6,1uhfg9fcd6audfw,q1ntqaukn18yizs,3d5dvqfnavp1pj6,m255o19777uu4da,tfn3f3oudacu4or,6gr0srusnpxv1fr,w0rbyyfjbg98yxq/shared"
+    },
+    {
+      id: "172-3",
+      episodeNumber: 21,
+      title: "CAN'T BUY ME LOVE Episodes 21-30",
+      description: "Episodes 21-30. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/410keqoyf66gitq,a1pskq1lc5y68y2,cynfcuzxux0ana3,7hb7y410okswepb,pdkgetnrkan2kr7,bkmp4a7l39q4fqp9,9ygt74jkmoh4o07,4fb0i62gic4l1as,snx2lc6j4hqh39y,4nj1970q7dnqvd9/shared",
+      downloadUrl: "https://www.mediafire.com/folder/410keqoyf66gitq,a1pskq1lc5y68y2,cynfcuzxux0ana3,7hb7y410okswepb,pdkgetnrkan2kr7,bkmp4a7l39q4fqp9,9ygt74jkmoh4o07,4fb0i62gic4l1as,snx2lc6j4hqh39y,4nj1970q7dnqvd9/shared"
+    },
+    {
+      id: "172-4",
+      episodeNumber: 31,
+      title: "CAN'T BUY ME LOVE Episodes 31-40",
+      description: "Episodes 31-40. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/3s76ztn2sadyy4d,fe8rmyiewf1fjbq,4tuda20aw53d4dv,toc64bb5ewpz49m,6v9657d7i2y080p,6d8054t02pb0ofb,fcvddfvqyj8v3d2,4sm96dy52dornwt,4zjl6kwrll5z8ky,hyfls285tv3tmgs/shared",
+      downloadUrl: "https://www.mediafire.com/folder/3s76ztn2sadyy4d,fe8rmyiewf1fjbq,4tuda20aw53d4dv,toc64bb5ewpz49m,6v9657d7i2y080p,6d8054t02pb0ofb,fcvddfvqyj8v3d2,4sm96dy52dornwt,4zjl6kwrll5z8ky,hyfls285tv3tmgs/shared"
+    },
+    {
+      id: "172-5",
+      episodeNumber: 41,
+      title: "CAN'T BUY ME LOVE Episodes 41-50",
+      description: "Episodes 41-50. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/jwhom2sxwca1eds,fbrxi3n7ls4n53p,gurmh24lgsky4xb,0kttdmseepwmrrg,v65fb4vpas77dlb,vfl8hw6m1guxs92,lh3qhtm4j79wf38,y8dx5qtgpwivnzu/shared",
+      downloadUrl: "https://www.mediafire.com/folder/jwhom2sxwca1eds,fbrxi3n7ls4n53p,gurmh24lgsky4xb,0kttdmseepwmrrg,v65fb4vpas77dlb,vfl8hw6m1guxs92,lh3qhtm4j79wf38,y8dx5qtgpwivnzu/shared"
+    },
+    {
+      id: "172-6",
+      episodeNumber: 51,
+      title: "CAN'T BUY ME LOVE Episodes 51-60",
+      description: "Episodes 51-60. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/78vj6sb9zsqhjuc,uh8bihzu8pom4nd,g9n9b8wi5ybguz3,7ns47kkolk1ierl,ru37v1gynayutwk,809hcq4ui0vncdn,jszn4qau4anza77,ue6efri82w1dn4n,xjbniyq7ywew40f,nu5qhr6w2mhy3dj/shared",
+      downloadUrl: "https://www.mediafire.com/folder/78vj6sb9zsqhjuc,uh8bihzu8pom4nd,g9n9b8wi5ybguz3,7ns47kkolk1ierl,ru37v1gynayutwk,809hcq4ui0vncdn,jszn4qau4anza77,ue6efri82w1dn4n,xjbniyq7ywew40f,nu5qhr6w2mhy3dj/shared"
+    },
+    {
+      id: "172-7",
+      episodeNumber: 60,
+      title: "CAN'T BUY ME LOVE Episodes 60-70",
+      description: "Episodes 60-70. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/fg3vkxms1mhe4ex,css9ysr3ml62elo,joaaj8qv32po4rs,ipbhi9mx96znnhs,l26zlsuwcgpyqax,pda8acs9ozm6wtu,9vphx4sdx4cn1ps,k3mbv729ndf3hct,a57z1wganu5h6da,ekp5ebjeaudv262/shared",
+      downloadUrl: "https://www.mediafire.com/folder/fg3vkxms1mhe4ex,css9ysr3ml62elo,joaaj8qv32po4rs,ipbhi9mx96znnhs,l26zlsuwcgpyqax,pda8acs9ozm6wtu,9vphx4sdx4cn1ps,k3mbv729ndf3hct,a57z1wganu5h6da,ekp5ebjeaudv262/shared"
+    },
+    {
+      id: "172-8",
+      episodeNumber: 71,
+      title: "CAN'T BUY ME LOVE Episodes 71-80",
+      description: "Episodes 71-80. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/yaldhym472qt56q,9z7l5i8o29gfib6,zuhrvvt0sq7m1ox,g2vj4qoab803b55,3zyxo7n6ohi69dd,npdxfyabhnnolmn,di4nhb5yq97r4v3,lut16v2lym3dzye,gu80ujxyops2rc1,jzx4iyg2xg1fsv9/shared",
+      downloadUrl: "https://www.mediafire.com/folder/yaldhym472qt56q,9z7l5i8o29gfib6,zuhrvvt0sq7m1ox,g2vj4qoab803b55,3zyxo7n6ohi69dd,npdxfyabhnnolmn,di4nhb5yq97r4v3,lut16v2lym3dzye,gu80ujxyops2rc1,jzx4iyg2xg1fsv9/shared"
+    },
+    {
+      id: "172-9",
+      episodeNumber: 81,
+      title: "CAN'T BUY ME LOVE Episodes 81-90",
+      description: "Episodes 81-90. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/yaldhym472qt56q,9z7l5i8o29gfib6,zuhrvvt0sq7m1ox,g2vj4qoab803b55,3zyxo7n6ohi69dd,npdxfyabhnnolmn,di4nhb5yq97r4v3,lut16v2lym3dzye,gu80ujxyops2rc1,jzx4iyg2xg1fsv9/shared",
+      downloadUrl: "https://www.mediafire.com/folder/yaldhym472qt56q,9z7l5i8o29gfib6,zuhrvvt0sq7m1ox,g2vj4qoab803b55,3zyxo7n6ohi69dd,npdxfyabhnnolmn,di4nhb5yq97r4v3,lut16v2lym3dzye,gu80ujxyops2rc1,jzx4iyg2xg1fsv9/shared"
+    },
+    {
+      id: "172-10",
+      episodeNumber: 91,
+      title: "CAN'T BUY ME LOVE Episodes 91-100",
+      description: "Episodes 91-100. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/48o4wvlkzg61kj9,j7kdrm9yan899vs,pxda5hy7acd5zm6,k72g39zho67sgjd,5icbpgceqjghu0x,iiqznxjm8bp5zdu,hdfw1x7reoqh0yt,elvneq81ox9k43x,2louzwe658rcezs,qoe5lsvmzzti94y/shared",
+      downloadUrl: "https://www.mediafire.com/folder/48o4wvlkzg61kj9,j7kdrm9yan899vs,pxda5hy7acd5zm6,k72g39zho67sgjd,5icbpgceqjghu0x,iiqznxjm8bp5zdu,hdfw1x7reoqh0yt,elvneq81ox9k43x,2louzwe658rcezs,qoe5lsvmzzti94y/shared"
+    },
+    {
+      id: "172-11",
+      episodeNumber: 101,
+      title: "CAN'T BUY ME LOVE Episodes 101-110",
+      description: "Episodes 101-110. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/rngk8on071zt17m,u3ju8nu3ijmnld1,c0uwxy0tnxeh49q,3ig4n0jt1y4l1yi,men8v80e2oomoue,zkj925nwlf4751r,tz9f1nubon4wjdr,9ylkep1znegs1lp,tg97n7xeaai2oqg,nx85d2ylmxpur1d/shared",
+      downloadUrl: "https://www.mediafire.com/folder/rngk8on071zt17m,u3ju8nu3ijmnld1,c0uwxy0tnxeh49q,3ig4n0jt1y4l1yi,men8v80e2oomoue,zkj925nwlf4751r,tz9f1nubon4wjdr,9ylkep1znegs1lp,tg97n7xeaai2oqg,nx85d2ylmxpur1d/shared"
+    },
+    {
+      id: "172-12",
+      episodeNumber: 111,
+      title: "CAN'T BUY ME LOVE Episodes 111-120",
+      description: "Episodes 111-120. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/ym923itwvdoei4s,idqcr8ubco7chp7,lmhn63es78mulux,yc5ar4ik8gospmd,noi8c8ncjpv2fk8,14mwov8padh1i1n,8g0pt4dedsmlyi4,jlta9js846dwqcf,quermly75x7wpn4,1entr9izm069y1q/shared",
+      downloadUrl: "https://www.mediafire.com/folder/ym923itwvdoei4s,idqcr8ubco7chp7,lmhn63es78mulux,yc5ar4ik8gospmd,noi8c8ncjpv2fk8,14mwov8padh1i1n,8g0pt4dedsmlyi4,jlta9js846dwqcf,quermly75x7wpn4,1entr9izm069y1q/shared"
+    },
+    {
+      id: "172-13",
+      episodeNumber: 121,
+      title: "CAN'T BUY ME LOVE Episodes 121-130",
+      description: "Episodes 121-130. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/6jn84ui6fjl9f0d,6my2cgm98s13gfw,joqrv4vxoa7em5i,esn5gm9bh6o2b0z,wekd5k6rzo09i4n,7d2ihglcpggm6th,1qlaxdf9ra9aarj,lcmvresps1yirlw,j33sejjnzulyiuw,cxihv6i364ou526/shared",
+      downloadUrl: "https://www.mediafire.com/folder/6jn84ui6fjl9f0d,6my2cgm98s13gfw,joqrv4vxoa7em5i,esn5gm9bh6o2b0z,wekd5k6rzo09i4n,7d2ihglcpggm6th,1qlaxdf9ra9aarj,lcmvresps1yirlw,j33sejjnzulyiuw,cxihv6i364ou526/shared"
+    },
+    {
+      id: "172-14",
+      episodeNumber: 131,
+      title: "CAN'T BUY ME LOVE Episodes 131-140",
+      description: "Episodes 131-140. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/woh362ra520clxu,ja23qgbf9jph9f7,4em4g8153v3qjtq,watdhp18xxz67sm,q7w2a5cc3aw8f8y,o9v7vmeh6g7rqah/shared",
+      downloadUrl: "https://www.mediafire.com/folder/woh362ra520clxu,ja23qgbf9jph9f7,4em4g8153v3qjtq,watdhp18xxz67sm,q7w2a5cc3aw8f8y,o9v7vmeh6g7rqah/shared"
+    },
+    {
+      id: "172-15",
+      episodeNumber: 141,
+      title: "CAN'T BUY ME LOVE Final",
+      description: "Final episode. Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/folder/woh362ra520clxu,ja23qgbf9jph9f7,4em4g8153v3qjtq,watdhp18xxz67sm,q7w2a5cc3aw8f8y,o9v7vmeh6g7rqah/shared",
+      downloadUrl: "https://www.mediafire.com/folder/woh362ra520clxu,ja23qgbf9jph9f7,4em4g8153v3qjtq,watdhp18xxz67sm,q7w2a5cc3aw8f8y,o9v7vmeh6g7rqah/shared"
+    }
+  ]
+},
+{
+  id: "173",
+  title: "THE CLEANING LADY - SEASON 2",
+  slug: "the-cleaning-lady-season-2",
+  year: "",
+  rating: "",
+  image: "the-cleaning-lady-season-2.jpg",
+  isFeatured: false,
+  createdAt: "2026-11-27",
+  description: "",
+  language: "",
+  genres: ["Romance"],
+  explainer: "",
+  trailer: "",
+  episodes: [
+    {
+      id: "173-1",
+      episodeNumber: 1,
+      title: "THE CLEANING LADY Episode 1",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/8ulqthe71vue59s/TheCleaningLadySo2Ep1.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/8ulqthe71vue59s/TheCleaningLadySo2Ep1.mp4/file"
+    },
+    {
+      id: "173-2",
+      episodeNumber: 2,
+      title: "THE CLEANING LADY Episode 2",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/gif6nptoub2cc0p/TheCleaningLadySo2Ep2.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/gif6nptoub2cc0p/TheCleaningLadySo2Ep2.mp4/file"
+    },
+    {
+      id: "173-3",
+      episodeNumber: 3,
+      title: "THE CLEANING LADY Episode 3",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/m4jhmibixdc7wsi/TheCleaningLadySo2Ep3.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/m4jhmibixdc7wsi/TheCleaningLadySo2Ep3.mp4/file"
+    },
+    {
+      id: "173-4",
+      episodeNumber: 4,
+      title: "THE CLEANING LADY Episode 4",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/ozzcxu3wldccl2d/TheCleaningLadySo2Ep5.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/ozzcxu3wldccl2d/TheCleaningLadySo2Ep5.mp4/file"
+    },
+    {
+      id: "173-5",
+      episodeNumber: 5,
+      title: "THE CLEANING LADY Episode 5",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/ozzcxu3wldccl2d/TheCleaningLadySo2Ep5.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/ozzcxu3wldccl2d/TheCleaningLadySo2Ep5.mp4/file"
+    },
+    {
+      id: "173-6",
+      episodeNumber: 6,
+      title: "THE CLEANING LADY Episode 6",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/u6gbekuqezdwnvg/TheCleaningLadySo2Ep6_DJ_ERICK_PRO_0784520912.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/u6gbekuqezdwnvg/TheCleaningLadySo2Ep6_DJ_ERICK_PRO_0784520912.mp4/file"
+    },
+    {
+      id: "173-7",
+      episodeNumber: 7,
+      title: "THE CLEANING LADY Episode 7",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/d37itu1h16uljmo/TheCleaningLadySo2Ep7_DJ_ERICK_PRO_0784520912.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/d37itu1h16uljmo/TheCleaningLadySo2Ep7_DJ_ERICK_PRO_0784520912.mp4/file"
+    },
+    {
+      id: "173-8",
+      episodeNumber: 8,
+      title: "THE CLEANING LADY Episode 8",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/ikox3u6oz7a8iup/TheCleaningLadySo2Ep8_0784520912_.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/ikox3u6oz7a8iup/TheCleaningLadySo2Ep8_0784520912_.mp4/file"
+    },
+    {
+      id: "173-9",
+      episodeNumber: 9,
+      title: "THE CLEANING LADY Episode 9",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/l7p47fxsajt43yd/TheCleaningLadySo2Ep9.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/l7p47fxsajt43yd/TheCleaningLadySo2Ep9.mp4/file"
+    },
+    {
+      id: "173-10",
+      episodeNumber: 10,
+      title: "THE CLEANING LADY Episode 10",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/th2fp5qr4xf4t4g/TheCleaningLadySo2Ep10_Dj_Erick_pro_.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/th2fp5qr4xf4t4g/TheCleaningLadySo2Ep10_Dj_Erick_pro_.mp4/file"
+    },
+    {
+      id: "173-11",
+      episodeNumber: 11,
+      title: "THE CLEANING LADY Episode 11",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/38rxqiq8srvmhnv/TheCleaningLadySo2Ep11.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/38rxqiq8srvmhnv/TheCleaningLadySo2Ep11.mp4/file"
+    },
+    {
+      id: "173-12",
+      episodeNumber: 12,
+      title: "THE CLEANING LADY Episode 12 (Final)",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/zmgyneli93hu405/TheCleaningLadySo2Ep12.mp4/file",
+      downloadUrl: "https://www.mediafire.com/file/zmgyneli93hu405/TheCleaningLadySo2Ep12.mp4/file"
+    }
+  ]
+},
+{
+  id: "174",
+  title: "WHEN THEY SEE US",
+  slug: "when-they-see-us",
+  year: "2019",
+  rating: "",
+  image: "when-they-see-us.jpg",
+  isFeatured: false,
+  createdAt: "2026-11-27",
+  description: "Five teens from Harlem become trapped in a nightmare when they're falsely accused of a brutal attack in Central Park. Based on the true story.",
+  language: "",
+  genres: ["Drama"],
+  explainer: "",
+  trailer: "",
+  episodes: [
+    {
+      id: "174-1",
+      episodeNumber: 1,
+      title: "WHEN THEY SEE US Episode 1",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/szsdew9dscb8d5c/WHEN_THEY_SEE_US_EP_1.%2528isata.pythonanywhere.com%2529.avi/file",
+      downloadUrl: "https://www.mediafire.com/file/szsdew9dscb8d5c/WHEN_THEY_SEE_US_EP_1.%2528isata.pythonanywhere.com%2529.avi/file"
+    },
+    {
+      id: "174-2",
+      episodeNumber: 2,
+      title: "WHEN THEY SEE US Episode 2",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/cs435zu3dj0zp78/WHEN_THEY_SEE_US_EP_2.%2528isata.pythonanywhere.com%2529.avi/file",
+      downloadUrl: "https://www.mediafire.com/file/cs435zu3dj0zp78/WHEN_THEY_SEE_US_EP_2.%2528isata.pythonanywhere.com%2529.avi/file"
+    },
+    {
+      id: "174-3",
+      episodeNumber: 3,
+      title: "WHEN THEY SEE US Episode 3",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/6gjcpo1glp1zyq2/WHEN_THEY_SEE_US_EP_3.%2528isata.pythonanywhere.com%2529.avi/file",
+      downloadUrl: "https://www.mediafire.com/file/6gjcpo1glp1zyq2/WHEN_THEY_SEE_US_EP_3.%2528isata.pythonanywhere.com%2529.avi/file"
+    },
+    {
+      id: "174-4",
+      episodeNumber: 4,
+      title: "WHEN THEY SEE US Episode 4 (Final)",
+      description: "Aired: 11/20/2024",
+      streamUrl: "https://www.mediafire.com/file/rfbs55t8okf1reo/WHEN_THEY_SEE_US_EP_4FINAL.%2528isata.pythonanywhere.com%2529.avi/file",
+      downloadUrl: "https://www.mediafire.com/file/rfbs55t8okf1reo/WHEN_THEY_SEE_US_EP_4FINAL.%2528isata.pythonanywhere.com%2529.avi/file"
+    }
+  ]
+}
 
 
 
