@@ -14430,7 +14430,61 @@ genres: ["Action"],
     }
   ]
 },
-
+{
+  id: "543",
+  title: "THE MOSQUITO BOWL",
+  slug: "the-mosquito-bowl",
+  year: "2026",
+  rating: "7.6",
+  image: "the-mosquito-bowl.jpg",
+  description: "In the aftermath of Pearl Harbor, four college football stars enlist in the US Marines, discovering the strength of brotherhood and the cost of war.",
+  language: "",
+  genres: ["Drama"],
+  isFeatured: true,
+  createdAt: "2026-11-27",
+  explainer: "Perfect",
+  trailer: "",
+  parts: [
+    {
+      id: "543-1",
+      partNumber: 1,
+      title: "THE MOSQUITO BOWL",
+      streamUrl: "http://isatafilez.my/files/series/2026/america/perf/movie/THE_MOSQUITO_BOWL.mp4",
+      downloadUrl: "http://isatafilez.my/files/series/2026/america/perf/movie/THE_MOSQUITO_BOWL.mp4"
+    }
+  ]
+},
+{
+  id: "544",
+  title: "JAILER 2",
+  slug: "jailer-2",
+  year: "2026",
+  rating: "8.0",
+  image: "jailer-2.jpg",
+  description: "When a dangerous syndicate threatens his family, retired jailer Tiger Muthuvel Pandian goes undercover as a driver to battle enemies from the shadows.",
+  language: "",
+  genres: ["Indian"],
+  isFeatured: true,
+  createdAt: "2026-11-27",
+  explainer: "Perfect",
+  trailer: "",
+  parts: [
+    {
+      id: "544-1",
+      partNumber: 1,
+      title: "JAILER 2 - PART 1",
+      streamUrl: "http://isatafilez.my/files/series/2026/india/JAILER_2_A_2026_perfect.mp4",
+      downloadUrl: "http://isatafilez.my/files/series/2026/india/JAILER_2_A_2026_perfect.mp4"
+    },
+    {
+      id: "544-2",
+      partNumber: 2,
+      title: "JAILER 2 - PART 2",
+      streamUrl: "http://isatafilez.my/files/series/2026/india/JAILER_2_B_2026_perfect.mp4",
+      downloadUrl: "http://isatafilez.my/files/series/2026/india/JAILER_2_B_2026_perfect.mp4"
+    }
+  ]
+},
 
 
 
