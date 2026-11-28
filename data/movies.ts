@@ -14510,7 +14510,30 @@ genres: ["Action"],
   ]
 },
 
-
+{
+  id: "546",
+  title: "WAY OF THE WARRIOR KID",
+  slug: "way-of-the-warrior-kid",
+  year: "2026",
+  rating: "",
+  image: "way-of-the-warrior-kid.jpg",
+  description: "Jake is an injured Navy SEAL who becomes a mentor for his shy, struggling nephew Marc. Using the principles of his military training, Jake teaches Marc how to become a Warrior Kid as he enters high school.",
+  language: "Agasobanuye",
+  genres: ["Action", "Drama"],
+  isFeatured: true,
+  createdAt: "2026-11-28",
+  explainer: "Rocky kimomo",
+  trailer: "https://www.youtube.com/watch?v=CPOpiG5W4K8&pp=ygUed2F5IG9mIHRoZSB3YXJyaW9yIGtpZCB0cmFpbGVy",
+  parts: [
+    {
+      id: "546-1",
+      partNumber: 1,
+      title: "WAY OF THE WARRIOR KID",
+      streamUrl: "",
+      downloadUrl: "http://isatafilez.my/files/series/2026/america/rocky/movi/Warrior_Kid.mp4"
+    }
+  ]
+},
 
 
 ]
